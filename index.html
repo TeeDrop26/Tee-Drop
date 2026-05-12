@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tee Drop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="top-bar" aria-label="Search controls">
+      <div class="brand-block">
+        <h1>Tee Drop</h1>
+        <p class="hero-copy">Your first stop for last-minute tee times.</p>
+      </div>
+      <div class="coverage-block">
+        <p class="eyebrow">Tuscarawas County and surrounding area</p>
+        <div class="hero-stat" aria-label="Course coverage">
+          <strong id="courseCount">10</strong>
+          <span>local courses</span>
+        </div>
+      </div>
+      <button class="primary-action" id="useLocationButton" type="button">
+        Use My Location
+      </button>
+    </section>
+
+    <section class="search-panel" aria-label="Course search">
+      <label>
+        Search courses or cities
+        <input id="courseSearch" type="search" placeholder="Try Canton, Massillon, Zoar, or a course name">
+      </label>
+    </section>
+
+    <section class="filters" aria-label="Tee time filters">
+      <label>
+        Day
+        <select id="dayFilter">
+          <option value="today">Today</option>
+          <option value="tomorrow">Tomorrow</option>
+          <option value="any">Any day</option>
+        </select>
+      </label>
+
+      <label>
+        Time
+        <select id="timeFilter">
+          <option value="any">Any time</option>
+          <option value="morning">Morning</option>
+          <option value="midday">Midday</option>
+          <option value="afternoon">Afternoon</option>
+        </select>
+      </label>
+
+      <label>
+        Players
+        <select id="playersFilter">
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4</option>
+        </select>
+      </label>
+
+      <label>
+        Booking
+        <select id="bookingFilter">
+          <option value="all">All courses</option>
+          <option value="online">Online booking</option>
+          <option value="call">Call / info</option>
+        </select>
+      </label>
+
+      <label>
+        Max distance
+        <select id="distanceFilter">
+          <option value="10">10 miles</option>
+          <option value="25" selected>25 miles</option>
+          <option value="50">50 miles</option>
+          <option value="999">Any distance</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="alert-panel" aria-label="Tee time alert signup">
+      <div>
+        <p class="alert-kicker">Tee Drop alerts</p>
+        <h2>Get notified when a last-minute spot opens.</h2>
+      </div>
+
+      <form class="alert-form" id="alertForm" name="tee-drop-alerts" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="tee-drop-alerts">
+        <input id="alertCreatedAt" type="hidden" name="createdAt">
+
+        <label>
+          Contact
+          <input id="alertContact" name="contact" type="text" placeholder="Phone or email" required>
+        </label>
+
+        <label>
+          Area
+          <input id="alertArea" name="area" type="text" placeholder="New Philly, Canton, Massillon">
+        </label>
+
+        <label>
+          Time
+          <select id="alertTime" name="time">
+            <option value="Any time">Any time</option>
+            <option value="Morning">Morning</option>
+            <option value="Midday">Midday</option>
+            <option value="Afternoon">Afternoon</option>
+          </select>
+        </label>
+
+        <label>
+          Players
+          <select id="alertPlayers" name="players">
+            <option value="1+">1+</option>
+            <option value="2+">2+</option>
+            <option value="3+">3+</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+
+        <button class="secondary-action" type="submit">Join Alert List</button>
+      </form>
+
+      <p class="alert-message" id="alertMessage" aria-live="polite"></p>
+    </section>
+
+    <section class="status-row" aria-live="polite">
+      <p id="locationStatus">Showing Tuscarawas County and surrounding area courses. Use your location to sort by distance.</p>
+      <p id="resultCount"></p>
+    </section>
+
+    <section class="tee-time-list" id="teeTimeList" aria-label="Available tee times"></section>
+  </main>
+
+  <template id="teeTimeTemplate">
+    <article class="tee-card">
+      <div class="course-main">
+        <div>
+          <p class="course-meta"></p>
+          <h2></h2>
+        </div>
+        <div class="card-badges">
+          <span class="booking-type"></span>
+          <span class="distance-pill"></span>
+        </div>
+      </div>
+
+      <div class="tee-grid">
+        <div>
+          <span>Next time</span>
+          <strong class="time"></strong>
+        </div>
+        <div>
+          <span>Players</span>
+          <strong class="players"></strong>
+        </div>
+        <div>
+          <span>Price</span>
+          <strong class="price"></strong>
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <p class="note"></p>
+        <a class="book-link" target="_blank" rel="noreferrer">Book</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
