@@ -377,8 +377,16 @@ select:focus {
 
 .alert-panel h2 {
   max-width: 330px;
+  margin-bottom: 8px;
   color: white;
   font-size: 1.35rem;
+}
+
+.alert-note {
+  max-width: 370px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.45;
 }
 
 .alert-form {
