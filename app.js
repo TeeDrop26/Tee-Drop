@@ -166,6 +166,8 @@ const courses = [
   }
 ];
 
+const ALERT_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
+
 let userLocation = null;
 
 document.querySelector("#courseCount").textContent = courses.length;
@@ -308,17 +310,19 @@ async function saveAlertSignup(event) {
   document.querySelector("#alertCreatedAt").value = signup.createdAt;
 
   try {
-    if (isLocalPreview()) {
+    if (isLocalPreview() || !ALERT_FORM_ENDPOINT) {
       saveLocalAlertSignup(signup);
     } else {
-      await submitAlertToNetlify();
+      await submitAlertToFormspree();
     }
 
-    alertMessage.textContent = `Saved. You are on the list for ${signup.area}, ${signup.time.toLowerCase()}, ${signup.players} player${signup.players === "1+" ? "" : "s"}.`;
+    alertMessage.textContent = ALERT_FORM_ENDPOINT
+      ? `Saved. You are on the list for ${signup.area}, ${signup.time.toLowerCase()}, ${signup.players} player${signup.players === "1+" ? "" : "s"}.`
+      : "Saved locally for now. Add the Formspree endpoint to collect real alert signups.";
     alertForm.reset();
   } catch (error) {
     saveLocalAlertSignup(signup);
-    alertMessage.textContent = "Saved locally for now. Online alert delivery needs the published site connection.";
+    alertMessage.textContent = "Saved locally for now. Formspree did not accept the submission yet.";
   }
 }
 
@@ -333,14 +337,17 @@ function saveLocalAlertSignup(signup) {
   localStorage.setItem("teeDropAlertSignups", JSON.stringify(signups));
 }
 
-async function submitAlertToNetlify() {
+async function submitAlertToFormspree() {
   const formData = new FormData(alertForm);
-
-  await fetch("/", {
+  const response = await fetch(ALERT_FORM_ENDPOINT, {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
+    headers: { "Accept": "application/json" },
+    body: formData
   });
+
+  if (!response.ok) {
+    throw new Error("Formspree submission failed");
+  }
 }
 
 function getBookingType(course) {
