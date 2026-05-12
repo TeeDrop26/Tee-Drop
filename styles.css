@@ -94,6 +94,19 @@ a {
   line-height: 1.2;
 }
 
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-logo {
+  flex: 0 0 auto;
+  width: clamp(76px, 10vw, 112px);
+  height: clamp(76px, 10vw, 112px);
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.22));
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: #f0bd68;
@@ -583,6 +596,17 @@ h2 {
   .coverage-block {
     justify-items: stretch;
     text-align: left;
+  }
+
+  .brand-lockup {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .brand-logo {
+    width: 72px;
+    height: 72px;
   }
 
   .coverage-block .eyebrow {
