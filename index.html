@@ -25,6 +25,8 @@
       </button>
     </section>
 
+    <section class="featured-course" id="featuredCourse" aria-label="Course of the week"></section>
+
     <section class="search-panel" aria-label="Course search">
       <label>
         Search courses or cities
@@ -88,8 +90,7 @@
         <h2>Get notified when a last-minute spot opens.</h2>
       </div>
 
-      <form class="alert-form" id="alertForm" name="tee-drop-alerts" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="tee-drop-alerts">
+      <form class="alert-form" id="alertForm" name="tee-drop-alerts" method="POST">
         <input id="alertCreatedAt" type="hidden" name="createdAt">
 
         <label>
@@ -151,7 +152,7 @@
 
       <div class="tee-grid">
         <div>
-          <span>Next time</span>
+          <span>First available</span>
           <strong class="time"></strong>
         </div>
         <div>
