@@ -354,7 +354,7 @@ async function saveAlertSignup(event) {
     }
 
     alertMessage.textContent = ALERT_FORM_ENDPOINT
-      ? `Saved. You are on the list for ${signup.area}, ${signup.time.toLowerCase()}, ${signup.players} player${signup.players === "1+" ? "" : "s"}.`
+      ? `Saved. You are on the early alert list for ${signup.area}, ${signup.time.toLowerCase()}, ${signup.players} player${signup.players === "1+" ? "" : "s"}.`
       : "Saved locally for now. Add the Formspree endpoint to collect real alert signups.";
     alertForm.reset();
   } catch (error) {
@@ -451,5 +451,4 @@ function toRadians(degrees) {
 }
 
 function capitalize(value) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
-}
+  return value.charAt(0).toUpperCase() + value.
