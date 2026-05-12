@@ -199,6 +199,7 @@ document.querySelector("#useLocationButton").addEventListener("click", getUserLo
 Object.values(filters).forEach((filter) => filter.addEventListener("change", renderTeeTimes));
 courseSearch.addEventListener("input", renderTeeTimes);
 alertForm.addEventListener("submit", saveAlertSignup);
+document.addEventListener("click", handleCourseLinkClick);
 
 renderTeeTimes();
 renderFeaturedCourse();
@@ -293,9 +294,11 @@ function renderTeeTimes() {
     card.querySelector(".players").textContent = `${teeTime.players}`;
     card.querySelector(".price").textContent = teeTime.price === null ? "Live" : `$${teeTime.price}`;
     card.querySelector(".note").textContent = teeTime.note;
-    card.querySelector(".book-link").href = teeTime.course.bookingUrl;
-    card.querySelector(".book-link").textContent = teeTime.course.bookingLabel || "Book";
-    card.querySelector(".book-link").setAttribute("aria-label", `Book ${teeTime.time} at ${teeTime.course.name}`);
+    const bookLink = card.querySelector(".book-link");
+    bookLink.href = teeTime.course.bookingUrl;
+    bookLink.textContent = teeTime.course.bookingLabel || "Book";
+    bookLink.setAttribute("aria-label", `Book ${teeTime.time} at ${teeTime.course.name}`);
+    addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
   });
 }
@@ -323,6 +326,73 @@ function renderFeaturedCourse() {
       <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Book"}</a>
     </div>
   `;
+
+  addTrackingData(featuredCourse.querySelector(".book-link"), course, "course of the week");
+}
+
+function addTrackingData(link, course, source) {
+  link.dataset.courseName = course.name;
+  link.dataset.courseCity = course.city;
+  link.dataset.courseSource = source;
+  link.dataset.bookingType = getBookingType(course);
+}
+
+function handleCourseLinkClick(event) {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const link = event.target.closest(".book-link[data-course-name]");
+
+  if (!link) {
+    return;
+  }
+
+  trackCourseClick({
+    course: link.dataset.courseName,
+    city: link.dataset.courseCity,
+    source: link.dataset.courseSource,
+    bookingType: link.dataset.bookingType,
+    url: link.href
+  });
+}
+
+function trackCourseClick(click) {
+  const clickRecord = {
+    eventType: "course_click",
+    course: click.course,
+    city: click.city,
+    source: click.source,
+    bookingType: click.bookingType,
+    bookingUrl: click.url,
+    page: location.href,
+    createdAt: new Date().toISOString()
+  };
+
+  if (isLocalPreview() || !ALERT_FORM_ENDPOINT) {
+    saveLocalCourseClick(clickRecord);
+    return;
+  }
+
+  const formData = new FormData();
+
+  Object.entries(clickRecord).forEach(([key, value]) => {
+    formData.append(key, value);
+  });
+
+  formData.append("_subject", `Tee Drop course click: ${click.course}`);
+
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(ALERT_FORM_ENDPOINT, formData);
+    return;
+  }
+
+  fetch(ALERT_FORM_ENDPOINT, {
+    method: "POST",
+    headers: { "Accept": "application/json" },
+    body: formData,
+    keepalive: true
+  }).catch(() => {});
 }
 
 function matchesSearch(course, searchTerm) {
@@ -374,8 +444,18 @@ function saveLocalAlertSignup(signup) {
   localStorage.setItem("teeDropAlertSignups", JSON.stringify(signups));
 }
 
+function saveLocalCourseClick(click) {
+  const clicks = JSON.parse(localStorage.getItem("teeDropCourseClicks") || "[]");
+
+  clicks.push(click);
+  localStorage.setItem("teeDropCourseClicks", JSON.stringify(clicks));
+}
+
 async function submitAlertToFormspree() {
   const formData = new FormData(alertForm);
+  formData.append("eventType", "alert_signup");
+  formData.append("_subject", "Tee Drop early alert signup");
+
   const response = await fetch(ALERT_FORM_ENDPOINT, {
     method: "POST",
     headers: { "Accept": "application/json" },
