@@ -5,6 +5,12 @@ const courses = [
     latitude: 40.6122153,
     longitude: -81.418408,
     bookingUrl: "https://zoar-village-golf-course.book.teeitup.com/?course=4264",
+    firstAvailable: {
+      time: "Check live",
+      players: 4,
+      price: null,
+      note: "Tap Book to see Zoar's first available tee time."
+    },
     teeTimes: []
   },
   {
@@ -46,7 +52,7 @@ const courses = [
     longitude: -81.368983,
     bookingUrl: "https://www.5watersgolf.com/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (740) 922-2182 for tee times.",
+    bookingNote: "Call (740) 922-2182 for the first available tee time.",
     teeTimes: []
   },
   {
@@ -56,7 +62,7 @@ const courses = [
     longitude: -81.355,
     bookingUrl: "https://bigbendgolfcourse.com/golf1-2243",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (740) 229-7660 for tee times.",
+    bookingNote: "Call (740) 229-7660 for the first available tee time.",
     teeTimes: []
   },
   {
@@ -167,6 +173,7 @@ const courses = [
 ];
 
 const ALERT_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
+const FEATURED_COURSE_NAME = "Zoar Village Golf Course";
 
 let userLocation = null;
 
@@ -175,6 +182,7 @@ document.querySelector("#courseCount").textContent = courses.length;
 const teeTimeList = document.querySelector("#teeTimeList");
 const resultCount = document.querySelector("#resultCount");
 const locationStatus = document.querySelector("#locationStatus");
+const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
 const alertForm = document.querySelector("#alertForm");
@@ -193,6 +201,7 @@ courseSearch.addEventListener("input", renderTeeTimes);
 alertForm.addEventListener("submit", saveAlertSignup);
 
 renderTeeTimes();
+renderFeaturedCourse();
 
 function getUserLocation() {
   if (!navigator.geolocation) {
@@ -266,14 +275,17 @@ function renderTeeTimes() {
 
   availableTimes.forEach((teeTime) => {
     const card = template.content.cloneNode(true);
+    const article = card.querySelector(".tee-card");
     const bookingType = card.querySelector(".booking-type");
+    const courseBookingType = getBookingType(teeTime.course);
 
     card.querySelector("h2").textContent = teeTime.course.name;
     card.querySelector(".course-meta").textContent = teeTime.bookingOnly
       ? `${teeTime.course.city} - Live booking link`
       : `${teeTime.course.city} - ${capitalize(teeTime.day)}`;
-    bookingType.textContent = getBookingType(teeTime.course) === "call" ? "Call" : "Online";
-    bookingType.classList.toggle("call", getBookingType(teeTime.course) === "call");
+    article.classList.toggle("call-card", courseBookingType === "call");
+    bookingType.textContent = courseBookingType === "call" ? "Call" : "Online";
+    bookingType.classList.toggle("call", courseBookingType === "call");
     card.querySelector(".distance-pill").textContent = teeTime.distance === null
       ? "Distance unknown"
       : `${teeTime.distance.toFixed(1)} mi`;
@@ -286,6 +298,31 @@ function renderTeeTimes() {
     card.querySelector(".book-link").setAttribute("aria-label", `Book ${teeTime.time} at ${teeTime.course.name}`);
     teeTimeList.append(card);
   });
+}
+
+function renderFeaturedCourse() {
+  const course = courses.find((item) => item.name === FEATURED_COURSE_NAME) || courses[0];
+  const firstAvailable = getDisplayTimes(course)[0];
+  const bookingType = getBookingType(course);
+
+  featuredCourse.innerHTML = `
+    <div class="featured-copy">
+      <p class="alert-kicker">Course of the week</p>
+      <h2>${course.name}</h2>
+      <p>${course.city} - ${bookingType === "call" ? "Call for the first available tee time." : "Tap through to check the first available tee time."}</p>
+    </div>
+    <div class="featured-details">
+      <div>
+        <span>First available</span>
+        <strong>${firstAvailable.time}</strong>
+      </div>
+      <div>
+        <span>Booking</span>
+        <strong>${bookingType === "call" ? "Call / Info" : "Online"}</strong>
+      </div>
+      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Book"}</a>
+    </div>
+  `;
 }
 
 function matchesSearch(course, searchTerm) {
@@ -359,13 +396,16 @@ function getDisplayTimes(course) {
     return course.teeTimes;
   }
 
+  const firstAvailable = course.firstAvailable || {};
+  const isCallOnly = getBookingType(course) === "call";
+
   return [
     {
       day: "any",
-      time: "Check live",
-      players: 4,
-      price: null,
-      note: course.bookingNote || "Tap Book to check the live tee sheet.",
+      time: firstAvailable.time || (isCallOnly ? "Call course" : "Check live"),
+      players: firstAvailable.players || 4,
+      price: firstAvailable.price ?? null,
+      note: firstAvailable.note || course.bookingNote || "Tap Book to see the first available tee time.",
       bookingOnly: true
     }
   ];
