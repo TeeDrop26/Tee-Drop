@@ -192,31 +192,60 @@ h1 {
 }
 
 .featured-course {
+  position: relative;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, auto);
   align-items: center;
-  gap: 18px;
-  margin-top: 16px;
-  padding: 18px;
+  gap: 24px;
+  margin-top: 18px;
+  padding: 26px;
   background:
-    linear-gradient(135deg, rgba(255, 253, 248, 0.98), rgba(237, 246, 232, 0.96)),
-    var(--surface);
-  border: 1px solid #cbd9c7;
-  border-left: 6px solid var(--gold);
+    linear-gradient(90deg, rgba(25, 56, 46, 0.98), rgba(31, 107, 77, 0.94) 64%, rgba(197, 134, 43, 0.28)),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 24px),
+    var(--green-dark);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  box-shadow: 0 14px 32px rgba(23, 34, 29, 0.1);
+  box-shadow: 0 22px 44px rgba(23, 34, 29, 0.18);
+  color: white;
+}
+
+.featured-course::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 7px;
+  background: linear-gradient(90deg, var(--gold), #f1ca76 48%, rgba(255, 255, 255, 0.54));
+}
+
+.featured-copy,
+.featured-details {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-course .alert-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border: 1px solid rgba(241, 202, 118, 0.44);
+  border-radius: 6px;
+  background: rgba(197, 134, 43, 0.22);
+  color: #ffe5a8;
+  letter-spacing: 0.04em;
 }
 
 .featured-copy h2 {
   max-width: 560px;
   margin: 0;
-  color: var(--ink);
-  font-size: 1.75rem;
+  color: white;
+  font-size: 1.95rem;
 }
 
 .featured-copy p:last-child {
   margin: 8px 0 0;
-  color: var(--muted);
+  color: #e3efe8;
   line-height: 1.4;
 }
 
@@ -224,21 +253,26 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(112px, auto)) auto;
   align-items: end;
-  gap: 10px;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(16, 42, 33, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .featured-details div {
   min-height: 62px;
-  padding: 10px;
-  border: 1px solid #d6e1d3;
+  padding: 11px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 6px;
-  background: linear-gradient(180deg, #f9fcf4, #e9f2e4);
+  background: rgba(255, 255, 255, 0.11);
 }
 
 .featured-details span {
   display: block;
   margin-bottom: 6px;
-  color: var(--muted);
+  color: #c9dfd4;
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -246,7 +280,13 @@ h1 {
 
 .featured-details strong {
   display: block;
+  color: white;
   font-size: 1rem;
+}
+
+.featured-details .book-link {
+  min-height: 62px;
+  box-shadow: 0 10px 24px rgba(9, 22, 17, 0.24);
 }
 
 .search-panel label {
