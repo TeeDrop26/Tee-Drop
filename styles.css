@@ -585,6 +585,11 @@ h2 {
   line-height: 1.35;
 }
 
+.tee-card.call-card .note {
+  color: #5f3b0f;
+  font-weight: 800;
+}
+
 .book-link {
   display: inline-flex;
   align-items: center;
