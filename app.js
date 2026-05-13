@@ -139,11 +139,13 @@ const courses = [
     teeTimes: []
   },
   {
-    name: "Rolling Green Golf Course",
-    city: "Massillon, OH",
-    latitude: 40.89109,
-    longitude: -81.515284,
-    bookingUrl: "https://www.chronogolf.com/club/rolling-green-golf-course-ohio",
+    name: "Fire Ridge Golf Course",
+    city: "Millersburg, OH",
+    latitude: 40.553110960225,
+    longitude: -81.90175181534,
+    bookingUrl: "https://www.fireridgegolfcourse.com/contact-us",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 674-3921 for the first available tee time.",
     teeTimes: []
   },
   {
@@ -365,6 +367,7 @@ function trackCourseClick(click) {
     source: click.source,
     bookingType: click.bookingType,
     bookingUrl: click.url,
+    message: `Course click: ${click.course} from ${click.source}`,
     page: location.href,
     createdAt: new Date().toISOString()
   };
@@ -374,23 +377,16 @@ function trackCourseClick(click) {
     return;
   }
 
-  const formData = new FormData();
-
-  Object.entries(clickRecord).forEach(([key, value]) => {
-    formData.append(key, value);
-  });
-
-  formData.append("_subject", `Tee Drop course click: ${click.course}`);
-
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon(ALERT_FORM_ENDPOINT, formData);
-    return;
-  }
-
   fetch(ALERT_FORM_ENDPOINT, {
     method: "POST",
-    headers: { "Accept": "application/json" },
-    body: formData,
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      ...clickRecord,
+      _subject: `Tee Drop course click: ${click.course}`
+    }),
     keepalive: true
   }).catch(() => {});
 }
