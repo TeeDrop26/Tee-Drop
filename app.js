@@ -38,6 +38,15 @@ const courses = [
     teeTimes: []
   },
   {
+    name: "Hickory Flats Golf Course",
+    city: "West Lafayette, OH",
+    latitude: 40.25775,
+    longitude: -81.749625,
+    bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
+    bookingNote: "54188 Township Road 155. Tap Book to check online tee times.",
+    teeTimes: []
+  },
+  {
     name: "The Legends of Massillon",
     city: "Massillon, OH",
     latitude: 40.767691,
