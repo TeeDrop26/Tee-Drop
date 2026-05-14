@@ -43,7 +43,7 @@ const courses = [
     latitude: 40.25775,
     longitude: -81.749625,
     bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
-    bookingNote: "54188 Township Road 155. Tap Book to check online tee times.",
+    bookingNote: "Tap Book to check Hickory Flats' online tee times.",
     teeTimes: []
   },
   {
