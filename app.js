@@ -184,7 +184,7 @@ const courses = [
 ];
 
 const ALERT_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
-const FEATURED_COURSE_NAME = "Wilkshire Golf Course";
+const FEATURED_COURSE_NAME = "River Greens Golf Course";
 
 let userLocation = null;
 
