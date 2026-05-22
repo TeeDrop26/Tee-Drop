@@ -124,14 +124,6 @@ const courses = [
     teeTimes: []
   },
   {
-    name: "Edgewood Golf Club",
-    city: "North Canton, OH",
-    latitude: 40.88282,
-    longitude: -81.361036,
-    bookingUrl: "https://www.chronogolf.com/club/edgewood-golf-club-ohio",
-    teeTimes: []
-  },
-  {
     name: "Sable Creek Golf Course",
     city: "Hartville, OH",
     latitude: 40.950798,
