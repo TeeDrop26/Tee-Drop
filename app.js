@@ -124,6 +124,15 @@ const courses = [
     teeTimes: []
   },
   {
+    name: "Raymond C. Firestone Golf Course",
+    city: "Akron, OH",
+    latitude: 41.014555552933,
+    longitude: -81.50688001586,
+    bookingUrl: "https://www.firestone9.com/book-a-tee-time/",
+    bookingNote: "Public 9-hole course. Open the tee time link to check availability.",
+    teeTimes: []
+  },
+  {
     name: "Sable Creek Golf Course",
     city: "Hartville, OH",
     latitude: 40.950798,
@@ -467,16 +476,4 @@ function getTimeWindow(time) {
 
 function parseTime(time) {
   const [clock, period] = time.split(" ");
-  const [rawHour, rawMinutes] = clock.split(":").map(Number);
-  const hour = period === "PM" && rawHour !== 12 ? rawHour + 12 : rawHour === 12 && period === "AM" ? 0 : rawHour;
-
-  return hour * 60 + rawMinutes;
-}
-
-function toRadians(degrees) {
-  return degrees * Math.PI / 180;
-}
-
-function capitalize(value) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
-}
+  const [rawHour, rawMinutes] = clock.split(":").map(Number)
