@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tee Drop</title>
-  <link rel="stylesheet" href="styles.css?v=course-polish">
+  <link rel="stylesheet" href="styles.css?v=search-polish">
 </head>
 <body>
   <main class="app-shell">
@@ -51,14 +51,12 @@
 
     <section class="featured-course" id="featuredCourse" aria-label="Course of the week"></section>
 
-    <section class="search-panel" aria-label="Course search">
-      <label>
-        Search courses or cities
-        <input id="courseSearch" type="search" placeholder="Try Canton, Massillon, Zoar, or a course name">
-      </label>
-    </section>
-
     <section class="filters" aria-label="Tee time filters">
+      <label class="course-search">
+        Course or town
+        <input id="courseSearch" type="search" placeholder="Zoar, Canton, Wilkshire...">
+      </label>
+
       <label>
         Day
         <select id="dayFilter">
