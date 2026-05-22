@@ -240,7 +240,7 @@ h1 {
   background:
     linear-gradient(90deg, rgba(25, 56, 46, 0.98), rgba(31, 107, 77, 0.9) 54%, rgba(15, 43, 31, 0.58)),
     repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 24px),
-    url("assets/tee-drop-fairway.jpg") center / cover;
+    url("tee-drop-fairway.jpg") center / cover;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   box-shadow: 0 22px 44px rgba(23, 34, 29, 0.18);
