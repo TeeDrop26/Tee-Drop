@@ -476,4 +476,16 @@ function getTimeWindow(time) {
 
 function parseTime(time) {
   const [clock, period] = time.split(" ");
-  const [rawHour, rawMinutes] = clock.split(":").map(Number)
+  const [rawHour, rawMinutes] = clock.split(":").map(Number);
+  const hour = period === "PM" && rawHour !== 12 ? rawHour + 12 : rawHour === 12 && period === "AM" ? 0 : rawHour;
+
+  return hour * 60 + rawMinutes;
+}
+
+function toRadians(degrees) {
+  return degrees * Math.PI / 180;
+}
+
+function capitalize(value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
