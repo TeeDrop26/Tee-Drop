@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tee Drop</title>
-  <link rel="stylesheet" href="styles.css?v=honest-hero">
+  <link rel="stylesheet" href="styles.css?v=course-polish">
 </head>
 <body>
   <main class="app-shell">
@@ -40,6 +40,13 @@
       <button class="primary-action" id="useLocationButton" type="button">
         Use My Location
       </button>
+    </section>
+
+    <section class="trust-strip" aria-label="Tee Drop highlights">
+      <p>Local course links</p>
+      <p>Faster course checking</p>
+      <p>Book direct when possible</p>
+      <p class="feedback-note">Updated with help from local golfers</p>
     </section>
 
     <section class="featured-course" id="featuredCourse" aria-label="Course of the week"></section>
@@ -101,52 +108,6 @@
       </label>
     </section>
 
-    <section class="alert-panel" aria-label="Tee Drop alert list signup">
-      <div>
-        <p class="alert-kicker">Tee Drop early alerts</p>
-        <h2>Get on the local tee time alert list.</h2>
-        <p class="alert-note">We will notify early testers as local tee time alerts roll out.</p>
-      </div>
-
-      <form class="alert-form" id="alertForm" name="tee-drop-alerts" method="POST">
-        <input id="alertCreatedAt" type="hidden" name="createdAt">
-
-        <label>
-          Contact
-          <input id="alertContact" name="contact" type="text" placeholder="Phone or email" required>
-        </label>
-
-        <label>
-          Area
-          <input id="alertArea" name="area" type="text" placeholder="New Philly, Canton, Massillon">
-        </label>
-
-        <label>
-          Time
-          <select id="alertTime" name="time">
-            <option value="Any time">Any time</option>
-            <option value="Morning">Morning</option>
-            <option value="Midday">Midday</option>
-            <option value="Afternoon">Afternoon</option>
-          </select>
-        </label>
-
-        <label>
-          Players
-          <select id="alertPlayers" name="players">
-            <option value="1+">1+</option>
-            <option value="2+">2+</option>
-            <option value="3+">3+</option>
-            <option value="4">4</option>
-          </select>
-        </label>
-
-        <button class="secondary-action" type="submit">Join Early List</button>
-      </form>
-
-      <p class="alert-message" id="alertMessage" aria-live="polite"></p>
-    </section>
-
     <section class="status-row" aria-live="polite">
       <p id="locationStatus">Showing Tuscarawas County and surrounding area courses. Use your location to sort by distance.</p>
       <p id="resultCount"></p>
@@ -170,7 +131,7 @@
 
       <div class="tee-grid">
         <div>
-          <span>First available</span>
+          <span>Availability</span>
           <strong class="time"></strong>
         </div>
         <div>
