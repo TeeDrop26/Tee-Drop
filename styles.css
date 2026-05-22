@@ -163,7 +163,6 @@ h1 {
 }
 
 .primary-action,
-.secondary-action,
 .book-link {
   min-height: 44px;
   border: 0;
@@ -183,10 +182,41 @@ h1 {
 }
 
 .primary-action:hover,
-.secondary-action:hover,
 .book-link:hover {
   background: #d99a3f;
   transform: translateY(-1px);
+}
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: rgba(249, 251, 244, 0.88);
+  border: 1px solid #cbd9c7;
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(23, 34, 29, 0.07);
+}
+
+.trust-strip p {
+  display: flex;
+  align-items: center;
+  min-height: 34px;
+  margin: 0;
+  padding: 0 14px;
+  border-left: 1px solid #d6e1d3;
+  color: var(--green-dark);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.trust-strip p:first-child {
+  border-left: 0;
+  padding-left: 2px;
+}
+
+.trust-strip .feedback-note {
+  color: var(--blue);
 }
 
 .search-panel {
@@ -208,9 +238,9 @@ h1 {
   margin-top: 18px;
   padding: 26px;
   background:
-    linear-gradient(90deg, rgba(25, 56, 46, 0.98), rgba(31, 107, 77, 0.94) 64%, rgba(197, 134, 43, 0.28)),
+    linear-gradient(90deg, rgba(25, 56, 46, 0.98), rgba(31, 107, 77, 0.9) 54%, rgba(15, 43, 31, 0.58)),
     repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 24px),
-    var(--green-dark);
+    url("assets/tee-drop-fairway.jpg") center / cover;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   box-shadow: 0 22px 44px rgba(23, 34, 29, 0.18);
@@ -359,79 +389,12 @@ select:focus {
   outline: 3px solid rgba(31, 107, 77, 0.18);
 }
 
-.alert-panel {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.72fr) minmax(0, 1.55fr);
-  gap: 16px;
-  margin-top: 16px;
-  padding: 16px;
-  background:
-    linear-gradient(135deg, rgba(25, 56, 46, 0.96), rgba(35, 90, 67, 0.94)),
-    var(--surface-strong);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  box-shadow: 0 14px 34px rgba(23, 34, 29, 0.12);
-  color: white;
-}
-
 .alert-kicker {
   margin: 0 0 8px;
   color: #f0bd68;
   font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
-}
-
-.alert-panel h2 {
-  max-width: 330px;
-  margin-bottom: 8px;
-  color: white;
-  font-size: 1.35rem;
-}
-
-.alert-note {
-  max-width: 370px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.45;
-}
-
-.alert-form {
-  display: grid;
-  grid-template-columns: 1.25fr 1.1fr 0.85fr 0.75fr auto;
-  gap: 10px;
-  align-items: end;
-}
-
-.alert-form label {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.alert-form input,
-.alert-form select {
-  width: 100%;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 2px solid rgba(255, 255, 255, 0.28);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.96);
-  color: var(--ink);
-}
-
-.alert-form input::placeholder {
-  color: #7f8b84;
-}
-
-.secondary-action {
-  min-width: 142px;
-  padding: 0 14px;
-}
-
-.alert-message {
-  grid-column: 2;
-  margin: -4px 0 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.9rem;
 }
 
 .status-row {
@@ -474,6 +437,7 @@ select:focus {
   box-shadow: 0 12px 28px rgba(23, 34, 29, 0.1);
   overflow: hidden;
   position: relative;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
 .tee-card::before {
@@ -486,6 +450,17 @@ select:focus {
 
 .tee-card.call-card {
   border-top-color: var(--gold);
+}
+
+.tee-card.online-card:hover {
+  border-color: #b6cdb9;
+  box-shadow: 0 16px 34px rgba(23, 34, 29, 0.16);
+  transform: translateY(-2px);
+}
+
+.tee-card.nearby-card {
+  border-color: rgba(31, 107, 77, 0.46);
+  box-shadow: 0 16px 34px rgba(31, 107, 77, 0.16);
 }
 
 .tee-card > * {
@@ -525,7 +500,7 @@ h2 {
 
 .distance-pill,
 .booking-type {
-  max-width: 112px;
+  max-width: 132px;
   padding: 6px 8px;
   border-radius: 999px;
   font-size: 0.74rem;
@@ -537,6 +512,11 @@ h2 {
 .distance-pill {
   background: #e7f1ec;
   color: var(--green-dark);
+}
+
+.distance-pill.nearby {
+  background: var(--green-dark);
+  color: white;
 }
 
 .booking-type {
@@ -605,6 +585,10 @@ h2 {
   padding: 0 16px;
 }
 
+.tee-card.online-card .book-link {
+  box-shadow: 0 10px 20px rgba(197, 134, 43, 0.2);
+}
+
 .empty-state {
   grid-column: 1 / -1;
   padding: 24px;
@@ -630,14 +614,17 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .alert-panel,
-  .featured-course,
-  .alert-form {
-    grid-template-columns: 1fr 1fr;
+  .trust-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .alert-message {
-    grid-column: 1 / -1;
+  .trust-strip p:nth-child(3) {
+    border-left: 0;
+    padding-left: 2px;
+  }
+
+  .featured-course {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -684,22 +671,29 @@ h2 {
 
   .filters,
   .featured-course,
-  .alert-panel,
-  .alert-form,
   .tee-time-list {
     grid-template-columns: 1fr;
   }
 
+  .trust-strip {
+    grid-template-columns: 1fr;
+    padding: 8px 14px;
+  }
+
+  .trust-strip p,
+  .trust-strip p:nth-child(3) {
+    min-height: 38px;
+    padding-left: 2px;
+    border-top: 1px solid #d6e1d3;
+    border-left: 0;
+  }
+
+  .trust-strip p:first-child {
+    border-top: 0;
+  }
+
   .featured-details {
     grid-template-columns: 1fr;
-  }
-
-  .alert-panel h2 {
-    max-width: none;
-  }
-
-  .secondary-action {
-    width: 100%;
   }
 
   .status-row,
