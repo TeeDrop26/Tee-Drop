@@ -9,7 +9,7 @@ const courses = [
       time: "Check live",
       players: 4,
       price: null,
-      note: "Tap Book to see Zoar's first available tee time."
+      note: "Open Zoar's tee time link to check availability."
     },
     teeTimes: []
   },
@@ -43,7 +43,7 @@ const courses = [
     latitude: 40.25775,
     longitude: -81.749625,
     bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
-    bookingNote: "Tap Book to check Hickory Flats' online tee times.",
+    bookingNote: "Open Hickory Flats' tee time link to check availability.",
     teeTimes: []
   },
   {
@@ -61,7 +61,7 @@ const courses = [
     longitude: -81.368983,
     bookingUrl: "https://www.5watersgolf.com/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (740) 922-2182 for the first available tee time.",
+    bookingNote: "Call (740) 922-2182 to check tee time availability.",
     teeTimes: []
   },
   {
@@ -71,7 +71,7 @@ const courses = [
     longitude: -81.355,
     bookingUrl: "https://bigbendgolfcourse.com/golf1-2243",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (740) 229-7660 for the first available tee time.",
+    bookingNote: "Call (740) 229-7660 to check tee time availability.",
     teeTimes: []
   },
   {
@@ -112,7 +112,7 @@ const courses = [
     latitude: 40.862,
     longitude: -81.426,
     bookingUrl: "https://arrowhead-golf-club-4.book-v2.teeitup.golf/",
-    bookingNote: "1500 Rogwin Cir SW. Tap Book to check the live tee sheet.",
+    bookingNote: "1500 Rogwin Cir SW. Open the tee time link to check availability.",
     teeTimes: []
   },
   {
@@ -146,7 +146,7 @@ const courses = [
     longitude: -81.90175181534,
     bookingUrl: "https://www.fireridgegolfcourse.com/contact-us",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 674-3921 for the first available tee time.",
+    bookingNote: "Call (330) 674-3921 to check tee time availability.",
     teeTimes: []
   },
   {
@@ -175,7 +175,7 @@ const courses = [
   }
 ];
 
-const ALERT_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
+const TRACKING_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
 const FEATURED_COURSE_NAME = "Wilkshire Golf Course";
 
 let userLocation = null;
@@ -188,8 +188,6 @@ const locationStatus = document.querySelector("#locationStatus");
 const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
-const alertForm = document.querySelector("#alertForm");
-const alertMessage = document.querySelector("#alertMessage");
 const filters = {
   day: document.querySelector("#dayFilter"),
   time: document.querySelector("#timeFilter"),
@@ -201,7 +199,6 @@ const filters = {
 document.querySelector("#useLocationButton").addEventListener("click", getUserLocation);
 Object.values(filters).forEach((filter) => filter.addEventListener("change", renderTeeTimes));
 courseSearch.addEventListener("input", renderTeeTimes);
-alertForm.addEventListener("submit", saveAlertSignup);
 document.addEventListener("click", handleCourseLinkClick);
 
 renderTeeTimes();
@@ -272,35 +269,41 @@ function renderTeeTimes() {
   if (availableTimes.length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "No tee times match those filters yet.";
+    empty.textContent = "No courses match those filters yet.";
     teeTimeList.append(empty);
     return;
   }
 
-  availableTimes.forEach((teeTime) => {
+  availableTimes.forEach((teeTime, index) => {
     const card = template.content.cloneNode(true);
     const article = card.querySelector(".tee-card");
     const bookingType = card.querySelector(".booking-type");
     const courseBookingType = getBookingType(teeTime.course);
 
     card.querySelector("h2").textContent = teeTime.course.name;
+    const isNearby = Boolean(userLocation) && teeTime.distance !== null && index < 3;
+
     card.querySelector(".course-meta").textContent = teeTime.bookingOnly
-      ? `${teeTime.course.city} - Live booking link`
+      ? `${teeTime.course.city} - Tee time link`
       : `${teeTime.course.city} - ${capitalize(teeTime.day)}`;
     article.classList.toggle("call-card", courseBookingType === "call");
-    bookingType.textContent = courseBookingType === "call" ? "Call" : "Online";
+    article.classList.toggle("online-card", courseBookingType === "online");
+    article.classList.toggle("nearby-card", isNearby);
+    bookingType.textContent = courseBookingType === "call" ? "Call course" : "Online";
     bookingType.classList.toggle("call", courseBookingType === "call");
-    card.querySelector(".distance-pill").textContent = teeTime.distance === null
-      ? "Distance unknown"
-      : `${teeTime.distance.toFixed(1)} mi`;
+    const distancePill = card.querySelector(".distance-pill");
+    distancePill.classList.toggle("nearby", isNearby);
+    distancePill.textContent = teeTime.distance === null
+      ? "Use location"
+      : `${isNearby ? "Nearby - " : ""}${teeTime.distance.toFixed(1)} mi`;
     card.querySelector(".time").textContent = teeTime.time;
     card.querySelector(".players").textContent = `${teeTime.players}`;
     card.querySelector(".price").textContent = teeTime.price === null ? "Live" : `$${teeTime.price}`;
     card.querySelector(".note").textContent = teeTime.note;
     const bookLink = card.querySelector(".book-link");
     bookLink.href = teeTime.course.bookingUrl;
-    bookLink.textContent = teeTime.course.bookingLabel || "Book";
-    bookLink.setAttribute("aria-label", `Book ${teeTime.time} at ${teeTime.course.name}`);
+    bookLink.textContent = teeTime.course.bookingLabel || "Check Times";
+    bookLink.setAttribute("aria-label", `Open tee time link for ${teeTime.course.name}`);
     addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
   });
@@ -315,18 +318,18 @@ function renderFeaturedCourse() {
     <div class="featured-copy">
       <p class="alert-kicker">Course of the week</p>
       <h2>${course.name}</h2>
-      <p>${course.city} - ${bookingType === "call" ? "Call for the first available tee time." : "Tap through to check the first available tee time."}</p>
+      <p>${course.city} - ${bookingType === "call" ? "Call the course to check tee time availability." : "Open the course link to check tee time availability."}</p>
     </div>
     <div class="featured-details">
       <div>
-        <span>First available</span>
+        <span>Availability</span>
         <strong>${firstAvailable.time}</strong>
       </div>
       <div>
         <span>Booking</span>
         <strong>${bookingType === "call" ? "Call / Info" : "Online"}</strong>
       </div>
-      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Book"}</a>
+      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Check Times"}</a>
     </div>
   `;
 
@@ -373,12 +376,12 @@ function trackCourseClick(click) {
     createdAt: new Date().toISOString()
   };
 
-  if (isLocalPreview() || !ALERT_FORM_ENDPOINT) {
+  if (isLocalPreview() || !TRACKING_FORM_ENDPOINT) {
     saveLocalCourseClick(clickRecord);
     return;
   }
 
-  fetch(ALERT_FORM_ENDPOINT, {
+  fetch(TRACKING_FORM_ENDPOINT, {
     method: "POST",
     headers: {
       "Accept": "application/json",
@@ -400,45 +403,8 @@ function matchesSearch(course, searchTerm) {
   return `${course.name} ${course.city}`.toLowerCase().includes(searchTerm);
 }
 
-async function saveAlertSignup(event) {
-  event.preventDefault();
-
-  const signup = {
-    contact: document.querySelector("#alertContact").value.trim(),
-    area: document.querySelector("#alertArea").value.trim() || "Any area",
-    time: document.querySelector("#alertTime").value,
-    players: document.querySelector("#alertPlayers").value,
-    createdAt: new Date().toISOString()
-  };
-
-  document.querySelector("#alertCreatedAt").value = signup.createdAt;
-
-  try {
-    if (isLocalPreview() || !ALERT_FORM_ENDPOINT) {
-      saveLocalAlertSignup(signup);
-    } else {
-      await submitAlertToFormspree();
-    }
-
-    alertMessage.textContent = ALERT_FORM_ENDPOINT
-      ? `Saved. You are on the early alert list for ${signup.area}, ${signup.time.toLowerCase()}, ${signup.players} player${signup.players === "1+" ? "" : "s"}.`
-      : "Saved locally for now. Add the Formspree endpoint to collect real alert signups.";
-    alertForm.reset();
-  } catch (error) {
-    saveLocalAlertSignup(signup);
-    alertMessage.textContent = "Saved locally for now. Formspree did not accept the submission yet.";
-  }
-}
-
 function isLocalPreview() {
   return location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
-}
-
-function saveLocalAlertSignup(signup) {
-  const signups = JSON.parse(localStorage.getItem("teeDropAlertSignups") || "[]");
-
-  signups.push(signup);
-  localStorage.setItem("teeDropAlertSignups", JSON.stringify(signups));
 }
 
 function saveLocalCourseClick(click) {
@@ -446,22 +412,6 @@ function saveLocalCourseClick(click) {
 
   clicks.push(click);
   localStorage.setItem("teeDropCourseClicks", JSON.stringify(clicks));
-}
-
-async function submitAlertToFormspree() {
-  const formData = new FormData(alertForm);
-  formData.append("eventType", "alert_signup");
-  formData.append("_subject", "Tee Drop early alert signup");
-
-  const response = await fetch(ALERT_FORM_ENDPOINT, {
-    method: "POST",
-    headers: { "Accept": "application/json" },
-    body: formData
-  });
-
-  if (!response.ok) {
-    throw new Error("Formspree submission failed");
-  }
 }
 
 function getBookingType(course) {
@@ -482,7 +432,7 @@ function getDisplayTimes(course) {
       time: firstAvailable.time || (isCallOnly ? "Call course" : "Check live"),
       players: firstAvailable.players || 4,
       price: firstAvailable.price ?? null,
-      note: firstAvailable.note || course.bookingNote || "Tap Book to see the first available tee time.",
+      note: firstAvailable.note || course.bookingNote || "Open the course link to check tee time availability.",
       bookingOnly: true
     }
   ];
