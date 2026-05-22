@@ -116,11 +116,11 @@ const courses = [
     teeTimes: []
   },
   {
-    name: "The Sanctuary Golf Club",
-    city: "North Canton, OH",
-    latitude: 40.899,
-    longitude: -81.407,
-    bookingUrl: "https://www.chronogolf.com/club/the-sanctuary-golf-club",
+    name: "Raintree Golf & Event Center",
+    city: "Uniontown, OH",
+    latitude: 40.969,
+    longitude: -81.425,
+    bookingUrl: "https://www.golfraintree.com/book-a-tee-time/",
     teeTimes: []
   },
   {
