@@ -319,7 +319,7 @@ h1 {
 
 .filters {
   display: grid;
-  grid-template-columns: minmax(220px, 1.55fr) repeat(5, minmax(0, 1fr)) minmax(160px, 0.85fr);
+  grid-template-columns: minmax(220px, 2fr) minmax(160px, 0.75fr);
   gap: 12px;
   margin-top: 16px;
   padding: 16px;
@@ -386,32 +386,6 @@ select {
 select:focus {
   border-color: var(--green);
   outline: 3px solid rgba(31, 107, 77, 0.18);
-}
-
-.filter-action {
-  align-self: end;
-  min-height: 66px;
-  padding: 12px 14px;
-  border: 0;
-  border-radius: 6px;
-  background: linear-gradient(180deg, var(--green), var(--green-dark));
-  color: white;
-  cursor: pointer;
-  font-size: 0.78rem;
-  font-weight: 900;
-  line-height: 1.2;
-  text-transform: uppercase;
-  box-shadow: 0 12px 22px rgba(16, 61, 44, 0.18);
-}
-
-.filter-action:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 15px 26px rgba(16, 61, 44, 0.24);
-}
-
-.filter-action:focus {
-  outline: 3px solid rgba(31, 107, 77, 0.22);
-  outline-offset: 2px;
 }
 
 .alert-kicker {
