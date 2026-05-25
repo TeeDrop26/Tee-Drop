@@ -185,7 +185,26 @@ const courses = [
 ];
 
 const TRACKING_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
-const FEATURED_COURSE_NAME = "Wilkshire Golf Course";
+const FEATURED_ROTATION_START_DATE = "2026-05-25";
+const FEATURED_BEFORE_ROTATION = "Wilkshire Golf Course";
+const FEATURED_COURSE_ROTATION = [
+  "River Greens Golf Course",
+  "Oak Shadows Golf Club",
+  "Raymond C. Firestone Golf Course",
+  "Raintree Golf & Event Center",
+  "Black Gold Golf Club",
+  "The Quarry Golf Club and Venue",
+  "The Legends of Massillon",
+  "Hickory Flats Golf Course",
+  "Arrowhead Golf Club & Banquet Center",
+  "Sable Creek Golf Course",
+  "Carroll Meadows Golf Course",
+  "Great Trail Golf Course",
+  "Pleasant View Golf Club",
+  "The Pines Golf Club",
+  "Hawks Nest Golf Club",
+  "Chippewa Golf Club"
+];
 
 let userLocation = null;
 
@@ -319,7 +338,7 @@ function renderTeeTimes() {
 }
 
 function renderFeaturedCourse() {
-  const course = courses.find((item) => item.name === FEATURED_COURSE_NAME) || courses[0];
+  const course = courses.find((item) => item.name === getFeaturedCourseName()) || courses[0];
   const firstAvailable = getDisplayTimes(course)[0];
   const bookingType = getBookingType(course);
 
@@ -410,6 +429,38 @@ function matchesSearch(course, searchTerm) {
   }
 
   return `${course.name} ${course.city}`.toLowerCase().includes(searchTerm);
+}
+
+function getFeaturedCourseName(date = new Date()) {
+  const daysSinceStart = getDaysBetweenDates(FEATURED_ROTATION_START_DATE, getEasternDateString(date));
+
+  if (daysSinceStart < 0) {
+    return FEATURED_BEFORE_ROTATION;
+  }
+
+  const weekIndex = Math.floor(daysSinceStart / 7) % FEATURED_COURSE_ROTATION.length;
+  return FEATURED_COURSE_ROTATION[weekIndex];
+}
+
+function getEasternDateString(date) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    day: "2-digit",
+    month: "2-digit",
+    timeZone: "America/New_York",
+    year: "numeric"
+  }).formatToParts(date);
+  const dateParts = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+
+  return `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+}
+
+function getDaysBetweenDates(startDateString, endDateString) {
+  return (getDateValue(endDateString) - getDateValue(startDateString)) / 86400000;
+}
+
+function getDateValue(dateString) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  return Date.UTC(year, month - 1, day);
 }
 
 function isLocalPreview() {
