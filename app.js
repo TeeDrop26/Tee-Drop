@@ -181,6 +181,160 @@ const courses = [
     longitude: -81.657214,
     bookingUrl: "https://www.chippewagolfclub.com/tee-times/",
     teeTimes: []
+  },
+  {
+    name: "Spring Valley Golf Course",
+    city: "East Sparta, OH",
+    latitude: 40.723104,
+    longitude: -81.391027,
+    bookingUrl: "https://www.svgcanton.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 484-1886 to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Clearview Golf Club",
+    city: "East Canton, OH",
+    latitude: 40.779,
+    longitude: -81.286,
+    bookingUrl: "https://www.clearviewgolfclub.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 488-0404 to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Edgewater Golf Course",
+    city: "Minerva, OH",
+    latitude: 40.7298,
+    longitude: -81.1054,
+    bookingUrl: "https://book.edgewatergolfcourse.com/",
+    teeTimes: []
+  },
+  {
+    name: "Lake Mohawk Golf Club",
+    city: "Malvern, OH",
+    latitude: 40.666,
+    longitude: -81.189,
+    bookingUrl: "https://www.lake-mohawk.org/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Community course. Contact Lake Mohawk before planning a round.",
+    teeTimes: []
+  },
+  {
+    name: "The Elms Country Club",
+    city: "North Lawrence, OH",
+    latitude: 40.839,
+    longitude: -81.631,
+    bookingUrl: "https://www.facebook.com/profile.php?id=100063908499193",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 833-2668 to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Black Diamond Golf Course",
+    city: "Millersburg, OH",
+    latitude: 40.61443,
+    longitude: -81.868461,
+    bookingUrl: "https://www.ohiogolf.com/golfcourses/black-diamond-golf",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 674-6110 to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Mayfair Country Club",
+    city: "Green, OH",
+    latitude: 40.964,
+    longitude: -81.466,
+    bookingUrl: "https://www.mayfaircountryclub.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 699-2209 or check the course site for current booking instructions.",
+    teeTimes: []
+  },
+  {
+    name: "Chenoweth Golf Course",
+    city: "Akron, OH",
+    latitude: 40.990,
+    longitude: -81.465,
+    bookingUrl: "https://www.chenowethgolf.com/tee-times/",
+    teeTimes: []
+  },
+  {
+    name: "Mud Run Golf Course",
+    city: "Akron, OH",
+    latitude: 41.032,
+    longitude: -81.571,
+    bookingUrl: "https://mud-run-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03844",
+    teeTimes: []
+  },
+  {
+    name: "J. Edward Good Park Golf Course",
+    city: "Akron, OH",
+    latitude: 41.095709,
+    longitude: -81.578544,
+    bookingUrl: "https://je-good-park-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03840",
+    teeTimes: []
+  },
+  {
+    name: "Meadowlake Golf Course",
+    city: "Canton, OH",
+    latitude: 40.839,
+    longitude: -81.359,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/21609/8341",
+    teeTimes: []
+  },
+  {
+    name: "Tannenhauf Golf Club",
+    city: "Alliance, OH",
+    latitude: 40.909,
+    longitude: -81.184,
+    bookingUrl: "http://www.tannenhaufgolf.net/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 823-4402 to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Riceland Golf Course",
+    city: "Orrville, OH",
+    latitude: 40.7965129,
+    longitude: -81.7649999,
+    bookingUrl: "https://ricelandgolfcourse.com/book-a-tee-time/",
+    teeTimes: []
+  },
+  {
+    name: "Round Lake Golf Course",
+    city: "Lakeville, OH",
+    latitude: 40.629,
+    longitude: -82.141,
+    bookingUrl: "https://www.roundlakegolfcourse.com/",
+    teeTimes: []
+  },
+  {
+    name: "Big Dawg's Golf Course",
+    city: "Minerva, OH",
+    latitude: 40.730,
+    longitude: -81.152,
+    bookingUrl: "https://www.golflink.com/golf-courses/oh/minerva/big-dawg-s-golf-course",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 868-3294 to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Salt Fork State Park Golf Course",
+    city: "Lore City, OH",
+    latitude: 40.0776634,
+    longitude: -81.4692891,
+    bookingUrl: "https://www.chronogolf.com/club/salt-fork-state-park-golf-course",
+    teeTimes: []
+  },
+  {
+    name: "Mulligan Springs Golf Course",
+    city: "Mogadore, OH",
+    latitude: 41.048564,
+    longitude: -81.331005,
+    bookingUrl: "https://www.localgolfspot.com/golf-clubs/mulligan-springs-golf-course",
+    bookingLabel: "Call / Info",
+    bookingNote: "Par 3 course. Call (330) 628-5139 to check availability.",
+    teeTimes: []
   }
 ];
 
@@ -203,7 +357,15 @@ const FEATURED_COURSE_ROTATION = [
   "Pleasant View Golf Club",
   "The Pines Golf Club",
   "Hawks Nest Golf Club",
-  "Chippewa Golf Club"
+  "Chippewa Golf Club",
+  "Edgewater Golf Course",
+  "Chenoweth Golf Course",
+  "Mud Run Golf Course",
+  "J. Edward Good Park Golf Course",
+  "Meadowlake Golf Course",
+  "Riceland Golf Course",
+  "Round Lake Golf Course",
+  "Salt Fork State Park Golf Course"
 ];
 
 let userLocation = null;
@@ -361,182 +523,4 @@ function renderFeaturedCourse() {
     </div>
   `;
 
-  addTrackingData(featuredCourse.querySelector(".book-link"), course, "course of the week");
-}
-
-function addTrackingData(link, course, source) {
-  link.dataset.courseName = course.name;
-  link.dataset.courseCity = course.city;
-  link.dataset.courseSource = source;
-  link.dataset.bookingType = getBookingType(course);
-}
-
-function handleCourseLinkClick(event) {
-  if (!(event.target instanceof Element)) {
-    return;
-  }
-
-  const link = event.target.closest(".book-link[data-course-name]");
-
-  if (!link) {
-    return;
-  }
-
-  trackCourseClick({
-    course: link.dataset.courseName,
-    city: link.dataset.courseCity,
-    source: link.dataset.courseSource,
-    bookingType: link.dataset.bookingType,
-    url: link.href
-  });
-}
-
-function trackCourseClick(click) {
-  const clickRecord = {
-    eventType: "course_click",
-    course: click.course,
-    city: click.city,
-    source: click.source,
-    bookingType: click.bookingType,
-    bookingUrl: click.url,
-    message: `Course click: ${click.course} from ${click.source}`,
-    page: location.href,
-    createdAt: new Date().toISOString()
-  };
-
-  if (isLocalPreview() || !TRACKING_FORM_ENDPOINT) {
-    saveLocalCourseClick(clickRecord);
-    return;
-  }
-
-  fetch(TRACKING_FORM_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      ...clickRecord,
-      _subject: `Tee Drop course click: ${click.course}`
-    }),
-    keepalive: true
-  }).catch(() => {});
-}
-
-function matchesSearch(course, searchTerm) {
-  if (!searchTerm) {
-    return true;
-  }
-
-  return `${course.name} ${course.city}`.toLowerCase().includes(searchTerm);
-}
-
-function getFeaturedCourseName(date = new Date()) {
-  const daysSinceStart = getDaysBetweenDates(FEATURED_ROTATION_START_DATE, getEasternDateString(date));
-
-  if (daysSinceStart < 0) {
-    return FEATURED_BEFORE_ROTATION;
-  }
-
-  const weekIndex = Math.floor(daysSinceStart / 7) % FEATURED_COURSE_ROTATION.length;
-  return FEATURED_COURSE_ROTATION[weekIndex];
-}
-
-function getEasternDateString(date) {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    day: "2-digit",
-    month: "2-digit",
-    timeZone: "America/New_York",
-    year: "numeric"
-  }).formatToParts(date);
-  const dateParts = Object.fromEntries(parts.map((part) => [part.type, part.value]));
-
-  return `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
-}
-
-function getDaysBetweenDates(startDateString, endDateString) {
-  return (getDateValue(endDateString) - getDateValue(startDateString)) / 86400000;
-}
-
-function getDateValue(dateString) {
-  const [year, month, day] = dateString.split("-").map(Number);
-  return Date.UTC(year, month - 1, day);
-}
-
-function isLocalPreview() {
-  return location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
-}
-
-function saveLocalCourseClick(click) {
-  const clicks = JSON.parse(localStorage.getItem("teeDropCourseClicks") || "[]");
-
-  clicks.push(click);
-  localStorage.setItem("teeDropCourseClicks", JSON.stringify(clicks));
-}
-
-function getBookingType(course) {
-  return course.bookingLabel ? "call" : "online";
-}
-
-function getDisplayTimes(course) {
-  if (course.teeTimes.length > 0) {
-    return course.teeTimes;
-  }
-
-  const firstAvailable = course.firstAvailable || {};
-  const isCallOnly = getBookingType(course) === "call";
-
-  return [
-    {
-      day: "any",
-      time: firstAvailable.time || (isCallOnly ? "Call course" : "Check live"),
-      players: firstAvailable.players || 4,
-      price: firstAvailable.price ?? null,
-      note: firstAvailable.note || course.bookingNote || "Open the course link to check tee time availability.",
-      bookingOnly: true
-    }
-  ];
-}
-
-function calculateDistance(lat1, lon1, lat2, lon2) {
-  const earthRadiusMiles = 3958.8;
-  const dLat = toRadians(lat2 - lat1);
-  const dLon = toRadians(lon2 - lon1);
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
-    Math.sin(dLon / 2) * Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-  return earthRadiusMiles * c;
-}
-
-function getTimeWindow(time) {
-  const hour = parseTime(time) / 60;
-
-  if (hour < 11) {
-    return "morning";
-  }
-
-  if (hour < 15) {
-    return "midday";
-  }
-
-  return "afternoon";
-}
-
-function parseTime(time) {
-  const [clock, period] = time.split(" ");
-  const [rawHour, rawMinutes] = clock.split(":").map(Number);
-  const hour = period === "PM" && rawHour !== 12 ? rawHour + 12 : rawHour === 12 && period === "AM" ? 0 : rawHour;
-
-  return hour * 60 + rawMinutes;
-}
-
-function toRadians(degrees) {
-  return degrees * Math.PI / 180;
-}
-
-function capitalize(value) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
-}
+  addTrackingD
