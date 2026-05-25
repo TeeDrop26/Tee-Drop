@@ -378,6 +378,7 @@ const locationStatus = document.querySelector("#locationStatus");
 const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
+const applyLocationButton = document.querySelector("#applyLocationButton");
 const filters = {
   day: document.querySelector("#dayFilter"),
   time: document.querySelector("#timeFilter"),
@@ -387,7 +388,9 @@ const filters = {
 };
 
 document.querySelector("#useLocationButton").addEventListener("click", getUserLocation);
+applyLocationButton.addEventListener("click", applyNearbyResults);
 Object.values(filters).forEach((filter) => filter.addEventListener("change", renderTeeTimes));
+filters.distance.addEventListener("change", handleDistanceChange);
 courseSearch.addEventListener("input", renderTeeTimes);
 document.addEventListener("click", handleCourseLinkClick);
 
@@ -416,6 +419,27 @@ function getUserLocation() {
     },
     { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
   );
+}
+
+function applyNearbyResults() {
+  if (!userLocation) {
+    getUserLocation();
+    return;
+  }
+
+  locationStatus.textContent = `Showing courses within ${getDistanceLabel()} of your current location.`;
+  renderTeeTimes();
+}
+
+function handleDistanceChange() {
+  if (!userLocation && filters.distance.value !== "999") {
+    locationStatus.textContent = `Choose Update Nearby Results to see courses within ${getDistanceLabel()}.`;
+    return;
+  }
+
+  if (userLocation) {
+    locationStatus.textContent = `Showing courses within ${getDistanceLabel()} of your current location.`;
+  }
 }
 
 function renderTeeTimes() {
@@ -497,6 +521,10 @@ function renderTeeTimes() {
     addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
   });
+}
+
+function getDistanceLabel() {
+  return filters.distance.value === "999" ? "any distance" : `${filters.distance.value} miles`;
 }
 
 function renderFeaturedCourse() {
