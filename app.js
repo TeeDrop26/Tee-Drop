@@ -378,19 +378,12 @@ const locationStatus = document.querySelector("#locationStatus");
 const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
-const applyLocationButton = document.querySelector("#applyLocationButton");
 const filters = {
-  day: document.querySelector("#dayFilter"),
-  time: document.querySelector("#timeFilter"),
-  players: document.querySelector("#playersFilter"),
-  booking: document.querySelector("#bookingFilter"),
-  distance: document.querySelector("#distanceFilter")
+  booking: document.querySelector("#bookingFilter")
 };
 
 document.querySelector("#useLocationButton").addEventListener("click", getUserLocation);
-applyLocationButton.addEventListener("click", applyNearbyResults);
 Object.values(filters).forEach((filter) => filter.addEventListener("change", renderTeeTimes));
-filters.distance.addEventListener("change", handleDistanceChange);
 courseSearch.addEventListener("input", renderTeeTimes);
 document.addEventListener("click", handleCourseLinkClick);
 
@@ -403,7 +396,7 @@ function getUserLocation() {
     return;
   }
 
-  locationStatus.textContent = "Finding nearby tee times...";
+  locationStatus.textContent = "Finding your location...";
 
   navigator.geolocation.getCurrentPosition(
     (position) => {
@@ -411,7 +404,7 @@ function getUserLocation() {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
       };
-      locationStatus.textContent = "Showing tee times closest to your current location.";
+      locationStatus.textContent = "Showing courses closest to your current location.";
       renderTeeTimes();
     },
     () => {
@@ -421,35 +414,10 @@ function getUserLocation() {
   );
 }
 
-function applyNearbyResults() {
-  if (!userLocation) {
-    getUserLocation();
-    return;
-  }
-
-  locationStatus.textContent = `Showing courses within ${getDistanceLabel()} of your current location.`;
-  renderTeeTimes();
-}
-
-function handleDistanceChange() {
-  if (!userLocation && filters.distance.value !== "999") {
-    locationStatus.textContent = `Choose Update Nearby Results to see courses within ${getDistanceLabel()}.`;
-    return;
-  }
-
-  if (userLocation) {
-    locationStatus.textContent = `Showing courses within ${getDistanceLabel()} of your current location.`;
-  }
-}
-
 function renderTeeTimes() {
   teeTimeList.textContent = "";
 
-  const day = filters.day.value;
-  const timeWindow = filters.time.value;
-  const minPlayers = Number(filters.players.value);
   const bookingType = filters.booking.value;
-  const maxDistance = Number(filters.distance.value);
   const searchTerm = courseSearch.value.trim().toLowerCase();
 
   const availableTimes = courses
@@ -461,11 +429,7 @@ function renderTeeTimes() {
       return { ...teeTime, course, distance };
     }))
     .filter((teeTime) => matchesSearch(teeTime.course, searchTerm))
-    .filter((teeTime) => teeTime.bookingOnly || day === "any" || teeTime.day === day)
-    .filter((teeTime) => teeTime.bookingOnly || timeWindow === "any" || getTimeWindow(teeTime.time) === timeWindow)
-    .filter((teeTime) => teeTime.players >= minPlayers)
     .filter((teeTime) => bookingType === "all" || getBookingType(teeTime.course) === bookingType)
-    .filter((teeTime) => !userLocation || teeTime.distance <= maxDistance)
     .sort((a, b) => {
       if (userLocation) {
         return a.distance - b.distance;
@@ -521,10 +485,6 @@ function renderTeeTimes() {
     addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
   });
-}
-
-function getDistanceLabel() {
-  return filters.distance.value === "999" ? "any distance" : `${filters.distance.value} miles`;
 }
 
 function renderFeaturedCourse() {
