@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tee Drop</title>
-  <link rel="stylesheet" href="styles.css?v=distance-filter">
+  <link rel="stylesheet" href="styles.css?v=simple-filters">
 </head>
 <body>
   <main class="app-shell">
@@ -58,35 +58,6 @@
       </label>
 
       <label>
-        Day
-        <select id="dayFilter">
-          <option value="today">Today</option>
-          <option value="tomorrow">Tomorrow</option>
-          <option value="any">Any day</option>
-        </select>
-      </label>
-
-      <label>
-        Time
-        <select id="timeFilter">
-          <option value="any">Any time</option>
-          <option value="morning">Morning</option>
-          <option value="midday">Midday</option>
-          <option value="afternoon">Afternoon</option>
-        </select>
-      </label>
-
-      <label>
-        Players
-        <select id="playersFilter">
-          <option value="1">1+</option>
-          <option value="2">2+</option>
-          <option value="3">3+</option>
-          <option value="4">4</option>
-        </select>
-      </label>
-
-      <label>
         Booking
         <select id="bookingFilter">
           <option value="all">All courses</option>
@@ -94,28 +65,14 @@
           <option value="call">Call / info</option>
         </select>
       </label>
-
-      <label>
-        Max distance
-        <select id="distanceFilter">
-          <option value="10">10 miles</option>
-          <option value="25" selected>25 miles</option>
-          <option value="50">50 miles</option>
-          <option value="999">Any distance</option>
-        </select>
-      </label>
-
-      <button class="filter-action" id="applyLocationButton" type="button">
-        Update Nearby Results
-      </button>
     </section>
 
     <section class="status-row" aria-live="polite">
-      <p id="locationStatus">Showing Tuscarawas County and surrounding area courses. Use your location to sort by distance.</p>
+      <p id="locationStatus">Showing Tuscarawas County and surrounding area courses. Use your location to sort closest courses first.</p>
       <p id="resultCount"></p>
     </section>
 
-    <section class="tee-time-list" id="teeTimeList" aria-label="Available tee times"></section>
+    <section class="tee-time-list" id="teeTimeList" aria-label="Course booking links"></section>
   </main>
 
   <template id="teeTimeTemplate">
