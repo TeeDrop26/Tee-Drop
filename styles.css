@@ -319,7 +319,7 @@ h1 {
 
 .filters {
   display: grid;
-  grid-template-columns: minmax(220px, 2fr) minmax(160px, 0.75fr);
+  grid-template-columns: minmax(240px, 420px) minmax(160px, 220px);
   gap: 12px;
   margin-top: 16px;
   padding: 16px;
@@ -327,6 +327,7 @@ h1 {
   border: 1px solid #cbd9c7;
   border-radius: 8px;
   backdrop-filter: blur(8px);
+  justify-content: start;
 }
 
 .filters label {
