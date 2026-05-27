@@ -542,6 +542,7 @@ function handleCourseLinkClick(event) {
 }
 
 function trackCourseClick(click) {
+  const createdAt = new Date();
   const clickRecord = {
     eventType: "course_click",
     course: click.course,
@@ -551,7 +552,8 @@ function trackCourseClick(click) {
     bookingUrl: click.url,
     message: `Course click: ${click.course} from ${click.source}`,
     page: location.href,
-    createdAt: new Date().toISOString()
+    clickedAtEastern: formatEasternDateTime(createdAt),
+    createdAt: createdAt.toISOString()
   };
 
   if (isLocalPreview() || !TRACKING_FORM_ENDPOINT) {
@@ -590,6 +592,18 @@ function getFeaturedCourseName(date = new Date()) {
 
   const weekIndex = Math.floor(daysSinceStart / 7) % FEATURED_COURSE_ROTATION.length;
   return FEATURED_COURSE_ROTATION[weekIndex];
+}
+
+function formatEasternDateTime(date) {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true
+  }).format(date);
 }
 
 function getEasternDateString(date) {
