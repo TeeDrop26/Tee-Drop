@@ -575,9 +575,6 @@ function trackCourseClick(click) {
 function sendSheetClick(clickRecord) {
   fetch(TRACKING_SHEET_ENDPOINT, {
     method: "POST",
-    headers: {
-      "Content-Type": "text/plain;charset=utf-8"
-    },
     body: JSON.stringify(clickRecord),
     mode: "no-cors",
     keepalive: true
@@ -692,4 +689,53 @@ function getDisplayTimes(course) {
     {
       day: "any",
       time: firstAvailable.time || (isCallOnly ? "Call course" : "Check live"),
-      players: firstAvailable.p
+      players: firstAvailable.players || 4,
+      price: firstAvailable.price ?? null,
+      note: firstAvailable.note || course.bookingNote || "Open the course link to check tee time availability.",
+      bookingOnly: true
+    }
+  ];
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const earthRadiusMiles = 3958.8;
+  const dLat = toRadians(lat2 - lat1);
+  const dLon = toRadians(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+  return earthRadiusMiles * c;
+}
+
+function getTimeWindow(time) {
+  const hour = parseTime(time) / 60;
+
+  if (hour < 11) {
+    return "morning";
+  }
+
+  if (hour < 15) {
+    return "midday";
+  }
+
+  return "afternoon";
+}
+
+function parseTime(time) {
+  const [clock, period] = time.split(" ");
+  const [rawHour, rawMinutes] = clock.split(":").map(Number);
+  const hour = period === "PM" && rawHour !== 12 ? rawHour + 12 : rawHour === 12 && period === "AM" ? 0 : rawHour;
+
+  return hour * 60 + rawMinutes;
+}
+
+function toRadians(degrees) {
+  return degrees * Math.PI / 180;
+}
+
+function capitalize(value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
