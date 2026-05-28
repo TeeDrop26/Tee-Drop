@@ -338,6 +338,7 @@ const courses = [
   }
 ];
 
+const TRACKING_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBXBZrOxn6hbDb-GWPV7oORMCG4sb1VTYGKLEpRmezpPYmuL0vmwdPKwvl-qpOsgYtgg/exec";
 const TRACKING_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
 const FEATURED_ROTATION_START_DATE = "2026-05-25";
 const FEATURED_BEFORE_ROTATION = "Wilkshire Golf Course";
@@ -558,11 +559,32 @@ function trackCourseClick(click) {
     createdAt: createdAt.toISOString()
   };
 
-  if (isLocalPreview() || !TRACKING_FORM_ENDPOINT) {
+  if (isLocalPreview() || (!TRACKING_SHEET_ENDPOINT && !TRACKING_FORM_ENDPOINT)) {
     saveLocalCourseClick(clickRecord);
     return;
   }
 
+  if (TRACKING_SHEET_ENDPOINT) {
+    sendSheetClick(clickRecord);
+    return;
+  }
+
+  sendFormspreeClick(clickRecord, click.course);
+}
+
+function sendSheetClick(clickRecord) {
+  fetch(TRACKING_SHEET_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify(clickRecord),
+    mode: "no-cors",
+    keepalive: true
+  }).catch(() => {});
+}
+
+function sendFormspreeClick(clickRecord, courseName) {
   fetch(TRACKING_FORM_ENDPOINT, {
     method: "POST",
     headers: {
@@ -571,7 +593,7 @@ function trackCourseClick(click) {
     },
     body: JSON.stringify({
       ...clickRecord,
-      _subject: `Tee Drop course click: ${click.course}`
+      _subject: `Tee Drop course click: ${courseName}`
     }),
     keepalive: true
   }).catch(() => {});
@@ -670,25 +692,4 @@ function getDisplayTimes(course) {
     {
       day: "any",
       time: firstAvailable.time || (isCallOnly ? "Call course" : "Check live"),
-      players: firstAvailable.players || 4,
-      price: firstAvailable.price ?? null,
-      note: firstAvailable.note || course.bookingNote || "Open the course link to check tee time availability.",
-      bookingOnly: true
-    }
-  ];
-}
-
-function calculateDistance(lat1, lon1, lat2, lon2) {
-  const earthRadiusMiles = 3958.8;
-  const dLat = toRadians(lat2 - lat1);
-  const dLon = toRadians(lon2 - lon1);
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
-    Math.sin(dLon / 2) * Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-  return earthRadiusMiles * c;
-}
-
-functio
+      players: firstAvailable.p
