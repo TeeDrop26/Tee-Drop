@@ -443,6 +443,69 @@ const courses = [
     bookingUrl: "https://stdenisgolfclub.com/",
     bookingNote: "Open St. Denis' tee time link to check availability.",
     teeTimes: []
+  },
+  {
+    name: "Big Met Golf Course",
+    city: "Fairview Park, OH",
+    latitude: 41.4338,
+    longitude: -81.8487,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/big-met-golf-course-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Ironwood Golf Course",
+    city: "Hinckley, OH",
+    latitude: 41.2355,
+    longitude: -81.745,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/ironwood-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Little Met Golf Course",
+    city: "Cleveland, OH",
+    latitude: 41.42,
+    longitude: -81.8284,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/little-met-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Mastick Woods Golf Course",
+    city: "Cleveland, OH",
+    latitude: 41.4317,
+    longitude: -81.8427,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/mastick-woods-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Seneca Golf Course",
+    city: "Broadview Heights, OH",
+    latitude: 41.3196,
+    longitude: -81.6307,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/seneca-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Shawnee Hills Golf Course",
+    city: "Bedford, OH",
+    latitude: 41.3559,
+    longitude: -81.512,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/shawnee-hills-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
+  },
+  {
+    name: "Washington Golf Course",
+    city: "Newburgh Heights, OH",
+    latitude: 41.4469,
+    longitude: -81.6706,
+    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    teeTimes: []
   }
 ];
 
