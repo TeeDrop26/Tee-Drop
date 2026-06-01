@@ -335,6 +335,114 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Par 3 course. Call (330) 628-5139 to check availability.",
     teeTimes: []
+  },
+  {
+    name: "Windmill Lakes Golf Club",
+    city: "Ravenna, OH",
+    latitude: 41.172989,
+    longitude: -81.223061,
+    bookingUrl: "https://windmilllakesgclub.cps.golf/",
+    bookingNote: "Open Windmill Lakes' tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Turkeyfoot Lake Golf Links",
+    city: "Akron, OH",
+    latitude: 40.979,
+    longitude: -81.543,
+    bookingUrl: "https://turkeyfoot-lake-golf-links.book.teeitup.com/",
+    bookingNote: "Open Turkeyfoot's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Brookledge Golf Club",
+    city: "Cuyahoga Falls, OH",
+    latitude: 41.1516,
+    longitude: -81.4665,
+    bookingUrl: "https://www.brookledgegc.com/tee-times/",
+    bookingNote: "Open Brookledge's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Fox Den Golf Course",
+    city: "Stow, OH",
+    latitude: 41.184918,
+    longitude: -81.407369,
+    bookingUrl: "https://www.foxdengc.com/tee-times/",
+    bookingNote: "Open Fox Den's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Roses Run Country Club",
+    city: "Stow, OH",
+    latitude: 41.1856,
+    longitude: -81.4542,
+    bookingUrl: "https://www.rosesrun.com/tee-times/",
+    bookingNote: "Open Roses Run's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Boulder Creek Golf Club",
+    city: "Streetsboro, OH",
+    latitude: 41.2545609,
+    longitude: -81.3259579,
+    bookingUrl: "https://boulder-creek-golf-club-3.book.teeitup.com/",
+    bookingNote: "Open Boulder Creek's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Pine Hills Golf Club",
+    city: "Hinckley, OH",
+    latitude: 41.3213,
+    longitude: -81.7855,
+    bookingUrl: "https://pine-hills-golf-club-oh.book.teeitup.com/",
+    bookingNote: "Open Pine Hills' tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Manakiki Golf Course",
+    city: "Willoughby Hills, OH",
+    latitude: 41.5802,
+    longitude: -81.4319,
+    bookingUrl: "https://www.chronogolf.com/club/manakiki-golf-course",
+    bookingNote: "Cleveland Metroparks course. Open the tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "The Flying B Golf Course",
+    city: "Salem, OH",
+    latitude: 40.9353,
+    longitude: -80.8722,
+    bookingUrl: "https://www.flyingbgolf.com/teetimes/",
+    bookingNote: "Open The Flying B's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Reserve Run Golf Course",
+    city: "Poland, OH",
+    latitude: 40.9852,
+    longitude: -80.609,
+    bookingUrl: "https://reserverun.cps.golf/",
+    bookingNote: "Open Reserve Run's tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "Sleepy Hollow Golf Course",
+    city: "Brecksville, OH",
+    latitude: 41.3044563,
+    longitude: -81.6226271,
+    bookingUrl: "https://www.chronogolf.com/club/sleepy-hollow-golf-course-ohio",
+    bookingNote: "Cleveland Metroparks course. Open the tee time link to check availability.",
+    teeTimes: []
+  },
+  {
+    name: "St. Denis Golf Club",
+    city: "Chardon, OH",
+    latitude: 41.5811,
+    longitude: -81.2058,
+    bookingUrl: "https://stdenisgolfclub.com/",
+    bookingNote: "Open St. Denis' tee time link to check availability.",
+    teeTimes: []
   }
 ];
 
