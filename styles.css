@@ -562,6 +562,24 @@ h2 {
   font-size: 1rem;
 }
 
+.rate-info,
+.featured-rate {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #d7c188;
+  border-radius: 6px;
+  background: #fff8e7;
+  color: #564015;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.featured-rate {
+  margin-top: 14px;
+  max-width: 640px;
+}
+
 .card-actions {
   display: flex;
   align-items: center;
