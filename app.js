@@ -19,6 +19,10 @@ const courses = [
     latitude: 40.50251,
     longitude: -81.423778,
     bookingUrl: "https://www.oakshadowsgolf.com/tee-times/",
+    rateInfo: {
+      summary: "Fri posted: 18 w/cart $50; 9 w/cart from $32.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -72,6 +76,10 @@ const courses = [
     bookingUrl: "https://bigbendgolfcourse.com/golf1-2243",
     bookingLabel: "Call / Info",
     bookingNote: "Call (740) 229-7660 to check tee time availability.",
+    rateInfo: {
+      summary: "Posted: 18 riding $22; 9 riding $15. Weekend: 18 $25; 9 $18.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -121,6 +129,10 @@ const courses = [
     latitude: 40.969,
     longitude: -81.425,
     bookingUrl: "https://www.golfraintree.com/book-a-tee-time/",
+    rateInfo: {
+      summary: "Dynamic pricing posted. Online rates can change by demand and availability.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -130,6 +142,10 @@ const courses = [
     longitude: -81.50688001586,
     bookingUrl: "https://www.firestone9.com/book-a-tee-time/",
     bookingNote: "Public 9-hole course. Open the tee time link to check availability.",
+    rateInfo: {
+      summary: "Fri-Sun posted: ride 9 $32, walk 9 $22; ride 18 $47, walk 18 $33.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -138,6 +154,10 @@ const courses = [
     latitude: 40.950798,
     longitude: -81.279248,
     bookingUrl: "https://sablecreekgolf.com/book-a-tee-time/",
+    rateInfo: {
+      summary: "Weekday posted: 18 w/cart $45; 9 w/cart $28.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -156,6 +176,10 @@ const courses = [
     bookingUrl: "https://www.fireridgegolfcourse.com/contact-us",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 674-3921 to check tee time availability.",
+    rateInfo: {
+      summary: "Mon-Fri posted: 18 w/cart $44; 9 w/cart $33.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -190,6 +214,10 @@ const courses = [
     bookingUrl: "https://www.svgcanton.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 484-1886 to check tee time availability.",
+    rateInfo: {
+      summary: "Friday posted: 18 w/cart $40; 9 w/cart $29. After 4: 18 $30; 9 $20.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -200,6 +228,10 @@ const courses = [
     bookingUrl: "https://www.clearviewgolfclub.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 488-0404 to check tee time availability.",
+    rateInfo: {
+      summary: "Weekday posted: 18 riding $40; 9 riding $28.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -248,6 +280,10 @@ const courses = [
     bookingUrl: "https://www.mayfaircountryclub.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 699-2209 or check the course site for current booking instructions.",
+    rateInfo: {
+      summary: "Mon-Fri posted: 18 riding $39 at 8-9:52; $35 at 10-12:52.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -256,6 +292,10 @@ const courses = [
     latitude: 40.990,
     longitude: -81.465,
     bookingUrl: "https://www.chenowethgolf.com/tee-times/",
+    rateInfo: {
+      summary: "Friday posted: 18 w/cart $48; 9 w/cart $28.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -298,6 +338,10 @@ const courses = [
     latitude: 40.7965129,
     longitude: -81.7649999,
     bookingUrl: "https://ricelandgolfcourse.com/book-a-tee-time/",
+    rateInfo: {
+      summary: "Weekday posted: 18 w/cart $40; 9 w/cart $24.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -306,6 +350,10 @@ const courses = [
     latitude: 40.629,
     longitude: -82.141,
     bookingUrl: "https://www.roundlakegolfcourse.com/",
+    rateInfo: {
+      summary: "Fri-Sun posted: 18 w/cart $46; 9 w/cart $30.",
+      checked: "Jun 12, 2026"
+    },
     teeTimes: []
   },
   {
@@ -649,6 +697,9 @@ function renderTeeTimes() {
     card.querySelector(".time").textContent = teeTime.time;
     card.querySelector(".players").textContent = `${teeTime.players}`;
     card.querySelector(".price").textContent = teeTime.price === null ? "Live" : `$${teeTime.price}`;
+    const rateInfo = card.querySelector(".rate-info");
+    rateInfo.textContent = getRateInfoText(teeTime.course);
+    rateInfo.hidden = !teeTime.course.rateInfo;
     card.querySelector(".note").textContent = teeTime.note;
     const bookLink = card.querySelector(".book-link");
     bookLink.href = teeTime.course.bookingUrl;
@@ -669,6 +720,7 @@ function renderFeaturedCourse() {
       <p class="alert-kicker">Course of the week</p>
       <h2>${course.name}</h2>
       <p>${course.city} - ${bookingType === "call" ? "Call the course to check tee time availability." : "Open the course link to check tee time availability."}</p>
+      ${course.rateInfo ? `<p class="featured-rate">${getRateInfoText(course)}</p>` : ""}
     </div>
     <div class="featured-details">
       <div>
@@ -846,6 +898,14 @@ function saveLocalCourseClick(click) {
 
 function getBookingType(course) {
   return course.bookingLabel ? "call" : "online";
+}
+
+function getRateInfoText(course) {
+  if (!course.rateInfo) {
+    return "";
+  }
+
+  return `Posted rates: ${course.rateInfo.summary} Checked ${course.rateInfo.checked}. Confirm with course before booking.`;
 }
 
 function getDisplayTimes(course) {
