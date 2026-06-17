@@ -496,6 +496,85 @@ const courses = [
     teeTimes: []
   },
   {
+    name: "Bunker Hill Golf Course",
+    city: "Medina, OH",
+    latitude: 41.2289,
+    longitude: -81.8426,
+    bookingUrl: "https://bunker-hill-golf-course.book.teeitup.com/",
+    bookingNote: "Open Bunker Hill's tee time link to check availability.",
+    rateInfo: {
+      summary: "2025-2026 golf rates posted on the course rates page.",
+      checked: "Jun 17, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Coppertop Golf Club",
+    city: "Valley City, OH",
+    latitude: 41.2399,
+    longitude: -81.9188,
+    bookingUrl: "https://coppertop-golf-club.book.teeitup.com/",
+    bookingNote: "Open Coppertop's tee time link to check availability.",
+    rateInfo: {
+      summary: "Green fees vary by day, time, and season; online deal times may be available.",
+      checked: "Jun 17, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Grey Hawk Golf Club",
+    city: "LaGrange, OH",
+    latitude: 41.2358,
+    longitude: -82.1236,
+    bookingUrl: "https://grey-hawk-golf-club.book.teeitup.com/",
+    bookingNote: "Open Grey Hawk's tee time link to check availability.",
+    rateInfo: {
+      summary: "Dynamic pricing posted. Online rates change by demand, season, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Sweetbriar Golf Club",
+    city: "Avon Lake, OH",
+    latitude: 41.4948,
+    longitude: -82.0322,
+    bookingUrl: "https://sweetbriar-golf-club-legacy-18.book.teeitup.com/",
+    bookingNote: "Open Sweetbriar's tee time link to check availability.",
+    rateInfo: {
+      summary: "Course site says to book online for the best available rates.",
+      checked: "Jun 17, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Pleasant Hill Golf Course",
+    city: "Perrysville, OH",
+    latitude: 40.6576,
+    longitude: -82.2744,
+    bookingUrl: "https://pleasanthillgolfcourse.com/green-fees",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (419) 938-5311 or check the course site for current tee times.",
+    rateInfo: {
+      summary: "Green fees page lists 9/18-hole walking and cart categories; confirm current prices before playing.",
+      checked: "Jun 17, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Deer Ridge Golf Club",
+    city: "Bellville, OH",
+    latitude: 40.6238,
+    longitude: -82.5318,
+    bookingUrl: "https://deerridge.quick18.com/",
+    bookingNote: "Open Deer Ridge's tee time link to check availability.",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
+    teeTimes: []
+  },
+  {
     name: "Manakiki Golf Course",
     city: "Willoughby Hills, OH",
     latitude: 41.5802,
@@ -633,7 +712,13 @@ const FEATURED_COURSE_ROTATION = [
   "Meadowlake Golf Course",
   "Riceland Golf Course",
   "Round Lake Golf Course",
-  "Salt Fork State Park Golf Course"
+  "Salt Fork State Park Golf Course",
+  "Bunker Hill Golf Course",
+  "Coppertop Golf Club",
+  "Grey Hawk Golf Club",
+  "Sweetbriar Golf Club",
+  "Pleasant Hill Golf Course",
+  "Deer Ridge Golf Club"
 ];
 
 let userLocation = null;
