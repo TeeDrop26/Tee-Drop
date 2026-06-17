@@ -5,6 +5,10 @@ const courses = [
     latitude: 40.6122153,
     longitude: -81.418408,
     bookingUrl: "https://zoar-village-golf-course.book.teeitup.com/?course=4264",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     firstAvailable: {
       time: "Check live",
       players: 4,
@@ -31,6 +35,10 @@ const courses = [
     latitude: 40.636738059988,
     longitude: -81.44818665347,
     bookingUrl: "https://wilkshire-golf-course.book.teeitup.com/",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -39,6 +47,10 @@ const courses = [
     latitude: 40.277816,
     longitude: -81.69626,
     bookingUrl: "https://apimanager-cc30.clubcaddie.com/webapi/view/eifdabab",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -48,6 +60,10 @@ const courses = [
     longitude: -81.749625,
     bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
     bookingNote: "Open Hickory Flats' tee time link to check availability.",
+    rateInfo: {
+      summary: "GolfNow tee sheet. Online pricing can vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -88,6 +104,10 @@ const courses = [
     latitude: 40.526565,
     longitude: -81.618241,
     bookingUrl: "https://blackgoldgc.teesnap.net/",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -96,6 +116,10 @@ const courses = [
     latitude: 40.772227,
     longitude: -81.298935,
     bookingUrl: "https://vip.teeitup.com/the-quarry/tee-times/",
+    rateInfo: {
+      summary: "Online tee sheet. Rates are shown through the booking page when available.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -104,6 +128,10 @@ const courses = [
     latitude: 40.5884705,
     longitude: -81.0784467,
     bookingUrl: "https://www.chronogolf.com/club/carroll-meadows-golf-course",
+    rateInfo: {
+      summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -112,6 +140,10 @@ const courses = [
     latitude: 40.72279,
     longitude: -81.080017,
     bookingUrl: "https://apimanager-cc20.clubcaddie.com/webapi/view/ggfdabab",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -121,6 +153,10 @@ const courses = [
     longitude: -81.426,
     bookingUrl: "https://arrowhead-golf-club-4.book-v2.teeitup.golf/",
     bookingNote: "1500 Rogwin Cir SW. Open the tee time link to check availability.",
+    rateInfo: {
+      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -166,6 +202,10 @@ const courses = [
     latitude: 40.83752,
     longitude: -81.126503,
     bookingUrl: "https://www.chronogolf.com/club/pleasant-view-golf-club-ohio",
+    rateInfo: {
+      summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -188,6 +228,10 @@ const courses = [
     latitude: 40.836,
     longitude: -81.782,
     bookingUrl: "https://www.chronogolf.com/club/the-pines-golf-club-ohio",
+    rateInfo: {
+      summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -204,6 +248,10 @@ const courses = [
     latitude: 40.947362,
     longitude: -81.657214,
     bookingUrl: "https://www.chippewagolfclub.com/tee-times/",
+    rateInfo: {
+      summary: "Off-season posted: weekday 18 riding $53, 9 riding $30; weekend before 2pm 18 riding $75, 9 riding $40.",
+      checked: "Jun 17, 2026"
+    },
     teeTimes: []
   },
   {
@@ -905,7 +953,7 @@ function getRateInfoText(course) {
     return "";
   }
 
-  return `Posted rates: ${course.rateInfo.summary} Checked ${course.rateInfo.checked}. Confirm with course before booking.`;
+  return `Rate info: ${course.rateInfo.summary} Checked ${course.rateInfo.checked}. Confirm with course before booking.`;
 }
 
 function getDisplayTimes(course) {
