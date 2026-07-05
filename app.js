@@ -79,7 +79,7 @@ const courses = [
     city: "Midvale, OH",
     latitude: 40.429115,
     longitude: -81.368983,
-    bookingUrl: "https://www.5watersgolf.com/",
+    bookingUrl: "http://www.5watersgolf.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (740) 922-2182 to check tee time availability.",
     teeTimes: []
@@ -305,7 +305,7 @@ const courses = [
     city: "North Lawrence, OH",
     latitude: 40.839,
     longitude: -81.631,
-    bookingUrl: "https://www.facebook.com/profile.php?id=100063908499193",
+    bookingUrl: "https://www.facebook.com/people/The-Elms-Country-Club/100063908499193/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 833-2668 to check tee time availability.",
     teeTimes: []
@@ -375,7 +375,7 @@ const courses = [
     city: "Alliance, OH",
     latitude: 40.909,
     longitude: -81.184,
-    bookingUrl: "http://www.tannenhaufgolf.net/",
+    bookingUrl: "https://tannenhaufgolf.net/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 823-4402 to check tee time availability.",
     teeTimes: []
@@ -427,7 +427,7 @@ const courses = [
     city: "Mogadore, OH",
     latitude: 41.048564,
     longitude: -81.331005,
-    bookingUrl: "https://www.localgolfspot.com/golf-clubs/mulligan-springs-golf-course",
+    bookingUrl: "https://www.facebook.com/MulliganSpringsGolfCourse/",
     bookingLabel: "Call / Info",
     bookingNote: "Par 3 course. Call (330) 628-5139 to check availability.",
     teeTimes: []
@@ -437,7 +437,7 @@ const courses = [
     city: "Ravenna, OH",
     latitude: 41.172989,
     longitude: -81.223061,
-    bookingUrl: "https://windmilllakesgclub.cps.golf/",
+    bookingUrl: "https://www.chronogolf.com/club/windmill-lakes-golf-club",
     bookingNote: "Open Windmill Lakes' tee time link to check availability.",
     teeTimes: []
   },
