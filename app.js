@@ -7,7 +7,7 @@ const courses = [
     bookingUrl: "https://zoar-village-golf-course.book.teeitup.com/?course=4264",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     firstAvailable: {
       time: "Check live",
@@ -24,8 +24,8 @@ const courses = [
     longitude: -81.423778,
     bookingUrl: "https://www.oakshadowsgolf.com/tee-times/",
     rateInfo: {
-      summary: "Fri posted: 18 w/cart $50; 9 w/cart from $32.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend posted: 18 w/cart $60; 9 w/cart $38. Twilight after 2: 18 $45; 9 $30.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -37,7 +37,7 @@ const courses = [
     bookingUrl: "https://wilkshire-golf-course.book.teeitup.com/",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -49,7 +49,7 @@ const courses = [
     bookingUrl: "https://apimanager-cc30.clubcaddie.com/webapi/view/eifdabab",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -62,7 +62,7 @@ const courses = [
     bookingNote: "Open Hickory Flats' tee time link to check availability.",
     rateInfo: {
       summary: "GolfNow tee sheet. Online pricing can vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -94,7 +94,7 @@ const courses = [
     bookingNote: "Call (740) 229-7660 to check tee time availability.",
     rateInfo: {
       summary: "Posted: 18 riding $22; 9 riding $15. Weekend: 18 $25; 9 $18.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -106,7 +106,7 @@ const courses = [
     bookingUrl: "https://blackgoldgc.teesnap.net/",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -118,7 +118,7 @@ const courses = [
     bookingUrl: "https://vip.teeitup.com/the-quarry/tee-times/",
     rateInfo: {
       summary: "Online tee sheet. Rates are shown through the booking page when available.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -130,7 +130,7 @@ const courses = [
     bookingUrl: "https://www.chronogolf.com/club/carroll-meadows-golf-course",
     rateInfo: {
       summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -142,7 +142,7 @@ const courses = [
     bookingUrl: "https://apimanager-cc20.clubcaddie.com/webapi/view/ggfdabab",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -155,7 +155,7 @@ const courses = [
     bookingNote: "1500 Rogwin Cir SW. Open the tee time link to check availability.",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -167,7 +167,7 @@ const courses = [
     bookingUrl: "https://www.golfraintree.com/book-a-tee-time/",
     rateInfo: {
       summary: "Dynamic pricing posted. Online rates can change by demand and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -179,8 +179,8 @@ const courses = [
     bookingUrl: "https://www.firestone9.com/book-a-tee-time/",
     bookingNote: "Public 9-hole course. Open the tee time link to check availability.",
     rateInfo: {
-      summary: "Fri-Sun posted: ride 9 $32, walk 9 $22; ride 18 $47, walk 18 $33.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend/holiday posted: ride 9 $32, walk 9 $22; ride 18 $47, walk 18 $33.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -191,8 +191,8 @@ const courses = [
     longitude: -81.279248,
     bookingUrl: "https://sablecreekgolf.com/book-a-tee-time/",
     rateInfo: {
-      summary: "Weekday posted: 18 w/cart $45; 9 w/cart $28.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend posted: AM 18 w/cart $62; AM 9 w/cart $40. After 1: 18 $47; 9 $33.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -204,7 +204,7 @@ const courses = [
     bookingUrl: "https://www.chronogolf.com/club/pleasant-view-golf-club-ohio",
     rateInfo: {
       summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -217,8 +217,8 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 674-3921 to check tee time availability.",
     rateInfo: {
-      summary: "Mon-Fri posted: 18 w/cart $44; 9 w/cart $33.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend/holiday posted: morning 18 w/cart $49; 9 w/cart $38. After 2: 18 $43; 9 $33.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -230,7 +230,7 @@ const courses = [
     bookingUrl: "https://www.chronogolf.com/club/the-pines-golf-club-ohio",
     rateInfo: {
       summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -249,8 +249,8 @@ const courses = [
     longitude: -81.657214,
     bookingUrl: "https://www.chippewagolfclub.com/tee-times/",
     rateInfo: {
-      summary: "Off-season posted: weekday 18 riding $53, 9 riding $30; weekend before 2pm 18 riding $75, 9 riding $40.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend/holiday posted: before 2 18 riding $75, 9 riding $40; after 2 18 $57, 9 $35.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -263,8 +263,8 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 484-1886 to check tee time availability.",
     rateInfo: {
-      summary: "Friday posted: 18 w/cart $44; 9 w/cart $32. After 4: 18 $33; 9 $23.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend/holiday posted: 7-1 18 w/cart $55, 9 $40; 1-4 18 $47, 9 $32; after 4 18 $33, 9 $23.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -277,8 +277,8 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 488-0404 to check tee time availability.",
     rateInfo: {
-      summary: "Weekday posted: 18 riding $40; 9 riding $28.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend/holiday before noon posted: 18 riding $56; 9 riding $33.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -329,8 +329,8 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 699-2209 or check the course site for current booking instructions.",
     rateInfo: {
-      summary: "Mon-Fri posted: 18 riding $39 at 8-9:52; $35 at 10-12:52.",
-      checked: "Jun 19, 2026"
+      summary: "Saturday posted: 18 riding $52 early, $43 late morning, $40 after 1; 9 riding $34/$28/$25.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -341,8 +341,8 @@ const courses = [
     longitude: -81.465,
     bookingUrl: "https://www.chenowethgolf.com/tee-times/",
     rateInfo: {
-      summary: "Friday posted: 18 w/cart $48; 9 w/cart $28.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend posted: before 2 18 w/cart $62, 9 $35; 2-4 18 $50, 9 $30; after 4 18 $44, 9 $28.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -387,8 +387,8 @@ const courses = [
     longitude: -81.7649999,
     bookingUrl: "https://ricelandgolfcourse.com/book-a-tee-time/",
     rateInfo: {
-      summary: "Weekday posted: 18 w/cart $40; 9 w/cart $24.",
-      checked: "Jun 19, 2026"
+      summary: "Weekend posted: 18 w/cart $48 before noon, $44 after noon; 9 w/cart $26.",
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -400,7 +400,7 @@ const courses = [
     bookingUrl: "https://www.roundlakegolfcourse.com/",
     rateInfo: {
       summary: "Fri-Sun posted: 18 w/cart $46; 9 w/cart $30.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -504,7 +504,7 @@ const courses = [
     bookingNote: "Open Bunker Hill's tee time link to check availability.",
     rateInfo: {
       summary: "2025-2026 golf rates posted on the course rates page.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -517,7 +517,7 @@ const courses = [
     bookingNote: "Open Coppertop's tee time link to check availability.",
     rateInfo: {
       summary: "Green fees vary by day, time, and season; online deal times may be available.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -530,7 +530,7 @@ const courses = [
     bookingNote: "Open Grey Hawk's tee time link to check availability.",
     rateInfo: {
       summary: "Dynamic pricing posted. Online rates change by demand, season, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -543,7 +543,7 @@ const courses = [
     bookingNote: "Open Sweetbriar's tee time link to check availability.",
     rateInfo: {
       summary: "Course site says to book online for the best available rates.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -557,7 +557,7 @@ const courses = [
     bookingNote: "Call (419) 938-5311 or check the course site for current tee times.",
     rateInfo: {
       summary: "Green fees page lists 9/18-hole walking and cart categories; confirm current prices before playing.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
@@ -570,7 +570,7 @@ const courses = [
     bookingNote: "Open Deer Ridge's tee time link to check availability.",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jun 19, 2026"
+      checked: "Jul 4, 2026"
     },
     teeTimes: []
   },
