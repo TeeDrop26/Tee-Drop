@@ -896,13 +896,12 @@ function renderTeeTimes() {
     distancePill.textContent = teeTime.distance === null
       ? "Use location"
       : `${isNearby ? "Nearby - " : ""}${teeTime.distance.toFixed(1)} mi`;
-    card.querySelector(".time").textContent = teeTime.time;
-    card.querySelector(".players").textContent = "Public";
-    card.querySelector(".price").textContent = teeTime.price === null ? "See rate info" : `$${teeTime.price}`;
+    card.querySelector(".time").textContent = getBookingOptionText(teeTime.course);
+    card.querySelector(".price").textContent = getRateStatusText(teeTime.course);
     const rateInfo = card.querySelector(".rate-info");
     rateInfo.textContent = getRateInfoText(teeTime.course);
     rateInfo.hidden = !teeTime.course.rateInfo;
-    card.querySelector(".note").textContent = teeTime.note;
+    card.querySelector(".note").textContent = getCourseNoteText(teeTime.course, teeTime.note);
     const bookLink = card.querySelector(".book-link");
     bookLink.href = teeTime.course.bookingUrl;
     bookLink.textContent = getCourseButtonText(teeTime.course);
@@ -914,25 +913,23 @@ function renderTeeTimes() {
 
 function renderFeaturedCourse() {
   const course = courses.find((item) => item.name === getFeaturedCourseName()) || courses[0];
-  const firstAvailable = getDisplayTimes(course)[0];
-  const bookingType = getBookingType(course);
   const buttonText = getCourseButtonText(course);
 
   featuredCourse.innerHTML = `
     <div class="featured-copy">
       <p class="alert-kicker">Course of the week</p>
       <h2>${course.name}</h2>
-      <p>${course.city} - ${bookingType === "call" ? "Call the course to check booking options." : "Open the course link to check booking options."}</p>
+      <p>${course.city} - ${getFeaturedCourseNoteText(course)}</p>
       ${course.rateInfo ? `<p class="featured-rate">${getRateInfoText(course)}</p>` : ""}
     </div>
     <div class="featured-details">
       <div>
-        <span>Booking options</span>
-        <strong>${firstAvailable.time}</strong>
+        <span>Booking option</span>
+        <strong>${getBookingOptionText(course)}</strong>
       </div>
       <div>
-        <span>Booking</span>
-        <strong>${bookingType === "call" ? "Call / Info" : "Online"}</strong>
+        <span>Rate information</span>
+        <strong>${getRateStatusText(course)}</strong>
       </div>
       <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${buttonText}</a>
     </div>
@@ -1137,7 +1134,52 @@ function getBookingType(course) {
 }
 
 function getCourseButtonText(course) {
-  return getBookingType(course) === "call" ? "Course Info" : "Check Tee Times";
+  return getBookingType(course) === "call" ? "Call / Info" : "View Booking";
+}
+
+function getBookingOptionText(course) {
+  return getBookingType(course) === "call" ? "Call course" : "Online booking";
+}
+
+function getRateStatusText(course) {
+  if (!course.rateInfo) {
+    return "Not listed";
+  }
+
+  const summary = course.rateInfo.summary.toLowerCase();
+
+  if (/\$\d/.test(course.rateInfo.summary)) {
+    return "Rates listed";
+  }
+
+  if (summary.includes("not posted") || summary.includes("not listed")) {
+    return "Not listed";
+  }
+
+  return "See booking page";
+}
+
+function getCourseNoteText(course, note) {
+  const fallbackNote = getBookingType(course) === "call"
+    ? "Call the course to confirm current availability and rates."
+    : "Open the course's booking page to check current availability and pricing.";
+  const sourceNote = note || course.bookingNote || fallbackNote;
+
+  if (getBookingType(course) === "call") {
+    return sourceNote.replace("to check booking options.", "to confirm current availability and rates.");
+  }
+
+  return sourceNote
+    .replace(/Open ([^.]+?(?:'s|')) course link to check booking options\./g, "Open $1 booking page to check current availability and pricing.")
+    .replace("Open the course link to check booking options.", "Open the course's booking page to check current availability and pricing.");
+}
+
+function getFeaturedCourseNoteText(course) {
+  if (getBookingType(course) === "call") {
+    return getCourseNoteText(course, course.bookingNote);
+  }
+
+  return "Open the course's booking page to check current availability and pricing.";
 }
 
 function getRateInfoText(course) {
