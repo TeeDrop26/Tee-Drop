@@ -828,7 +828,7 @@ function renderTeeTimes() {
       ? "Use location"
       : `${isNearby ? "Nearby - " : ""}${teeTime.distance.toFixed(1)} mi`;
     card.querySelector(".time").textContent = teeTime.time;
-    card.querySelector(".players").textContent = `${teeTime.players}`;
+   card.querySelector(".players").textContent = "Public";
     card.querySelector(".price").textContent = teeTime.price === null ? "See rate info" : `$${teeTime.price}`;
     const rateInfo = card.querySelector(".rate-info");
     rateInfo.textContent = getRateInfoText(teeTime.course);
