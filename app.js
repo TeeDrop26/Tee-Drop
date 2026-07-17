@@ -1097,4 +1097,10 @@ function parseTime(time) {
 }
 
 function toRadians(degrees) {
-  return degrees * Math.P
+  return degrees * Math.PI / 180;
+}
+
+function capitalize(value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
