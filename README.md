@@ -1,43 +1,98 @@
-# Last Minute Tee Times Prototype
+# Tee Drop
 
-This is a simple first version of a golf tee time finder. It runs as a mobile-friendly website and does not need a build step.
+Tee Drop is a static Northeast Ohio public golf course directory. It keeps public course links in one place so golfers can check options faster and book direct whenever possible.
 
-## How to Try It
+Tee Drop does not provide live tee-time inventory, does not process bookings, and does not take payment. Course links send golfers to the course website, booking page, or information page.
 
-Open `index.html` in a browser.
+Posted rates can change. Golfers should confirm rates and availability with the course before booking.
 
-## Where to Add Real Courses
+## What It Includes
 
-Edit the `courses` array at the top of `app.js`.
+- Direct course and booking links
+- Posted rate information when available
+- Course and town search
+- Area filtering
+- Online-booking versus call/info filtering
+- Location-based distance sorting
+- Course-link click tracking through Google Sheets, with Formspree as a fallback
+- Course of the Week
 
-Each course needs:
+## Project Files
+
+- `index.html` contains the page structure, filters, SEO metadata, and footer.
+- `styles.css` contains the visual design and responsive layout.
+- `app.js` contains the course list, filters, location sorting, Course of the Week, rate text, and click tracking.
+- `tee-drop-fairway.jpg` is the main visual image used by the site.
+- `favicon.svg` is the browser icon.
+
+There is no framework, package install, build process, or server-side code.
+
+## Updating Course Information
+
+Open `app.js` and edit the `courses` array near the top of the file.
+
+Each course should include:
 
 - `name`
 - `city`
+- `area`
 - `latitude`
 - `longitude`
 - `bookingUrl`
 - `teeTimes`
 
-For now, the app sends golfers to the course booking page. Direct in-app booking can come later after course or platform partnerships.
+Use one of these `area` values:
 
-## Good Next Features
+- `Tuscarawas County`
+- `Canton / Stark County`
+- `Akron / Summit County`
+- `Wayne / Holmes County`
+- `Cleveland area`
+- `Eastern Northeast Ohio`
+- `Other Northeast Ohio`
 
-- Add real local courses from your spreadsheet
-- Add saved favorite courses
-- Add alert signups for last-minute openings
-- Replace sample tee times with live data from partner courses or tee time APIs
+For call-only or information-only courses, keep a `bookingLabel` value. The site uses that to classify the course as call/info and shows the button text `Course Info`.
 
-## Alert Signups
+## Adding or Editing Rate Information
 
-The alert form is ready for Netlify Forms.
+Add or update a `rateInfo` block inside a course:
 
-When you publish the site on Netlify:
+```js
+rateInfo: {
+  summary: "Weekend posted: 18 w/cart $60; 9 w/cart $38.",
+  checked: "Jul 17, 2026"
+}
+```
 
-1. Open the site dashboard in Netlify.
-2. Go to Forms.
-3. Enable form detection if Netlify asks.
-4. Redeploy the site.
-5. New submissions should appear under the `tee-drop-alerts` form.
+Keep the rate summary short and include only posted or course-provided information. Always keep the reminder that rates should be confirmed with the course before booking.
 
-While testing on `localhost`, submissions are saved only in this browser.
+## Adding a New Course
+
+Copy an existing course object in `app.js`, paste it into the `courses` array, and update the fields.
+
+Make sure:
+
+- The `bookingUrl` is the course website, booking page, or information page.
+- The `area` matches the course location as closely as possible.
+- The latitude and longitude are accurate enough for distance sorting.
+- `teeTimes` remains an empty array unless the site has a real source for live inventory.
+
+Do not add fake live tee times.
+
+## Opening the Site Locally
+
+Because Tee Drop is static, you can open `index.html` directly in a browser.
+
+For the most accurate preview, serve the folder with a simple local web server and open the local address in a browser. This helps test browser features like geolocation more realistically than opening the file directly.
+
+## Publishing
+
+Upload or commit the static files to the GitHub repository root:
+
+- `index.html`
+- `styles.css`
+- `app.js`
+- `tee-drop-fairway.jpg`
+- `favicon.svg`
+
+Vercel publishes the site from the repository root on the `main` branch.

@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tee Drop</title>
+  <title>Tee Drop | Northeast Ohio Public Golf Courses</title>
+  <meta name="description" content="Find Northeast Ohio public golf courses, direct booking links, phone information, and posted golf rates in one place.">
+  <link rel="canonical" href="https://playteedrop.com/">
+  <meta property="og:title" content="Tee Drop | Northeast Ohio Public Golf Courses">
+  <meta property="og:description" content="Find Northeast Ohio public golf courses, direct booking links, phone information, and posted golf rates in one place.">
+  <meta property="og:url" content="https://playteedrop.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://playteedrop.com/tee-drop-fairway.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tee Drop | Northeast Ohio Public Golf Courses">
+  <meta name="twitter:description" content="Find Northeast Ohio public golf courses, direct booking links, phone information, and posted golf rates in one place.">
+  <meta name="twitter:image" content="https://playteedrop.com/tee-drop-fairway.jpg">
+  <meta name="theme-color" content="#164832">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css?v=clarity-20260717b">
 </head>
 <body>
@@ -28,14 +41,14 @@
             <p class="eyebrow">Tee Drop</p>
             <h1>Find Northeast Ohio public golf courses faster.</h1>
             <p class="hero-copy">Tee Drop keeps course links, direct booking options, phone information, and posted rates in one place.</p>
-            <p class="hero-proof">63 public courses listed &bull; Rate information for 30 courses &bull; Updated July 17, 2026</p>
+            <p class="hero-proof" id="courseStats">Public courses listed &bull; Rate information updated from course sources</p>
           </div>
         </div>
       </div>
       <div class="coverage-block">
         <p class="eyebrow">Tuscarawas County to Northeast Ohio</p>
         <div class="hero-stat" aria-label="Course coverage">
-          <strong id="courseCount">63</strong>
+          <strong id="courseCount"></strong>
           <span>public courses</span>
         </div>
       </div>
@@ -67,6 +80,20 @@
           <option value="call">Call / info</option>
         </select>
       </label>
+
+      <label>
+        Area
+        <select id="areaFilter">
+          <option value="all">All areas</option>
+          <option value="Tuscarawas County">Tuscarawas County</option>
+          <option value="Canton / Stark County">Canton / Stark County</option>
+          <option value="Akron / Summit County">Akron / Summit County</option>
+          <option value="Wayne / Holmes County">Wayne / Holmes County</option>
+          <option value="Cleveland area">Cleveland area</option>
+          <option value="Eastern Northeast Ohio">Eastern Northeast Ohio</option>
+          <option value="Other Northeast Ohio">Other Northeast Ohio</option>
+        </select>
+      </label>
     </section>
 
     <section class="status-row" aria-live="polite">
@@ -75,6 +102,12 @@
     </section>
 
     <section class="tee-time-list" id="teeTimeList" aria-label="Course booking links"></section>
+
+    <footer class="site-footer">
+      <p>Tee Drop keeps public course links in one place so golfers can check options faster and book direct whenever possible.</p>
+      <p>Posted rates can change. Confirm rates and availability with the course before booking.</p>
+      <p class="footer-meta">&copy; <span id="currentYear"></span> Tee Drop &bull; Northeast Ohio</p>
+    </footer>
   </main>
 
   <template id="teeTimeTemplate">
@@ -109,7 +142,7 @@
 
       <div class="card-actions">
         <p class="note"></p>
-        <a class="book-link" target="_blank" rel="noreferrer">Open Link</a>
+        <a class="book-link" target="_blank" rel="noreferrer">Check Tee Times</a>
       </div>
     </article>
   </template>

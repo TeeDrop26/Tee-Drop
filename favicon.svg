@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Tee Drop">
+  <circle cx="64" cy="64" r="60" fill="#103d2c"/>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="#f0bd68" stroke-width="6"/>
+  <path fill="#c5862b" d="M39 78h50c-4 9-13 15-25 15s-21-6-25-15Z"/>
+  <path fill="#c5862b" d="M57 91h14l-7 29-7-29Z"/>
+  <path fill="#fffdf8" d="M64 12c-24 0-43 19-43 42 0 30 43 63 43 63s43-33 43-63c0-23-19-42-43-42Z"/>
+  <circle cx="64" cy="53" r="29" fill="#f9fbf4" stroke="#cbd9c7" stroke-width="3"/>
+  <circle cx="51" cy="41" r="4" fill="#cbd9c7"/>
+  <circle cx="66" cy="37" r="4" fill="#cbd9c7"/>
+  <circle cx="78" cy="48" r="4" fill="#cbd9c7"/>
+  <circle cx="55" cy="58" r="4" fill="#cbd9c7"/>
+  <circle cx="72" cy="66" r="4" fill="#cbd9c7"/>
+</svg>

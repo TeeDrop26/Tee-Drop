@@ -2,6 +2,7 @@ const courses = [
   {
     name: "Zoar Village Golf Course",
     city: "Zoar, OH",
+    area: "Tuscarawas County",
     latitude: 40.6122153,
     longitude: -81.418408,
     bookingUrl: "https://zoar-village-golf-course.book.teeitup.com/?course=4264",
@@ -20,6 +21,7 @@ const courses = [
   {
     name: "Oak Shadows Golf Club",
     city: "New Philadelphia, OH",
+    area: "Tuscarawas County",
     latitude: 40.50251,
     longitude: -81.423778,
     bookingUrl: "https://www.oakshadowsgolf.com/tee-times/",
@@ -32,6 +34,7 @@ const courses = [
   {
     name: "Wilkshire Golf Course",
     city: "Bolivar, OH",
+    area: "Tuscarawas County",
     latitude: 40.636738059988,
     longitude: -81.44818665347,
     bookingUrl: "https://wilkshire-golf-course.book.teeitup.com/",
@@ -44,6 +47,7 @@ const courses = [
   {
     name: "River Greens Golf Course",
     city: "West Lafayette, OH",
+    area: "Other Northeast Ohio",
     latitude: 40.277816,
     longitude: -81.69626,
     bookingUrl: "https://apimanager-cc30.clubcaddie.com/webapi/view/eifdabab",
@@ -56,6 +60,7 @@ const courses = [
   {
     name: "Hickory Flats Golf Course",
     city: "West Lafayette, OH",
+    area: "Other Northeast Ohio",
     latitude: 40.25775,
     longitude: -81.749625,
     bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
@@ -69,6 +74,7 @@ const courses = [
   {
     name: "The Legends of Massillon",
     city: "Massillon, OH",
+    area: "Canton / Stark County",
     latitude: 40.767691,
     longitude: -81.497323,
     bookingUrl: "https://foreupsoftware.com/index.php/booking/22058",
@@ -77,6 +83,7 @@ const courses = [
   {
     name: "Five Waters Golf Course",
     city: "Midvale, OH",
+    area: "Tuscarawas County",
     latitude: 40.429115,
     longitude: -81.368983,
     bookingUrl: "http://www.5watersgolf.com/",
@@ -87,6 +94,7 @@ const courses = [
   {
     name: "Big Bend Golf Course",
     city: "Uhrichsville, OH",
+    area: "Tuscarawas County",
     latitude: 40.394,
     longitude: -81.355,
     bookingUrl: "https://bigbendgolfcourse.com/golf1-2243",
@@ -101,6 +109,7 @@ const courses = [
   {
     name: "Black Gold Golf Club",
     city: "Sugarcreek, OH",
+    area: "Tuscarawas County",
     latitude: 40.526565,
     longitude: -81.618241,
     bookingUrl: "https://blackgoldgc.teesnap.net/",
@@ -113,6 +122,7 @@ const courses = [
   {
     name: "The Quarry Golf Club and Venue",
     city: "Canton, OH",
+    area: "Canton / Stark County",
     latitude: 40.772227,
     longitude: -81.298935,
     bookingUrl: "https://vip.teeitup.com/the-quarry/tee-times/",
@@ -125,6 +135,7 @@ const courses = [
   {
     name: "Carroll Meadows Golf Course",
     city: "Carrollton, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.5884705,
     longitude: -81.0784467,
     bookingUrl: "https://www.chronogolf.com/club/carroll-meadows-golf-course",
@@ -137,6 +148,7 @@ const courses = [
   {
     name: "Great Trail Golf Course",
     city: "Minerva, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.72279,
     longitude: -81.080017,
     bookingUrl: "https://apimanager-cc20.clubcaddie.com/webapi/view/ggfdabab",
@@ -149,6 +161,7 @@ const courses = [
   {
     name: "Arrowhead Golf Club & Banquet Center",
     city: "North Canton, OH",
+    area: "Canton / Stark County",
     latitude: 40.862,
     longitude: -81.426,
     bookingUrl: "https://arrowhead-golf-club-4.book-v2.teeitup.golf/",
@@ -162,6 +175,7 @@ const courses = [
   {
     name: "Raintree Golf & Event Center",
     city: "Uniontown, OH",
+    area: "Canton / Stark County",
     latitude: 40.969,
     longitude: -81.425,
     bookingUrl: "https://www.golfraintree.com/book-a-tee-time/",
@@ -174,6 +188,7 @@ const courses = [
   {
     name: "Raymond C. Firestone Golf Course",
     city: "Akron, OH",
+    area: "Akron / Summit County",
     latitude: 41.014555552933,
     longitude: -81.50688001586,
     bookingUrl: "https://www.firestone9.com/book-a-tee-time/",
@@ -187,6 +202,7 @@ const courses = [
   {
     name: "Sable Creek Golf Course",
     city: "Hartville, OH",
+    area: "Canton / Stark County",
     latitude: 40.950798,
     longitude: -81.279248,
     bookingUrl: "https://sablecreekgolf.com/book-a-tee-time/",
@@ -199,6 +215,7 @@ const courses = [
   {
     name: "Pleasant View Golf Club",
     city: "Paris, OH",
+    area: "Canton / Stark County",
     latitude: 40.83752,
     longitude: -81.126503,
     bookingUrl: "https://www.chronogolf.com/club/pleasant-view-golf-club-ohio",
@@ -211,6 +228,7 @@ const courses = [
   {
     name: "Fire Ridge Golf Course",
     city: "Millersburg, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.553110960225,
     longitude: -81.90175181534,
     bookingUrl: "https://www.fireridgegolfcourse.com/contact-us",
@@ -225,6 +243,7 @@ const courses = [
   {
     name: "The Pines Golf Club",
     city: "Orrville, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.836,
     longitude: -81.782,
     bookingUrl: "https://www.chronogolf.com/club/the-pines-golf-club-ohio",
@@ -237,6 +256,7 @@ const courses = [
   {
     name: "Hawks Nest Golf Club",
     city: "Creston, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.919587,
     longitude: -81.902738,
     bookingUrl: "https://www.chronogolf.com/club/hawks-nest-golf-club-ohio",
@@ -245,6 +265,7 @@ const courses = [
   {
     name: "Chippewa Golf Club",
     city: "Doylestown, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.947362,
     longitude: -81.657214,
     bookingUrl: "https://www.chippewagolfclub.com/tee-times/",
@@ -257,6 +278,7 @@ const courses = [
   {
     name: "Spring Valley Golf Course",
     city: "East Sparta, OH",
+    area: "Canton / Stark County",
     latitude: 40.723104,
     longitude: -81.391027,
     bookingUrl: "https://www.svgcanton.com/",
@@ -271,6 +293,7 @@ const courses = [
   {
     name: "Clearview Golf Club",
     city: "East Canton, OH",
+    area: "Canton / Stark County",
     latitude: 40.779,
     longitude: -81.286,
     bookingUrl: "https://www.clearviewgolfclub.com/",
@@ -285,6 +308,7 @@ const courses = [
   {
     name: "Edgewater Golf Course",
     city: "Minerva, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.7298,
     longitude: -81.1054,
     bookingUrl: "https://book.edgewatergolfcourse.com/",
@@ -293,6 +317,7 @@ const courses = [
   {
     name: "Lake Mohawk Golf Club",
     city: "Malvern, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.666,
     longitude: -81.189,
     bookingUrl: "https://www.lake-mohawk.org/",
@@ -303,6 +328,7 @@ const courses = [
   {
     name: "The Elms Country Club",
     city: "North Lawrence, OH",
+    area: "Canton / Stark County",
     latitude: 40.839,
     longitude: -81.631,
     bookingUrl: "https://www.facebook.com/people/The-Elms-Country-Club/100063908499193/",
@@ -313,6 +339,7 @@ const courses = [
   {
     name: "Black Diamond Golf Course",
     city: "Millersburg, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.61443,
     longitude: -81.868461,
     bookingUrl: "https://www.ohiogolf.com/golfcourses/black-diamond-golf",
@@ -323,6 +350,7 @@ const courses = [
   {
     name: "Mayfair Country Club",
     city: "Green, OH",
+    area: "Akron / Summit County",
     latitude: 40.964,
     longitude: -81.466,
     bookingUrl: "https://www.mayfaircountryclub.com/",
@@ -337,6 +365,7 @@ const courses = [
   {
     name: "Chenoweth Golf Course",
     city: "Akron, OH",
+    area: "Akron / Summit County",
     latitude: 40.990,
     longitude: -81.465,
     bookingUrl: "https://www.chenowethgolf.com/tee-times/",
@@ -349,6 +378,7 @@ const courses = [
   {
     name: "Mud Run Golf Course",
     city: "Akron, OH",
+    area: "Akron / Summit County",
     latitude: 41.032,
     longitude: -81.571,
     bookingUrl: "https://mud-run-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03844",
@@ -357,6 +387,7 @@ const courses = [
   {
     name: "J. Edward Good Park Golf Course",
     city: "Akron, OH",
+    area: "Akron / Summit County",
     latitude: 41.095709,
     longitude: -81.578544,
     bookingUrl: "https://je-good-park-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03840",
@@ -365,6 +396,7 @@ const courses = [
   {
     name: "Meadowlake Golf Course",
     city: "Canton, OH",
+    area: "Canton / Stark County",
     latitude: 40.839,
     longitude: -81.359,
     bookingUrl: "https://foreupsoftware.com/index.php/booking/21609/8341",
@@ -373,6 +405,7 @@ const courses = [
   {
     name: "Tannenhauf Golf Club",
     city: "Alliance, OH",
+    area: "Canton / Stark County",
     latitude: 40.909,
     longitude: -81.184,
     bookingUrl: "https://tannenhaufgolf.net/",
@@ -383,6 +416,7 @@ const courses = [
   {
     name: "Riceland Golf Course",
     city: "Orrville, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.7965129,
     longitude: -81.7649999,
     bookingUrl: "https://ricelandgolfcourse.com/book-a-tee-time/",
@@ -395,6 +429,7 @@ const courses = [
   {
     name: "Round Lake Golf Course",
     city: "Lakeville, OH",
+    area: "Wayne / Holmes County",
     latitude: 40.629,
     longitude: -82.141,
     bookingUrl: "https://www.roundlakegolfcourse.com/",
@@ -407,6 +442,7 @@ const courses = [
   {
     name: "Big Dawg's Golf Course",
     city: "Minerva, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.730,
     longitude: -81.152,
     bookingUrl: "https://www.golflink.com/golf-courses/oh/minerva/big-dawg-s-golf-course",
@@ -417,6 +453,7 @@ const courses = [
   {
     name: "Salt Fork State Park Golf Course",
     city: "Lore City, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.0776634,
     longitude: -81.4692891,
     bookingUrl: "https://www.chronogolf.com/club/salt-fork-state-park-golf-course",
@@ -425,6 +462,7 @@ const courses = [
   {
     name: "Mulligan Springs Golf Course",
     city: "Mogadore, OH",
+    area: "Akron / Summit County",
     latitude: 41.048564,
     longitude: -81.331005,
     bookingUrl: "https://www.facebook.com/MulliganSpringsGolfCourse/",
@@ -435,6 +473,7 @@ const courses = [
   {
     name: "Windmill Lakes Golf Club",
     city: "Ravenna, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 41.172989,
     longitude: -81.223061,
     bookingUrl: "https://www.chronogolf.com/club/windmill-lakes-golf-club",
@@ -444,6 +483,7 @@ const courses = [
   {
     name: "Turkeyfoot Lake Golf Links",
     city: "Akron, OH",
+    area: "Akron / Summit County",
     latitude: 40.979,
     longitude: -81.543,
     bookingUrl: "https://turkeyfoot-lake-golf-links.book.teeitup.com/",
@@ -453,6 +493,7 @@ const courses = [
   {
     name: "Brookledge Golf Club",
     city: "Cuyahoga Falls, OH",
+    area: "Akron / Summit County",
     latitude: 41.1516,
     longitude: -81.4665,
     bookingUrl: "https://www.brookledgegc.com/tee-times/",
@@ -462,6 +503,7 @@ const courses = [
   {
     name: "Fox Den Golf Course",
     city: "Stow, OH",
+    area: "Akron / Summit County",
     latitude: 41.184918,
     longitude: -81.407369,
     bookingUrl: "https://www.foxdengc.com/tee-times/",
@@ -471,6 +513,7 @@ const courses = [
   {
     name: "Roses Run Country Club",
     city: "Stow, OH",
+    area: "Akron / Summit County",
     latitude: 41.1856,
     longitude: -81.4542,
     bookingUrl: "https://www.rosesrun.com/tee-times/",
@@ -480,6 +523,7 @@ const courses = [
   {
     name: "Boulder Creek Golf Club",
     city: "Streetsboro, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 41.2545609,
     longitude: -81.3259579,
     bookingUrl: "https://boulder-creek-golf-club-3.book.teeitup.com/",
@@ -489,6 +533,7 @@ const courses = [
   {
     name: "Pine Hills Golf Club",
     city: "Hinckley, OH",
+    area: "Cleveland area",
     latitude: 41.3213,
     longitude: -81.7855,
     bookingUrl: "https://pine-hills-golf-club-oh.book.teeitup.com/",
@@ -498,6 +543,7 @@ const courses = [
   {
     name: "Bunker Hill Golf Course",
     city: "Medina, OH",
+    area: "Cleveland area",
     latitude: 41.2289,
     longitude: -81.8426,
     bookingUrl: "https://bunker-hill-golf-course.book.teeitup.com/",
@@ -511,6 +557,7 @@ const courses = [
   {
     name: "Coppertop Golf Club",
     city: "Valley City, OH",
+    area: "Cleveland area",
     latitude: 41.2399,
     longitude: -81.9188,
     bookingUrl: "https://coppertop-golf-club.book.teeitup.com/",
@@ -524,6 +571,7 @@ const courses = [
   {
     name: "Grey Hawk Golf Club",
     city: "LaGrange, OH",
+    area: "Cleveland area",
     latitude: 41.2358,
     longitude: -82.1236,
     bookingUrl: "https://grey-hawk-golf-club.book.teeitup.com/",
@@ -537,6 +585,7 @@ const courses = [
   {
     name: "Sweetbriar Golf Club",
     city: "Avon Lake, OH",
+    area: "Cleveland area",
     latitude: 41.4948,
     longitude: -82.0322,
     bookingUrl: "https://sweetbriar-golf-club-legacy-18.book.teeitup.com/",
@@ -550,6 +599,7 @@ const courses = [
   {
     name: "Pleasant Hill Golf Course",
     city: "Perrysville, OH",
+    area: "Other Northeast Ohio",
     latitude: 40.6576,
     longitude: -82.2744,
     bookingUrl: "https://pleasanthillgolfcourse.com/green-fees",
@@ -564,6 +614,7 @@ const courses = [
   {
     name: "Deer Ridge Golf Club",
     city: "Bellville, OH",
+    area: "Other Northeast Ohio",
     latitude: 40.6238,
     longitude: -82.5318,
     bookingUrl: "https://deerridge.quick18.com/",
@@ -577,6 +628,7 @@ const courses = [
   {
     name: "Manakiki Golf Course",
     city: "Willoughby Hills, OH",
+    area: "Cleveland area",
     latitude: 41.5802,
     longitude: -81.4319,
     bookingUrl: "https://www.chronogolf.com/club/manakiki-golf-course",
@@ -586,6 +638,7 @@ const courses = [
   {
     name: "The Flying B Golf Course",
     city: "Salem, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.9353,
     longitude: -80.8722,
     bookingUrl: "https://www.flyingbgolf.com/teetimes/",
@@ -595,6 +648,7 @@ const courses = [
   {
     name: "Reserve Run Golf Course",
     city: "Poland, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 40.9852,
     longitude: -80.609,
     bookingUrl: "https://reserverun.cps.golf/",
@@ -604,6 +658,7 @@ const courses = [
   {
     name: "Sleepy Hollow Golf Course",
     city: "Brecksville, OH",
+    area: "Cleveland area",
     latitude: 41.3044563,
     longitude: -81.6226271,
     bookingUrl: "https://www.chronogolf.com/club/sleepy-hollow-golf-course-ohio",
@@ -613,6 +668,7 @@ const courses = [
   {
     name: "St. Denis Golf Club",
     city: "Chardon, OH",
+    area: "Eastern Northeast Ohio",
     latitude: 41.5811,
     longitude: -81.2058,
     bookingUrl: "https://stdenisgolfclub.com/",
@@ -622,6 +678,7 @@ const courses = [
   {
     name: "Big Met Golf Course",
     city: "Fairview Park, OH",
+    area: "Cleveland area",
     latitude: 41.4338,
     longitude: -81.8487,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/big-met-golf-course-course",
@@ -631,6 +688,7 @@ const courses = [
   {
     name: "Ironwood Golf Course",
     city: "Hinckley, OH",
+    area: "Cleveland area",
     latitude: 41.2355,
     longitude: -81.745,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/ironwood-golf-course",
@@ -640,6 +698,7 @@ const courses = [
   {
     name: "Little Met Golf Course",
     city: "Cleveland, OH",
+    area: "Cleveland area",
     latitude: 41.42,
     longitude: -81.8284,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/little-met-golf-course",
@@ -649,6 +708,7 @@ const courses = [
   {
     name: "Mastick Woods Golf Course",
     city: "Cleveland, OH",
+    area: "Cleveland area",
     latitude: 41.4317,
     longitude: -81.8427,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/mastick-woods-golf-course",
@@ -658,6 +718,7 @@ const courses = [
   {
     name: "Seneca Golf Course",
     city: "Broadview Heights, OH",
+    area: "Cleveland area",
     latitude: 41.3196,
     longitude: -81.6307,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/seneca-golf-course",
@@ -667,6 +728,7 @@ const courses = [
   {
     name: "Shawnee Hills Golf Course",
     city: "Bedford, OH",
+    area: "Cleveland area",
     latitude: 41.3559,
     longitude: -81.512,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/shawnee-hills-golf-course",
@@ -676,6 +738,7 @@ const courses = [
   {
     name: "Washington Golf Course",
     city: "Newburgh Heights, OH",
+    area: "Cleveland area",
     latitude: 41.4469,
     longitude: -81.6706,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
@@ -723,16 +786,18 @@ const FEATURED_COURSE_ROTATION = [
 
 let userLocation = null;
 
-document.querySelector("#courseCount").textContent = courses.length;
-
+const courseCount = document.querySelector("#courseCount");
+const courseStats = document.querySelector("#courseStats");
 const teeTimeList = document.querySelector("#teeTimeList");
 const resultCount = document.querySelector("#resultCount");
 const locationStatus = document.querySelector("#locationStatus");
 const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
+const currentYear = document.querySelector("#currentYear");
 const filters = {
-  booking: document.querySelector("#bookingFilter")
+  booking: document.querySelector("#bookingFilter"),
+  area: document.querySelector("#areaFilter")
 };
 
 document.querySelector("#useLocationButton").addEventListener("click", getUserLocation);
@@ -740,6 +805,8 @@ Object.values(filters).forEach((filter) => filter.addEventListener("change", ren
 courseSearch.addEventListener("input", renderTeeTimes);
 document.addEventListener("click", handleCourseLinkClick);
 
+updateHomepageStats();
+updateFooterYear();
 renderTeeTimes();
 renderFeaturedCourse();
 
@@ -771,6 +838,7 @@ function renderTeeTimes() {
   teeTimeList.textContent = "";
 
   const bookingType = filters.booking.value;
+  const area = filters.area.value;
   const searchTerm = courseSearch.value.trim().toLowerCase();
 
   const availableTimes = courses
@@ -783,6 +851,7 @@ function renderTeeTimes() {
     }))
     .filter((teeTime) => matchesSearch(teeTime.course, searchTerm))
     .filter((teeTime) => bookingType === "all" || getBookingType(teeTime.course) === bookingType)
+    .filter((teeTime) => matchesArea(teeTime.course, area))
     .sort((a, b) => {
       if (userLocation) {
         return a.distance - b.distance;
@@ -828,7 +897,7 @@ function renderTeeTimes() {
       ? "Use location"
       : `${isNearby ? "Nearby - " : ""}${teeTime.distance.toFixed(1)} mi`;
     card.querySelector(".time").textContent = teeTime.time;
-   card.querySelector(".players").textContent = "Public";
+    card.querySelector(".players").textContent = "Public";
     card.querySelector(".price").textContent = teeTime.price === null ? "See rate info" : `$${teeTime.price}`;
     const rateInfo = card.querySelector(".rate-info");
     rateInfo.textContent = getRateInfoText(teeTime.course);
@@ -836,7 +905,7 @@ function renderTeeTimes() {
     card.querySelector(".note").textContent = teeTime.note;
     const bookLink = card.querySelector(".book-link");
     bookLink.href = teeTime.course.bookingUrl;
-    bookLink.textContent = teeTime.course.bookingLabel || "Open Link";
+    bookLink.textContent = getCourseButtonText(teeTime.course);
     bookLink.setAttribute("aria-label", `Open course link for ${teeTime.course.name}`);
     addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
@@ -847,6 +916,7 @@ function renderFeaturedCourse() {
   const course = courses.find((item) => item.name === getFeaturedCourseName()) || courses[0];
   const firstAvailable = getDisplayTimes(course)[0];
   const bookingType = getBookingType(course);
+  const buttonText = getCourseButtonText(course);
 
   featuredCourse.innerHTML = `
     <div class="featured-copy">
@@ -864,7 +934,7 @@ function renderFeaturedCourse() {
         <span>Booking</span>
         <strong>${bookingType === "call" ? "Call / Info" : "Online"}</strong>
       </div>
-      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Open Link"}</a>
+      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${buttonText}</a>
     </div>
   `;
 
@@ -960,6 +1030,39 @@ function matchesSearch(course, searchTerm) {
   return `${course.name} ${course.city}`.toLowerCase().includes(searchTerm);
 }
 
+function matchesArea(course, area) {
+  return area === "all" || course.area === area;
+}
+
+function updateHomepageStats() {
+  const coursesWithRateInfo = courses.filter((course) => course.rateInfo).length;
+  const latestCheckedDate = getLatestRateCheckedDate();
+  const latestCheckedText = latestCheckedDate ? formatDisplayDate(latestCheckedDate) : "rate checks pending";
+
+  courseCount.textContent = courses.length;
+  courseStats.textContent = `${courses.length} public courses listed \u2022 Rate information for ${coursesWithRateInfo} courses \u2022 Updated ${latestCheckedText}`;
+}
+
+function updateFooterYear() {
+  currentYear.textContent = new Date().getFullYear();
+}
+
+function getLatestRateCheckedDate() {
+  return courses
+    .filter((course) => course.rateInfo && course.rateInfo.checked)
+    .map((course) => new Date(`${course.rateInfo.checked} 00:00:00`))
+    .filter((date) => !Number.isNaN(date.getTime()))
+    .sort((a, b) => b - a)[0] || null;
+}
+
+function formatDisplayDate(date) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  }).format(date);
+}
+
 function getFeaturedCourseName(date = new Date()) {
   const daysSinceStart = getDaysBetweenDates(FEATURED_ROTATION_START_DATE, getEasternDateString(date));
 
@@ -1031,6 +1134,10 @@ function saveLocalCourseClick(click) {
 
 function getBookingType(course) {
   return course.bookingLabel ? "call" : "online";
+}
+
+function getCourseButtonText(course) {
+  return getBookingType(course) === "call" ? "Course Info" : "Check Tee Times";
 }
 
 function getRateInfoText(course) {

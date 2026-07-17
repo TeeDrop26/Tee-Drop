@@ -195,6 +195,12 @@ h1 {
   transform: translateY(-1px);
 }
 
+.primary-action:focus-visible,
+.book-link:focus-visible {
+  outline: 3px solid rgba(240, 189, 104, 0.78);
+  outline-offset: 3px;
+}
+
 .trust-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -627,6 +633,29 @@ h2 {
   border-radius: 8px;
   color: var(--muted);
   text-align: center;
+}
+
+.site-footer {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(25, 56, 46, 0.98), rgba(22, 72, 50, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 34px rgba(23, 34, 29, 0.12);
+}
+
+.site-footer p {
+  max-width: 860px;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.site-footer .footer-meta {
+  color: #f0bd68;
+  font-weight: 800;
 }
 
 @media (max-width: 940px) {
