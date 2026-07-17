@@ -10,10 +10,10 @@ const courses = [
       checked: "Jul 17, 2026"
     },
     firstAvailable: {
-      time: "Check live",
+      time: "Open link",
       players: 4,
       price: null,
-      note: "Open Zoar's tee time link to check availability."
+      note: "Open Zoar's course link to check booking options."
     },
     teeTimes: []
   },
@@ -59,7 +59,7 @@ const courses = [
     latitude: 40.25775,
     longitude: -81.749625,
     bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
-    bookingNote: "Open Hickory Flats' tee time link to check availability.",
+    bookingNote: "Open Hickory Flats' course link to check booking options.",
     rateInfo: {
       summary: "GolfNow tee sheet. Online pricing can vary by date, time, and availability.",
       checked: "Jul 17, 2026"
@@ -81,7 +81,7 @@ const courses = [
     longitude: -81.368983,
     bookingUrl: "http://www.5watersgolf.com/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (740) 922-2182 to check tee time availability.",
+    bookingNote: "Call (740) 922-2182 to check booking options.",
     teeTimes: []
   },
   {
@@ -91,7 +91,7 @@ const courses = [
     longitude: -81.355,
     bookingUrl: "https://bigbendgolfcourse.com/golf1-2243",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (740) 229-7660 to check tee time availability.",
+    bookingNote: "Call (740) 229-7660 to check booking options.",
     rateInfo: {
       summary: "Posted: 18 riding $22; 9 riding $15. Weekend: 18 $25; 9 $18.",
       checked: "Jul 17, 2026"
@@ -152,7 +152,7 @@ const courses = [
     latitude: 40.862,
     longitude: -81.426,
     bookingUrl: "https://arrowhead-golf-club-4.book-v2.teeitup.golf/",
-    bookingNote: "1500 Rogwin Cir SW. Open the tee time link to check availability.",
+    bookingNote: "1500 Rogwin Cir SW. Open the course link to check booking options.",
     rateInfo: {
       summary: "2026 posted: daily 18 riding $55, 9 riding $36; senior riding 18 $37, 9 $27.",
       checked: "Jul 17, 2026"
@@ -177,7 +177,7 @@ const courses = [
     latitude: 41.014555552933,
     longitude: -81.50688001586,
     bookingUrl: "https://www.firestone9.com/book-a-tee-time/",
-    bookingNote: "Public 9-hole course. Open the tee time link to check availability.",
+    bookingNote: "Public 9-hole course. Open the course link to check booking options.",
     rateInfo: {
       summary: "Weekend/holiday posted: ride 9 $32, walk 9 $22; ride 18 $47, walk 18 $33.",
       checked: "Jul 17, 2026"
@@ -215,7 +215,7 @@ const courses = [
     longitude: -81.90175181534,
     bookingUrl: "https://www.fireridgegolfcourse.com/contact-us",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 674-3921 to check tee time availability.",
+    bookingNote: "Call (330) 674-3921 to check booking options.",
     rateInfo: {
       summary: "Weekend/holiday posted: morning 18 w/cart $49; 9 w/cart $38. After 2: 18 $43; 9 $33.",
       checked: "Jul 17, 2026"
@@ -261,7 +261,7 @@ const courses = [
     longitude: -81.391027,
     bookingUrl: "https://www.svgcanton.com/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 484-1886 to check tee time availability.",
+    bookingNote: "Call (330) 484-1886 to check booking options.",
     rateInfo: {
       summary: "Weekend/holiday posted: 7-1 18 w/cart $55, 9 $40; 1-4 18 $47, 9 $32; after 4 18 $33, 9 $23.",
       checked: "Jul 17, 2026"
@@ -275,7 +275,7 @@ const courses = [
     longitude: -81.286,
     bookingUrl: "https://www.clearviewgolfclub.com/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 488-0404 to check tee time availability.",
+    bookingNote: "Call (330) 488-0404 to check booking options.",
     rateInfo: {
       summary: "Weekend/holiday before noon posted: 18 riding $56; 9 riding $33.",
       checked: "Jul 17, 2026"
@@ -307,7 +307,7 @@ const courses = [
     longitude: -81.631,
     bookingUrl: "https://www.facebook.com/people/The-Elms-Country-Club/100063908499193/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 833-2668 to check tee time availability.",
+    bookingNote: "Call (330) 833-2668 to check booking options.",
     teeTimes: []
   },
   {
@@ -317,7 +317,7 @@ const courses = [
     longitude: -81.868461,
     bookingUrl: "https://www.ohiogolf.com/golfcourses/black-diamond-golf",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 674-6110 to check tee time availability.",
+    bookingNote: "Call (330) 674-6110 to check booking options.",
     teeTimes: []
   },
   {
@@ -377,7 +377,7 @@ const courses = [
     longitude: -81.184,
     bookingUrl: "https://tannenhaufgolf.net/",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 823-4402 to check tee time availability.",
+    bookingNote: "Call (330) 823-4402 to check booking options.",
     teeTimes: []
   },
   {
@@ -411,7 +411,7 @@ const courses = [
     longitude: -81.152,
     bookingUrl: "https://www.golflink.com/golf-courses/oh/minerva/big-dawg-s-golf-course",
     bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 868-3294 to check tee time availability.",
+    bookingNote: "Call (330) 868-3294 to check booking options.",
     teeTimes: []
   },
   {
@@ -429,7 +429,7 @@ const courses = [
     longitude: -81.331005,
     bookingUrl: "https://www.facebook.com/MulliganSpringsGolfCourse/",
     bookingLabel: "Call / Info",
-    bookingNote: "Par 3 course. Call (330) 628-5139 to check availability.",
+    bookingNote: "Par 3 course. Call (330) 628-5139 to check booking options.",
     teeTimes: []
   },
   {
@@ -438,7 +438,7 @@ const courses = [
     latitude: 41.172989,
     longitude: -81.223061,
     bookingUrl: "https://www.chronogolf.com/club/windmill-lakes-golf-club",
-    bookingNote: "Open Windmill Lakes' tee time link to check availability.",
+    bookingNote: "Open Windmill Lakes' course link to check booking options.",
     teeTimes: []
   },
   {
@@ -447,7 +447,7 @@ const courses = [
     latitude: 40.979,
     longitude: -81.543,
     bookingUrl: "https://turkeyfoot-lake-golf-links.book.teeitup.com/",
-    bookingNote: "Open Turkeyfoot's tee time link to check availability.",
+    bookingNote: "Open Turkeyfoot's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -456,7 +456,7 @@ const courses = [
     latitude: 41.1516,
     longitude: -81.4665,
     bookingUrl: "https://www.brookledgegc.com/tee-times/",
-    bookingNote: "Open Brookledge's tee time link to check availability.",
+    bookingNote: "Open Brookledge's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -465,7 +465,7 @@ const courses = [
     latitude: 41.184918,
     longitude: -81.407369,
     bookingUrl: "https://www.foxdengc.com/tee-times/",
-    bookingNote: "Open Fox Den's tee time link to check availability.",
+    bookingNote: "Open Fox Den's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -474,7 +474,7 @@ const courses = [
     latitude: 41.1856,
     longitude: -81.4542,
     bookingUrl: "https://www.rosesrun.com/tee-times/",
-    bookingNote: "Open Roses Run's tee time link to check availability.",
+    bookingNote: "Open Roses Run's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -483,7 +483,7 @@ const courses = [
     latitude: 41.2545609,
     longitude: -81.3259579,
     bookingUrl: "https://boulder-creek-golf-club-3.book.teeitup.com/",
-    bookingNote: "Open Boulder Creek's tee time link to check availability.",
+    bookingNote: "Open Boulder Creek's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -492,7 +492,7 @@ const courses = [
     latitude: 41.3213,
     longitude: -81.7855,
     bookingUrl: "https://pine-hills-golf-club-oh.book.teeitup.com/",
-    bookingNote: "Open Pine Hills' tee time link to check availability.",
+    bookingNote: "Open Pine Hills' course link to check booking options.",
     teeTimes: []
   },
   {
@@ -501,7 +501,7 @@ const courses = [
     latitude: 41.2289,
     longitude: -81.8426,
     bookingUrl: "https://bunker-hill-golf-course.book.teeitup.com/",
-    bookingNote: "Open Bunker Hill's tee time link to check availability.",
+    bookingNote: "Open Bunker Hill's course link to check booking options.",
     rateInfo: {
       summary: "2025-2026 golf rates posted on the course rates page.",
       checked: "Jul 17, 2026"
@@ -514,7 +514,7 @@ const courses = [
     latitude: 41.2399,
     longitude: -81.9188,
     bookingUrl: "https://coppertop-golf-club.book.teeitup.com/",
-    bookingNote: "Open Coppertop's tee time link to check availability.",
+    bookingNote: "Open Coppertop's course link to check booking options.",
     rateInfo: {
       summary: "Green fees vary by day, time, and season; online deal times may be available.",
       checked: "Jul 17, 2026"
@@ -527,7 +527,7 @@ const courses = [
     latitude: 41.2358,
     longitude: -82.1236,
     bookingUrl: "https://grey-hawk-golf-club.book.teeitup.com/",
-    bookingNote: "Open Grey Hawk's tee time link to check availability.",
+    bookingNote: "Open Grey Hawk's course link to check booking options.",
     rateInfo: {
       summary: "Dynamic pricing posted. Online rates change by demand, season, time, and availability.",
       checked: "Jul 17, 2026"
@@ -540,7 +540,7 @@ const courses = [
     latitude: 41.4948,
     longitude: -82.0322,
     bookingUrl: "https://sweetbriar-golf-club-legacy-18.book.teeitup.com/",
-    bookingNote: "Open Sweetbriar's tee time link to check availability.",
+    bookingNote: "Open Sweetbriar's course link to check booking options.",
     rateInfo: {
       summary: "Course site says to book online for the best available rates.",
       checked: "Jul 17, 2026"
@@ -567,7 +567,7 @@ const courses = [
     latitude: 40.6238,
     longitude: -82.5318,
     bookingUrl: "https://deerridge.quick18.com/",
-    bookingNote: "Open Deer Ridge's tee time link to check availability.",
+    bookingNote: "Open Deer Ridge's course link to check booking options.",
     rateInfo: {
       summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
       checked: "Jul 17, 2026"
@@ -580,7 +580,7 @@ const courses = [
     latitude: 41.5802,
     longitude: -81.4319,
     bookingUrl: "https://www.chronogolf.com/club/manakiki-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the tee time link to check availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -589,7 +589,7 @@ const courses = [
     latitude: 40.9353,
     longitude: -80.8722,
     bookingUrl: "https://www.flyingbgolf.com/teetimes/",
-    bookingNote: "Open The Flying B's tee time link to check availability.",
+    bookingNote: "Open The Flying B's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -598,7 +598,7 @@ const courses = [
     latitude: 40.9852,
     longitude: -80.609,
     bookingUrl: "https://reserverun.cps.golf/",
-    bookingNote: "Open Reserve Run's tee time link to check availability.",
+    bookingNote: "Open Reserve Run's course link to check booking options.",
     teeTimes: []
   },
   {
@@ -607,7 +607,7 @@ const courses = [
     latitude: 41.3044563,
     longitude: -81.6226271,
     bookingUrl: "https://www.chronogolf.com/club/sleepy-hollow-golf-course-ohio",
-    bookingNote: "Cleveland Metroparks course. Open the tee time link to check availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -616,7 +616,7 @@ const courses = [
     latitude: 41.5811,
     longitude: -81.2058,
     bookingUrl: "https://stdenisgolfclub.com/",
-    bookingNote: "Open St. Denis' tee time link to check availability.",
+    bookingNote: "Open St. Denis' course link to check booking options.",
     teeTimes: []
   },
   {
@@ -625,7 +625,7 @@ const courses = [
     latitude: 41.4338,
     longitude: -81.8487,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/big-met-golf-course-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -634,7 +634,7 @@ const courses = [
     latitude: 41.2355,
     longitude: -81.745,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/ironwood-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -643,7 +643,7 @@ const courses = [
     latitude: 41.42,
     longitude: -81.8284,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/little-met-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -652,7 +652,7 @@ const courses = [
     latitude: 41.4317,
     longitude: -81.8427,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/mastick-woods-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -661,7 +661,7 @@ const courses = [
     latitude: 41.3196,
     longitude: -81.6307,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/seneca-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -670,7 +670,7 @@ const courses = [
     latitude: 41.3559,
     longitude: -81.512,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/shawnee-hills-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   },
   {
@@ -679,7 +679,7 @@ const courses = [
     latitude: 41.4469,
     longitude: -81.6706,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
-    bookingNote: "Cleveland Metroparks course. Open the course link to check tee time availability.",
+    bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
   }
 ];
@@ -815,7 +815,7 @@ function renderTeeTimes() {
     const isNearby = Boolean(userLocation) && teeTime.distance !== null && index < 3;
 
     card.querySelector(".course-meta").textContent = teeTime.bookingOnly
-      ? `${teeTime.course.city} - Tee time link`
+      ? `${teeTime.course.city} - Course and booking link`
       : `${teeTime.course.city} - ${capitalize(teeTime.day)}`;
     article.classList.toggle("call-card", courseBookingType === "call");
     article.classList.toggle("online-card", courseBookingType === "online");
@@ -829,15 +829,15 @@ function renderTeeTimes() {
       : `${isNearby ? "Nearby - " : ""}${teeTime.distance.toFixed(1)} mi`;
     card.querySelector(".time").textContent = teeTime.time;
     card.querySelector(".players").textContent = `${teeTime.players}`;
-    card.querySelector(".price").textContent = teeTime.price === null ? "Live" : `$${teeTime.price}`;
+    card.querySelector(".price").textContent = teeTime.price === null ? "See rate info" : `$${teeTime.price}`;
     const rateInfo = card.querySelector(".rate-info");
     rateInfo.textContent = getRateInfoText(teeTime.course);
     rateInfo.hidden = !teeTime.course.rateInfo;
     card.querySelector(".note").textContent = teeTime.note;
     const bookLink = card.querySelector(".book-link");
     bookLink.href = teeTime.course.bookingUrl;
-    bookLink.textContent = teeTime.course.bookingLabel || "Check Times";
-    bookLink.setAttribute("aria-label", `Open tee time link for ${teeTime.course.name}`);
+    bookLink.textContent = teeTime.course.bookingLabel || "Open Link";
+    bookLink.setAttribute("aria-label", `Open course link for ${teeTime.course.name}`);
     addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
   });
@@ -852,19 +852,19 @@ function renderFeaturedCourse() {
     <div class="featured-copy">
       <p class="alert-kicker">Course of the week</p>
       <h2>${course.name}</h2>
-      <p>${course.city} - ${bookingType === "call" ? "Call the course to check tee time availability." : "Open the course link to check tee time availability."}</p>
+      <p>${course.city} - ${bookingType === "call" ? "Call the course to check booking options." : "Open the course link to check booking options."}</p>
       ${course.rateInfo ? `<p class="featured-rate">${getRateInfoText(course)}</p>` : ""}
     </div>
     <div class="featured-details">
       <div>
-        <span>Availability</span>
+        <span>Booking options</span>
         <strong>${firstAvailable.time}</strong>
       </div>
       <div>
         <span>Booking</span>
         <strong>${bookingType === "call" ? "Call / Info" : "Online"}</strong>
       </div>
-      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Check Times"}</a>
+      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${course.bookingLabel || "Open Link"}</a>
     </div>
   `;
 
@@ -1052,10 +1052,10 @@ function getDisplayTimes(course) {
   return [
     {
       day: "any",
-      time: firstAvailable.time || (isCallOnly ? "Call course" : "Check live"),
+      time: firstAvailable.time || (isCallOnly ? "Call course" : "Open link"),
       players: firstAvailable.players || 4,
       price: firstAvailable.price ?? null,
-      note: firstAvailable.note || course.bookingNote || "Open the course link to check tee time availability.",
+      note: firstAvailable.note || course.bookingNote || "Open the course link to check booking options.",
       bookingOnly: true
     }
   ];
@@ -1103,4 +1103,6 @@ function toRadians(degrees) {
 function capitalize(value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
 }
+
+
 
