@@ -744,6 +744,217 @@ const courses = [
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     teeTimes: []
+  },
+  {
+    name: "Shale Creek Golf Club",
+    city: "Medina, OH",
+    area: "Cleveland area",
+    latitude: 41.192727,
+    longitude: -81.881917,
+    bookingUrl: "https://shalecreek.cps.golf/",
+    bookingNote: "Open Shale Creek's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Online tee sheet displays current pricing; posted dollar amounts were not listed on the official site.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Valleaire Golf Club",
+    city: "Hinckley, OH",
+    area: "Cleveland area",
+    latitude: 41.270683,
+    longitude: -81.735964,
+    bookingUrl: "https://valleaire-golf-club.book.teeitup.com/",
+    bookingNote: "Open Valleaire's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "2026 posted rates include 18 holes with cart from $48 Monday-Thursday, $52 Friday before noon, and $64 weekend or holiday before 1 PM.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Mallard Creek Golf Club",
+    city: "Columbia Station, OH",
+    area: "Cleveland area",
+    latitude: 41.318633,
+    longitude: -81.985478,
+    bookingUrl: "https://themallardcreek.com/tee-times/",
+    bookingNote: "Open Mallard Creek's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Dynamic pricing is used; pricing may vary by date, time, demand, and availability.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Pine Brook Golf Links",
+    city: "Grafton, OH",
+    area: "Cleveland area",
+    latitude: 41.332498,
+    longitude: -82.050553,
+    bookingUrl: "https://golfpinebrook.com/tee-times/",
+    bookingNote: "Open Pine Brook's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Published rate page is labeled 2025; check the booking page or contact the course for current pricing.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Hinckley Hills Golf Course",
+    city: "Hinckley, OH",
+    area: "Cleveland area",
+    latitude: 41.263625,
+    longitude: -81.717235,
+    bookingUrl: "https://hinckley-hills-golf-course.book.teeitup.com/",
+    bookingNote: "Open Hinckley Hills' booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Current rates are not posted on the official site; check the booking page or call the course for current pricing.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Cossett Creek Golf Course",
+    city: "Brunswick, OH",
+    area: "Cleveland area",
+    latitude: 41.238009,
+    longitude: -81.862849,
+    bookingUrl: "https://cossettcreek.com/book-a-tee-time/",
+    bookingNote: "Open Cossett Creek's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Dynamic pricing is used; pricing may vary by date, time, demand, and availability.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Fowler's Mill Golf Course",
+    city: "Chesterland, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.513225,
+    longitude: -81.274878,
+    bookingUrl: "https://golfback.com/#/course/44064327-b8aa-4c4b-8976-fcc697699926",
+    bookingNote: "Open Fowler's Mill's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Rates are shown through the official booking flow; pricing may vary by date, time, demand, and availability.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Painesville Country Club",
+    city: "Painesville, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.708011,
+    longitude: -81.218395,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/20201/3971#teetimes",
+    bookingNote: "Open Painesville Country Club's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Published rate page is labeled 2025; check the booking page or contact the course for current pricing.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Mill Creek Golf Course",
+    city: "Boardman, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.030779,
+    longitude: -80.698454,
+    bookingUrl: "https://millcreekmetroparks.teesnap.net/",
+    bookingNote: "Open Mill Creek's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Official rate page describes 2026 rates but also shows conflicting effective-date language; confirm current pricing with the course.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Knoll Run Golf Course",
+    city: "Lowellville, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.064616,
+    longitude: -80.563371,
+    bookingUrl: "https://www.knollrun.com/rates-booking",
+    bookingNote: "Open Knoll Run's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Official rates page lists price categories but does not show a clear 2026 effective date; confirm current pricing with the course.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "The Links at Firestone Farms",
+    city: "Columbiana, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 40.887366,
+    longitude: -80.639382,
+    bookingUrl: "https://www.linksatfirestonefarms.com/bookteetimes",
+    bookingNote: "Open Firestone Farms' booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "2026 posted rates include 18 holes with cart from $49 weekday, $55 Friday, and $65 weekend before 3 PM.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Lake Milton Golf Club",
+    city: "Lake Milton, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.083626,
+    longitude: -80.970047,
+    bookingUrl: "https://lake-milton-golf-club.book.teeitup.com/",
+    bookingNote: "Open Lake Milton's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Published rate page is labeled 2025; check the booking page or contact the course for current pricing.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Lyons Den Golf",
+    city: "Canal Fulton, OH",
+    area: "Canton / Stark County",
+    latitude: 40.871466,
+    longitude: -81.605995,
+    bookingUrl: "https://www.lyonsdengolf.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call 330-854-9910 to confirm current availability and rates.",
+    rateInfo: {
+      summary: "Current rates are not listed on the official site; call the course to confirm current pricing.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Pleasant Hill Golf Course — Chardon",
+    city: "Chardon, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.496787,
+    longitude: -81.187607,
+    bookingUrl: "https://pleasanthillgolfchardon.teesnap.net/",
+    bookingNote: "Open Pleasant Hill Chardon's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "Official rates page lists posted prices but does not show a clear 2026 effective date; confirm current pricing with the course.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Olde Dutch Mill Golf Course",
+    city: "Lake Milton, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.13039,
+    longitude: -80.977581,
+    bookingUrl: "https://b51e062b-8ea4-4ca1-aa13-c449a771989b.book.teeitup.com/",
+    bookingNote: "Open Olde Dutch Mill's booking page to check current availability and pricing.",
+    rateInfo: {
+      summary: "2026 peak-season rates include 18 holes with cart from $35 weekday and $49 weekend before 2 PM.",
+      checked: "Jul 22, 2026"
+    },
+    teeTimes: []
   }
 ];
 
