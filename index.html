@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://playteedrop.com/tee-drop-fairway.jpg">
   <meta name="theme-color" content="#164832">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=clarity-20260717c">
+  <link rel="stylesheet" href="styles.css?v=progressive-20260722">
 </head>
 <body>
   <main class="app-shell">
@@ -66,7 +66,7 @@
 
     <section class="featured-course" id="featuredCourse" aria-label="Course of the week"></section>
 
-    <section class="filters" aria-label="Course filters">
+    <section class="filters" id="courseFilters" aria-label="Course filters">
       <label class="course-search">
         Course or town
         <input id="courseSearch" type="search" placeholder="Zoar, Canton, Wilkshire...">
@@ -102,6 +102,16 @@
     </section>
 
     <section class="tee-time-list" id="teeTimeList" aria-label="Course booking links"></section>
+
+    <div class="results-actions">
+      <button class="primary-action show-more-button" id="showMoreCourses" type="button" aria-controls="teeTimeList" aria-label="Show 10 more matching courses" hidden>
+        Show 10 More Courses
+      </button>
+    </div>
+
+    <button class="primary-action back-to-filters" id="backToFiltersButton" type="button" aria-label="Back to course search and filters" hidden>
+      Back to top
+    </button>
 
     <footer class="site-footer">
       <p>Tee Drop keeps public course links in one place so golfers can check options faster and book direct whenever possible.</p>
@@ -143,6 +153,6 @@
     </article>
   </template>
 
-  <script src="app.js?v=clarity-20260717c"></script>
+  <script src="app.js?v=progressive-20260722"></script>
 </body>
 </html>

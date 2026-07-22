@@ -995,7 +995,10 @@ const FEATURED_COURSE_ROTATION = [
   "Deer Ridge Golf Club"
 ];
 
+const COURSE_BATCH_SIZE = 10;
+
 let userLocation = null;
+let visibleCourseLimit = COURSE_BATCH_SIZE;
 
 const courseCount = document.querySelector("#courseCount");
 const courseStats = document.querySelector("#courseStats");
@@ -1006,14 +1009,20 @@ const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
 const currentYear = document.querySelector("#currentYear");
+const courseFilters = document.querySelector("#courseFilters");
+const showMoreButton = document.querySelector("#showMoreCourses");
+const backToFiltersButton = document.querySelector("#backToFiltersButton");
 const filters = {
   booking: document.querySelector("#bookingFilter"),
   area: document.querySelector("#areaFilter")
 };
 
 document.querySelector("#useLocationButton").addEventListener("click", getUserLocation);
-Object.values(filters).forEach((filter) => filter.addEventListener("change", renderTeeTimes));
-courseSearch.addEventListener("input", renderTeeTimes);
+Object.values(filters).forEach((filter) => filter.addEventListener("change", resetCourseLimitAndRender));
+courseSearch.addEventListener("input", resetCourseLimitAndRender);
+showMoreButton.addEventListener("click", showMoreCourses);
+backToFiltersButton.addEventListener("click", scrollToCourseFilters);
+window.addEventListener("scroll", updateBackToFiltersButton, { passive: true });
 document.addEventListener("click", handleCourseLinkClick);
 
 updateHomepageStats();
@@ -1036,13 +1045,23 @@ function getUserLocation() {
         longitude: position.coords.longitude
       };
       locationStatus.textContent = "Showing courses closest to your current location.";
-      renderTeeTimes();
+      resetCourseLimitAndRender();
     },
     () => {
       locationStatus.textContent = "Could not access location. You can still browse the course list.";
     },
     { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
   );
+}
+
+function resetCourseLimitAndRender() {
+  visibleCourseLimit = COURSE_BATCH_SIZE;
+  renderTeeTimes();
+}
+
+function showMoreCourses() {
+  visibleCourseLimit += COURSE_BATCH_SIZE;
+  renderTeeTimes();
 }
 
 function renderTeeTimes() {
@@ -1075,17 +1094,30 @@ function renderTeeTimes() {
       return parseTime(a.time) - parseTime(b.time);
     });
 
-  resultCount.textContent = `${availableTimes.length} course${availableTimes.length === 1 ? "" : "s"} found`;
-
   if (availableTimes.length === 0) {
+    resultCount.textContent = "0 courses found";
+    showMoreButton.hidden = true;
+    showMoreButton.disabled = true;
     const empty = document.createElement("div");
     empty.className = "empty-state";
     empty.textContent = "No courses match those filters yet.";
     teeTimeList.append(empty);
+    updateBackToFiltersButton();
     return;
   }
 
-  availableTimes.forEach((teeTime, index) => {
+  const visibleTimes = availableTimes.slice(0, visibleCourseLimit);
+  const visibleCount = visibleTimes.length;
+
+  resultCount.textContent = `Showing ${visibleCount} of ${availableTimes.length} course${availableTimes.length === 1 ? "" : "s"}`;
+  showMoreButton.hidden = visibleCount >= availableTimes.length;
+  showMoreButton.disabled = visibleCount >= availableTimes.length;
+  showMoreButton.setAttribute(
+    "aria-label",
+    `Show 10 more matching courses. Showing ${visibleCount} of ${availableTimes.length} courses.`
+  );
+
+  visibleTimes.forEach((teeTime, index) => {
     const card = template.content.cloneNode(true);
     const article = card.querySelector(".tee-card");
     const bookingType = card.querySelector(".booking-type");
@@ -1120,6 +1152,18 @@ function renderTeeTimes() {
     addTrackingData(bookLink, teeTime.course, "course list");
     teeTimeList.append(card);
   });
+
+  updateBackToFiltersButton();
+}
+
+function scrollToCourseFilters() {
+  courseFilters.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function updateBackToFiltersButton() {
+  const resultStart = teeTimeList.getBoundingClientRect().top + window.scrollY;
+  const shouldShow = window.scrollY > resultStart + 320;
+  backToFiltersButton.hidden = !shouldShow;
 }
 
 function renderFeaturedCourse() {
