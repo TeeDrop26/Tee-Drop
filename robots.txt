@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://playteedrop.com/sitemap.xml
+Sitemap: https://www.playteedrop.com/sitemap.xml
