@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://playteedrop.com/sitemap.xml

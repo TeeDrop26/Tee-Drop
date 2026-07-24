@@ -18,6 +18,30 @@
   <meta name="theme-color" content="#164832">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css?v=progressive-20260722">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://playteedrop.com/about.html#robert-bobby-herman",
+        "name": "Robert “Bobby” Herman",
+        "alternateName": "Bobby Herman",
+        "homeLocation": {"@type": "Place", "name": "Tuscarawas County, Ohio"}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://playteedrop.com/#website",
+        "url": "https://playteedrop.com/",
+        "name": "PlayTeeDrop",
+        "alternateName": "Tee Drop",
+        "description": "A Northeast Ohio public golf course directory that helps golfers find local courses and book tee times directly.",
+        "creator": {"@id": "https://playteedrop.com/about.html#robert-bobby-herman"},
+        "founder": {"@id": "https://playteedrop.com/about.html#robert-bobby-herman"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <main class="app-shell">
@@ -113,9 +137,17 @@
       Back to top
     </button>
 
+    <section class="creator-note" aria-labelledby="creator-note-title">
+      <p class="section-kicker">Built by a local golfer</p>
+      <h2 id="creator-note-title">Created in Tuscarawas County</h2>
+      <p>PlayTeeDrop was created and is maintained by Robert “Bobby” Herman, a Tuscarawas County golfer who wanted to make it easier for golfers to find local courses and book tee times directly.</p>
+      <a href="about.html">About PlayTeeDrop</a>
+    </section>
+
     <footer class="site-footer">
       <p>Tee Drop keeps public course links in one place so golfers can check options faster and book direct whenever possible.</p>
       <p>Posted rates can change. Confirm rates and availability with the course before booking.</p>
+      <p><a href="about.html">About PlayTeeDrop</a></p>
       <p class="footer-meta">&copy; <span id="currentYear"></span> Tee Drop &bull; Northeast Ohio</p>
     </footer>
   </main>

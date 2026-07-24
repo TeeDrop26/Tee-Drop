@@ -15,6 +15,129 @@
   --shadow: 0 18px 42px rgba(23, 34, 29, 0.12);
 }
 
+.creator-note {
+  margin-top: 24px;
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(23, 34, 29, 0.07);
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.creator-note h2 {
+  margin: 0 0 10px;
+  color: var(--green-dark);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.creator-note p:not(.section-kicker) {
+  max-width: 820px;
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.creator-note a,
+.site-footer a,
+.about-back {
+  color: var(--green-dark);
+  font-weight: 800;
+}
+
+.about-shell {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0 42px;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 4px 24px;
+}
+
+.about-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green-dark);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.about-brand img {
+  width: 46px;
+  height: 46px;
+}
+
+.about-card {
+  padding: clamp(30px, 7vw, 76px);
+  border: 1px solid var(--line);
+  border-top: 7px solid var(--gold);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.about-card h1 {
+  max-width: 820px;
+  margin: 0 0 30px;
+  color: var(--green-dark);
+  font-size: clamp(2.4rem, 7vw, 5.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.about-card p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.about-card .about-lead {
+  color: var(--ink);
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+.about-footer {
+  margin-top: 24px;
+}
+
+@media (max-width: 560px) {
+  .about-header {
+    align-items: flex-start;
+  }
+
+  .about-back {
+    font-size: 0.9rem;
+  }
+
+  .about-card {
+    padding: 28px 22px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
