@@ -24,11 +24,18 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Person",
-        "@id": "https://www.playteedrop.com/about.html#robert-bobby-herman",
-        "name": "Robert “Bobby” Herman",
-        "alternateName": "Bobby Herman",
-        "homeLocation": {"@type": "Place", "name": "Tuscarawas County, Ohio"}
+        "@type": "Organization",
+        "@id": "https://www.playteedrop.com/#organization",
+        "name": "PlayTeeDrop",
+        "alternateName": "Tee Drop",
+        "url": "https://www.playteedrop.com/",
+        "logo": "https://www.playteedrop.com/favicon.svg",
+        "description": "PlayTeeDrop is a locally owned and operated Tuscarawas County golf directory for public golf course links, direct booking options, phone information, and posted rates.",
+        "foundingLocation": {"@type": "Place", "name": "Tuscarawas County, Ohio"},
+        "areaServed": [
+          {"@type": "AdministrativeArea", "name": "Tuscarawas County, Ohio"},
+          {"@type": "AdministrativeArea", "name": "Northeast Ohio"}
+        ]
       },
       {
         "@type": "WebSite",
@@ -36,9 +43,10 @@
         "url": "https://www.playteedrop.com/",
         "name": "PlayTeeDrop",
         "alternateName": "Tee Drop",
-        "description": "A Northeast Ohio public golf course directory that helps golfers find local courses and book tee times directly.",
-        "creator": {"@id": "https://www.playteedrop.com/about.html#robert-bobby-herman"},
-        "founder": {"@id": "https://www.playteedrop.com/about.html#robert-bobby-herman"}
+        "description": "A locally owned and operated Tuscarawas County golf directory that helps golfers find Northeast Ohio public courses and book direct whenever possible.",
+        "publisher": {"@id": "https://www.playteedrop.com/#organization"},
+        "creator": {"@id": "https://www.playteedrop.com/#organization"},
+        "copyrightHolder": {"@id": "https://www.playteedrop.com/#organization"}
       }
     ]
   }
@@ -139,9 +147,9 @@
     </button>
 
     <section class="creator-note" aria-labelledby="creator-note-title">
-      <p class="section-kicker">Built by a local golfer</p>
-      <h2 id="creator-note-title">Created in Tuscarawas County</h2>
-      <p>PlayTeeDrop was created and is maintained by Robert “Bobby” Herman, a Tuscarawas County golfer who wanted to make it easier for golfers to find local courses and book tee times directly.</p>
+      <p class="section-kicker">Locally owned in Tuscarawas County</p>
+      <h2 id="creator-note-title">A local golf directory for Northeast Ohio</h2>
+      <p>PlayTeeDrop is a locally owned and operated Tuscarawas County golf directory built to help golfers find public course links, booking options, phone information, and posted rates faster.</p>
       <a href="about.html">About PlayTeeDrop</a>
     </section>
 
