@@ -995,6 +995,7 @@ const FEATURED_COURSE_ROTATION = [
   "Deer Ridge Golf Club"
 ];
 
+const AUGUST_COURSE_OF_MONTH = "Oak Shadows Golf Club";
 const COURSE_BATCH_SIZE = 10;
 
 let userLocation = null;
@@ -1005,6 +1006,7 @@ const courseStats = document.querySelector("#courseStats");
 const teeTimeList = document.querySelector("#teeTimeList");
 const resultCount = document.querySelector("#resultCount");
 const locationStatus = document.querySelector("#locationStatus");
+const monthlyCourse = document.querySelector("#monthlyCourse");
 const featuredCourse = document.querySelector("#featuredCourse");
 const template = document.querySelector("#teeTimeTemplate");
 const courseSearch = document.querySelector("#courseSearch");
@@ -1028,6 +1030,7 @@ document.addEventListener("click", handleCourseLinkClick);
 updateHomepageStats();
 updateFooterYear();
 renderTeeTimes();
+renderCourseOfMonth();
 renderFeaturedCourse();
 
 function getUserLocation() {
@@ -1164,6 +1167,27 @@ function updateBackToFiltersButton() {
   const resultStart = teeTimeList.getBoundingClientRect().top + window.scrollY;
   const shouldShow = window.scrollY > resultStart + 320;
   backToFiltersButton.hidden = !shouldShow;
+}
+
+function renderCourseOfMonth() {
+  const course = courses.find((item) => item.name === AUGUST_COURSE_OF_MONTH);
+
+  if (!course || !monthlyCourse) {
+    return;
+  }
+
+  monthlyCourse.innerHTML = `
+    <div class="monthly-course-copy">
+      <p class="alert-kicker">August Course of the Month</p>
+      <h2>${course.name}</h2>
+      <p>Located in New Philadelphia, Oak Shadows offers rolling terrain, elevated views, water features, and a memorable public-golf experience in Tuscarawas County.</p>
+    </div>
+    <div class="monthly-course-action">
+      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer" aria-label="View Oak Shadows booking">View Booking</a>
+    </div>
+  `;
+
+  addTrackingData(monthlyCourse.querySelector(".book-link"), course, "course of the month");
 }
 
 function renderFeaturedCourse() {
