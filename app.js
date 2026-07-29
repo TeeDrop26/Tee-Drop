@@ -919,7 +919,7 @@ const courses = [
     area: "Canton / Stark County",
     latitude: 40.871466,
     longitude: -81.605995,
-    bookingUrl: "https://www.lyonsdengolf.com/",
+    bookingUrl: "http://www.lyonsdengolf.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call 330-854-9910 to confirm current availability and rates.",
     rateInfo: {
@@ -1228,6 +1228,7 @@ function trackCourseClick(click) {
     course: click.course,
     city: click.city,
     source: click.source,
+    trafficSource: getTrafficSource(),
     bookingType: click.bookingType,
     bookingUrl: click.url,
     message: `Course click: ${click.course} from ${click.source} at ${clickedAtEastern} Eastern`,
@@ -1375,6 +1376,16 @@ function getDateValue(dateString) {
 
 function isLocalPreview() {
   return location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
+}
+
+function getTrafficSource() {
+  const source = new URLSearchParams(location.search).get("source");
+
+  if (!source) {
+    return "direct";
+  }
+
+  return source.trim().toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 60) || "direct";
 }
 
 function saveLocalCourseClick(click) {
