@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 280" role="img" aria-labelledby="title desc">
+  <title id="title">Tee Drop horizontal logo for light backgrounds</title>
+  <desc id="desc">The Tee Drop light-background icon with a bold, slightly italic Tee Drop wordmark.</desc>
+  <defs>
+    <g id="tee-drop-icon"><circle cx="128" cy="128" r="96" fill="none" stroke="#c5862b" stroke-width="14" stroke-linecap="butt" stroke-dasharray="137 14" stroke-dashoffset="7" transform="rotate(-45 128 128)"/><path d="M74 65h108v28h-28c-5 0-8 3-9 8l-12 97-5 25-5-25-12-97c-1-5-4-8-9-8H74z" fill="#164832"/><path d="M119 105h18l-9 91z" fill="#fffdf8"/></g>
+    <path id="letter-t" d="M0 0h54v13H35v61H19V13H0z"/><path id="letter-e" d="M0 0h51v13H16v16h30v13H16v19h35v13H0z"/>
+    <path id="letter-d" fill-rule="evenodd" d="M0 0h25c22 0 35 14 35 37S47 74 25 74H0zm16 13v48h8c13 0 20-9 20-24S37 13 24 13z"/><path id="letter-r" fill-rule="evenodd" d="M0 0h28c18 0 29 8 29 24 0 10-5 17-14 21l18 29H43L27 48H16v26H0zm16 13v22h11c9 0 14-4 14-11s-5-11-14-11z"/>
+    <path id="letter-o" fill-rule="evenodd" d="M30 0c20 0 31 14 31 37S50 74 30 74-1 60-1 37 10 0 30 0zm0 13c-10 0-15 9-15 24s5 24 15 24 15-9 15-24-5-24-15-24z"/><path id="letter-p" fill-rule="evenodd" d="M0 0h28c19 0 30 9 30 25S47 50 28 50H16v24H0zm16 13v24h11c10 0 15-4 15-12s-5-12-15-12z"/>
+  </defs>
+  <g transform="translate(26 12) scale(.92)"><use href="#tee-drop-icon"/></g>
+  <g fill="#164832" transform="translate(330 80) skewX(-10) scale(1.5)"><use href="#letter-t" x="0"/><use href="#letter-e" x="60"/><use href="#letter-e" x="117"/><use href="#letter-d" x="192"/><use href="#letter-r" x="264"/><use href="#letter-o" x="336"/><use href="#letter-p" x="412"/></g>
+  <path d="M492 225h365l-8 3H500z" fill="#c5862b"/>
+</svg>

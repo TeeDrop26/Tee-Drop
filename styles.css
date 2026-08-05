@@ -79,8 +79,9 @@
 }
 
 .about-brand img {
-  width: 46px;
-  height: 46px;
+  display: block;
+  width: clamp(150px, 18vw, 212px);
+  height: auto;
 }
 
 .about-card {
@@ -214,23 +215,31 @@ a {
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+}
+
+.brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  line-height: 0;
 }
 
 .brand-logo {
-  flex: 0 0 auto;
-  width: clamp(58px, 6.4vw, 78px);
-  height: clamp(58px, 6.4vw, 78px);
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.22));
+  display: block;
+  width: clamp(220px, 25vw, 300px);
+  height: auto;
 }
 
-.eyebrow {
-  margin: 0 0 10px;
-  color: #f0bd68;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: uppercase;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .brand-title {
@@ -962,16 +971,16 @@ h2 {
   .brand-lockup {
     align-items: flex-start;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+  }
+
+  .brand-mark {
+    width: 64px;
   }
 
   .brand-logo {
-    width: 46px;
-    height: 46px;
-  }
-
-  .brand-title {
-    font-size: clamp(2.25rem, 10vw, 2.55rem);
+    width: 64px;
+    height: 64px;
   }
 
   .hero-headline {

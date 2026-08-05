@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Tee Drop icon for light backgrounds</title>
+  <desc id="desc">A dark green golf tee shaped like a T inside a four-part broken gold ring.</desc>
+  <circle cx="128" cy="128" r="96" fill="none" stroke="#c5862b" stroke-width="14" stroke-linecap="butt" stroke-dasharray="137 14" stroke-dashoffset="7" transform="rotate(-45 128 128)"/>
+  <path d="M74 65h108v28h-28c-5 0-8 3-9 8l-12 97-5 25-5-25-12-97c-1-5-4-8-9-8H74z" fill="#164832"/>
+  <path d="M119 105h18l-9 91z" fill="#fffdf8"/>
+</svg>
