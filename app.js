@@ -1678,7 +1678,7 @@ function matchesArea(course, area) {
 
 function updateHomepageStats() {
   courseCount.textContent = courses.length;
-  courseStats.textContent = `${courses.length} public courses \u00b7 Rate status checked for every course \u00b7 Book direct`;
+  courseStats.textContent = `${courses.length} public courses \u00b7 Rate information reviewed monthly \u00b7 Book direct`;
 }
 
 function updateFooterYear() {
