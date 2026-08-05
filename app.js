@@ -1677,12 +1677,8 @@ function matchesArea(course, area) {
 }
 
 function updateHomepageStats() {
-  const coursesWithCurrentPostedPrices = courses.filter(
-    (course) => course.rateInfo?.status === "posted"
-  ).length;
-
   courseCount.textContent = courses.length;
-  courseStats.textContent = `${courses.length} public-course records \u00b7 Current posted prices for ${coursesWithCurrentPostedPrices} \u00b7 Rate status checked for all courses`;
+  courseStats.textContent = `${courses.length} public courses \u00b7 Rate status checked for every course \u00b7 Book direct`;
 }
 
 function updateFooterYear() {
