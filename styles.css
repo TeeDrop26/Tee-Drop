@@ -1084,3 +1084,828 @@ h2 {
     max-width: calc(100% - 24px);
   }
 }
+
+/* Homepage prototype: Modern Golf Utility */
+body.homepage {
+  --utility-bg: #f5f3ed;
+  --utility-surface: #fffdf8;
+  --utility-ink: #15251e;
+  --utility-muted: #5d6b63;
+  --utility-line: #d9ddd5;
+  --utility-shadow: 0 10px 26px rgba(22, 72, 50, 0.08);
+  background: var(--utility-bg);
+  color: var(--utility-ink);
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.homepage .app-shell {
+  width: min(1200px, calc(100% - 48px));
+  padding: 0 0 48px;
+}
+
+.homepage .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  min-height: 90px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(197, 134, 43, 0.38);
+}
+
+.homepage .site-brand,
+.homepage .brand-mark {
+  display: block;
+  line-height: 0;
+}
+
+.homepage .brand-logo {
+  width: 264px;
+  height: auto;
+}
+
+.homepage .site-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.homepage .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--green-dark);
+  font-size: 0.94rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.homepage .site-nav a:hover {
+  color: var(--gold);
+}
+
+.homepage .search-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(370px, 0.9fr);
+  align-items: end;
+  gap: clamp(28px, 5vw, 72px);
+  margin: 44px 0 64px;
+  padding: clamp(28px, 5vw, 54px);
+  border-top: 4px solid var(--gold);
+  border-radius: 12px;
+  background: var(--green-dark);
+  box-shadow: var(--utility-shadow);
+  color: var(--cream, #fffdf8);
+}
+
+.homepage .section-kicker {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.homepage .search-hero h1 {
+  max-width: 620px;
+  margin: 0;
+  color: #fffdf8;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.98;
+}
+
+.homepage .hero-copy {
+  max-width: 590px;
+  margin: 16px 0 0;
+  color: rgba(255, 253, 248, 0.82);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  line-height: 1.55;
+}
+
+.homepage .hero-proof {
+  margin: 22px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #efc16e;
+  font-size: 0.83rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.homepage .hero-search-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.homepage .hero-search {
+  display: grid;
+  gap: 8px;
+  color: rgba(255, 253, 248, 0.8);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.homepage .hero-search input,
+.homepage select {
+  min-height: 48px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: #fffdf8;
+  color: var(--utility-ink);
+  box-shadow: none;
+}
+
+.homepage .hero-search input {
+  width: 100%;
+  padding: 0 14px;
+}
+
+.homepage .hero-search input::placeholder {
+  color: #78837c;
+}
+
+.homepage .primary-action,
+.homepage .book-link {
+  min-height: 48px;
+  border-radius: 7px;
+  background: var(--gold);
+  box-shadow: none;
+  color: #17221d;
+  font-weight: 800;
+}
+
+.homepage .primary-action {
+  padding: 0 18px;
+}
+
+.homepage .primary-action:hover,
+.homepage .book-link:hover {
+  background: #d2943a;
+  transform: none;
+}
+
+.homepage .primary-action:focus-visible,
+.homepage .book-link:focus-visible,
+.homepage .site-nav a:focus-visible,
+.homepage select:focus-visible,
+.homepage input:focus-visible {
+  outline: 3px solid rgba(197, 134, 43, 0.8);
+  outline-offset: 3px;
+}
+
+.homepage .featured-section,
+.homepage .course-directory {
+  scroll-margin-top: 22px;
+}
+
+.homepage .section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.homepage .section-heading h2 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.homepage .section-heading > p {
+  max-width: 330px;
+  margin: 0;
+  color: var(--utility-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.homepage .featured-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(310px, 0.85fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.homepage .monthly-course,
+.homepage .featured-course {
+  margin: 0;
+  box-shadow: var(--utility-shadow);
+}
+
+.homepage .monthly-course {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  min-height: 344px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 4px solid var(--gold);
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, rgba(13, 50, 35, 0.94) 0%, rgba(13, 50, 35, 0.78) 58%, rgba(13, 50, 35, 0.26) 100%),
+    url("oak-shadows-august-course-of-month.jpg") center / cover;
+  color: #fffdf8;
+}
+
+.homepage .monthly-course::before,
+.homepage .featured-course::before,
+.homepage .tee-card::before {
+  display: none;
+}
+
+.homepage .monthly-course h2 {
+  margin: 0;
+  color: #fffdf8;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.homepage .monthly-course .alert-kicker {
+  margin: 0 0 12px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--gold);
+  color: #173b2b;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.homepage .monthly-course p:not(.alert-kicker) {
+  max-width: 580px;
+  margin: 14px 0 0;
+  color: rgba(255, 253, 248, 0.9);
+  font-size: 0.98rem;
+  line-height: 1.52;
+}
+
+.homepage .monthly-course-action .book-link {
+  min-width: 146px;
+}
+
+.homepage .featured-course {
+  display: flex;
+  min-height: 344px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 26px;
+  border: 1px solid var(--utility-line);
+  border-radius: 10px;
+  background: var(--utility-surface);
+  color: var(--utility-ink);
+}
+
+.homepage .featured-copy h2 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.homepage .featured-course .alert-kicker {
+  margin: 0 0 11px;
+  color: var(--green-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.homepage .featured-copy > p:not(.alert-kicker):not(.featured-rate) {
+  margin: 11px 0 0;
+  color: var(--utility-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.homepage .featured-rate {
+  display: none;
+}
+
+.homepage .featured-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.homepage .featured-details div {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.homepage .featured-details span,
+.homepage .tee-grid span {
+  margin-bottom: 4px;
+  color: var(--utility-muted);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.homepage .featured-details strong,
+.homepage .tee-grid strong {
+  color: var(--green-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.homepage .featured-details .book-link {
+  grid-column: 1 / -1;
+  min-height: 46px;
+  margin-top: 6px;
+}
+
+.homepage .course-directory {
+  margin-top: 80px;
+}
+
+.homepage .directory-heading {
+  margin-bottom: 22px;
+}
+
+.homepage .filters {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 18px;
+  border: 0;
+  border-bottom: 1px solid var(--utility-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.homepage .filters label {
+  min-width: 210px;
+  color: var(--utility-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.homepage .filters select {
+  padding: 0 12px;
+  border-color: #cbd3c9;
+}
+
+.homepage .status-row {
+  align-items: center;
+  margin: 16px 0 20px;
+  color: var(--utility-muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.homepage #resultCount {
+  flex: 0 0 auto;
+  color: var(--green-dark);
+  font-weight: 800;
+  text-align: right;
+}
+
+.homepage .tee-time-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.homepage .tee-card {
+  min-height: 0;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--utility-line);
+  border-top: 3px solid var(--green-dark);
+  border-radius: 9px;
+  background: var(--utility-surface);
+  box-shadow: var(--utility-shadow);
+}
+
+.homepage .tee-card.call-card {
+  border-top-color: var(--gold);
+}
+
+.homepage .tee-card.online-card:hover {
+  border-color: #b9c7bb;
+  box-shadow: 0 14px 30px rgba(22, 72, 50, 0.12);
+  transform: none;
+}
+
+.homepage .tee-card.nearby-card {
+  border-color: rgba(22, 72, 50, 0.42);
+  box-shadow: 0 14px 30px rgba(22, 72, 50, 0.12);
+}
+
+.homepage .course-main {
+  gap: 16px;
+}
+
+.homepage .course-meta {
+  margin: 0 0 7px;
+  color: var(--utility-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.homepage .tee-card h2 {
+  color: var(--green-dark);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.homepage .card-badges {
+  gap: 7px;
+}
+
+.homepage .booking-type,
+.homepage .distance-pill {
+  max-width: 118px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.homepage .booking-type {
+  background: #eaf1ec;
+  color: var(--green-dark);
+}
+
+.homepage .booking-type.call {
+  background: #fbefd9;
+  color: #805113;
+}
+
+.homepage .distance-pill {
+  background: var(--green-dark);
+  color: #fffdf8;
+}
+
+.homepage .tee-grid {
+  gap: 18px;
+}
+
+.homepage .tee-grid div {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.homepage .rate-info {
+  padding: 11px 12px;
+  border: 1px solid #e2dac6;
+  border-radius: 6px;
+  background: #fbf6e8;
+  color: #5a4b2b;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.48;
+}
+
+.homepage .card-actions {
+  align-items: end;
+  gap: 18px;
+}
+
+.homepage .note {
+  max-width: 62%;
+  color: var(--utility-muted);
+  font-size: 0.8rem;
+  line-height: 1.42;
+}
+
+.homepage .tee-card.call-card .note {
+  color: #6d501f;
+  font-weight: 700;
+}
+
+.homepage .book-link {
+  min-width: 132px;
+  padding: 0 16px;
+}
+
+.homepage .results-actions {
+  margin: 24px 0 0;
+}
+
+.homepage .show-more-button {
+  min-width: 260px;
+}
+
+.homepage .back-to-filters {
+  border: 1px solid rgba(255, 253, 248, 0.22);
+  background: var(--green-dark);
+  color: #fffdf8;
+}
+
+.homepage .back-to-filters:hover {
+  background: #0f3525;
+}
+
+.homepage .site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  gap: 48px;
+  margin-top: 72px;
+  padding: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--green-dark);
+  box-shadow: none;
+  color: rgba(255, 253, 248, 0.8);
+}
+
+.homepage .footer-brand img {
+  display: block;
+  width: 204px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.homepage .site-footer p {
+  max-width: 520px;
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.homepage .footer-links {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.homepage .site-footer a {
+  color: #f0bd68;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.homepage .site-footer a:hover {
+  color: #fffdf8;
+}
+
+.homepage .site-footer .footer-meta {
+  color: rgba(255, 253, 248, 0.58);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 940px) {
+  .homepage .search-hero,
+  .homepage .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage .search-hero {
+    gap: 30px;
+  }
+
+  .homepage .featured-course {
+    min-height: 0;
+  }
+
+  .homepage .tee-time-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .homepage .app-shell {
+    width: min(100% - 28px, 1200px);
+    padding-bottom: 28px;
+  }
+
+  .homepage .site-header {
+    min-height: 82px;
+    gap: 18px;
+    padding: 10px 0;
+  }
+
+  .homepage .brand-mark,
+  .homepage .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .homepage .site-nav {
+    gap: 16px;
+  }
+
+  .homepage .site-nav a {
+    font-size: 0.78rem;
+  }
+
+  .homepage .search-hero {
+    display: block;
+    margin: 24px 0 48px;
+    padding: 27px 20px 20px;
+    border-radius: 9px;
+  }
+
+  .homepage .search-hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3rem);
+  }
+
+  .homepage .hero-copy {
+    margin-top: 14px;
+    font-size: 0.96rem;
+  }
+
+  .homepage .hero-proof {
+    margin-top: 18px;
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+
+  .homepage .hero-search-actions {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .homepage .hero-search input,
+  .homepage .primary-action,
+  .homepage .book-link,
+  .homepage select {
+    min-height: 48px;
+  }
+
+  .homepage .section-heading {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .homepage .section-heading > p {
+    max-width: none;
+    margin-top: 8px;
+    font-size: 0.84rem;
+    text-align: left;
+  }
+
+  .homepage .monthly-course {
+    grid-template-columns: 1fr;
+    min-height: 330px;
+    padding: 22px;
+    background-position: 58% center;
+  }
+
+  .homepage .monthly-course h2 {
+    font-size: 2rem;
+  }
+
+  .homepage .monthly-course .alert-kicker {
+    width: max-content;
+    max-width: 100%;
+    padding: 5px 7px;
+    font-size: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .homepage .monthly-course-action {
+    margin-top: 20px;
+  }
+
+  .homepage .monthly-course-action .book-link {
+    width: 100%;
+  }
+
+  .homepage .featured-course {
+    padding: 22px;
+  }
+
+  .homepage .course-directory {
+    margin-top: 56px;
+  }
+
+  .homepage .filters {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .homepage .filters label {
+    min-width: 0;
+  }
+
+  .homepage .status-row {
+    align-items: flex-start;
+    gap: 6px;
+    margin: 14px 0 18px;
+  }
+
+  .homepage #resultCount {
+    text-align: left;
+  }
+
+  .homepage .tee-card {
+    padding: 20px;
+  }
+
+  .homepage .course-main,
+  .homepage .card-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .homepage .card-badges {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .homepage .note {
+    max-width: none;
+  }
+
+  .homepage .book-link {
+    width: 100%;
+  }
+
+  .homepage .show-more-button {
+    width: 100%;
+  }
+
+  .homepage .site-footer {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 56px;
+    padding: 28px 22px;
+    border-radius: 8px;
+  }
+
+  .homepage .footer-brand img {
+    width: 180px;
+  }
+}
+
+/* Restrained section depth for the homepage prototype. */
+.homepage .featured-section,
+.homepage .course-directory {
+  position: relative;
+}
+
+.homepage .featured-section {
+  padding: 36px;
+  border-radius: 18px;
+  background: #e5ede4;
+}
+
+.homepage .course-directory {
+  margin-top: 44px;
+  padding: 36px;
+  border-radius: 18px;
+  background: #e9e4da;
+}
+
+.homepage .featured-section::before,
+.homepage .course-directory::before {
+  display: none;
+}
+
+.homepage .tee-card {
+  border-color: #bdc7bb;
+  box-shadow: 0 12px 26px rgba(22, 72, 50, 0.13);
+}
+
+.homepage .tee-card.call-card {
+  border-color: #d8c58e;
+  border-top-color: var(--gold);
+}
+
+@media (max-width: 680px) {
+  .homepage .featured-section {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .homepage .course-directory {
+    margin-top: 28px;
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+}

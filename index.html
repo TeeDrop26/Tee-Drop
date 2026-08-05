@@ -20,6 +20,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=tee-drop-logo-20260805">
   <link rel="icon" type="image/png" sizes="32x32" href="brand-assets/tee-drop-logo-system/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="brand-assets/tee-drop-logo-system/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=tee-drop-logo-20260805">
   <script type="application/ld+json">
   {
@@ -54,105 +57,115 @@
   }
   </script>
 </head>
-<body>
+<body class="homepage">
   <main class="app-shell">
-    <section class="top-bar" aria-label="Search controls">
-      <div class="brand-block">
-        <div class="brand-lockup">
-          <picture class="brand-mark">
-            <source media="(max-width: 680px)" srcset="brand-assets/tee-drop-logo-system/tee-drop-icon.svg">
-            <img class="brand-logo" src="brand-assets/tee-drop-logo-system/tee-drop-horizontal.svg" alt="Tee Drop">
-          </picture>
-          <div>
-            <h1 class="visually-hidden">Tee Drop</h1>
-            <p class="hero-headline">Find Northeast Ohio public golf courses faster.</p>
-            <p class="hero-copy">Tee Drop keeps course links, direct booking options, phone information, and posted rates in one place.</p>
-            <p class="hero-proof" id="courseStats">Public courses listed &bull; Rate information updated from course sources</p>
-            <p class="hero-region">Tuscarawas County to Northeast Ohio</p>
-          </div>
-        </div>
+    <header class="site-header">
+      <a class="site-brand" href="#top" aria-label="Tee Drop home">
+        <picture class="brand-mark">
+          <source media="(max-width: 680px)" srcset="brand-assets/tee-drop-logo-system/tee-drop-icon.svg">
+          <img class="brand-logo" src="brand-assets/tee-drop-logo-system/tee-drop-horizontal-light.svg" alt="Tee Drop">
+        </picture>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#courseDirectory">Find a Course</a>
+        <a href="#featured">Featured</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <section class="search-hero" id="top" aria-labelledby="homepage-title">
+      <div class="hero-content">
+        <p class="section-kicker">Northeast Ohio public golf</p>
+        <h1 id="homepage-title">Find your next round.</h1>
+        <p class="hero-copy">Search Northeast Ohio public golf courses, compare posted rates, and book directly with the course.</p>
+        <p class="hero-proof" id="courseStats">Public courses listed &bull; Rate information updated from course sources</p>
+        <span id="courseCount" class="visually-hidden"></span>
       </div>
-      <div class="hero-actions">
-        <div class="hero-stat" aria-label="Course coverage">
-          <strong id="courseCount"></strong>
-          <span>public courses</span>
+      <div class="hero-search-actions">
+        <label class="hero-search" for="courseSearch">
+          <span>Course or town</span>
+          <input id="courseSearch" type="search" placeholder="Search a course or town">
+        </label>
+        <button class="primary-action" id="useLocationButton" type="button">Use My Location</button>
+      </div>
+    </section>
+
+    <section class="featured-section" id="featured" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Local courses worth a look</p>
+          <h2 id="featured-title">Featured</h2>
         </div>
-        <button class="primary-action" id="useLocationButton" type="button">
-          Use My Location
+        <p>Public golf, highlighted by Tee Drop.</p>
+      </div>
+      <div class="featured-grid">
+        <section class="monthly-course" id="monthlyCourse" aria-label="August Course of the Month"></section>
+        <section class="featured-course" id="featuredCourse" aria-label="Course of the week"></section>
+      </div>
+    </section>
+
+    <section class="course-directory" id="courseDirectory" aria-labelledby="directory-title">
+      <div class="section-heading directory-heading">
+        <div>
+          <p class="section-kicker">Course directory</p>
+          <h2 id="directory-title">Explore Northeast Ohio courses</h2>
+        </div>
+        <p>Find a course, then confirm current rates and availability directly with it.</p>
+      </div>
+
+      <section class="filters" id="courseFilters" aria-label="Course filters">
+        <label>
+          Booking
+          <select id="bookingFilter">
+            <option value="all">All courses</option>
+            <option value="online">Online booking</option>
+            <option value="call">Call / info</option>
+          </select>
+        </label>
+
+        <label>
+          Area
+          <select id="areaFilter">
+            <option value="all">All areas</option>
+            <option value="Tuscarawas County">Tuscarawas County</option>
+            <option value="Canton / Stark County">Canton / Stark County</option>
+            <option value="Akron / Summit County">Akron / Summit County</option>
+            <option value="Wayne / Holmes County">Wayne / Holmes County</option>
+            <option value="Cleveland area">Cleveland area</option>
+            <option value="Eastern Northeast Ohio">Eastern Northeast Ohio</option>
+            <option value="Other Northeast Ohio">Other Northeast Ohio</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="status-row" aria-live="polite">
+        <p id="locationStatus">Showing Tuscarawas County and Northeast Ohio courses. Use your location to sort closest courses first.</p>
+        <p id="resultCount"></p>
+      </section>
+
+      <section class="tee-time-list" id="teeTimeList" aria-label="Course booking links"></section>
+
+      <div class="results-actions">
+        <button class="primary-action show-more-button" id="showMoreCourses" type="button" aria-controls="teeTimeList" aria-label="Show 10 more matching courses" hidden>
+          Show 10 More Courses
         </button>
       </div>
     </section>
-
-    <section class="trust-strip" aria-label="Tee Drop highlights">
-      <p>Local course links</p>
-      <p>Faster course checking</p>
-      <p>Book direct when possible</p>
-      <p class="feedback-note">Updated with help from local golfers</p>
-    </section>
-
-    <section class="monthly-course" id="monthlyCourse" aria-label="August Course of the Month"></section>
-
-    <section class="featured-course" id="featuredCourse" aria-label="Course of the week"></section>
-
-    <section class="filters" id="courseFilters" aria-label="Course filters">
-      <label class="course-search">
-        Course or town
-        <input id="courseSearch" type="search" placeholder="Zoar, Canton, Wilkshire...">
-      </label>
-
-      <label>
-        Booking
-        <select id="bookingFilter">
-          <option value="all">All courses</option>
-          <option value="online">Online booking</option>
-          <option value="call">Call / info</option>
-        </select>
-      </label>
-
-      <label>
-        Area
-        <select id="areaFilter">
-          <option value="all">All areas</option>
-          <option value="Tuscarawas County">Tuscarawas County</option>
-          <option value="Canton / Stark County">Canton / Stark County</option>
-          <option value="Akron / Summit County">Akron / Summit County</option>
-          <option value="Wayne / Holmes County">Wayne / Holmes County</option>
-          <option value="Cleveland area">Cleveland area</option>
-          <option value="Eastern Northeast Ohio">Eastern Northeast Ohio</option>
-          <option value="Other Northeast Ohio">Other Northeast Ohio</option>
-        </select>
-      </label>
-    </section>
-
-    <section class="status-row" aria-live="polite">
-      <p id="locationStatus">Showing Tuscarawas County and Northeast Ohio courses. Use your location to sort closest courses first.</p>
-      <p id="resultCount"></p>
-    </section>
-
-    <section class="tee-time-list" id="teeTimeList" aria-label="Course booking links"></section>
-
-    <div class="results-actions">
-      <button class="primary-action show-more-button" id="showMoreCourses" type="button" aria-controls="teeTimeList" aria-label="Show 10 more matching courses" hidden>
-        Show 10 More Courses
-      </button>
-    </div>
 
     <button class="primary-action back-to-filters" id="backToFiltersButton" type="button" aria-label="Back to course search and filters" hidden>
       Back to top
     </button>
 
-    <section class="creator-note" aria-labelledby="creator-note-title">
-      <p class="section-kicker">Locally owned in Tuscarawas County</p>
-      <h2 id="creator-note-title">A local golf directory for Northeast Ohio</h2>
-      <p>PlayTeeDrop is a locally owned and operated Tuscarawas County golf directory built to help golfers find public course links, booking options, phone information, and posted rates faster.</p>
-      <a href="about.html">About PlayTeeDrop</a>
-    </section>
-
     <footer class="site-footer">
-      <p>Tee Drop keeps public course links in one place so golfers can check options faster and book direct whenever possible.</p>
-      <p>Posted rates can change. Confirm rates and availability with the course before booking.</p>
-      <p><a href="about.html">About PlayTeeDrop</a></p>
-      <p class="footer-meta">&copy; <span id="currentYear"></span> Tee Drop &bull; Northeast Ohio</p>
+      <div class="footer-brand">
+        <img src="brand-assets/tee-drop-logo-system/tee-drop-horizontal.svg" alt="Tee Drop">
+        <p>Tee Drop keeps public course links in one place so golfers can check options faster and book direct whenever possible.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About PlayTeeDrop</a>
+        <p>Posted rates can change. Confirm rates and availability with the course before booking.</p>
+        <p class="footer-meta">&copy; <span id="currentYear"></span> Tee Drop &bull; Northeast Ohio</p>
+      </div>
     </footer>
   </main>
 

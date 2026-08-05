@@ -7,8 +7,11 @@ const courses = [
     longitude: -81.418408,
     bookingUrl: "https://zoar-village-golf-course.book.teeitup.com/?course=4264",
     rateInfo: {
-      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Current official rates: Monday-Thursday 18 holes riding $44 and 9 riding $30; Friday 18 riding $53, or $44 after noon; weekend/holiday 18 riding ranges from $65-$68, $57-$60 from noon-2, and $50-$53 after 2.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://zoarvillagegolf.com/rates/"
     },
     firstAvailable: {
       time: "Open link",
@@ -26,8 +29,11 @@ const courses = [
     longitude: -81.423778,
     bookingUrl: "https://www.oakshadowsgolf.com/tee-times/",
     rateInfo: {
-      summary: "Weekend posted: 18 w/cart $60; 9 w/cart $38. Twilight after 2: 18 $45; 9 $30.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official course site provides online booking but no fixed current public rate sheet was verified. Check the official booking page for the current date-and-time price.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.oakshadowsgolf.com/tee-times/"
     },
     teeTimes: []
   },
@@ -39,8 +45,11 @@ const courses = [
     longitude: -81.44818665347,
     bookingUrl: "https://wilkshire-golf-course.book.teeitup.com/",
     rateInfo: {
-      summary: "2026 posted: weekday 18 w/cart $45, 9 w/cart $30; weekend/holiday 18 $65, 9 PM $40; after 2 18 $55.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: weekday 18 w/cart $45, 9 w/cart $30; weekend/holiday 18 $65; after 2 PM 18 $55; weekend 9 $40 PM only.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.wilkshiregolf.com/rates/"
     },
     teeTimes: []
   },
@@ -52,8 +61,11 @@ const courses = [
     longitude: -81.69626,
     bookingUrl: "https://apimanager-cc30.clubcaddie.com/webapi/view/eifdabab",
     rateInfo: {
-      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: weekday 18 w/cart $40, 9 w/cart $28; Friday 18 w/cart $45; weekend/holiday 18 w/cart $54, $45 after 2 PM; weekend 9 w/cart $30, $28 after 2 PM.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://rivergreens.com/rates/"
     },
     teeTimes: []
   },
@@ -66,8 +78,11 @@ const courses = [
     bookingUrl: "https://www.golfnow.com/tee-times/facility/6066-hickory-flats-golf-course/search",
     bookingNote: "Open Hickory Flats' course link to check booking options.",
     rateInfo: {
-      summary: "GolfNow tee sheet. Online pricing can vary by date, time, and availability.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Posted: walking 9 $12 / 18 $20; weekday riding 9 $20 / 18 $27; weekend riding 9 $24 / 18 $34; senior weekday and after 1 PM weekend 9 $18 / 18 $23.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.hickoryflatsgc.com/rates/"
     },
     teeTimes: []
   },
@@ -78,6 +93,13 @@ const courses = [
     latitude: 40.767691,
     longitude: -81.497323,
     bookingUrl: "https://foreupsoftware.com/index.php/booking/22058",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 in-season posted: weekday 18 w/cart $45, weekend/holiday $58; weekday 9 w/cart $32, weekend $36; weekend 18 after 1 PM $48.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.thelegends.com/course/rates"
+    },
     teeTimes: []
   },
   {
@@ -89,6 +111,13 @@ const courses = [
     bookingUrl: "http://www.5watersgolf.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (740) 922-2182 to check booking options.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official site lists weekday 9 walk $10 / ride $15 and 18 walk $16 / ride $22; weekend/holiday categories are listed, but the same page still contains 2020 membership wording, so confirm current prices.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://5watersgolf.com/info.html"
+    },
     teeTimes: []
   },
   {
@@ -101,8 +130,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (740) 229-7660 to check booking options.",
     rateInfo: {
-      summary: "Posted: 18 riding $22; 9 riding $15. Weekend: 18 $25; 9 $18.",
-      checked: "Jul 17, 2026"
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "The official course site does not publish current green fees and directs golfers to call for tee times. Call 740-229-7660 to confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://bigbendgolfcourse.com/"
     },
     teeTimes: []
   },
@@ -114,8 +146,11 @@ const courses = [
     longitude: -81.618241,
     bookingUrl: "https://blackgoldgc.teesnap.net/",
     rateInfo: {
-      summary: "Posted: weekday 18 w/GPS cart $49, 9 $37; weekend 18 $70, 9 $47. Online may show best price.",
-      checked: "Jul 17, 2026"
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "Official rates page exists but did not expose rates in search text; use booking page or call to confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://blackgoldgolfclub.com/rates/"
     },
     teeTimes: []
   },
@@ -127,8 +162,11 @@ const courses = [
     longitude: -81.298935,
     bookingUrl: "https://vip.teeitup.com/the-quarry/tee-times/",
     rateInfo: {
-      summary: "Online tee sheet. Rates are shown through the booking page when available.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Official booking page shows tee-time pricing; rates vary by date, time, demand, and availability.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://vip.teeitup.com/the-quarry/tee-times/"
     },
     teeTimes: []
   },
@@ -140,8 +178,11 @@ const courses = [
     longitude: -81.0784467,
     bookingUrl: "https://www.chronogolf.com/club/carroll-meadows-golf-course",
     rateInfo: {
-      summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: weekday 18 w/cart $38, weekend/holiday $48, weekend after 1 PM $40; weekday senior $32.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://carrollmeadows.com/rates/"
     },
     teeTimes: []
   },
@@ -153,8 +194,11 @@ const courses = [
     longitude: -81.080017,
     bookingUrl: "https://apimanager-cc20.clubcaddie.com/webapi/view/ggfdabab",
     rateInfo: {
-      summary: "Weekend posted: AM 18 riding $55, PM 18 $39; AM 9 riding $35, PM 9 $28.",
-      checked: "Jul 17, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official rate page lists weekday 18 riding $42 and weekend 18 riding $55, with PM and 9-hole rates, but the page does not clearly state an effective year; confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://greattrailgc.com/golf/rates-passes/"
     },
     teeTimes: []
   },
@@ -167,8 +211,11 @@ const courses = [
     bookingUrl: "https://arrowhead-golf-club-4.book-v2.teeitup.golf/",
     bookingNote: "1500 Rogwin Cir SW. Open the course link to check booking options.",
     rateInfo: {
-      summary: "2026 posted: daily 18 riding $55, 9 riding $36; senior riding 18 $37, 9 $27.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: daily 18 riding $55, 9 riding $36; walking 18 $45, 9 $27; senior riding 18 $37, 9 $27.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://ncarrowhead.com/golf/book-time/"
     },
     teeTimes: []
   },
@@ -180,8 +227,11 @@ const courses = [
     longitude: -81.425,
     bookingUrl: "https://www.golfraintree.com/book-a-tee-time/",
     rateInfo: {
-      summary: "Dynamic pricing posted. Online rates can change by demand and availability.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Official site states lowest rates are online and phone/walk-up rates may be higher; check booking page for current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.golfraintree.com/tee-times-2/"
     },
     teeTimes: []
   },
@@ -194,8 +244,11 @@ const courses = [
     bookingUrl: "https://www.firestone9.com/book-a-tee-time/",
     bookingNote: "Public 9-hole course. Open the course link to check booking options.",
     rateInfo: {
-      summary: "Weekend/holiday posted: ride 9 $32, walk 9 $22; ride 18 $47, walk 18 $33.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Summer posted: Mon-Thu ride 9 $29 / walk 9 $19; ride 18 $44 / walk 18 $30. Fri-Sun/holidays ride 9 $32 / walk 9 $22; ride 18 $47 / walk 18 $33.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.firestone9.com/rates/"
     },
     teeTimes: []
   },
@@ -207,8 +260,11 @@ const courses = [
     longitude: -81.279248,
     bookingUrl: "https://sablecreekgolf.com/book-a-tee-time/",
     rateInfo: {
-      summary: "Weekend posted: AM 18 w/cart $62; AM 9 w/cart $40. After 1: 18 $47; 9 $33.",
-      checked: "Jul 17, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists weekday 18 w/cart $45, 9 w/cart $28; weekend AM 18 w/cart $62, 9 w/cart $40; after 1 PM 18 $47, 9 $33. Page does not clearly label the year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://sablecreekgolf.com/rates-and-fees/"
     },
     teeTimes: []
   },
@@ -220,8 +276,11 @@ const courses = [
     longitude: -81.126503,
     bookingUrl: "https://www.chronogolf.com/club/pleasant-view-golf-club-ohio",
     rateInfo: {
-      summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Official rate page directs golfers to the booking page for current rates.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://pleasantviewgolfclub.com/rates/"
     },
     teeTimes: []
   },
@@ -235,8 +294,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 674-3921 to check booking options.",
     rateInfo: {
-      summary: "Weekend/holiday posted: morning 18 w/cart $49; 9 w/cart $38. After 2: 18 $43; 9 $33.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: Mon-Fri 18 w/cart $44, 9 $33; senior 18 $39, 9 $30. Weekend/holiday 7-2: 18 $49, 9 $38; after 2: 18 $43, 9 $33.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.fireridgegolfcourse.com/rates-and-specials"
     },
     teeTimes: []
   },
@@ -248,8 +310,11 @@ const courses = [
     longitude: -81.782,
     bookingUrl: "https://www.chronogolf.com/club/the-pines-golf-club-ohio",
     rateInfo: {
-      summary: "Chronogolf tee sheet. Rates are not posted on the public overview page.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: Mon-Thu 18 w/cart $45, 9 $31; Fri-Sun/holidays 18 $51, 9 $34; senior Mon-Fri 18 $34, 9 $26.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://thepinesgolf.com/the-course/"
     },
     teeTimes: []
   },
@@ -260,6 +325,13 @@ const courses = [
     latitude: 40.919587,
     longitude: -81.902738,
     bookingUrl: "https://www.chronogolf.com/club/hawks-nest-golf-club-ohio",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "No official current rate page found; call 330-435-4611 for current rates and tee times.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.ohiogolf.com/golfcourses/hawks-nest-golf-club"
+    },
     teeTimes: []
   },
   {
@@ -270,8 +342,11 @@ const courses = [
     longitude: -81.657214,
     bookingUrl: "https://www.chippewagolfclub.com/tee-times/",
     rateInfo: {
-      summary: "Weekend/holiday posted: before 2 18 riding $75, 9 riding $40; after 2 18 $57, 9 $35.",
-      checked: "Jul 17, 2026"
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "The Doylestown course's official site does not publish current rates; call 330-658-6126 or use its booking page. Do not use Chippewa 579 rates from Curtice, Ohio.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.chippewagolfclub.com/"
     },
     teeTimes: []
   },
@@ -285,8 +360,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 484-1886 to check booking options.",
     rateInfo: {
-      summary: "Weekend/holiday posted: 7-1 18 w/cart $55, 9 $40; 1-4 18 $47, 9 $32; after 4 18 $33, 9 $23.",
-      checked: "Jul 17, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists weekday 18 w/cart $39, 9 $27; Friday 18 $44, 9 $32; weekend/holiday 7-1 18 $55, 9 $40; 1-4 18 $47, 9 $32; after 4 18 $33, 9 $23. Page does not clearly state the year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.svgcanton.com/golf-rates"
     },
     teeTimes: []
   },
@@ -300,8 +378,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 488-0404 to check booking options.",
     rateInfo: {
-      summary: "Weekend/holiday before noon posted: 18 riding $56; 9 riding $33.",
-      checked: "Jul 17, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists weekday 18 riding $40, 9 riding $28; senior before noon 18 riding $36, 9 $23; weekend/holiday before noon 18 riding $56, 9 $33. Page does not clearly state the year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clearviewgolfclub.com/rates"
     },
     teeTimes: []
   },
@@ -312,6 +393,13 @@ const courses = [
     latitude: 40.7298,
     longitude: -81.1054,
     bookingUrl: "https://book.edgewatergolfcourse.com/",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists weekday 9 walk $10 / cart $17 and 18 walk $18 / cart $27; weekend 9 walk $12 / cart $20 and 18 walk $20 / cart $35. Page does not clearly state the year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.edgewatergolfcourse.com/pricing"
+    },
     teeTimes: []
   },
   {
@@ -323,6 +411,13 @@ const courses = [
     bookingUrl: "https://www.lake-mohawk.org/",
     bookingLabel: "Call / Info",
     bookingNote: "Community course. Contact Lake Mohawk before planning a round.",
+    rateInfo: {
+      status: "access-review",
+      statusLabel: "Confirm access",
+      summary: "Lake Mohawk is a private gated community. Golf access and guest eligibility are not clearly published; contact the Golf Clubhouse at 330-863-1122 before listing it as a normal public course.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.lake-mohawk.org/"
+    },
     teeTimes: []
   },
   {
@@ -334,6 +429,13 @@ const courses = [
     bookingUrl: "https://www.facebook.com/people/The-Elms-Country-Club/100063908499193/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 833-2668 to check booking options.",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "Official site confirms the course is open to the public but does not publish current rates; call 330-833-2668.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://elms.golf/"
+    },
     teeTimes: []
   },
   {
@@ -345,6 +447,13 @@ const courses = [
     bookingUrl: "https://www.ohiogolf.com/golfcourses/black-diamond-golf",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 674-6110 to check booking options.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists Mon-Thu 18 riding $42, after 2 $40; Fri-Sun 18 riding $58, after 2 $48; Mon-Thu 9 riding $29, after 2 $27; Fri-Sun 9 riding $38, after 2 $34. Page does not clearly state the year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://blackdiamondgolfcourse.com/rates/"
+    },
     teeTimes: []
   },
   {
@@ -357,8 +466,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 699-2209 or check the course site for current booking instructions.",
     rateInfo: {
-      summary: "Saturday posted: 18 riding $52 early, $43 late morning, $40 after 1; 9 riding $34/$28/$25.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted schedule varies by day and time. Examples: Mon-Fri 18 riding $31 early, $39 from 8-9:52, $35 from 10-12:52; Saturday $52 early / $43 late morning / $40 after 1; Sunday $58 early / $50 late morning / $40 after 1.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.mayfaircountryclub.com/rates/"
     },
     teeTimes: []
   },
@@ -370,8 +482,11 @@ const courses = [
     longitude: -81.465,
     bookingUrl: "https://www.chenowethgolf.com/tee-times/",
     rateInfo: {
-      summary: "Weekend posted: before 2 18 w/cart $62, 9 $35; 2-4 18 $50, 9 $30; after 4 18 $44, 9 $28.",
-      checked: "Jul 17, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official course page lists Monday-Thursday 18 holes with cart $44 and 9 holes $26; Friday 18 with cart $48 and 9 $28; weekend 18 with cart $62 before 2 PM, $50 from 2-4, and $44 after 4. The page does not clearly state an effective year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.chenowethgolf.com/about-us/rates/"
     },
     teeTimes: []
   },
@@ -382,6 +497,13 @@ const courses = [
     latitude: 41.032,
     longitude: -81.571,
     bookingUrl: "https://mud-run-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03844",
+    rateInfo: {
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "An official rates page is available, but its current dollar amounts were not exposed in the page text. Check the official rates or booking page, or call the course, for current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.mudrungolf.com/rates/"
+    },
     teeTimes: []
   },
   {
@@ -391,6 +513,13 @@ const courses = [
     latitude: 41.095709,
     longitude: -81.578544,
     bookingUrl: "https://je-good-park-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03840",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official Akron course page lists weekday 9 walking $21 / riding $28 and 18 walking $26 / riding $38; weekend before 1 PM 18 walking $45 / riding $57. No clear 2026 effective date was visible.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.golfakron.org/good-park/rates/"
+    },
     teeTimes: []
   },
   {
@@ -400,6 +529,13 @@ const courses = [
     latitude: 40.839,
     longitude: -81.359,
     bookingUrl: "https://foreupsoftware.com/index.php/booking/21609/8341",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official Canton course page lists weekday 9 holes $15 and 18 holes $20; weekend 9 holes $20 and 18 holes $25; cart fees are $15 for 9 and $20 for 18. No clear 2026 effective date was visible.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.meadowlakegc.com/rates"
+    },
     teeTimes: []
   },
   {
@@ -411,6 +547,13 @@ const courses = [
     bookingUrl: "https://tannenhaufgolf.net/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 823-4402 to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 summer rates: weekday 18 riding $42; weekend before noon $60 and after noon $47; weekday 9 riding $22.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://tannenhaufgolf.net/rates/"
+    },
     teeTimes: []
   },
   {
@@ -421,8 +564,11 @@ const courses = [
     longitude: -81.7649999,
     bookingUrl: "https://ricelandgolfcourse.com/book-a-tee-time/",
     rateInfo: {
-      summary: "Weekend posted: 18 w/cart $48 before noon, $44 after noon; 9 w/cart $26.",
-      checked: "Jul 17, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 rates: weekday 18 riding $40; weekend 18 riding $48 before noon and $44 after noon; 9 riding $24 weekday and $26 weekend.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://ricelandgolfcourse.com/rates/"
     },
     teeTimes: []
   },
@@ -434,8 +580,11 @@ const courses = [
     longitude: -82.141,
     bookingUrl: "https://www.roundlakegolfcourse.com/",
     rateInfo: {
-      summary: "Fri-Sun posted: 18 w/cart $46; 9 w/cart $30.",
-      checked: "Jul 17, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists Monday-Thursday 18 riding $40 and 9 riding $26; Friday-Sunday 18 riding $46 and 9 riding $30. Confirm current pricing with the course.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.roundlakegolfcourse.com/golfcourse"
     },
     teeTimes: []
   },
@@ -448,6 +597,13 @@ const courses = [
     bookingUrl: "https://www.golflink.com/golf-courses/oh/minerva/big-dawg-s-golf-course",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 868-3294 to check booking options.",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "No official current rate page was found. Call 330-868-3294 to confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://thegolfcourses.net/golfcourses/OH/622655.htm"
+    },
     teeTimes: []
   },
   {
@@ -457,6 +613,13 @@ const courses = [
     latitude: 40.0776634,
     longitude: -81.4692891,
     bookingUrl: "https://www.chronogolf.com/club/salt-fork-state-park-golf-course",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 rates: Monday-Thursday 18 riding $46 and 9 riding $32; Friday-Sunday 18 riding $58 and 9 riding $40.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.saltforkparklodge.com/things-to-do/golf"
+    },
     teeTimes: []
   },
   {
@@ -468,6 +631,13 @@ const courses = [
     bookingUrl: "https://www.facebook.com/MulliganSpringsGolfCourse/",
     bookingLabel: "Call / Info",
     bookingNote: "Par 3 course. Call (330) 628-5139 to check booking options.",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "No official current rate page was found. Call 330-628-5139 to confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.golfdigest.com/courses/oh/mulligan-springs-golf-course-mulligan"
+    },
     teeTimes: []
   },
   {
@@ -478,6 +648,13 @@ const courses = [
     longitude: -81.223061,
     bookingUrl: "https://www.chronogolf.com/club/windmill-lakes-golf-club",
     bookingNote: "Open Windmill Lakes' course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 summer rates: weekday 18 riding $49.50 and 9 riding $26; weekend before noon 18 riding $67, noon-2 $56, and after 2 $44.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://golfwindmilllakes.com/rates/"
+    },
     teeTimes: []
   },
   {
@@ -488,6 +665,13 @@ const courses = [
     longitude: -81.543,
     bookingUrl: "https://turkeyfoot-lake-golf-links.book.teeitup.com/",
     bookingNote: "Open Turkeyfoot's course link to check booking options.",
+    rateInfo: {
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "Official rates page is labeled 2025 and does not confirm current 2026 peak-season pricing; check the booking page or call (330) 644-5971.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.turkeyfootgolf.com/rates/"
+    },
     teeTimes: []
   },
   {
@@ -498,6 +682,13 @@ const courses = [
     longitude: -81.4665,
     bookingUrl: "https://www.brookledgegc.com/tee-times/",
     bookingNote: "Open Brookledge's course link to check booking options.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Rates are shown through the official booking flow and may vary by date, time, and availability.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.brookledgegc.com/tee-times/"
+    },
     teeTimes: []
   },
   {
@@ -508,6 +699,13 @@ const courses = [
     longitude: -81.407369,
     bookingUrl: "https://www.foxdengc.com/tee-times/",
     bookingNote: "Open Fox Den's course link to check booking options.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Current pricing is shown through the course booking system; check the booking page or call (330) 673-3443.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.foxdengc.com/tee-times/"
+    },
     teeTimes: []
   },
   {
@@ -518,6 +716,13 @@ const courses = [
     longitude: -81.4542,
     bookingUrl: "https://www.rosesrun.com/tee-times/",
     bookingNote: "Open Roses Run's course link to check booking options.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Current rates are shown through the official tee-time booking flow; pricing may vary by date, time, and availability.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.rosesrun.com/tee-times/"
+    },
     teeTimes: []
   },
   {
@@ -528,6 +733,13 @@ const courses = [
     longitude: -81.3259579,
     bookingUrl: "https://boulder-creek-golf-club-3.book.teeitup.com/",
     bookingNote: "Open Boulder Creek's course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 summer rates: Monday-Thursday 18 riding $62; Friday $68; weekend/holiday $84 before noon, $74 noon-2, $64 after 2, and $54 after 4.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://bouldercreekohio.com/rates-and-course-policy/"
+    },
     teeTimes: []
   },
   {
@@ -538,6 +750,13 @@ const courses = [
     longitude: -81.7855,
     bookingUrl: "https://pine-hills-golf-club-oh.book.teeitup.com/",
     bookingNote: "Open Pine Hills' course link to check booking options.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Green fees use dynamic pricing based on season, weather, course conditions, and demand; check the official booking page for the current rate.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.golfpinehills.net/course-rates/"
+    },
     teeTimes: []
   },
   {
@@ -549,8 +768,11 @@ const courses = [
     bookingUrl: "https://bunker-hill-golf-course.book.teeitup.com/",
     bookingNote: "Open Bunker Hill's course link to check booking options.",
     rateInfo: {
-      summary: "2025-2026 golf rates posted on the course rates page.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Current rates are shown through the official booking page; pricing may vary by date, time, and availability.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://bunker-hill-golf-course.book.teeitup.com/"
     },
     teeTimes: []
   },
@@ -563,8 +785,11 @@ const courses = [
     bookingUrl: "https://coppertop-golf-club.book.teeitup.com/",
     bookingNote: "Open Coppertop's course link to check booking options.",
     rateInfo: {
-      summary: "Green fees vary by day, time, and season; online deal times may be available.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Green fees vary by day, time, and season; check the official booking page for current pricing. The course notes some deal times may be as low as $24.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://coppertopgolf.com/course-overview/"
     },
     teeTimes: []
   },
@@ -577,8 +802,11 @@ const courses = [
     bookingUrl: "https://grey-hawk-golf-club.book.teeitup.com/",
     bookingNote: "Open Grey Hawk's course link to check booking options.",
     rateInfo: {
-      summary: "Dynamic pricing posted. Online rates change by demand, season, time, and availability.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Dynamic pricing varies with demand, season, time, weather, and availability; online-only rates are shown through the official booking page.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.greyhawkgolf.com/daily-rates/"
     },
     teeTimes: []
   },
@@ -591,8 +819,11 @@ const courses = [
     bookingUrl: "https://sweetbriar-golf-club-legacy-18.book.teeitup.com/",
     bookingNote: "Open Sweetbriar's course link to check booking options.",
     rateInfo: {
-      summary: "Course site says to book online for the best available rates.",
-      checked: "Jul 17, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The course uses dynamic pricing; online rates fluctuate with weather, competition, local events, and booking timing. Check the official booking page for the current rate.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.sweetbriargolfclub.com/book-a-tee-time/"
     },
     teeTimes: []
   },
@@ -606,8 +837,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (419) 938-5311 or check the course site for current tee times.",
     rateInfo: {
-      summary: "Green fees page lists 9/18-hole walking and cart categories; confirm current prices before playing.",
-      checked: "Jul 17, 2026"
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "The official Perrysville rate page lists fee categories but does not display current dollar amounts; call (419) 938-5311 to confirm pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://pleasanthillgolfcourse.com/green-fees"
     },
     teeTimes: []
   },
@@ -620,8 +854,11 @@ const courses = [
     bookingUrl: "https://deerridge.quick18.com/",
     bookingNote: "Open Deer Ridge's course link to check booking options.",
     rateInfo: {
-      summary: "Online tee sheet. Pricing may vary by date, time, and availability.",
-      checked: "Jul 17, 2026"
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The official course site provides a 2026 rate page; open it or the booking page to confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://deerridgegc.com/rates"
     },
     teeTimes: []
   },
@@ -633,6 +870,13 @@ const courses = [
     longitude: -81.4319,
     bookingUrl: "https://www.chronogolf.com/club/manakiki-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 18 holes $38 Monday-Thursday, $45 Friday, and $51 weekends; an 18-hole cart is $16 at Manakiki.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://cms.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -643,6 +887,13 @@ const courses = [
     longitude: -80.8722,
     bookingUrl: "https://www.flyingbgolf.com/teetimes/",
     bookingNote: "Open The Flying B's course link to check booking options.",
+    rateInfo: {
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The official site has a rates page but does not expose current dollar amounts in readable text; check the booking page or call (330) 337-8138.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.flyingbgolf.com/aboutus/rates/"
+    },
     teeTimes: []
   },
   {
@@ -653,6 +904,13 @@ const courses = [
     longitude: -80.609,
     bookingUrl: "https://reserverun.cps.golf/",
     bookingNote: "Open Reserve Run's course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 in-season rates: Monday-Thursday 18 riding $40 before 8 and $45 after 8; Friday $50; weekends $55 before 2 and $45 after 2.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.reserverungolf.com/rates-booking/2025-rates"
+    },
     teeTimes: []
   },
   {
@@ -663,6 +921,13 @@ const courses = [
     longitude: -81.6226271,
     bookingUrl: "https://www.chronogolf.com/club/sleepy-hollow-golf-course-ohio",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 18 holes $38 Monday-Thursday, $45 Friday, and $51 weekends; an 18-hole cart is $14.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -673,6 +938,13 @@ const courses = [
     longitude: -81.2058,
     bookingUrl: "https://stdenisgolfclub.com/",
     bookingNote: "Open St. Denis' course link to check booking options.",
+    rateInfo: {
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official rates page is still labeled 2025; use the booking page or call (440) 285-2183 for current 2026 pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://stdenisgolfclub.com/rates/"
+    },
     teeTimes: []
   },
   {
@@ -683,6 +955,13 @@ const courses = [
     longitude: -81.8487,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/big-met-golf-course-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 18 holes $31 Monday-Thursday, $34 Friday, and $37 weekends; an 18-hole cart is $14.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -693,6 +972,13 @@ const courses = [
     longitude: -81.745,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/ironwood-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 18 holes $31 Monday-Thursday, $34 Friday, and $37 weekends; an 18-hole cart is $16 at Ironwood.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -703,6 +989,13 @@ const courses = [
     longitude: -81.8284,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/little-met-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 9 holes $14 weekdays and $16 weekends; a 9-hole cart is $8.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -713,6 +1006,13 @@ const courses = [
     longitude: -81.8427,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/mastick-woods-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 9 holes $14 weekdays and $16 weekends; a 9-hole cart is $8.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -723,6 +1023,13 @@ const courses = [
     longitude: -81.6307,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/seneca-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 18 holes $31 Monday-Thursday, $34 Friday, and $37 weekends; an 18-hole cart is $14.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -733,6 +1040,13 @@ const courses = [
     longitude: -81.512,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/shawnee-hills-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 18 holes $31 Monday-Thursday, $34 Friday, and $37 weekends; an 18-hole cart is $14.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -743,6 +1057,13 @@ const courses = [
     longitude: -81.6706,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Peak greens fees: 9 holes $14 weekdays and $16 weekends; a 9-hole cart is $8.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
+    },
     teeTimes: []
   },
   {
@@ -754,8 +1075,11 @@ const courses = [
     bookingUrl: "https://shalecreek.cps.golf/",
     bookingNote: "Open Shale Creek's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Online tee sheet displays current pricing; posted dollar amounts were not listed on the official site.",
-      checked: "Jul 22, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official site directs golfers to its tee-time booking flow; no fixed public daily-rate sheet was found. Check the official booking page for current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://shalecreek.cps.golf/"
     },
     teeTimes: []
   },
@@ -768,8 +1092,11 @@ const courses = [
     bookingUrl: "https://valleaire-golf-club.book.teeitup.com/",
     bookingNote: "Open Valleaire's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "2026 posted rates include 18 holes with cart from $48 Monday-Thursday, $52 Friday before noon, and $64 weekend or holiday before 1 PM.",
-      checked: "Jul 22, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: Monday-Thursday 18 holes with cart $48 and 9 holes $32; Friday 18 holes $52 before noon and $42 after; weekend 18 holes $64 before 1 PM and $54 after.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.valleairegolf.com/rates/"
     },
     teeTimes: []
   },
@@ -782,8 +1109,11 @@ const courses = [
     bookingUrl: "https://themallardcreek.com/tee-times/",
     bookingNote: "Open Mallard Creek's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Dynamic pricing is used; pricing may vary by date, time, demand, and availability.",
-      checked: "Jul 22, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Official course site uses dynamic pricing; current rates vary by date, time, demand, and availability and are shown in the booking flow.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://themallardcreek.com/tee-times/"
     },
     teeTimes: []
   },
@@ -796,8 +1126,11 @@ const courses = [
     bookingUrl: "https://golfpinebrook.com/tee-times/",
     bookingNote: "Open Pine Brook's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Published rate page is labeled 2025; check the booking page or contact the course for current pricing.",
-      checked: "Jul 22, 2026"
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official published rate page is labeled 2025. Check the current booking page or contact the course for 2026 pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://golfpinebrook.com/rates/"
     },
     teeTimes: []
   },
@@ -810,8 +1143,11 @@ const courses = [
     bookingUrl: "https://hinckley-hills-golf-course.book.teeitup.com/",
     bookingNote: "Open Hinckley Hills' booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Current rates are not posted on the official site; check the booking page or call the course for current pricing.",
-      checked: "Jul 22, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official site offers online booking but does not publish a fixed current daily-rate sheet. Check the official booking flow or call 330-278-4861 for current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://hinckley-hills-golf-course.book.teeitup.com/"
     },
     teeTimes: []
   },
@@ -824,8 +1160,11 @@ const courses = [
     bookingUrl: "https://cossettcreek.com/book-a-tee-time/",
     bookingNote: "Open Cossett Creek's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Dynamic pricing is used; pricing may vary by date, time, demand, and availability.",
-      checked: "Jul 22, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "Official course site uses dynamic pricing; current rates vary by date, time, demand, and availability and are shown when booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://cossettcreek.com/book-a-tee-time/"
     },
     teeTimes: []
   },
@@ -838,8 +1177,11 @@ const courses = [
     bookingUrl: "https://golfback.com/#/course/44064327-b8aa-4c4b-8976-fcc697699926",
     bookingNote: "Open Fowler's Mill's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Rates are shown through the official booking flow; pricing may vary by date, time, demand, and availability.",
-      checked: "Jul 22, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official course site directs golfers to its GolfBack booking flow and does not publish a fixed daily-rate sheet. Current pricing varies by tee time and is shown when booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://fowlersmillgc.com/"
     },
     teeTimes: []
   },
@@ -852,8 +1194,11 @@ const courses = [
     bookingUrl: "https://foreupsoftware.com/index.php/booking/20201/3971#teetimes",
     bookingNote: "Open Painesville Country Club's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Published rate page is labeled 2025; check the booking page or contact the course for current pricing.",
-      checked: "Jul 22, 2026"
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official published rate page is labeled 2025. Check the booking page or contact the course for current 2026 pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.painesvillecountryclub.com/rates/"
     },
     teeTimes: []
   },
@@ -866,8 +1211,11 @@ const courses = [
     bookingUrl: "https://millcreekmetroparks.teesnap.net/",
     bookingNote: "Open Mill Creek's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Official rate page describes 2026 rates but also shows conflicting effective-date language; confirm current pricing with the course.",
-      checked: "Jul 22, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "The official MetroParks page labels the section as 2026 rates but also says rates are effective January 2025. It lists Mahoning County resident 18-hole riding at $46 and non-resident 18-hole riding at $54; confirm current pricing because the effective-date language conflicts.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.millcreekmetroparks.org/mill-creek-golf-course/"
     },
     teeTimes: []
   },
@@ -880,8 +1228,11 @@ const courses = [
     bookingUrl: "https://www.knollrun.com/rates-booking",
     bookingNote: "Open Knoll Run's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Official rates page lists price categories but does not show a clear 2026 effective date; confirm current pricing with the course.",
-      checked: "Jul 22, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists weekday 9 holes $20 and 18 holes $40; weekend/holiday 9 holes $24 before 1 PM and $22 after, and 18 holes $48 before 1 PM and $42 after. Cart fees are additional. No clear effective year is shown.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.knollrun.com/rates-booking"
     },
     teeTimes: []
   },
@@ -894,8 +1245,11 @@ const courses = [
     bookingUrl: "https://www.linksatfirestonefarms.com/bookteetimes",
     bookingNote: "Open Firestone Farms' booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "2026 posted rates include 18 holes with cart from $49 weekday, $55 Friday, and $65 weekend before 3 PM.",
-      checked: "Jul 22, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 posted: Monday-Thursday 18 holes riding $49, Friday $55, weekend before 3 PM $65, and weekend after 3 PM $55; 9-hole riding rates range from $27 to $40.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.linksatfirestonefarms.com/golf-course/rates"
     },
     teeTimes: []
   },
@@ -908,8 +1262,11 @@ const courses = [
     bookingUrl: "https://lake-milton-golf-club.book.teeitup.com/",
     bookingNote: "Open Lake Milton's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Published rate page is labeled 2025; check the booking page or contact the course for current pricing.",
-      checked: "Jul 22, 2026"
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official published rate page is labeled 2025. Check the booking page or call 330-557-1077 for current 2026 pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.lakemiltongolfclub.com/rates/"
     },
     teeTimes: []
   },
@@ -923,8 +1280,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call 330-854-9910 to confirm current availability and rates.",
     rateInfo: {
-      summary: "Current rates are not listed on the official site; call the course to confirm current pricing.",
-      checked: "Jul 22, 2026"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 peak-season posted: weekday 9 holes riding $26 and 18 holes riding $36; weekend before 1 PM 9 riding $30 and 18 riding $48; after 1 PM 9 riding $28 and 18 riding $42.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.lyonsdengolf.com/id14.html"
     },
     teeTimes: []
   },
@@ -937,8 +1297,11 @@ const courses = [
     bookingUrl: "https://pleasanthillgolfchardon.teesnap.net/",
     bookingNote: "Open Pleasant Hill Chardon's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "Official rates page lists posted prices but does not show a clear 2026 effective date; confirm current pricing with the course.",
-      checked: "Jul 22, 2026"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official Chardon course page lists Monday and Wednesday-Friday 18 holes with cart $38, Tuesday $28, and Saturday-Sunday $48; senior/junior 18 with cart $30. The rate table does not clearly state an effective year.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://playphgc.com/rates/"
     },
     teeTimes: []
   },
@@ -951,8 +1314,11 @@ const courses = [
     bookingUrl: "https://b51e062b-8ea4-4ca1-aa13-c449a771989b.book.teeitup.com/",
     bookingNote: "Open Olde Dutch Mill's booking page to check current availability and pricing.",
     rateInfo: {
-      summary: "2026 peak-season rates include 18 holes with cart from $35 weekday and $49 weekend before 2 PM.",
-      checked: "Jul 22, 2026"
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "No fixed current rate sheet was found on an official course site. Use the course's official TeeItUp booking page or call 330-654-4100 to confirm current pricing.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://b51e062b-8ea4-4ca1-aa13-c449a771989b.book.teeitup.com/"
     },
     teeTimes: []
   }
@@ -1129,9 +1495,7 @@ function renderTeeTimes() {
     card.querySelector("h2").textContent = teeTime.course.name;
     const isNearby = Boolean(userLocation) && teeTime.distance !== null && index < 3;
 
-    card.querySelector(".course-meta").textContent = teeTime.bookingOnly
-      ? `${teeTime.course.city} - Course and booking link`
-      : `${teeTime.course.city} - ${capitalize(teeTime.day)}`;
+    card.querySelector(".course-meta").textContent = `${teeTime.course.city} - ${teeTime.course.area}`;
     article.classList.toggle("call-card", courseBookingType === "call");
     article.classList.toggle("online-card", courseBookingType === "online");
     article.classList.toggle("nearby-card", isNearby);
@@ -1139,6 +1503,7 @@ function renderTeeTimes() {
     bookingType.classList.toggle("call", courseBookingType === "call");
     const distancePill = card.querySelector(".distance-pill");
     distancePill.classList.toggle("nearby", isNearby);
+    distancePill.hidden = teeTime.distance === null;
     distancePill.textContent = teeTime.distance === null
       ? "Use location"
       : `${isNearby ? "Nearby - " : ""}${teeTime.distance.toFixed(1)} mi`;
@@ -1312,12 +1677,12 @@ function matchesArea(course, area) {
 }
 
 function updateHomepageStats() {
-  const coursesWithRateInfo = courses.filter((course) => course.rateInfo).length;
-  const latestCheckedDate = getLatestRateCheckedDate();
-  const latestCheckedText = latestCheckedDate ? formatDisplayDate(latestCheckedDate) : "rate checks pending";
+  const coursesWithCurrentPostedPrices = courses.filter(
+    (course) => course.rateInfo?.status === "posted"
+  ).length;
 
   courseCount.textContent = courses.length;
-  courseStats.textContent = `${courses.length} public courses listed \u2022 Rate information for ${coursesWithRateInfo} courses \u2022 Updated ${latestCheckedText}`;
+  courseStats.textContent = `${courses.length} public-course records \u00b7 Current posted prices for ${coursesWithCurrentPostedPrices} \u00b7 Rate status checked for all courses`;
 }
 
 function updateFooterYear() {
@@ -1436,9 +1801,13 @@ function getRateStatusText(course) {
     return "Not listed";
   }
 
+  if (course.rateInfo.statusLabel) {
+    return course.rateInfo.statusLabel;
+  }
+
   const summary = course.rateInfo.summary.toLowerCase();
 
-  if (/\$\d/.test(course.rateInfo.summary)) {
+  if (/\$\d/.test(course.rateInfo.summary) || summary.includes("rates posted")) {
     return "Rates listed";
   }
 
