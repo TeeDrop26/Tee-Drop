@@ -1145,17 +1145,48 @@ body.homepage {
 }
 
 .homepage .search-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(370px, 0.9fr);
-  align-items: end;
-  gap: clamp(28px, 5vw, 72px);
-  margin: 44px 0 64px;
-  padding: clamp(28px, 5vw, 54px);
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  margin: 36px 0 56px;
+  padding: 58px clamp(42px, 5vw, 64px);
+  overflow: hidden;
   border-top: 4px solid var(--gold);
   border-radius: 12px;
-  background: var(--green-dark);
+  background-color: var(--green-dark);
+  background-image:
+    linear-gradient(90deg, rgba(13, 68, 46, 0.99) 0%, rgba(13, 68, 46, 0.97) 35%, rgba(13, 68, 46, 0.86) 52%, rgba(13, 68, 46, 0.42) 72%, rgba(13, 68, 46, 0.2) 100%),
+    linear-gradient(180deg, rgba(4, 34, 23, 0.08) 45%, rgba(4, 34, 23, 0.35) 100%),
+    url("assets/tee-drop-hero-course.webp");
+  background-position: center, center, center;
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: var(--utility-shadow);
   color: var(--cream, #fffdf8);
+}
+
+.homepage .search-hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 220px;
+  height: 132px;
+  background-image: radial-gradient(circle, rgba(239, 178, 65, 0.78) 1.4px, transparent 1.8px);
+  background-size: 14px 14px;
+  content: "";
+  mask-image: linear-gradient(135deg, transparent 4%, #000 56%);
+  pointer-events: none;
+}
+
+.homepage .hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .homepage .section-kicker {
@@ -1168,7 +1199,7 @@ body.homepage {
 }
 
 .homepage .search-hero h1 {
-  max-width: 620px;
+  max-width: 570px;
   margin: 0;
   color: #fffdf8;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -1178,15 +1209,16 @@ body.homepage {
 }
 
 .homepage .hero-copy {
-  max-width: 590px;
-  margin: 16px 0 0;
-  color: rgba(255, 253, 248, 0.82);
-  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  max-width: 600px;
+  margin: 20px 0 0;
+  color: rgba(255, 253, 248, 0.9);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   line-height: 1.55;
 }
 
 .homepage .hero-proof {
-  margin: 22px 0 0;
+  max-width: 720px;
+  margin: 24px 0 0;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -1200,7 +1232,10 @@ body.homepage {
 .homepage .hero-search-actions {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 24px;
+  gap: 14px;
   align-items: end;
 }
 
@@ -1216,7 +1251,7 @@ body.homepage {
 
 .homepage .hero-search input,
 .homepage select {
-  min-height: 48px;
+  min-height: 58px;
   border: 1px solid transparent;
   border-radius: 7px;
   background: #fffdf8;
@@ -1226,7 +1261,11 @@ body.homepage {
 
 .homepage .hero-search input {
   width: 100%;
-  padding: 0 14px;
+  padding: 0 16px 0 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2368726c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
+  background-position: 17px center;
+  background-repeat: no-repeat;
+  background-size: 21px;
 }
 
 .homepage .hero-search input::placeholder {
@@ -1235,7 +1274,7 @@ body.homepage {
 
 .homepage .primary-action,
 .homepage .book-link {
-  min-height: 48px;
+  min-height: 58px;
   border-radius: 7px;
   background: var(--gold);
   box-shadow: none;
@@ -1244,7 +1283,15 @@ body.homepage {
 }
 
 .homepage .primary-action {
-  padding: 0 18px;
+  padding: 0 24px;
+}
+
+.homepage .search-hero .primary-action {
+  padding-left: 52px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2317221d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E");
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  background-size: 21px;
 }
 
 .homepage .primary-action:hover,
@@ -1678,13 +1725,30 @@ body.homepage {
 }
 
 @media (max-width: 940px) {
-  .homepage .search-hero,
-  .homepage .featured-grid {
-    grid-template-columns: 1fr;
+  .homepage .search-hero {
+    min-height: 480px;
+    padding: 48px 38px;
+    background-image:
+      linear-gradient(90deg, rgba(13, 68, 46, 0.99) 0%, rgba(13, 68, 46, 0.95) 42%, rgba(13, 68, 46, 0.7) 68%, rgba(13, 68, 46, 0.34) 100%),
+      linear-gradient(180deg, rgba(4, 34, 23, 0.1) 45%, rgba(4, 34, 23, 0.38) 100%),
+      url("assets/tee-drop-hero-course.webp");
+    background-position: center, center, 58% center;
   }
 
-  .homepage .search-hero {
-    gap: 30px;
+  .homepage .search-hero h1 {
+    max-width: 520px;
+  }
+
+  .homepage .hero-copy {
+    max-width: 560px;
+  }
+
+  .homepage .hero-search-actions {
+    max-width: 680px;
+  }
+
+  .homepage .featured-grid {
+    grid-template-columns: 1fr;
   }
 
   .homepage .featured-course {
@@ -1724,9 +1788,19 @@ body.homepage {
 
   .homepage .search-hero {
     display: block;
-    margin: 24px 0 48px;
-    padding: 27px 20px 20px;
+    min-height: 0;
+    margin: 24px 0 44px;
+    padding: 30px 20px 24px;
     border-radius: 9px;
+    background-image:
+      linear-gradient(90deg, rgba(13, 68, 46, 0.96), rgba(13, 68, 46, 0.86)),
+      linear-gradient(180deg, rgba(4, 34, 23, 0.16), rgba(4, 34, 23, 0.46)),
+      url("assets/tee-drop-hero-course.webp");
+    background-position: center, center, 68% center;
+  }
+
+  .homepage .search-hero::after {
+    display: none;
   }
 
   .homepage .search-hero h1 {
@@ -1747,14 +1821,14 @@ body.homepage {
   .homepage .hero-search-actions {
     grid-template-columns: 1fr;
     gap: 12px;
-    margin-top: 24px;
+    margin-top: 18px;
   }
 
   .homepage .hero-search input,
   .homepage .primary-action,
   .homepage .book-link,
   .homepage select {
-    min-height: 48px;
+    min-height: 52px;
   }
 
   .homepage .section-heading {
