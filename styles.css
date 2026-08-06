@@ -1167,20 +1167,6 @@ body.homepage {
   color: var(--cream, #fffdf8);
 }
 
-.homepage .search-hero::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 220px;
-  height: 132px;
-  background-image: radial-gradient(circle, rgba(239, 178, 65, 0.78) 1.4px, transparent 1.8px);
-  background-size: 14px 14px;
-  content: "";
-  mask-image: linear-gradient(135deg, transparent 4%, #000 56%);
-  pointer-events: none;
-}
-
 .homepage .hero-content {
   position: relative;
   z-index: 1;
@@ -1797,10 +1783,6 @@ body.homepage {
       linear-gradient(180deg, rgba(4, 34, 23, 0.16), rgba(4, 34, 23, 0.46)),
       url("assets/tee-drop-hero-course.webp");
     background-position: center, center, 68% center;
-  }
-
-  .homepage .search-hero::after {
-    display: none;
   }
 
   .homepage .search-hero h1 {
