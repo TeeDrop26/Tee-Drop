@@ -403,24 +403,6 @@ const courses = [
     teeTimes: []
   },
   {
-    name: "Lake Mohawk Golf Club",
-    city: "Malvern, OH",
-    area: "Eastern Northeast Ohio",
-    latitude: 40.666,
-    longitude: -81.189,
-    bookingUrl: "https://www.lake-mohawk.org/",
-    bookingLabel: "Call / Info",
-    bookingNote: "Community course. Contact Lake Mohawk before planning a round.",
-    rateInfo: {
-      status: "access-review",
-      statusLabel: "Confirm access",
-      summary: "Lake Mohawk is a private gated community. Golf access and guest eligibility are not clearly published; contact the Golf Clubhouse at 330-863-1122 before listing it as a normal public course.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.lake-mohawk.org/"
-    },
-    teeTimes: []
-  },
-  {
     name: "The Elms Country Club",
     city: "North Lawrence, OH",
     area: "Canton / Stark County",
@@ -526,15 +508,15 @@ const courses = [
     name: "Meadowlake Golf Course",
     city: "Canton, OH",
     area: "Canton / Stark County",
-    latitude: 40.839,
-    longitude: -81.359,
-    bookingUrl: "https://foreupsoftware.com/index.php/booking/21609/8341",
+    latitude: 40.841091,
+    longitude: -81.358994,
+    bookingUrl: "https://apimanager-cc37.clubcaddie.com/webapi/view/bbgdabab",
     rateInfo: {
-      status: "undated",
+      status: "posted",
       statusLabel: "Rates listed",
-      summary: "Official Canton course page lists weekday 9 holes $15 and 18 holes $20; weekend 9 holes $20 and 18 holes $25; cart fees are $15 for 9 and $20 for 18. No clear 2026 effective date was visible.",
+      summary: "2026 posted rates: weekday 9 walking $16 / riding $23 and 18 walking $25 / riding $37; weekend 9 walking $17 / riding $26 and 18 walking $28 / riding $42. Confirm current pricing with the course before booking.",
       checked: "Aug 5, 2026",
-      sourceUrl: "https://www.meadowlakegc.com/rates"
+      sourceUrl: "https://www.meadowlakeclub.com/greens-fees"
     },
     teeTimes: []
   },
@@ -831,8 +813,8 @@ const courses = [
     name: "Pleasant Hill Golf Course",
     city: "Perrysville, OH",
     area: "Other Northeast Ohio",
-    latitude: 40.6576,
-    longitude: -82.2744,
+    latitude: 40.634455,
+    longitude: -82.364267,
     bookingUrl: "https://pleasanthillgolfcourse.com/green-fees",
     bookingLabel: "Call / Info",
     bookingNote: "Call (419) 938-5311 or check the course site for current tee times.",
@@ -1319,6 +1301,200 @@ const courses = [
       summary: "No fixed current rate sheet was found on an official course site. Use the course's official TeeItUp booking page or call 330-654-4100 to confirm current pricing.",
       checked: "Aug 5, 2026",
       sourceUrl: "https://b51e062b-8ea4-4ca1-aa13-c449a771989b.book.teeitup.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "EagleSticks Golf Club",
+    city: "Zanesville, OH",
+    area: "Other Northeast Ohio",
+    latitude: 39.8985115,
+    longitude: -82.0368666,
+    bookingUrl: "https://eaglesticks-golf-club.book.teeitup.com/",
+    bookingNote: "Open EagleSticks' booking page to check current availability and pricing.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "EagleSticks uses its official TeeItUp booking page for current pricing, which can vary by date, time, demand, and availability. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.eaglesticks.com/tee-times/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Crystal Springs Golf Club",
+    city: "Hopewell, OH",
+    area: "Other Northeast Ohio",
+    latitude: 39.96383,
+    longitude: -82.17212,
+    bookingUrl: "https://crystalspringsgc.com/teetimes/",
+    bookingNote: "Open Crystal Springs' booking page to check current availability and pricing.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 summer rates: weekday 18 holes $38 riding / $32 walking and weekend 18 holes $46 riding / $42 walking. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://crystalspringsgc.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "The Virtues Golf Club",
+    city: "Nashport, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.085709,
+    longitude: -82.234534,
+    bookingUrl: "https://apimanager-cc37.clubcaddie.com/webapi/view/iafdabab",
+    bookingNote: "Open The Virtues' booking page to check current availability and pricing.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The Virtues uses its official booking page for current pricing, which can vary by date, time, demand, and availability. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://thevirtuesgolfclub.com/book-a-tee-time/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Zanesville Jaycees Public Golf Course",
+    city: "Zanesville, OH",
+    area: "Other Northeast Ohio",
+    latitude: 39.981761,
+    longitude: -81.923787,
+    bookingUrl: "https://www.zanesvillejcgolfcourse.com/Contact.html",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (740) 452-1860 to confirm current availability and rates.",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "No current official rate sheet was found. Call (740) 452-1860 to confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.zanesvillejcgolfcourse.com/Contact.html"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Fuller's Fairways",
+    city: "Zanesville, OH",
+    area: "Other Northeast Ohio",
+    latitude: 39.9336299,
+    longitude: -81.9141207,
+    bookingUrl: "https://fullersfairways.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (740) 452-9830 to confirm current availability and rates.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official rate page lists 9 holes with cart $21, 18 holes with cart $35, and weekday senior 18 with cart $28; the page does not state an effective year. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://fullersfairways.com/?page_id=55"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Vista Golf Course",
+    city: "Nashport, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.03405,
+    longitude: -82.03438,
+    bookingUrl: "https://vistagolfcourse.teesnap.net/",
+    bookingNote: "Open Vista's booking page to check current availability and pricing.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official rate page lists weekday adult 18 holes $34 riding / $24 walking and weekend 18 holes $38 riding / $28 walking; the page does not state an effective year. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.vistagolfcourse.com/Golf-Course-Details/Rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Cadiz Country Club",
+    city: "Cadiz, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 40.248599,
+    longitude: -80.986166,
+    bookingUrl: "https://cadizcountryclub.com/tee-times/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (740) 942-3610 to confirm current availability and rates.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official tee-time page lists Monday 18 with cart $35, Tuesday-Friday $40, and weekend/holiday $50; the page does not state an effective year. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://cadizcountryclub.com/tee-times/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Beaver Creek Meadows Golf Course",
+    city: "Lisbon, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 40.7153082,
+    longitude: -80.6343783,
+    bookingUrl: "https://beavercreekmeadowsgolf.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 385-3020 to confirm current availability and rates.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official page lists weekday 18 holes $35 riding / $22 walking and weekend 18 holes $45 riding / $27 walking; the page does not state an effective year. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://beavercreekmeadowsgolf.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Turkana Golf Course",
+    city: "East Liverpool, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 40.691578,
+    longitude: -80.556343,
+    bookingUrl: "https://www.turkanagolf.com/home/welcome-to-turkana-golf-course",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 382-1187 to confirm current availability and rates.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 summer rates: weekday 18 holes with half cart $33 and weekend 18 holes with half cart $44. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://www.turkanagolf.com/rates"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Historic Highlands Golf Course",
+    city: "East Liverpool, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 40.658237,
+    longitude: -80.620529,
+    bookingUrl: "https://historichighlandsgc.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 831-4466 to confirm current availability and rates.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Official fee page lists 9 holes $21 with cart / $14 walking and 18 holes $31 with cart / $23 walking; the page does not state an effective year. Confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://historichighlandsgc.com/golf-fees-at-historic-highlands-golf-course/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "East Palestine Country Club",
+    city: "Negley, OH",
+    area: "Eastern Northeast Ohio",
+    latitude: 40.775188,
+    longitude: -80.54095,
+    bookingUrl: "https://epcountryclub.com/tee-times",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (330) 426-9761 to confirm current availability and rates.",
+    rateInfo: {
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The official public-golf rate page does not show readable dollar figures. Call (330) 426-9761 to confirm current pricing with the course before booking.",
+      checked: "Aug 5, 2026",
+      sourceUrl: "https://epcountryclub.com/rates"
     },
     teeTimes: []
   }
