@@ -356,9 +356,8 @@ const courses = [
     area: "Canton / Stark County",
     latitude: 40.723104,
     longitude: -81.391027,
-    bookingUrl: "https://www.svgcanton.com/",
-    bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 484-1886 to check booking options.",
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/20683/5399#/teetimes",
+    bookingNote: "Open Spring Valley's booking page to check current availability and pricing.",
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",
