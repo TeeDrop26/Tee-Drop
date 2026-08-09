@@ -17,6 +17,8 @@ Posted rates can change. Golfers should confirm rates and availability with the 
 - Course-link click tracking through Google Sheets, with Formspree as a fallback
 - Course of the Week
 
+`Source` records the Tee Drop placement where a click occurred, while `Traffic Source` records the referral parameter or defaults to `direct`.
+
 ## Project Files
 
 - `index.html` contains the page structure, filters, SEO metadata, and footer.

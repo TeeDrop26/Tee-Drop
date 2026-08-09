@@ -357,7 +357,6 @@ const courses = [
     latitude: 40.723104,
     longitude: -81.391027,
     bookingUrl: "https://foreupsoftware.com/index.php/booking/20683/5399#/teetimes",
-    bookingNote: "Open Spring Valley's booking page to check current availability and pricing.",
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",
