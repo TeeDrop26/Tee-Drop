@@ -1746,7 +1746,7 @@ const courses = [
 
 const TRACKING_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBXBZrOxn6hbDb-GWPV7oORMCG4sb1VTYGKLEpRmezpPYmuL0vmwdPKwvl-qpOsgYtgg/exec";
 const TRACKING_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
-const FEATURED_ROTATION_START_DATE = "2026-05-25";
+const FEATURED_ROTATION_START_DATE = "2026-06-01";
 const FEATURED_BEFORE_ROTATION = "Wilkshire Golf Course";
 const FEATURED_COURSE_ROTATION = [
   "River Greens Golf Course",
