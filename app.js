@@ -1531,6 +1531,216 @@ const courses = [
       sourceUrl: "https://epcountryclub.com/rates"
     },
     teeTimes: []
+  },
+  {
+    name: "Denison Golf Club",
+    city: "Granville, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.067648,
+    longitude: -82.507656,
+    bookingUrl: "https://denisongolfclub.teesnap.net/",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official 2026 rate page states that tee-time prices use dynamic pricing and change based on demand, availability, weather, and other factors.",
+      publicSummary: "Pricing varies by date, time, demand, and availability. Check the booking page for current rates.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://www.denisongolfclub.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Mastodon Golf Club",
+    city: "Heath, OH",
+    area: "Other Northeast Ohio",
+    latitude: 39.982103,
+    longitude: -82.453578,
+    bookingUrl: "https://apimanager-cc24.clubcaddie.com/webapi/view/fiedabab",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The official 2026 rate page lists non-member 18-hole rates of $40 with cart or $22 walking on weekdays and $45 with cart or $28 walking on weekends and holidays. Nine-hole, senior, and junior rates are also posted.",
+      publicSummary: "18 holes is listed at $40 with cart or $22 walking on weekdays and $45 with cart or $28 walking on weekends and holidays.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://www.mastodongolfclub.com/rates.html"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Raccoon Valley Golf Club",
+    city: "Granville, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.064878,
+    longitude: -82.558811,
+    bookingUrl: "https://golfback.com/#/course/b7f0a474-6a1e-4577-a348-c51a0a731e6a",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The course-owned website confirms public play and routes golfers to a course-specific GolfBack tee sheet; no separate current fixed-rate page was found.",
+      publicSummary: "Current pricing is shown through the course's online booking page.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://www.raccoongolf.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "The Links at Echo Springs",
+    city: "Johnstown, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.144406,
+    longitude: -82.557366,
+    bookingUrl: "https://player.eagleclubsystems.online/#/tee-slot?dbname=echosprings20231101",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The course-owned website confirms public play and links to a course-specific Eagle Club tee sheet; no separate current daily-rate page was found.",
+      publicSummary: "Check the booking page for current availability and pricing.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://thelinksatechosprings.org/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Cumberland Trail Golf Club",
+    city: "Pataskala, OH",
+    area: "Other Northeast Ohio",
+    latitude: 39.972801,
+    longitude: -82.695145,
+    bookingUrl: "https://t-r-public-be.book.teeitup.golf/",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The official rate page is effective February 1, 2026. In-season 18-hole cart rates range from $48 to $65 Monday through Thursday, $58.50 to $69 Friday, and $55 to $82.25 on weekends and holidays depending on time.",
+      publicSummary: "In-season 18-hole cart rates range from $48 to $65 Monday through Thursday, $58.50 to $69 Friday, and $55 to $82.25 on weekends and holidays.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://www.cumberlandtgc.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Irish Hills Golf Club",
+    city: "Mount Vernon, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.33451,
+    longitude: -82.46183,
+    bookingUrl: "https://irishhillsgc.teesnap.net/",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "The official site lists off-season rates beginning October 19 at $25 for 18 holes and $20 for 9 holes, with or without a cart, but does not state an effective year for that rate block.",
+      publicSummary: "Off-season rates are listed at $25 for 18 holes and $20 for 9 holes, with or without a cart. Check the booking page for current in-season pricing.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://www.irishhillsgolfclub.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Lancaster Golf Club",
+    city: "Lancaster, OH",
+    area: "Other Northeast Ohio",
+    identityKey: "lancaster-golf-club-lancaster-oh",
+    latitude: 39.680016,
+    longitude: -82.617194,
+    bookingUrl: "https://player.eagleclubsystems.online/#/tee-slot?dbname=lancaster20231201",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The current official daily-rate page for the public course at 3100 Country Club Rd SW lists 18-hole cart rates of $48 to $60 Monday through Thursday, $60 to $78 Friday, and $72 to $92 on weekends and holidays depending on time. Walking rates are lower.",
+      publicSummary: "18-hole cart rates range from $48 to $60 Monday through Thursday, $60 to $78 Friday, and $72 to $92 on weekends and holidays depending on time.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://lancastergolfclub.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Clover Valley Golf Club",
+    city: "Johnstown, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.175468,
+    longitude: -82.727296,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/19770/2457",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official rate policy states that non-member tee times are available and online prices use dynamic pricing adjusted for demand, availability, weather, and other factors.",
+      publicSummary: "Pricing varies by date, time, demand, and availability. Check the booking page for current rates.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://www.clovervalleygolfclub.com/rates-and-policies/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Kyber Run Golf Course",
+    city: "Johnstown, OH",
+    area: "Other Northeast Ohio",
+    latitude: 40.131728,
+    longitude: -82.695918,
+    bookingUrl: "https://player.eagleclubsystems.online/#/tee-slot?dbname=kyberrun20231101",
+    rateInfo: {
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The course-owned website confirms public play and provides an official rates page, but the current dollar figures were not available as readable page text during the review.",
+      publicSummary: "Check the course's rates page or booking page for current pricing.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://kyberrungolf.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Coyote Run Golf Course",
+    city: "Thornville, OH",
+    area: "Other Northeast Ohio",
+    identityKey: "coyote-run-golf-course-thornville-oh",
+    latitude: 39.821901,
+    longitude: -82.387407,
+    bookingUrl: "https://golfback.com/#/course/24590b6f-3269-46dd-838a-f515d42394a8",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "The current official rate page lists weekday riding rates of $22 for 9 holes and $34 for 18 holes, plus weekend riding rates of $24 for 9 holes and $36 for 18 holes, but does not state an effective year.",
+      publicSummary: "Weekday riding rates are listed at $22 for 9 holes and $34 for 18 holes; weekend riding rates are $24 and $36.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://coyoterungolfcourse.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Harbor Hills Country Club",
+    city: "Hebron, OH",
+    area: "Other Northeast Ohio",
+    identityKey: "harbor-hills-country-club-hebron-oh",
+    latitude: 39.934877,
+    longitude: -82.444434,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/index/18728",
+    rateInfo: {
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official public rate sheet is still labeled 2025 and should not be treated as current 2026 pricing. The course continues to offer public online tee times.",
+      publicSummary: "Check the booking page or call 740-928-3596 for current pricing.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://harborhillscountryclub.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Wildfire Golf Club",
+    city: "New Concord, OH",
+    area: "Other Northeast Ohio",
+    identityKey: "wildfire-golf-club-new-concord-oh",
+    latitude: 40.033419,
+    longitude: -81.756927,
+    bookingUrl: "https://sites.google.com/site/wildfiregolfclub/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call (740) 826-7606 to confirm current availability and rates.",
+    rateInfo: {
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The course-owned fee page says its 2026 fees remain from 2024, but the dollar amounts are presented as image content rather than readable page text.",
+      publicSummary: "Check the course's fee page or call (740) 826-7606 for current pricing.",
+      checked: "Aug 10, 2026",
+      sourceUrl: "https://sites.google.com/site/wildfiregolfclub/green-fees"
+    },
+    teeTimes: []
   }
 ];
 
