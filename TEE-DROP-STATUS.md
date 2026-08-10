@@ -5,13 +5,13 @@
 - Live site: https://www.playteedrop.com/
 - Repository: `TeeDrop26/Tee-Drop`
 - Production branch: `main`
-- Current production commit at this checkpoint: `d56bb74`
+- Current production code commit at this checkpoint: `25cd6cf`
 - Tee Drop is a static HTML, CSS, and JavaScript site deployed through the existing production workflow.
 
 ## Directory
 
-- 88 public-course records
-- 88 rate-status records
+- 100 public-course records
+- 100 rate-status records
 - Initial display: 10 matching course cards
 - Show More: reveals 10 additional matching courses at a time
 - In `rateInfo`, `summary` retains internal audit detail while `publicSummary` is the golfer-facing override used when internal wording should not appear on course cards.
@@ -32,6 +32,7 @@
 
 ## Recent Production Commits
 
+- `25cd6cf` - Expand Tee Drop directory to 100 courses
 - `fdb39d9` - Expand verified course directory to 88
 - `8f3c070` - Add golf course hero design
 - `370cd51` - Remove hero dot pattern
