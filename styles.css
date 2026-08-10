@@ -1608,7 +1608,8 @@ body.homepage {
   align-items: end;
 }
 
-.homepage .hero-search {
+.homepage .hero-search,
+.indoor-page .indoor-search {
   display: grid;
   gap: 8px;
   color: rgba(255, 253, 248, 0.8);
@@ -1619,6 +1620,7 @@ body.homepage {
 }
 
 .homepage .hero-search input,
+.indoor-page .indoor-search input,
 .homepage select {
   min-height: 58px;
   border: 1px solid transparent;
@@ -1628,7 +1630,8 @@ body.homepage {
   box-shadow: none;
 }
 
-.homepage .hero-search input {
+.homepage .hero-search input,
+.indoor-page .indoor-search input {
   width: 100%;
   padding: 0 16px 0 50px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2368726c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
@@ -1637,7 +1640,8 @@ body.homepage {
   background-size: 21px;
 }
 
-.homepage .hero-search input::placeholder {
+.homepage .hero-search input::placeholder,
+.indoor-page .indoor-search input::placeholder {
   color: #78837c;
 }
 
@@ -2190,6 +2194,7 @@ body.homepage {
   }
 
   .homepage .hero-search input,
+  .indoor-page .indoor-search input,
   .homepage .primary-action,
   .homepage .book-link,
   .homepage select {
