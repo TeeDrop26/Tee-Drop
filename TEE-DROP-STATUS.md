@@ -14,6 +14,7 @@
 - 88 rate-status records
 - Initial display: 10 matching course cards
 - Show More: reveals 10 additional matching courses at a time
+- In `rateInfo`, `summary` retains internal audit detail while `publicSummary` is the golfer-facing override used when internal wording should not appear on course cards.
 - Tee Drop does not display live tee-time inventory, process bookings, or confirm completed bookings.
 
 ## Featured Courses
