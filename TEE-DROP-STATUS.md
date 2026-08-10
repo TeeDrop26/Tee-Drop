@@ -5,13 +5,14 @@
 - Live site: https://www.playteedrop.com/
 - Repository: `TeeDrop26/Tee-Drop`
 - Production branch: `main`
-- Current production code commit at this checkpoint: `25cd6cf`
+- Current production code commit at this checkpoint: `2e29d4e`
 - Tee Drop is a static HTML, CSS, and JavaScript site deployed through the existing production workflow.
 
 ## Directory
 
 - 100 public-course records
 - 100 rate-status records
+- 14 verified indoor-golf facility records on `/indoor.html`
 - Initial display: 10 matching course cards
 - Show More: reveals 10 additional matching courses at a time
 - In `rateInfo`, `summary` retains internal audit detail while `publicSummary` is the golfer-facing override used when internal wording should not appear on course cards.
@@ -29,9 +30,12 @@
 - `Traffic Source` identifies the visitor referral parameter and defaults to `direct`.
 - Google Sheet tracking records course-link clicks, not unique golfers or confirmed bookings.
 - Local Google Sheet setup documentation includes `Traffic Source` as the final column.
+- Indoor Golf uses the same Apps Script endpoint but routes `indoor_click` events to the separate `Indoor Clicks` tab, leaving outdoor course-click reporting unchanged.
+- Indoor tracking records facility, city, placement source, referral traffic source, booking type, booking URL, page, and Eastern timestamp; local previews fall back to `teeDropIndoorClicks` in local storage.
 
 ## Recent Production Commits
 
+- `2e29d4e` - Add Tee Drop Indoor Golf
 - `25cd6cf` - Expand Tee Drop directory to 100 courses
 - `fdb39d9` - Expand verified course directory to 88
 - `8f3c070` - Add golf course hero design
@@ -64,6 +68,7 @@
 ## Next Likely Tasks
 
 - Complete the August 12 Spring Valley meeting and record any approved follow-up.
+- Monitor the separate Indoor Golf click report and reverify facility details as they change.
 - Continue monthly rate-status and external-link reviews.
 - Review partner or feature opportunities without promising placement before approval.
 - Keep local screenshots and temporary audit files out of production commits.
