@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tee Drop | Indoor Golf in Ohio</title>
+  <meta name="description" content="Find Ohio indoor golf facilities, compare verified features and pricing, and book directly with the facility.">
+  <link rel="canonical" href="https://www.playteedrop.com/indoor.html">
+  <meta property="og:title" content="Tee Drop | Indoor Golf in Ohio">
+  <meta property="og:description" content="Find Ohio indoor golf facilities, compare verified features and pricing, and book directly with the facility.">
+  <meta property="og:url" content="https://www.playteedrop.com/indoor.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tee Drop | Indoor Golf in Ohio">
+  <meta name="twitter:description" content="Find Ohio indoor golf facilities, compare verified features and pricing, and book directly with the facility.">
+  <meta name="theme-color" content="#164832">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=tee-drop-logo-20260805">
+  <link rel="icon" type="image/png" sizes="32x32" href="brand-assets/tee-drop-logo-system/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="brand-assets/tee-drop-logo-system/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=indoor-v1-20260810">
+</head>
+<body class="homepage indoor-page">
+  <main class="app-shell">
+    <header class="site-header">
+      <a class="site-brand" href="index.html" aria-label="Tee Drop home">
+        <picture class="brand-mark">
+          <source media="(max-width: 680px)" srcset="brand-assets/tee-drop-logo-system/tee-drop-icon.svg">
+          <img class="brand-logo" src="brand-assets/tee-drop-logo-system/tee-drop-horizontal-light.svg" alt="Tee Drop">
+        </picture>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#courseDirectory">Find a Course</a>
+        <a href="#indoorDirectory" aria-current="page">Indoor Golf</a>
+        <a href="index.html#featured">Featured</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <section class="indoor-hero" id="top" aria-labelledby="indoor-title">
+      <div class="indoor-hero-content">
+        <p class="section-kicker">Indoor golf across Ohio</p>
+        <h1 id="indoor-title">Find a place to play inside.</h1>
+        <p class="indoor-hero-copy">Search Ohio indoor golf facilities, compare features and pricing, and book directly with the facility.</p>
+        <div class="indoor-search-actions">
+          <label class="indoor-search" for="indoorSearch">
+            <span>Facility or town</span>
+            <input id="indoorSearch" type="search" placeholder="Search a facility or town" autocomplete="off">
+          </label>
+          <button class="primary-action" id="indoorLocationButton" type="button">Use My Location</button>
+        </div>
+        <p class="indoor-proof" id="indoorStats">14 indoor golf locations &bull; Book direct</p>
+      </div>
+    </section>
+
+    <section class="course-directory indoor-directory" id="indoorDirectory" aria-labelledby="indoor-directory-title">
+      <div class="section-heading directory-heading">
+        <div>
+          <p class="section-kicker">Indoor directory</p>
+          <h2 id="indoor-directory-title">Explore indoor golf</h2>
+        </div>
+        <p>Compare verified details, then confirm current pricing and availability with the facility.</p>
+      </div>
+
+      <section class="filters indoor-filters" id="indoorFilters" aria-label="Indoor golf filters">
+        <label>
+          Booking
+          <select id="indoorBookingFilter">
+            <option value="all">All locations</option>
+            <option value="online">Online booking</option>
+            <option value="call">Call / info</option>
+          </select>
+        </label>
+
+        <fieldset class="feature-filters">
+          <legend>Features</legend>
+          <label><input type="checkbox" value="24/7"> 24/7</label>
+          <label><input type="checkbox" value="Food &amp; Drink"> Food &amp; Drink</label>
+          <label><input type="checkbox" value="Lessons"> Lessons</label>
+          <label><input type="checkbox" value="Leagues"> Leagues</label>
+        </fieldset>
+      </section>
+
+      <section class="status-row" aria-live="polite">
+        <p id="indoorLocationStatus">Showing indoor golf locations across Ohio. Use your location to sort closest facilities first.</p>
+        <p id="indoorResultCount"></p>
+      </section>
+
+      <section class="indoor-list" id="indoorFacilityList" aria-label="Indoor golf locations"></section>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="brand-assets/tee-drop-logo-system/tee-drop-horizontal.svg" alt="Tee Drop">
+        <p>Tee Drop keeps Ohio golf links in one place so golfers can compare options and book direct whenever possible.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#courseDirectory">Explore outdoor courses</a>
+        <a href="about.html">About PlayTeeDrop</a>
+        <p>Prices, features, and availability can change. Confirm current details with the facility before booking.</p>
+        <p class="footer-meta">&copy; <span id="indoorCurrentYear"></span> Tee Drop &bull; Ohio</p>
+      </div>
+    </footer>
+  </main>
+
+  <template id="indoorFacilityTemplate">
+    <article class="indoor-card">
+      <div class="indoor-card-heading">
+        <div>
+          <p class="indoor-meta"></p>
+          <h2></h2>
+        </div>
+        <div class="indoor-card-badges">
+          <span class="indoor-booking-type"></span>
+          <span class="indoor-distance" hidden></span>
+        </div>
+      </div>
+
+      <p class="indoor-operating-status" hidden></p>
+
+      <dl class="indoor-details">
+        <div class="indoor-tech-detail">
+          <dt>Simulator</dt>
+          <dd class="indoor-tech"></dd>
+        </div>
+        <div class="indoor-bay-detail">
+          <dt>Bays</dt>
+          <dd class="indoor-bays"></dd>
+        </div>
+        <div class="indoor-price-detail">
+          <dt>Pricing</dt>
+          <dd class="indoor-price"></dd>
+        </div>
+      </dl>
+
+      <div class="indoor-feature-list" aria-label="Facility features"></div>
+      <p class="indoor-summary"></p>
+
+      <div class="indoor-card-actions">
+        <p class="indoor-booking-note"></p>
+        <a class="indoor-book-link" target="_blank" rel="noreferrer">View Booking</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="indoor.js?v=indoor-v1-20260810"></script>
+</body>
+</html>
