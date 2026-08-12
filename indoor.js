@@ -307,6 +307,9 @@ const indoorFacilities = [
 ];
 
 const INDOOR_TRACKING_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBXBZrOxn6hbDb-GWPV7oORMCG4sb1VTYGKLEpRmezpPYmuL0vmwdPKwvl-qpOsgYtgg/exec";
+const INDOOR_SESSION_ID_KEY = "teeDropIndoorSessionId";
+const INDOOR_VISIT_STORAGE_KEY = "teeDropIndoorVisits";
+const INDOOR_VISIT_RECORDED_PREFIX = "teeDropIndoorVisitRecorded:";
 
 let indoorUserLocation = null;
 
@@ -330,6 +333,7 @@ document.addEventListener("click", handleIndoorLinkClick);
 indoorStats.textContent = `${indoorFacilities.length} indoor golf locations \u00b7 Book direct`;
 indoorCurrentYear.textContent = new Date().getFullYear();
 renderIndoorFacilities();
+trackIndoorPageView();
 
 function renderIndoorFacilities() {
   indoorFacilityList.textContent = "";
@@ -514,6 +518,38 @@ function trackIndoorClick(click) {
   }).catch(() => {});
 }
 
+function trackIndoorPageView() {
+  const trafficSource = getIndoorTrafficSource();
+  const visitKey = `${INDOOR_VISIT_RECORDED_PREFIX}${trafficSource}`;
+
+  if (sessionStorage.getItem(visitKey)) {
+    return;
+  }
+
+  const record = {
+    eventType: "indoor_page_view",
+    trafficSource,
+    page: location.pathname,
+    referrer: getIndoorReferrer(),
+    sessionId: getIndoorSessionId(),
+    createdAt: new Date().toISOString()
+  };
+
+  sessionStorage.setItem(visitKey, "true");
+
+  if (isIndoorLocalPreview() || !INDOOR_TRACKING_ENDPOINT) {
+    saveLocalIndoorVisit(record);
+    return;
+  }
+
+  fetch(INDOOR_TRACKING_ENDPOINT, {
+    method: "POST",
+    body: JSON.stringify(record),
+    mode: "no-cors",
+    keepalive: true
+  }).catch(() => {});
+}
+
 function getIndoorTrafficSource() {
   const source = new URLSearchParams(location.search).get("source");
 
@@ -524,6 +560,34 @@ function getIndoorTrafficSource() {
   return source.trim().toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 60) || "direct";
 }
 
+function getIndoorReferrer() {
+  if (!document.referrer) {
+    return "";
+  }
+
+  try {
+    const referrer = new URL(document.referrer);
+    return `${referrer.origin}${referrer.pathname}`;
+  } catch {
+    return "";
+  }
+}
+
+function getIndoorSessionId() {
+  const existingSessionId = sessionStorage.getItem(INDOOR_SESSION_ID_KEY);
+
+  if (existingSessionId) {
+    return existingSessionId;
+  }
+
+  const sessionId = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
+    ? crypto.randomUUID()
+    : `indoor-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+  sessionStorage.setItem(INDOOR_SESSION_ID_KEY, sessionId);
+  return sessionId;
+}
+
 function isIndoorLocalPreview() {
   return location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
 }
@@ -532,6 +596,12 @@ function saveLocalIndoorClick(record) {
   const clicks = JSON.parse(localStorage.getItem("teeDropIndoorClicks") || "[]");
   clicks.push(record);
   localStorage.setItem("teeDropIndoorClicks", JSON.stringify(clicks));
+}
+
+function saveLocalIndoorVisit(record) {
+  const visits = JSON.parse(localStorage.getItem(INDOOR_VISIT_STORAGE_KEY) || "[]");
+  visits.push(record);
+  localStorage.setItem(INDOOR_VISIT_STORAGE_KEY, JSON.stringify(visits));
 }
 
 function calculateIndoorDistance(lat1, lon1, lat2, lon2) {

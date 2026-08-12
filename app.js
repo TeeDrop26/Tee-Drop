@@ -2037,6 +2037,9 @@ const courses = [
 
 const TRACKING_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBXBZrOxn6hbDb-GWPV7oORMCG4sb1VTYGKLEpRmezpPYmuL0vmwdPKwvl-qpOsgYtgg/exec";
 const TRACKING_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
+const OUTDOOR_SESSION_ID_KEY = "teeDropOutdoorSessionId";
+const OUTDOOR_VISIT_STORAGE_KEY = "teeDropOutdoorVisits";
+const OUTDOOR_VISIT_RECORDED_PREFIX = "teeDropOutdoorVisitRecorded:";
 const FEATURED_ROTATION_START_DATE = "2026-06-01";
 const FEATURED_BEFORE_ROTATION = "Wilkshire Golf Course";
 const FEATURED_COURSE_ROTATION = [
@@ -2110,6 +2113,7 @@ updateFooterYear();
 renderTeeTimes();
 renderCourseOfMonth();
 renderFeaturedCourse();
+trackOutdoorPageView();
 
 function getUserLocation() {
   if (!navigator.geolocation) {
@@ -2360,6 +2364,38 @@ function trackCourseClick(click) {
   sendFormspreeClick(clickRecord, click.course);
 }
 
+function trackOutdoorPageView() {
+  const trafficSource = getTrafficSource();
+  const visitKey = `${OUTDOOR_VISIT_RECORDED_PREFIX}${trafficSource}`;
+
+  if (sessionStorage.getItem(visitKey)) {
+    return;
+  }
+
+  const record = {
+    eventType: "outdoor_page_view",
+    trafficSource,
+    page: location.pathname,
+    referrer: getOutdoorReferrer(),
+    sessionId: getOutdoorSessionId(),
+    createdAt: new Date().toISOString()
+  };
+
+  sessionStorage.setItem(visitKey, "true");
+
+  if (isLocalPreview() || !TRACKING_SHEET_ENDPOINT) {
+    saveLocalOutdoorVisit(record);
+    return;
+  }
+
+  fetch(TRACKING_SHEET_ENDPOINT, {
+    method: "POST",
+    body: JSON.stringify(record),
+    mode: "no-cors",
+    keepalive: true
+  }).catch(() => {});
+}
+
 function sendSheetClick(clickRecord) {
   fetch(TRACKING_SHEET_ENDPOINT, {
     method: "POST",
@@ -2527,11 +2563,46 @@ function getTrafficSource() {
   return source.trim().toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 60) || "direct";
 }
 
+function getOutdoorReferrer() {
+  if (!document.referrer) {
+    return "";
+  }
+
+  try {
+    const referrer = new URL(document.referrer);
+    return `${referrer.origin}${referrer.pathname}`;
+  } catch {
+    return "";
+  }
+}
+
+function getOutdoorSessionId() {
+  const existingSessionId = sessionStorage.getItem(OUTDOOR_SESSION_ID_KEY);
+
+  if (existingSessionId) {
+    return existingSessionId;
+  }
+
+  const sessionId = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
+    ? crypto.randomUUID()
+    : `outdoor-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+  sessionStorage.setItem(OUTDOOR_SESSION_ID_KEY, sessionId);
+  return sessionId;
+}
+
 function saveLocalCourseClick(click) {
   const clicks = JSON.parse(localStorage.getItem("teeDropCourseClicks") || "[]");
 
   clicks.push(click);
   localStorage.setItem("teeDropCourseClicks", JSON.stringify(clicks));
+}
+
+function saveLocalOutdoorVisit(record) {
+  const visits = JSON.parse(localStorage.getItem(OUTDOOR_VISIT_STORAGE_KEY) || "[]");
+
+  visits.push(record);
+  localStorage.setItem(OUTDOOR_VISIT_STORAGE_KEY, JSON.stringify(visits));
 }
 
 function getBookingType(course) {
