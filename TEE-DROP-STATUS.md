@@ -10,11 +10,12 @@
 
 ## Directory
 
-- 100 public-course records
-- 100 rate-status records
+- 115 public-course records in the current local implementation; production remains at 100 until this expansion is approved for publishing
+- 115 rate-status records in the current local implementation
 - 14 verified indoor-golf facility records on `/indoor.html`
 - Initial display: 10 matching course cards
 - Show More: reveals 10 additional matching courses at a time
+- Course Type filters Regulation, Par 3, and Executive / Short layouts without double-counting facilities that have an additional playable layout.
 - In `rateInfo`, `summary` retains internal audit detail while `publicSummary` is the golfer-facing override used when internal wording should not appear on course cards.
 - Tee Drop does not display live tee-time inventory, process bookings, or confirm completed bookings.
 
@@ -67,6 +68,7 @@
 
 ## Next Likely Tasks
 
+- Review and approve the 115-facility Par 3 / Executive expansion for production.
 - Complete the August 12 Spring Valley meeting and record any approved follow-up.
 - Monitor the separate Indoor Golf click report and reverify facility details as they change.
 - Continue monthly rate-status and external-link reviews.

@@ -107,6 +107,7 @@ const courses = [
     name: "Five Waters Golf Course",
     city: "Midvale, OH",
     area: "Tuscarawas County",
+    additionalLayouts: [{ type: "par3" }],
     latitude: 40.429115,
     longitude: -81.368983,
     bookingUrl: "http://www.5watersgolf.com/",
@@ -116,6 +117,7 @@ const courses = [
       status: "undated",
       statusLabel: "Rates listed",
       summary: "Official site lists weekday 9 walk $10 / ride $15 and 18 walk $16 / ride $22; weekend/holiday categories are listed, but the same page still contains 2020 membership wording, so confirm current prices.",
+      publicSummary: "Posted rates are available, but confirm current pricing with the course before playing.",
       checked: "Aug 5, 2026",
       sourceUrl: "https://5watersgolf.com/info.html"
     },
@@ -622,6 +624,7 @@ const courses = [
     name: "Mulligan Springs Golf Course",
     city: "Mogadore, OH",
     area: "Akron / Summit County",
+    courseType: "par3",
     latitude: 41.048564,
     longitude: -81.331005,
     bookingUrl: "https://www.facebook.com/MulliganSpringsGolfCourse/",
@@ -829,6 +832,7 @@ const courses = [
     name: "Pleasant Hill Golf Course",
     city: "Perrysville, OH",
     area: "Other Northeast Ohio",
+    courseType: "par3",
     latitude: 40.634455,
     longitude: -82.364267,
     bookingUrl: "https://pleasanthillgolfcourse.com/green-fees",
@@ -838,6 +842,7 @@ const courses = [
       status: "call",
       statusLabel: "Call for rates",
       summary: "The official Perrysville rate page lists fee categories but does not display current dollar amounts; call (419) 938-5311 to confirm pricing.",
+      publicSummary: "Call (419) 938-5311 for current pricing.",
       checked: "Aug 5, 2026",
       sourceUrl: "https://pleasanthillgolfcourse.com/green-fees"
     },
@@ -984,6 +989,7 @@ const courses = [
     name: "Little Met Golf Course",
     city: "Cleveland, OH",
     area: "Cleveland area",
+    courseType: "executive",
     latitude: 41.42,
     longitude: -81.8284,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/little-met-golf-course",
@@ -1001,6 +1007,7 @@ const courses = [
     name: "Mastick Woods Golf Course",
     city: "Cleveland, OH",
     area: "Cleveland area",
+    courseType: "executive",
     latitude: 41.4317,
     longitude: -81.8427,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/mastick-woods-golf-course",
@@ -1035,6 +1042,7 @@ const courses = [
     name: "Shawnee Hills Golf Course",
     city: "Bedford, OH",
     area: "Cleveland area",
+    additionalLayouts: [{ type: "par3" }],
     latitude: 41.3559,
     longitude: -81.512,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/shawnee-hills-golf-course",
@@ -1052,6 +1060,7 @@ const courses = [
     name: "Washington Golf Course",
     city: "Newburgh Heights, OH",
     area: "Cleveland area",
+    courseType: "executive",
     latitude: 41.4469,
     longitude: -81.6706,
     bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
@@ -1741,6 +1750,288 @@ const courses = [
       sourceUrl: "https://sites.google.com/site/wildfiregolfclub/green-fees"
     },
     teeTimes: []
+  },
+  {
+    name: "Wick Recreation Area Par 3",
+    city: "Youngstown, OH",
+    area: "Eastern Northeast Ohio",
+    courseType: "par3",
+    latitude: 41.103579,
+    longitude: -80.652016,
+    bookingUrl: "https://www.millcreekmetroparks.org/wick-recreation-area/par-3-golf-course/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call 330-740-7114 or check the course page for current availability.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The official 2026 Golf and Recreation Planner lists 9 holes at $11 for Mahoning County residents, $12 for non-residents, and $10 for seniors and juniors.",
+      publicSummary: "9 holes are listed at $11 for Mahoning County residents, $12 for non-residents, and $10 for seniors and juniors.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://reservations.millcreekmetroparks.org/documents/2026/01/2026/1/2026_Mill_Creek_Golf___Recreation_Planner_-_web.pdf"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Wilson Road Golf Course",
+    city: "Columbus, OH",
+    area: "Central Ohio",
+    courseType: "executive",
+    latitude: 39.988086,
+    longitude: -83.107699,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/21525/8204#teetimes",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The official city course page links to ForeUp for current tee times and date-specific pricing for this 9-hole, par-30 executive course.",
+      publicSummary: "Check the booking page for current pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://crpdgolf.com/golf-courses/wilson-road/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Blacklick Woods Golf Course",
+    city: "Reynoldsburg, OH",
+    area: "Central Ohio",
+    additionalLayouts: [{ type: "executive" }],
+    latitude: 39.940936,
+    longitude: -82.802648,
+    bookingUrl: "https://metroparks.teesnap.net/",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The official 2026 rate page lists current Championship Course fees and separate Learning Course fees. The Learning Course is a separately playable 9-hole, par-29 short course.",
+      publicSummary: "Current rates are listed for both the Championship and Learning courses.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://blacklickwoodsgc.com/rates-fees/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Little Bear Golf Club",
+    city: "Lewis Center, OH",
+    area: "Central Ohio",
+    courseType: "par3",
+    latitude: 40.16133,
+    longitude: -82.99605,
+    bookingUrl: "https://apimanager-cc6.clubcaddie.com/webapi/view/ggfdabab",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The official tee-time page states that public Par 3 play opened for the 2026 season at a $15 walking rate, with limited public days.",
+      publicSummary: "Public walking play is listed at $15. Check the booking page for available public days and times.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.littlebearohio.com/tee-times"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Robin’s Nest Par 3",
+    city: "Cleves, OH",
+    area: "Southwest Ohio",
+    courseType: "par3",
+    latitude: 39.214971,
+    longitude: -84.763362,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/20987/6389#teetimes",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "See booking page",
+      summary: "The course-owned site provides online tee times, but no clearly dated current public rate sheet was verified.",
+      publicSummary: "Check the booking page for current pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://robinsnestgolf.com/contact-us/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Little Miami Golf Center",
+    city: "Newtown, OH",
+    area: "Southwest Ohio",
+    additionalLayouts: [{ type: "par3" }],
+    latitude: 39.132228,
+    longitude: -84.356503,
+    bookingUrl: "https://ohgreatparksweb.myvscloud.com/webtrac/web/search.html?module=GR&numberofholes=9&secondarycode=9009",
+    rateInfo: {
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official Great Parks page confirms a 9-hole regulation course and separately playable 9-hole Par 3, but the visible hours and rate section is labeled 2025.",
+      publicSummary: "Check the booking page or call 513-561-5650 for current pricing. The Par 3 course is booked by phone.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.greatparks.org/parks/little-miami-scenic-corridor/little-miami-golf-center"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Meadow Links & Golf Academy",
+    city: "Cincinnati, OH",
+    area: "Southwest Ohio",
+    courseType: "executive",
+    latitude: 39.276562,
+    longitude: -84.544653,
+    bookingUrl: "https://ohgreatparksweb.myvscloud.com/webtrac/web/search.html?module=GR&numberofholes=9&secondarycode=9010",
+    rateInfo: {
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The official page confirms a public 9-hole mid-length short course and online tee times, but the visible hours and rate section is labeled 2025.",
+      publicSummary: "Check the booking page for current pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.greatparks.org/parks/winton-woods/meadow-links-golf-academy"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Green Hills Golf Course",
+    city: "Clyde, OH",
+    area: "Northwest Ohio",
+    additionalLayouts: [{ type: "par3" }],
+    latitude: 41.289173,
+    longitude: -82.975141,
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/21253#/teetimes",
+    rateInfo: {
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The official site publishes 2026 rates as images and confirms the separately playable 9-hole Executive West Par 3 course.",
+      publicSummary: "Current rates are posted. Check the rate or booking page for pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.greenhillsgolf.com/rates"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Wee Links at SportsOhio",
+    city: "Dublin, OH",
+    area: "Central Ohio",
+    courseType: "par3",
+    latitude: 40.097848,
+    longitude: -83.188348,
+    bookingUrl: "https://sportsohio.org/play/sports-activities/golf/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call 614-791-3002 or check the Golf Center page before visiting.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "The current course-owned page lists 9-hole Wee Links rates of $16 for adults and $14 for juniors Monday-Thursday, and $18 for adults and $16 for juniors Friday-Sunday, without an effective year.",
+      publicSummary: "Posted rates are available, but confirm current pricing with the course before playing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://sportsohio.org/play/sports-activities/golf/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Fernbank Golf Course",
+    city: "Cincinnati, OH",
+    area: "Southwest Ohio",
+    courseType: "executive",
+    latitude: 39.121494,
+    longitude: -84.697436,
+    bookingUrl: "https://fernbankgolfcourse.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call 513-941-9960 or check the course page before visiting; play is generally first come, first served outside league times.",
+    rateInfo: {
+      status: "stale",
+      statusLabel: "Confirm current rates",
+      summary: "The course-owned page lists daily pricing effective January 1, 2025. Current 2026 membership information is posted, but current daily fees were not separately confirmed.",
+      publicSummary: "Call 513-941-9960 or check the course page for current daily pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://fernbankgolfcourse.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Reeves Golf Course",
+    city: "Cincinnati, OH",
+    area: "Southwest Ohio",
+    additionalLayouts: [{ type: "par3" }],
+    latitude: 39.116194,
+    longitude: -84.412138,
+    bookingUrl: "https://www.cincygolf.org/book-a-tee-time/",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "The official page lists current public rate tables for the 18-hole course and separately playable 9-hole Par 3, but the tables do not state an effective year.",
+      publicSummary: "Public rates are listed for both the 18-hole course and the separate 9-hole Par 3. Confirm current pricing when booking.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.cincygolf.org/reeves/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Little Apple Golf Course",
+    city: "Bellville, OH",
+    area: "Central Ohio",
+    courseType: "executive",
+    latitude: 40.603835,
+    longitude: -82.513529,
+    bookingUrl: "https://mid-ohio-golf-group.book.teeitup.com/?course=9965",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "The course-owned site links to TeeItUp for current tee times and date-specific pricing for this public short course.",
+      publicSummary: "Check the booking page for current pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.littleapplegolfcourse.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Shady Grove Golf Course",
+    city: "Findlay, OH",
+    area: "Northwest Ohio",
+    courseType: "par3",
+    latitude: 41.055324,
+    longitude: -83.580769,
+    bookingUrl: "https://www.shadygrovegolf.com/golf-course/rates",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call 419-422-7494 or check the course page before visiting; tee times are not normally required.",
+    rateInfo: {
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "The course-owned page lists 9 holes at $10 and 18 holes at $15 but does not state an effective year.",
+      publicSummary: "Posted rates are available, but confirm current pricing with the course before playing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.shadygrovegolf.com/green-fees-and-specials"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Armco Park Golf Course",
+    city: "Lebanon, OH",
+    area: "Southwest Ohio",
+    courseType: "executive",
+    latitude: 39.45419,
+    longitude: -84.28452,
+    bookingUrl: "https://www.warrencountyparks.com/activities/golf/golf/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Drop-in play only. Call 513-695-3980 for current availability or larger groups.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "The current official park page lists adult greens fees of $16 for the front 9, $18 for the back 9, and $24 for 18 holes, with separate senior, junior, military, and cart rates.",
+      publicSummary: "Adult greens fees are listed at $16 for the front 9, $18 for the back 9, and $24 for 18 holes. Cart fees are separate.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.warrencountyparks.com/activities/golf/golf/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Meadowood Golf Course",
+    city: "Westlake, OH",
+    area: "Cleveland area",
+    courseType: "par3",
+    latitude: 41.430335,
+    longitude: -81.952746,
+    bookingUrl: "https://www.cityofwestlake.org/o/rcwl/page/meadowood-golf-course",
+    bookingLabel: "Call / Info",
+    bookingNote: "Call 440-835-6442 or check the city course page for current availability.",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "The City of Westlake confirms that Meadowood remains open as two 9-hole Par 3 layouts during 2026 construction, with reduced rates, but a dependable current public rate table was not verified.",
+      publicSummary: "Temporary Par 3 configuration during 2026 construction. Call 440-835-6442 for current pricing.",
+      checked: "Aug 12, 2026",
+      sourceUrl: "https://www.cityofwestlake.org/page/newsletter-webapp"
+    },
+    teeTimes: []
   }
 ];
 
@@ -1801,6 +2092,7 @@ const courseFilters = document.querySelector("#courseFilters");
 const showMoreButton = document.querySelector("#showMoreCourses");
 const backToFiltersButton = document.querySelector("#backToFiltersButton");
 const filters = {
+  courseType: document.querySelector("#courseTypeFilter"),
   booking: document.querySelector("#bookingFilter"),
   area: document.querySelector("#areaFilter")
 };
@@ -1858,6 +2150,7 @@ function renderTeeTimes() {
 
   const bookingType = filters.booking.value;
   const area = filters.area.value;
+  const courseType = filters.courseType.value;
   const searchTerm = courseSearch.value.trim().toLowerCase();
 
   const availableTimes = courses
@@ -1871,6 +2164,7 @@ function renderTeeTimes() {
     .filter((teeTime) => matchesSearch(teeTime.course, searchTerm))
     .filter((teeTime) => bookingType === "all" || getBookingType(teeTime.course) === bookingType)
     .filter((teeTime) => matchesArea(teeTime.course, area))
+    .filter((teeTime) => matchesCourseType(teeTime.course, courseType))
     .sort((a, b) => {
       if (userLocation) {
         return a.distance - b.distance;
@@ -1921,6 +2215,12 @@ function renderTeeTimes() {
     article.classList.toggle("nearby-card", isNearby);
     bookingType.textContent = courseBookingType === "call" ? "Call course" : "Online";
     bookingType.classList.toggle("call", courseBookingType === "call");
+    getCourseTypeBadges(teeTime.course).forEach((badge) => {
+      const typeBadge = document.createElement("span");
+      typeBadge.className = "course-type-badge";
+      typeBadge.textContent = badge;
+      card.querySelector(".card-badges").prepend(typeBadge);
+    });
     const distancePill = card.querySelector(".distance-pill");
     distancePill.classList.toggle("nearby", isNearby);
     distancePill.hidden = teeTime.distance === null;
@@ -2094,6 +2394,40 @@ function matchesSearch(course, searchTerm) {
 
 function matchesArea(course, area) {
   return area === "all" || course.area === area;
+}
+
+function matchesCourseType(course, courseType) {
+  if (courseType === "all") {
+    return true;
+  }
+
+  return getPrimaryCourseType(course) === courseType ||
+    (course.additionalLayouts || []).some((layout) => layout.type === courseType);
+}
+
+function getPrimaryCourseType(course) {
+  return course.courseType || "regulation";
+}
+
+function getCourseTypeBadges(course) {
+  const badges = [];
+  const primaryType = getPrimaryCourseType(course);
+
+  if (primaryType === "par3") {
+    badges.push("PAR 3");
+  } else if (primaryType === "executive") {
+    badges.push("EXECUTIVE");
+  }
+
+  (course.additionalLayouts || []).forEach((layout) => {
+    if (layout.type === "par3") {
+      badges.push("PAR 3 AVAILABLE");
+    } else if (layout.type === "executive") {
+      badges.push("EXECUTIVE AVAILABLE");
+    }
+  });
+
+  return badges;
 }
 
 function updateHomepageStats() {

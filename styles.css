@@ -774,7 +774,8 @@ h2 {
 }
 
 .distance-pill,
-.booking-type {
+.booking-type,
+.course-type-badge {
   max-width: 132px;
   padding: 6px 8px;
   border-radius: 999px;
@@ -1083,6 +1084,13 @@ h2 {
     bottom: 12px;
     max-width: calc(100% - 24px);
   }
+}
+
+.course-type-badge {
+  border: 1px solid rgba(197, 134, 43, 0.42);
+  background: #fff8e9;
+  color: #765018;
+  letter-spacing: 0.04em;
 }
 
 /* Indoor Golf V1 */
@@ -1962,12 +1970,20 @@ body.homepage {
 }
 
 .homepage .booking-type,
-.homepage .distance-pill {
+.homepage .distance-pill,
+.homepage .course-type-badge {
   max-width: 118px;
   padding: 6px 8px;
   border-radius: 999px;
   font-size: 0.68rem;
   font-weight: 800;
+}
+
+.homepage .course-type-badge {
+  border-color: rgba(197, 134, 43, 0.38);
+  background: #fff8e9;
+  color: #765018;
+  letter-spacing: 0.04em;
 }
 
 .homepage .booking-type {
@@ -2141,7 +2157,7 @@ body.homepage {
 
   .homepage .site-header {
     min-height: 82px;
-    gap: 18px;
+    gap: 10px;
     padding: 10px 0;
   }
 
@@ -2152,11 +2168,12 @@ body.homepage {
   }
 
   .homepage .site-nav {
-    gap: 16px;
+    gap: 7px;
   }
 
   .homepage .site-nav a {
-    font-size: 0.78rem;
+    padding: 0 2px;
+    font-size: 0.7rem;
   }
 
   .homepage .search-hero {

@@ -1,6 +1,6 @@
 # Tee Drop
 
-Tee Drop is a static Northeast Ohio public golf course directory. It keeps public course links in one place so golfers can check options faster and book direct whenever possible.
+Tee Drop is a static Ohio public golf course directory. It keeps public course links in one place so golfers can check options faster and book direct whenever possible.
 
 Tee Drop does not provide live tee-time inventory, does not process bookings, and does not take payment. Course links send golfers to the course website, booking page, or information page.
 
@@ -12,6 +12,7 @@ Posted rates can change. Golfers should confirm rates and availability with the 
 - Posted rate information when available
 - Course and town search
 - Area filtering
+- Regulation, Par 3, and Executive / Short course-type filtering
 - Online-booking versus call/info filtering
 - Location-based distance sorting
 - Course-link click tracking through Google Sheets, with Formspree as a fallback
@@ -38,6 +39,7 @@ Each course should include:
 - `name`
 - `city`
 - `area`
+- `courseType` when the primary layout is `par3` or `executive` (omitted courses default to `regulation`)
 - `latitude`
 - `longitude`
 - `bookingUrl`
@@ -52,6 +54,15 @@ Use one of these `area` values:
 - `Cleveland area`
 - `Eastern Northeast Ohio`
 - `Other Northeast Ohio`
+- `Central Ohio`
+- `Southwest Ohio`
+- `Northwest Ohio`
+
+Use `additionalLayouts` only when one facility has another separately playable layout. The facility remains one directory record and can match more than one Course Type filter:
+
+```js
+additionalLayouts: [{ type: "par3" }]
+```
 
 For call-only or information-only courses, keep a `bookingLabel` value. The site uses that to classify the course as call/info and shows the button text `Course Info`.
 
