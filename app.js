@@ -269,6 +269,7 @@ const courses = [
       status: "undated",
       statusLabel: "Rates listed",
       summary: "Official page lists weekday 18 w/cart $45, 9 w/cart $28; weekend AM 18 w/cart $62, 9 w/cart $40; after 1 PM 18 $47, 9 $33. Page does not clearly label the year.",
+      publicSummary: "Weekday and weekend rates are posted. Confirm current pricing with the course.",
       checked: "Aug 5, 2026",
       sourceUrl: "https://sablecreekgolf.com/rates-and-fees/"
     },
@@ -418,7 +419,7 @@ const courses = [
     area: "Canton / Stark County",
     latitude: 40.839,
     longitude: -81.631,
-    bookingUrl: "https://www.facebook.com/people/The-Elms-Country-Club/100063908499193/",
+    bookingUrl: "https://elms.golf/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 833-2668 to check booking options.",
     rateInfo: {
@@ -437,7 +438,7 @@ const courses = [
     area: "Wayne / Holmes County",
     latitude: 40.61443,
     longitude: -81.868461,
-    bookingUrl: "https://www.ohiogolf.com/golfcourses/black-diamond-golf",
+    bookingUrl: "https://blackdiamondgolfcourse.com/",
     bookingLabel: "Call / Info",
     bookingNote: "Call (330) 674-6110 to check booking options.",
     rateInfo: {
@@ -515,7 +516,7 @@ const courses = [
       summary: "Official Akron course page lists weekday 9 walking $21 / riding $28 and 18 walking $26 / riding $38; weekend before 1 PM 18 walking $45 / riding $57. No clear 2026 effective date was visible.",
       publicSummary: "Weekday 9 walking is listed at $21 and riding at $28; weekday 18 walking is $26 and riding is $38. Confirm current pricing with the course.",
       checked: "Aug 5, 2026",
-      sourceUrl: "https://www.golfakron.org/good-park/rates/"
+      sourceUrl: "https://www.goodparkgolf.com/ates/"
     },
     teeTimes: []
   },
@@ -939,7 +940,7 @@ const courses = [
     area: "Eastern Northeast Ohio",
     latitude: 41.5811,
     longitude: -81.2058,
-    bookingUrl: "https://stdenisgolfclub.com/",
+    bookingUrl: "https://golfback.com/#/course/81222d23-764e-4201-873f-7d4c16e60632",
     bookingNote: "Open St. Denis' course link to check booking options.",
     rateInfo: {
       status: "stale",
@@ -1140,7 +1141,7 @@ const courses = [
       summary: "The official published rate page is labeled 2025. Check the current booking page or contact the course for 2026 pricing.",
       publicSummary: "Check the current booking page or contact the course for current pricing.",
       checked: "Aug 5, 2026",
-      sourceUrl: "https://golfpinebrook.com/rates/"
+      sourceUrl: "https://golfpinebrook.com/course-rates/"
     },
     teeTimes: []
   },
@@ -1221,8 +1222,9 @@ const courses = [
     area: "Eastern Northeast Ohio",
     latitude: 41.030779,
     longitude: -80.698454,
-    bookingUrl: "https://millcreekmetroparks.teesnap.net/",
-    bookingNote: "Open Mill Creek's booking page to check current availability and pricing.",
+    bookingUrl: "https://www.millcreekmetroparks.org/mill-creek-golf-course/",
+    bookingLabel: "Call / Info",
+    bookingNote: "Open Mill Creek's official course page or call (330) 740-7112 for current booking options.",
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",

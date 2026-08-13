@@ -67,10 +67,10 @@ const indoorFacilities = [
     area: "Canton / Stark County",
     latitude: 40.731291,
     longitude: -81.097407,
-    bookingUrl: "https://ggminerva.com/fees%2Fprices",
+    bookingUrl: "https://www.ggminerva.com/",
     bookingLabel: "call",
     phone: "239-989-8681",
-    priceSummary: "$35/hr per bay Tue-Thu; $40/hr per bay Fri-Sun",
+    priceSummary: "Contact facility for current pricing.",
     features: ["Food & Drink", "Memberships"],
     publicSummary: "Bay rentals are open to the public. A maximum of four players per bay is recommended; members may receive off-hours access.",
     verification: {
