@@ -2077,7 +2077,7 @@ const FEATURED_COURSE_ROTATION = [
   "Deer Ridge Golf Club"
 ];
 
-const AUGUST_COURSE_OF_MONTH = "Oak Shadows Golf Club";
+const SEPTEMBER_COURSE_OF_MONTH = "Spring Valley Golf Course";
 const COURSE_BATCH_SIZE = 10;
 
 let userLocation = null;
@@ -2261,20 +2261,25 @@ function updateBackToFiltersButton() {
 }
 
 function renderCourseOfMonth() {
-  const course = courses.find((item) => item.name === AUGUST_COURSE_OF_MONTH);
+  const course = courses.find((item) => item.name === SEPTEMBER_COURSE_OF_MONTH);
 
   if (!course || !monthlyCourse) {
     return;
   }
 
   monthlyCourse.innerHTML = `
+    <img
+      class="monthly-course-image"
+      src="assets/spring-valley-september-course-of-month.webp"
+      alt="Sunset over Spring Valley Golf Course's rolling fairways, pond, trees and distant hills"
+    >
     <div class="monthly-course-copy">
-      <p class="alert-kicker">August Course of the Month</p>
+      <p class="alert-kicker">September Course of the Month</p>
       <h2>${course.name}</h2>
-      <p>Located in New Philadelphia, Oak Shadows offers rolling terrain, elevated views, water features, and a memorable public-golf experience in Tuscarawas County.</p>
+      <p>Spring Valley is a hidden gem featuring rolling elevation changes, tree-lined holes, beautifully striped fairways and scenic views throughout the property. Elevated tee shots, water, fescue and challenging greens provide plenty of variety.</p>
     </div>
     <div class="monthly-course-action">
-      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer" aria-label="View Oak Shadows booking">View Booking</a>
+      <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer" aria-label="View Spring Valley booking">View Booking</a>
     </div>
   `;
 
