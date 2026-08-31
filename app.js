@@ -326,23 +326,6 @@ const courses = [
     teeTimes: []
   },
   {
-    name: "Hawks Nest Golf Club",
-    city: "Creston, OH",
-    area: "Wayne / Holmes County",
-    latitude: 40.919587,
-    longitude: -81.902738,
-    bookingUrl: "https://www.chronogolf.com/club/hawks-nest-golf-club-ohio",
-    rateInfo: {
-      status: "call",
-      statusLabel: "Call for rates",
-      summary: "No official current rate page found; call 330-435-4611 for current rates and tee times.",
-      publicSummary: "Call 330-435-4611 for current rates and tee times.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.ohiogolf.com/golfcourses/hawks-nest-golf-club"
-    },
-    teeTimes: []
-  },
-  {
     name: "Chippewa Golf Club",
     city: "Doylestown, OH",
     area: "Wayne / Holmes County",
@@ -583,25 +566,6 @@ const courses = [
       summary: "Official page lists Monday-Thursday 18 riding $40 and 9 riding $26; Friday-Sunday 18 riding $46 and 9 riding $30. Confirm current pricing with the course.",
       checked: "Aug 5, 2026",
       sourceUrl: "https://www.roundlakegolfcourse.com/golfcourse"
-    },
-    teeTimes: []
-  },
-  {
-    name: "Big Dawg's Golf Course",
-    city: "Minerva, OH",
-    area: "Eastern Northeast Ohio",
-    latitude: 40.730,
-    longitude: -81.152,
-    bookingUrl: "https://www.golflink.com/golf-courses/oh/minerva/big-dawg-s-golf-course",
-    bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 868-3294 to check booking options.",
-    rateInfo: {
-      status: "call",
-      statusLabel: "Call for rates",
-      summary: "No official current rate page was found. Call 330-868-3294 to confirm current pricing.",
-      publicSummary: "Call 330-868-3294 for current pricing.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://thegolfcourses.net/golfcourses/OH/622655.htm"
     },
     teeTimes: []
   },
@@ -2059,7 +2023,6 @@ const FEATURED_COURSE_ROTATION = [
   "Great Trail Golf Course",
   "Pleasant View Golf Club",
   "The Pines Golf Club",
-  "Hawks Nest Golf Club",
   "Chippewa Golf Club",
   "Edgewater Golf Course",
   "Chenoweth Golf Course",
