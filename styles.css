@@ -1885,6 +1885,55 @@ body.homepage {
   margin-top: 6px;
 }
 
+/* Approved weekly photography stays secondary to the monthly hero. */
+.homepage .featured-course.has-featured-image {
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0;
+}
+
+.homepage .featured-course-image {
+  display: block;
+  width: 100%;
+  height: 112px;
+  flex: 0 0 112px;
+  object-fit: cover;
+  object-position: center 68%;
+}
+
+@media (min-width: 941px) {
+  .homepage .featured-course-image {
+    height: 136px;
+    flex-basis: 136px;
+  }
+}
+
+.homepage .has-featured-image .featured-copy {
+  width: 100%;
+  padding: 0 22px;
+}
+
+.homepage .has-featured-image .alert-kicker {
+  margin-bottom: 9px;
+  border-color: var(--gold);
+  background: var(--green-dark);
+  color: #ffe5a8;
+}
+
+.homepage .has-featured-image .featured-copy h2 {
+  font-size: 1.5rem;
+}
+
+.homepage .has-featured-image .featured-copy > p:not(.alert-kicker):not(.featured-rate) {
+  margin-top: 6px;
+}
+
+.homepage .has-featured-image .featured-details {
+  width: 100%;
+  margin-top: auto;
+  padding: 0 22px 20px;
+}
+
 .homepage .course-directory {
   margin-top: 80px;
 }

@@ -1978,6 +1978,249 @@ const courses = [
       sourceUrl: "https://www.cityofwestlake.org/page/newsletter-webapp"
     },
     teeTimes: []
+  },
+  {
+    name: "L.C. Boles Memorial Golf Course",
+    city: "Wooster, OH",
+    address: "East Wayne Avenue at Gasche Street, Wooster, OH 44691",
+    holes: 9,
+    courseType: "regulation",
+    area: "Wayne / Holmes County",
+    latitude: 40.8120008,
+    longitude: -81.9248645,
+    bookingUrl: "https://inside.wooster.edu/golf/",
+    bookingLabel: "Call / Info",
+    bookingNote: "9-hole regulation course. East Wayne Avenue at Gasche Street, Wooster, OH 44691. Open April-October; alternate tees for a second nine. Call 330-263-2316 for information.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 adult fees: 9 holes walking $14 or with cart $24; 18 holes walking $21 or with cart $41.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://inside.wooster.edu/golf/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Apple Valley Golf Club",
+    city: "Howard, OH",
+    address: "433 Clubhouse Drive, Howard, OH 43028",
+    holes: 18,
+    courseType: "regulation",
+    area: "Central Ohio",
+    latitude: 40.446987,
+    longitude: -82.360107,
+    bookingUrl: "https://www.applevalleygolfcourse.com/tee-times",
+    bookingNote: "18-hole regulation course. 433 Clubhouse Drive, Howard, OH 43028. Open the official course site for online booking.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 adult 18-hole rates: Monday-Wednesday walking $42 / riding $58; Thursday $44 / $59; Friday-Sunday and holidays $60 / $79. Taxes included; carts required Friday-Sunday before 1 PM.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.applevalleygolfcourse.com/rates/fees"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Brookside Golf Course",
+    city: "Ashland, OH",
+    address: "1399 Sandusky Street, Ashland, OH 44805",
+    holes: 18,
+    courseType: "regulation",
+    area: "Other Northeast Ohio",
+    latitude: 40.8745007,
+    longitude: -82.3409965,
+    bookingUrl: "https://www.ashland-ohio.com/page/brookside-golf-course",
+    bookingNote: "18-hole regulation course. 1399 Sandusky Street, Ashland, OH 44805. Use Book a Tee Time on the official city page, or call 419-289-7933 for availability.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 regular rates: weekday 9 holes walking $15 / riding $25 and 18 walking $25 / riding $45; weekend 9 walking $19 / riding $30 and 18 walking $26 / riding $48.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.ashland-ohio.com/o/ashland/page/rates"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Ashland Golf Club",
+    city: "Ashland, OH",
+    address: "1333 Center Street, Ashland, OH 44805",
+    holes: 18,
+    courseType: "regulation",
+    area: "Other Northeast Ohio",
+    latitude: 40.8531613,
+    longitude: -82.3030028,
+    bookingUrl: "https://www.ashlandgolfclubohio.com/",
+    bookingNote: "18-hole regulation course. 1333 Center Street, Ashland, OH 44805. Open the official course site for online booking.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "See the booking page linked from the official course site for current prices; rates change with demand and availability.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.ashlandgolfclubohio.com/golf-course/course-rates"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Oak Tree Golf Club",
+    city: "Mansfield, OH",
+    address: "1440 Old Oak Trail, Mansfield, OH 44903",
+    holes: 18,
+    courseType: "regulation",
+    area: "Other Northeast Ohio",
+    latitude: 40.79417,
+    longitude: -82.60471,
+    bookingUrl: "https://www.oaktreeclub.com/",
+    bookingNote: "18-hole regulation course. 1440 Old Oak Trail, Mansfield, OH 44903. Open the official course site for online booking.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "See the booking page linked from the official course site for current availability and rates.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.oaktreeclub.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Forest Hills Golf Course",
+    city: "Mansfield, OH",
+    address: "2235 OH-430, Mansfield, OH 44903",
+    holes: 18,
+    courseType: "executive",
+    area: "Other Northeast Ohio",
+    latitude: 40.76779,
+    longitude: -82.43424,
+    bookingUrl: "https://fhgolfcourse.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "18-hole executive course. 2235 OH-430, Mansfield, OH 44903. No tee time required; call for course conditions and availability. Call 419-589-3331 for information.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 adult rates: 18 holes walking $15 or riding $25; 9 holes walking $10 or riding $20.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://fhgolfcourse.com/pricing/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Vernon View Golf Course",
+    city: "Mount Vernon, OH",
+    address: "901 Beech Street, Mount Vernon, OH 43050",
+    holes: 18,
+    courseType: "regulation",
+    area: "Central Ohio",
+    latitude: 40.405479,
+    longitude: -82.464767,
+    bookingUrl: "https://www.vernonviewgc.com/",
+    bookingNote: "18-hole regulation course. 901 Beech Street, Mount Vernon, OH 43050. Formerly Hiawatha. Select Golf Tee Times for outdoor public play. Open the official course site for online booking.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 adult rates: weekday 18 holes riding $38 / walking $24 and 9 riding $26 / walking $19; weekend 18 riding $45 / walking $31 and 9 riding $30 / walking $23.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.vernonviewgc.com/rates-and-passes/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Chapel Hill Golf Course",
+    city: "Mount Vernon, OH",
+    address: "7516 Johnstown Road, Mount Vernon, OH 43050",
+    holes: 18,
+    courseType: "regulation",
+    area: "Central Ohio",
+    latitude: 40.347534,
+    longitude: -82.551094,
+    bookingUrl: "https://www.chapelhillgolfcourse.com/",
+    bookingNote: "18-hole regulation course. 7516 Johnstown Road, Mount Vernon, OH 43050. Open the official course site for online booking.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 summer rates (June 1-mid October): weekday 18 holes riding $45 / walking $35; weekend and holidays riding $55 / walking $45. Seasonal and time-of-day discounts may apply.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.chapelhillgolfcourse.com/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Paradise Lake Country Club",
+    city: "Suffield, OH",
+    address: "1900 Randolph Road, Suffield, OH 44260",
+    holes: 18,
+    courseType: "regulation",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.0466052,
+    longitude: -81.3240458,
+    bookingUrl: "https://www.plcc.info/",
+    bookingNote: "18-hole regulation course. 1900 Randolph Road, Suffield, OH 44260. Open to public play. Open the official course site for online booking.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "See the booking page linked from the official course site, or call 330-628-1313 for current rates. The published rate table does not identify an effective year.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.plcc.info/rates/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "The Fairways at Twin Lakes",
+    city: "Kent, OH",
+    address: "1540 Overlook Road, Kent, OH 44240",
+    holes: 9,
+    courseType: "regulation",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.1912699,
+    longitude: -81.3392039,
+    bookingUrl: "https://www.fairwaysattwinlakes.com/",
+    bookingNote: "9-hole regulation course. 1540 Overlook Road, Kent, OH 44240. Use Book Now on the official homepage. Weekend tee times before noon require at least two golfers. Open the official course site for online booking.",
+    rateInfo: {
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Summer 2026: weekday 9 holes walking $19 / riding $25; weekend before 1 PM walking $24 / riding $30, after 1 PM $19 / $25. An 18-hole round with cart is $42 weekdays, $50 weekends before 1 PM, or $42 after 1 PM.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://www.fairwaysattwinlakes.com/prices/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Raccoon Hill Golf Club",
+    city: "Kent, OH",
+    address: "485 Judson Road, Kent, OH 44240",
+    holes: 18,
+    courseType: "regulation",
+    area: "Eastern Northeast Ohio",
+    latitude: 41.19025,
+    longitude: -81.37262,
+    bookingUrl: "https://raccoonhillgolfclub.com/",
+    bookingNote: "18-hole regulation course. 485 Judson Road, Kent, OH 44240. Open the official course site for online booking.",
+    rateInfo: {
+      status: "booking",
+      statusLabel: "See booking page",
+      summary: "See the booking page linked from the official course site, or call 330-673-2111 for current rates.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://raccoonhillgolfclub.com/"
+    },
+    teeTimes: []
+  },
+  {
+    name: "Twin Lakes Golf Club",
+    city: "Mansfield, OH",
+    address: "2220 Marion Avenue Road, Mansfield, OH 44903",
+    holes: 18,
+    courseType: "regulation",
+    area: "Other Northeast Ohio",
+    latitude: 40.73001,
+    longitude: -82.59513,
+    bookingUrl: "https://twin-lakes-golf.com/",
+    bookingLabel: "Call / Info",
+    bookingNote: "18-hole regulation course. 2220 Marion Avenue Road, Mansfield, OH 44903. Public play available. Call 419-529-3777 for information.",
+    rateInfo: {
+      status: "call",
+      statusLabel: "Call for rates",
+      summary: "Call 419-529-3777 for current rates and availability. The published rate table does not identify an effective year.",
+      checked: "Sep 9, 2026",
+      sourceUrl: "https://twin-lakes-golf.com/rates/"
+    },
+    teeTimes: []
   }
 ];
 
@@ -2021,6 +2264,19 @@ const FEATURED_COURSE_ROTATION = [
 ];
 
 const SEPTEMBER_COURSE_OF_MONTH = "Spring Valley Golf Course";
+// Optional, course-specific approved photography. Unmapped courses keep the text card.
+const FEATURED_COURSE_IMAGES = {
+  "Oak Shadows Golf Club": {
+    courseIdentifier: "Oak Shadows Golf Club",
+    filename: "oak-shadows-august-course-of-month.jpg",
+    alt: "Fairway, bunkers and wooded hills at Oak Shadows Golf Club",
+    cropPosition: "50% 68%",
+    source: "Existing Tee Drop asset: Oak Shadows Media / oak-shadows-august-course-of-month.jpg",
+    approved: true,
+    permissionNotes: "Existing Tee Drop Course of the Month asset; Bobby approved reuse in Course of the Week on September 9, 2026.",
+    creditNotes: "No separate photographer credit recorded in the existing asset mapping."
+  }
+};
 const COURSE_BATCH_SIZE = 10;
 
 let userLocation = null;
@@ -2232,12 +2488,21 @@ function renderCourseOfMonth() {
 function renderFeaturedCourse() {
   const course = courses.find((item) => item.name === getFeaturedCourseName()) || courses[0];
   const buttonText = getCourseButtonText(course);
+  const mappedImage = FEATURED_COURSE_IMAGES[course.name];
+  // The canonical course name is the identifier. Only approved local files may render.
+  const featuredImage = mappedImage?.approved === true &&
+    mappedImage.courseIdentifier === course.name &&
+    /^[a-z0-9][a-z0-9/_-]*\.(?:jpg|jpeg|png|webp|avif)$/i.test(mappedImage.filename)
+    ? mappedImage : null;
+
+  featuredCourse.classList.toggle("has-featured-image", Boolean(featuredImage));
 
   featuredCourse.innerHTML = `
+    ${featuredImage ? `<img class="featured-course-image" src="${featuredImage.filename}" alt="${featuredImage.alt}" width="2400" height="1350">` : ""}
     <div class="featured-copy">
       <p class="alert-kicker">Course of the week</p>
       <h2>${course.name}</h2>
-      <p>${course.city} - ${getFeaturedCourseNoteText(course)}</p>
+      <p>${featuredImage ? course.city : `${course.city} - ${getFeaturedCourseNoteText(course)}`}</p>
       ${course.rateInfo ? `<p class="featured-rate">${getRateInfoText(course)}</p>` : ""}
     </div>
     <div class="featured-details">
@@ -2252,6 +2517,17 @@ function renderFeaturedCourse() {
       <a class="book-link" href="${course.bookingUrl}" target="_blank" rel="noreferrer">${buttonText}</a>
     </div>
   `;
+
+  const image = featuredCourse.querySelector(".featured-course-image");
+  if (image) {
+    image.style.objectPosition = featuredImage.cropPosition || "50% 68%";
+    image.addEventListener("error", () => {
+      image.remove();
+      featuredCourse.classList.remove("has-featured-image");
+      featuredCourse.querySelector(".featured-copy > p:not(.alert-kicker)").textContent =
+        `${course.city} - ${getFeaturedCourseNoteText(course)}`;
+    }, { once: true });
+  }
 
   addTrackingData(featuredCourse.querySelector(".book-link"), course, "course of the week");
 }
