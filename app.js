@@ -1940,26 +1940,6 @@ const courses = [
     teeTimes: []
   },
   {
-    name: "Shady Grove Golf Course",
-    city: "Findlay, OH",
-    area: "Northwest Ohio",
-    courseType: "par3",
-    latitude: 41.055324,
-    longitude: -83.580769,
-    bookingUrl: "https://www.shadygrovegolf.com/golf-course/rates",
-    bookingLabel: "Call / Info",
-    bookingNote: "Call 419-422-7494 or check the course page before visiting; tee times are not normally required.",
-    rateInfo: {
-      status: "undated",
-      statusLabel: "Rates listed",
-      summary: "The course-owned page lists 9 holes at $10 and 18 holes at $15 but does not state an effective year.",
-      publicSummary: "Posted rates are available, but confirm current pricing with the course before playing.",
-      checked: "Aug 12, 2026",
-      sourceUrl: "https://www.shadygrovegolf.com/green-fees-and-specials"
-    },
-    teeTimes: []
-  },
-  {
     name: "Armco Park Golf Course",
     city: "Lebanon, OH",
     area: "Southwest Ohio",
