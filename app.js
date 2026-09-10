@@ -2266,6 +2266,16 @@ const FEATURED_COURSE_ROTATION = [
 const SEPTEMBER_COURSE_OF_MONTH = "Spring Valley Golf Course";
 // Optional, course-specific approved photography. Unmapped courses keep the text card.
 const FEATURED_COURSE_IMAGES = {
+  "Chippewa Golf Club": {
+    courseIdentifier: "Chippewa Golf Club",
+    filename: "assets/chippewa-course-of-week.webp",
+    alt: "Chippewa Golf Club in Doylestown, with a green, rolling fairway and trees in evening sunlight",
+    cropPosition: "50% 50%",
+    source: "https://www.chippewagolfclub.com/wp-content/uploads/sites/7206/2018/11/sliderphoto3-2.jpg",
+    approved: true,
+    permissionNotes: "Bobby approved local hosting and production use on September 10, 2026, explicitly choosing to proceed after being informed that rights-holder reuse permission is unconfirmed. Visual treatment and crop approved. No separate rights-holder license is recorded.",
+    creditNotes: "Photo sourced from Chippewa Golf Club's official Doylestown website. Photographer and any required attribution are unconfirmed."
+  },
   "Oak Shadows Golf Club": {
     courseIdentifier: "Oak Shadows Golf Club",
     filename: "oak-shadows-august-course-of-month.jpg",
