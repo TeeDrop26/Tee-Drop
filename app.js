@@ -5,7 +5,7 @@ const courses = [
     area: "Tuscarawas County",
     latitude: 40.6122153,
     longitude: -81.418408,
-    bookingUrl: "https://zoar-village-golf-course.book.teeitup.com/?course=4264",
+    bookingUrl: "https://zoargolf.teesnap.net/",
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
@@ -17,7 +17,7 @@ const courses = [
       time: "Open link",
       players: 4,
       price: null,
-      note: "Open Zoar's course link to check booking options."
+      note: "Closed September 14–16, 2026 for aeration; reopens September 17. Open Zoar's booking page to check availability."
     },
     teeTimes: []
   },
@@ -27,7 +27,7 @@ const courses = [
     area: "Tuscarawas County",
     latitude: 40.50251,
     longitude: -81.423778,
-    bookingUrl: "https://www.oakshadowsgolf.com/tee-times/",
+    bookingUrl: "https://oak-shadows-golf-club.book.teeitup.com/",
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
@@ -281,7 +281,7 @@ const courses = [
     area: "Canton / Stark County",
     latitude: 40.83752,
     longitude: -81.126503,
-    bookingUrl: "https://www.chronogolf.com/club/pleasant-view-golf-club-ohio",
+    bookingUrl: "https://foreupsoftware.com/index.php/booking/20611/5092#teetimes",
     rateInfo: {
       status: "booking",
       statusLabel: "See booking page",
@@ -315,7 +315,7 @@ const courses = [
     area: "Wayne / Holmes County",
     latitude: 40.836,
     longitude: -81.782,
-    bookingUrl: "https://www.chronogolf.com/club/the-pines-golf-club-ohio",
+    bookingUrl: "https://thepines.cps.golf/onlineresweb/m/search-teetime/default",
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
@@ -440,9 +440,8 @@ const courses = [
     area: "Akron / Summit County",
     latitude: 40.964,
     longitude: -81.466,
-    bookingUrl: "https://www.mayfaircountryclub.com/",
-    bookingLabel: "Call / Info",
-    bookingNote: "Call (330) 699-2209 or check the course site for current booking instructions.",
+    bookingUrl: "https://book.cgsteetimes.com/asp/default.asp?may",
+    bookingNote: "Online booking requires sign-in. Call (330) 699-2209 for booking assistance.",
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
@@ -525,8 +524,7 @@ const courses = [
     area: "Canton / Stark County",
     latitude: 40.909,
     longitude: -81.184,
-    bookingUrl: "https://tannenhaufgolf.net/",
-    bookingLabel: "Call / Info",
+    bookingUrl: "https://tannenhaufgolf.net/book-a-tee-time/",
     bookingNote: "Call (330) 823-4402 to check booking options.",
     rateInfo: {
       status: "posted",
@@ -560,6 +558,7 @@ const courses = [
     latitude: 40.629,
     longitude: -82.141,
     bookingUrl: "https://www.roundlakegolfcourse.com/",
+    bookingLabel: "Call / Info",
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",
@@ -592,7 +591,7 @@ const courses = [
     courseType: "par3",
     latitude: 41.048564,
     longitude: -81.331005,
-    bookingUrl: "https://www.facebook.com/MulliganSpringsGolfCourse/",
+    bookingUrl: "https://www.facebook.com/people/Mulligan-Springs-Golf-Course/100057617081208/",
     bookingLabel: "Call / Info",
     bookingNote: "Par 3 course. Call (330) 628-5139 to check booking options.",
     rateInfo: {
@@ -611,7 +610,7 @@ const courses = [
     area: "Eastern Northeast Ohio",
     latitude: 41.172989,
     longitude: -81.223061,
-    bookingUrl: "https://www.chronogolf.com/club/windmill-lakes-golf-club",
+    bookingUrl: "https://windmilllakesgclub.cps.golf/",
     bookingNote: "Open Windmill Lakes' course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -782,7 +781,7 @@ const courses = [
     area: "Cleveland area",
     latitude: 41.4948,
     longitude: -82.0322,
-    bookingUrl: "https://sweetbriar-golf-club-legacy-18.book.teeitup.com/",
+    bookingUrl: "https://www.sweetbriargolfclub.com/book-a-tee-time/",
     bookingNote: "Open Sweetbriar's course link to check booking options.",
     rateInfo: {
       status: "booking",
@@ -922,7 +921,7 @@ const courses = [
     area: "Cleveland area",
     latitude: 41.4338,
     longitude: -81.8487,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/big-met-golf-course-course",
+    bookingUrl: "https://www.chronogolf.com/club/big-met-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -939,7 +938,7 @@ const courses = [
     area: "Cleveland area",
     latitude: 41.2355,
     longitude: -81.745,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/ironwood-golf-course",
+    bookingUrl: "https://www.chronogolf.com/club/ironwood-golf-course-ohio",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -957,7 +956,7 @@ const courses = [
     courseType: "executive",
     latitude: 41.42,
     longitude: -81.8284,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/little-met-golf-course",
+    bookingUrl: "https://www.chronogolf.com/club/little-met-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -975,7 +974,7 @@ const courses = [
     courseType: "executive",
     latitude: 41.4317,
     longitude: -81.8427,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/mastick-woods-golf-course",
+    bookingUrl: "https://www.chronogolf.com/club/mastick-woods-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -992,7 +991,7 @@ const courses = [
     area: "Cleveland area",
     latitude: 41.3196,
     longitude: -81.6307,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/seneca-golf-course",
+    bookingUrl: "https://www.chronogolf.com/club/seneca-golf-club-ohio",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -1010,7 +1009,7 @@ const courses = [
     additionalLayouts: [{ type: "par3" }],
     latitude: 41.3559,
     longitude: -81.512,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/shawnee-hills-golf-course",
+    bookingUrl: "https://www.chronogolf.com/club/shawnee-hills-golf-club",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -1028,7 +1027,7 @@ const courses = [
     courseType: "executive",
     latitude: 41.4469,
     longitude: -81.6706,
-    bookingUrl: "https://www.clevelandmetroparks.com/golf/courses/washington-golf-course",
+    bookingUrl: "https://www.chronogolf.com/club/washington-golf-course",
     bookingNote: "Cleveland Metroparks course. Open the course link to check booking options.",
     rateInfo: {
       status: "posted",
@@ -1205,7 +1204,7 @@ const courses = [
     area: "Eastern Northeast Ohio",
     latitude: 41.064616,
     longitude: -80.563371,
-    bookingUrl: "https://www.knollrun.com/rates-booking",
+    bookingUrl: "https://www.chronogolf.com/club/knoll-run-golf-course",
     bookingNote: "Open Knoll Run's booking page to check current availability and pricing.",
     rateInfo: {
       status: "undated",
@@ -1363,8 +1362,7 @@ const courses = [
     area: "Other Northeast Ohio",
     latitude: 39.981761,
     longitude: -81.923787,
-    bookingUrl: "https://www.zanesvillejcgolfcourse.com/Contact.html",
-    bookingLabel: "Call / Info",
+    bookingUrl: "https://www.zanesvillejcgolfcourse.com/Schedule-a-tee-time.html",
     bookingNote: "Call (740) 452-1860 to confirm current availability and rates.",
     rateInfo: {
       status: "rate-page",
@@ -2069,7 +2067,7 @@ const courses = [
     area: "Other Northeast Ohio",
     latitude: 40.79417,
     longitude: -82.60471,
-    bookingUrl: "https://www.oaktreeclub.com/",
+    bookingUrl: "https://mid-ohio-golf-group.book.teeitup.com/?course=18701",
     bookingNote: "18-hole regulation course. 1440 Old Oak Trail, Mansfield, OH 44903. Open the official course site for online booking.",
     rateInfo: {
       status: "booking",
@@ -2089,8 +2087,7 @@ const courses = [
     area: "Other Northeast Ohio",
     latitude: 40.76779,
     longitude: -82.43424,
-    bookingUrl: "https://fhgolfcourse.com/",
-    bookingLabel: "Call / Info",
+    bookingUrl: "https://www.golfnow.com/tee-times/facility/14217-forest-hills-golf-course/search",
     bookingNote: "18-hole executive course. 2235 OH-430, Mansfield, OH 44903. No tee time required; call for course conditions and availability. Call 419-589-3331 for information.",
     rateInfo: {
       status: "posted",
@@ -2110,7 +2107,7 @@ const courses = [
     area: "Central Ohio",
     latitude: 40.405479,
     longitude: -82.464767,
-    bookingUrl: "https://www.vernonviewgc.com/",
+    bookingUrl: "https://vernon-view-golf-course.book.teeitup.com/",
     bookingNote: "18-hole regulation course. 901 Beech Street, Mount Vernon, OH 43050. Formerly Hiawatha. Select Golf Tee Times for outdoor public play. Open the official course site for online booking.",
     rateInfo: {
       status: "posted",
@@ -2130,7 +2127,7 @@ const courses = [
     area: "Central Ohio",
     latitude: 40.347534,
     longitude: -82.551094,
-    bookingUrl: "https://www.chapelhillgolfcourse.com/",
+    bookingUrl: "https://chapel-hill-golf-course-2.book.teeitup.com/",
     bookingNote: "18-hole regulation course. 7516 Johnstown Road, Mount Vernon, OH 43050. Open the official course site for online booking.",
     rateInfo: {
       status: "posted",
@@ -2190,7 +2187,7 @@ const courses = [
     area: "Eastern Northeast Ohio",
     latitude: 41.19025,
     longitude: -81.37262,
-    bookingUrl: "https://raccoonhillgolfclub.com/",
+    bookingUrl: "https://apimanager-cc30.clubcaddie.com/webapi/view/igfdabab",
     bookingNote: "18-hole regulation course. 485 Judson Road, Kent, OH 44240. Open the official course site for online booking.",
     rateInfo: {
       status: "posted",
