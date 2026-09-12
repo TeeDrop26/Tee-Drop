@@ -9,8 +9,8 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "Current official rates: Monday-Thursday 18 holes riding $44 and 9 riding $30; Friday 18 riding $53, or $44 after noon; weekend/holiday 18 riding ranges from $65-$68, $57-$60 from noon-2, and $50-$53 after 2.",
-      checked: "Aug 5, 2026",
+      summary: "Published riding rates vary with demand. 18 holes: Mon–Thu $44–48; Friday $53–56, or $44–47 after noon; weekends/holidays $65–70 before noon, $57–60 noon–2 PM, and $50–55 after 2 PM. Nine holes: Mon–Thu $30; Friday after noon $30; weekends after 2 PM $32–35.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://zoarvillagegolf.com/rates/"
     },
     firstAvailable: {
@@ -29,12 +29,12 @@ const courses = [
     longitude: -81.423778,
     bookingUrl: "https://www.oakshadowsgolf.com/tee-times/",
     rateInfo: {
-      status: "booking",
-      statusLabel: "See booking page",
-      summary: "The official course site provides online booking but no fixed current public rate sheet was verified. Check the official booking page for the current date-and-time price.",
-      publicSummary: "Check the official booking page for current date-and-time pricing.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.oakshadowsgolf.com/tee-times/"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 rates, April 1–October 1, including half cart: 18/9 holes Mon–Thu $44/$28; Friday $50/$32; weekends $60/$38, or $45/$30 after 2 PM.",
+      publicSummary: "2026 rates, April 1–October 1, including half cart: 18/9 holes Mon–Thu $44/$28; Friday $50/$32; weekends $60/$38, or $45/$30 after 2 PM.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.oakshadowsgolf.com/rates/"
     },
     teeTimes: []
   },
@@ -219,8 +219,8 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "2026 posted: daily 18 riding $55, 9 riding $36; walking 18 $45, 9 $27; senior riding 18 $37, 9 $27.",
-      checked: "Aug 5, 2026",
+      summary: "2026 regular 18/9-hole rates: riding $55/$36; walking $45/$27. Walking is unavailable before 2 PM on weekends. Senior ages 60+ riding rates: $37/$27.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://ncarrowhead.com/golf/book-time/"
     },
     teeTimes: []
@@ -334,12 +334,12 @@ const courses = [
     longitude: -81.657214,
     bookingUrl: "https://www.chippewagolfclub.com/tee-times/",
     rateInfo: {
-      status: "call",
-      statusLabel: "Call for rates",
-      summary: "The Doylestown course's official site does not publish current rates; call 330-658-6126 or use its booking page. Do not use Chippewa 579 rates from Curtice, Ohio.",
-      publicSummary: "For current pricing, call 330-658-6126 or check the online booking page.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.chippewagolfclub.com/"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 peak-season 18/9-hole rates: weekdays riding $53/$30 or walking $38/$20. Weekends/holidays riding $75/$40 before 2 PM or $57/$35 after 2 PM.",
+      publicSummary: "2026 peak-season 18/9-hole rates: weekdays riding $53/$30 or walking $38/$20. Weekends/holidays riding $75/$40 before 2 PM or $57/$35 after 2 PM.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.chippewagolfclub.com/golf/rates/"
     },
     teeTimes: []
   },
@@ -477,11 +477,11 @@ const courses = [
     longitude: -81.571,
     bookingUrl: "https://mud-run-golf-course.book.teeitup.com/?course=54f14d410c8ad60378b03844",
     rateInfo: {
-      status: "rate-page",
-      statusLabel: "See rate page",
-      summary: "An official rates page is available, but its current dollar amounts were not exposed in the page text. Check the official rates or booking page, or call the course, for current pricing.",
-      publicSummary: "Check the course's official rates or booking page, or call the course, for current pricing.",
-      checked: "Aug 5, 2026",
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Effective May 1, 2026: 9 holes weekdays $22 walking or $32 riding; weekends $25 walking or $35 riding.",
+      publicSummary: "Effective May 1, 2026: 9 holes weekdays $22 walking or $32 riding; weekends $25 walking or $35 riding.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://www.mudrungolf.com/rates/"
     },
     teeTimes: []
@@ -531,8 +531,8 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "2026 summer rates: weekday 18 riding $42; weekend before noon $60 and after noon $47; weekday 9 riding $22.",
-      checked: "Aug 5, 2026",
+      summary: "2026 summer riding rates: weekday 18 holes $42; weekend 18 holes $60 before noon or $47 after noon. Weekday 9 holes $22, except Monday–Thursday after 4 PM: $24.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://tannenhaufgolf.net/rates/"
     },
     teeTimes: []
@@ -631,11 +631,11 @@ const courses = [
     bookingUrl: "https://turkeyfoot-lake-golf-links.book.teeitup.com/",
     bookingNote: "Open Turkeyfoot's course link to check booking options.",
     rateInfo: {
-      status: "stale",
-      statusLabel: "Confirm current rates",
-      summary: "Official rates page is labeled 2025 and does not confirm current 2026 peak-season pricing; check the booking page or call (330) 644-5971.",
-      publicSummary: "Check the booking page or call (330) 644-5971 for current pricing.",
-      checked: "Aug 5, 2026",
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 peak-season rates from April 1. 18/9 holes: Mon–Thu riding $51/$32, walking $38/$24; Friday riding $55/$35, walking $41/$27; weekends before 2 PM riding $69/$37, walking $55/$30; weekends after 2 PM riding $57/$33, walking $43/$26.",
+      publicSummary: "2026 peak-season rates from April 1. 18/9 holes: Mon–Thu riding $51/$32, walking $38/$24; Friday riding $55/$35, walking $41/$27; weekends before 2 PM riding $69/$37, walking $55/$30; weekends after 2 PM riding $57/$33, walking $43/$26.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://www.turkeyfootgolf.com/rates/"
     },
     teeTimes: []
@@ -666,11 +666,11 @@ const courses = [
     bookingUrl: "https://www.foxdengc.com/tee-times/",
     bookingNote: "Open Fox Den's course link to check booking options.",
     rateInfo: {
-      status: "booking",
-      statusLabel: "See booking page",
-      summary: "Current pricing is shown through the course booking system; check the booking page or call (330) 673-3443.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.foxdengc.com/tee-times/"
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Published weekday and weekend-after-1-PM 18/9-hole rates: riding $51/$29; walking $35/$21. Weekend 18 holes before 1 PM: $65 riding or $49 walking. Weekend 9 holes are unavailable before 1 PM except the $35 early special before 7:30 AM; confirm that special’s cart terms. Pro shop: 330-689-2770. The rate sheet is undated.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.foxdengc.com/rates/"
     },
     teeTimes: []
   },
@@ -683,11 +683,11 @@ const courses = [
     bookingUrl: "https://www.rosesrun.com/tee-times/",
     bookingNote: "Open Roses Run's course link to check booking options.",
     rateInfo: {
-      status: "booking",
-      statusLabel: "See booking page",
-      summary: "Current rates are shown through the official tee-time booking flow; pricing may vary by date, time, and availability.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.rosesrun.com/tee-times/"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Effective April 1, 2026: weekday 18/9-hole rates $54/$35; weekends before 1 PM $66/$42, and after 1 PM $54/$35. The published table does not specify cart inclusion; confirm before booking.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.rosesrun.com/rates/"
     },
     teeTimes: []
   },
@@ -702,8 +702,8 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "2026 summer rates: Monday-Thursday 18 riding $62; Friday $68; weekend/holiday $84 before noon, $74 noon-2, $64 after 2, and $54 after 4.",
-      checked: "Aug 5, 2026",
+      summary: "2026 summer riding rates, May 2–October 24: Mon–Thu 18 holes $62; Friday $68. Weekend/holiday 18 holes: $84 opening–noon, $74 from 12:10–2 PM, $64 from 2:10–4 PM, and $54 after 4 PM.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://bouldercreekohio.com/rates-and-course-policy/"
     },
     teeTimes: []
@@ -856,10 +856,10 @@ const courses = [
     bookingUrl: "https://www.flyingbgolf.com/teetimes/",
     bookingNote: "Open The Flying B's course link to check booking options.",
     rateInfo: {
-      status: "rate-page",
-      statusLabel: "See rate page",
-      summary: "The official site has a rates page but does not expose current dollar amounts in readable text; check the booking page or call (330) 337-8138.",
-      checked: "Aug 5, 2026",
+      status: "undated",
+      statusLabel: "Rates listed",
+      summary: "Published 18/9-hole rates: weekdays riding $30/$20 or walking $20/$15; weekends riding $45/$25 or walking $30/$20. The rate table is undated; confirm current pricing and afternoon-special eligibility.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://www.flyingbgolf.com/aboutus/rates/"
     },
     teeTimes: []
@@ -1187,14 +1187,14 @@ const courses = [
     latitude: 41.030779,
     longitude: -80.698454,
     bookingUrl: "https://www.millcreekmetroparks.org/mill-creek-golf-course/",
-    bookingLabel: "Call / Info",
-    bookingNote: "Open Mill Creek's official course page or call (330) 740-7112 for current booking options.",
+    bookingLabel: "Updates / Info",
+    bookingNote: "Check the official course page for reopening updates.",
     rateInfo: {
-      status: "undated",
-      statusLabel: "Rates listed",
-      summary: "The official MetroParks page labels the section as 2026 rates but also says rates are effective January 2025. It lists Mahoning County resident 18-hole riding at $46 and non-resident 18-hole riding at $54; confirm current pricing because the effective-date language conflicts.",
-      publicSummary: "Mahoning County resident 18-hole riding is listed at $46 and non-resident 18-hole riding at $54. Confirm current pricing with the course.",
-      checked: "Aug 5, 2026",
+      status: "closed",
+      statusLabel: "Temporarily closed",
+      summary: "Temporarily closed until further notice following July 5, 2026 storm damage. Check the official course page for reopening updates; rates require reconfirmation before play resumes.",
+      publicSummary: "Temporarily closed until further notice following July 5, 2026 storm damage. Check the official course page for reopening updates; rates require reconfirmation before play resumes.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://www.millcreekmetroparks.org/mill-creek-golf-course/"
     },
     teeTimes: []
@@ -1367,12 +1367,12 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (740) 452-1860 to confirm current availability and rates.",
     rateInfo: {
-      status: "call",
-      statusLabel: "Call for rates",
-      summary: "No current official rate sheet was found. Call (740) 452-1860 to confirm current pricing with the course before booking.",
-      publicSummary: "Call (740) 452-1860 for current pricing.",
-      checked: "Aug 5, 2026",
-      sourceUrl: "https://www.zanesvillejcgolfcourse.com/Contact.html"
+      status: "rate-page",
+      statusLabel: "See rate page",
+      summary: "The official rate page lists 9 holes anytime at $20, or $23 when paying by card. Confirm cart inclusion. Other published rates require confirmation of hole count and cart terms. Call 740-452-1860; the rate page is undated.",
+      publicSummary: "The official rate page lists 9 holes anytime at $20, or $23 when paying by card. Confirm cart inclusion. Other published rates require confirmation of hole count and cart terms. Call 740-452-1860; the rate page is undated.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.zanesvillejcgolfcourse.com/Rates.html"
     },
     teeTimes: []
   },
@@ -1406,9 +1406,9 @@ const courses = [
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",
-      summary: "Official rate page lists weekday adult 18 holes $34 riding / $24 walking and weekend 18 holes $38 riding / $28 walking; the page does not state an effective year. Confirm current pricing with the course before booking.",
-      publicSummary: "Weekday adult 18 holes is listed at $34 riding or $24 walking; weekend 18 holes is $38 riding or $28 walking. Confirm current pricing with the course.",
-      checked: "Aug 5, 2026",
+      summary: "Published adult 18/9-hole rates: weekdays through 2 PM riding $34/$24, walking $24/$16; after 2 PM riding $27/$20, walking $21/$14. Weekends through 3 PM riding $38/$28, walking $28/$20. Confirm adult weekend pricing after 3 PM. The rate page is undated.",
+      publicSummary: "Published adult 18/9-hole rates: weekdays through 2 PM riding $34/$24, walking $24/$16; after 2 PM riding $27/$20, walking $21/$14. Weekends through 3 PM riding $38/$28, walking $28/$20. Confirm adult weekend pricing after 3 PM. The rate page is undated.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://www.vistagolfcourse.com/Golf-Course-Details/Rates/"
     },
     teeTimes: []
@@ -1463,8 +1463,8 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "2026 summer rates: weekday 18 holes with half cart $33 and weekend 18 holes with half cart $44. Confirm current pricing with the course before booking.",
-      checked: "Aug 5, 2026",
+      summary: "2026 summer cash rates, including half cart: weekday 18/9 holes $33/$23; weekend 18/9 holes $44/$27. Confirm pricing for other payment methods.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://www.turkanagolf.com/rates"
     },
     teeTimes: []
@@ -1481,9 +1481,9 @@ const courses = [
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",
-      summary: "Official fee page lists 9 holes $21 with cart / $14 walking and 18 holes $31 with cart / $23 walking; the page does not state an effective year. Confirm current pricing with the course before booking.",
-      publicSummary: "9 holes is listed at $21 with cart or $14 walking; 18 holes is $31 with cart or $23 walking. Confirm current pricing with the course.",
-      checked: "Aug 5, 2026",
+      summary: "Published 18/9-hole rates: weekdays $31/$21 with cart or $23/$14 walking; weekends $36/$26 with cart or $26/$18 walking. The rate page is undated; confirm current pricing.",
+      publicSummary: "Published 18/9-hole rates: weekdays $31/$21 with cart or $23/$14 walking; weekends $36/$26 with cart or $26/$18 walking. The rate page is undated; confirm current pricing.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://historichighlandsgc.com/golf-fees-at-historic-highlands-golf-course/"
     },
     teeTimes: []
@@ -1602,10 +1602,10 @@ const courses = [
     rateInfo: {
       status: "undated",
       statusLabel: "Rates listed",
-      summary: "The official site lists off-season rates beginning October 19 at $25 for 18 holes and $20 for 9 holes, with or without a cart, but does not state an effective year for that rate block.",
-      publicSummary: "Off-season rates are listed at $25 for 18 holes and $20 for 9 holes, with or without a cart. Check the booking page for current in-season pricing.",
-      checked: "Aug 10, 2026",
-      sourceUrl: "https://www.irishhillsgolfclub.com/"
+      summary: "Published in-season 18/9-hole rates: Mon–Thu riding $39/$23, walking $30/$18; Friday riding $42/$25, walking $32/$20; weekends/holidays riding $47/$27, walking $37/$22. Published 18-hole cash prices: Mon–Thu $35 riding/$25 walking; Friday $37/$27; weekends/holidays $42/$32. The page is undated; confirm current pricing.",
+      publicSummary: "Published in-season 18/9-hole rates: Mon–Thu riding $39/$23, walking $30/$18; Friday riding $42/$25, walking $32/$20; weekends/holidays riding $47/$27, walking $37/$22. Published 18-hole cash prices: Mon–Thu $35 riding/$25 walking; Friday $37/$27; weekends/holidays $42/$32. The page is undated; confirm current pricing.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.irishhillsgolfclub.com/rates/"
     },
     teeTimes: []
   },
@@ -1708,11 +1708,11 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call (740) 826-7606 to confirm current availability and rates.",
     rateInfo: {
-      status: "rate-page",
-      statusLabel: "See rate page",
-      summary: "The course-owned fee page says its 2026 fees remain from 2024, but the dollar amounts are presented as image content rather than readable page text.",
-      publicSummary: "Check the course's fee page or call (740) 826-7606 for current pricing.",
-      checked: "Aug 10, 2026",
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Official 2026 fees remain unchanged from 2024. Weekday 9/18-hole green fees: $10/$14; cart fees listed separately at $10/$14. Weekend green fees: $12/$16; cart fees listed separately at $12/$16. Confirm whether cart charges are per person or per cart.",
+      publicSummary: "Official 2026 fees remain unchanged from 2024. Weekday 9/18-hole green fees: $10/$14; cart fees listed separately at $10/$14. Weekend green fees: $12/$16; cart fees listed separately at $12/$16. Confirm whether cart charges are per person or per cart.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://sites.google.com/site/wildfiregolfclub/green-fees"
     },
     teeTimes: []
@@ -1730,9 +1730,9 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "The official 2026 Golf and Recreation Planner lists 9 holes at $11 for Mahoning County residents, $12 for non-residents, and $10 for seniors and juniors.",
-      publicSummary: "9 holes are listed at $11 for Mahoning County residents, $12 for non-residents, and $10 for seniors and juniors.",
-      checked: "Aug 12, 2026",
+      summary: "2026 daytime 9-hole fees: Mahoning County residents $8; nonresidents $9; seniors and juniors $7.",
+      publicSummary: "2026 daytime 9-hole fees: Mahoning County residents $8; nonresidents $9; seniors and juniors $7.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://reservations.millcreekmetroparks.org/documents/2026/01/2026/1/2026_Mill_Creek_Golf___Recreation_Planner_-_web.pdf"
     },
     teeTimes: []
@@ -1801,11 +1801,11 @@ const courses = [
     bookingUrl: "https://foreupsoftware.com/index.php/booking/20987/6389#teetimes",
     rateInfo: {
       status: "undated",
-      statusLabel: "See booking page",
-      summary: "The course-owned site provides online tee times, but no clearly dated current public rate sheet was verified.",
-      publicSummary: "Check the booking page for current pricing.",
-      checked: "Aug 12, 2026",
-      sourceUrl: "https://robinsnestgolf.com/contact-us/"
+      statusLabel: "Rates listed",
+      summary: "Published regular 18/9-hole rates: walking $17/$11.50; with cart $25/$18. No weekday/weekend distinction is published. The rate page is undated; confirm current pricing.",
+      publicSummary: "Published regular 18/9-hole rates: walking $17/$11.50; with cart $25/$18. No weekday/weekend distinction is published. The rate page is undated; confirm current pricing.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://robinsnestgolf.com/rates/"
     },
     teeTimes: []
   },
@@ -1970,12 +1970,12 @@ const courses = [
     bookingLabel: "Call / Info",
     bookingNote: "Call 440-835-6442 or check the city course page for current availability.",
     rateInfo: {
-      status: "call",
-      statusLabel: "Call for rates",
-      summary: "The City of Westlake confirms that Meadowood remains open as two 9-hole Par 3 layouts during 2026 construction, with reduced rates, but a dependable current public rate table was not verified.",
-      publicSummary: "Temporary Par 3 configuration during 2026 construction. Call 440-835-6442 for current pricing.",
-      checked: "Aug 12, 2026",
-      sourceUrl: "https://www.cityofwestlake.org/page/newsletter-webapp"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "Temporary Par 3 configuration during 2026 construction. Red/White green fees: 9/18 holes $13/$20; cart fees additional at $7/$12. Daily cart-inclusive special from opening–3 PM: 9 holes $17; 18 holes $27. Westlake residents receive $1 off regular rates; discount excludes the cart special.",
+      publicSummary: "Temporary Par 3 configuration during 2026 construction. Red/White green fees: 9/18 holes $13/$20; cart fees additional at $7/$12. Daily cart-inclusive special from opening–3 PM: 9 holes $17; 18 holes $27. Westlake residents receive $1 off regular rates; discount excludes the cart special.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://www.cityofwestlake.org/o/rcwl/page/meadowood-golf-course"
     },
     teeTimes: []
   },
@@ -1994,8 +1994,8 @@ const courses = [
     rateInfo: {
       status: "posted",
       statusLabel: "Rates listed",
-      summary: "2026 adult fees: 9 holes walking $14 or with cart $24; 18 holes walking $21 or with cart $41.",
-      checked: "Sep 9, 2026",
+      summary: "2026 adult green fees: 9 holes $14; 18 holes $21. Cart rental is additional: $10 per person for 9 holes or $20 per person for 18 holes.",
+      checked: "Sep 12, 2026",
       sourceUrl: "https://inside.wooster.edu/golf/"
     },
     teeTimes: []
@@ -2193,11 +2193,11 @@ const courses = [
     bookingUrl: "https://raccoonhillgolfclub.com/",
     bookingNote: "18-hole regulation course. 485 Judson Road, Kent, OH 44240. Open the official course site for online booking.",
     rateInfo: {
-      status: "booking",
-      statusLabel: "See booking page",
-      summary: "See the booking page linked from the official course site, or call 330-673-2111 for current rates.",
-      checked: "Sep 9, 2026",
-      sourceUrl: "https://raccoonhillgolfclub.com/"
+      status: "posted",
+      statusLabel: "Rates listed",
+      summary: "2026 18/9-hole rates: weekdays and weekends after 2 PM riding $45/$24 or walking $29/$16. Weekends/holidays before 2 PM riding $55/$32 or walking $39/$24.",
+      checked: "Sep 12, 2026",
+      sourceUrl: "https://raccoonhillgolfclub.com/rates/"
     },
     teeTimes: []
   },
@@ -2428,7 +2428,9 @@ function renderTeeTimes() {
     article.classList.toggle("call-card", courseBookingType === "call");
     article.classList.toggle("online-card", courseBookingType === "online");
     article.classList.toggle("nearby-card", isNearby);
-    bookingType.textContent = courseBookingType === "call" ? "Call course" : "Online";
+    bookingType.textContent = isCourseClosed(teeTime.course)
+      ? "Temporarily closed"
+      : courseBookingType === "call" ? "Call course" : "Online";
     bookingType.classList.toggle("call", courseBookingType === "call");
     getCourseTypeBadges(teeTime.course).forEach((badge) => {
       const typeBadge = document.createElement("span");
@@ -2845,11 +2847,23 @@ function getBookingType(course) {
   return course.bookingLabel ? "call" : "online";
 }
 
+function isCourseClosed(course) {
+  return course.rateInfo?.status === "closed";
+}
+
 function getCourseButtonText(course) {
+  if (isCourseClosed(course)) {
+    return "Updates / Info";
+  }
+
   return getBookingType(course) === "call" ? "Call / Info" : "View Booking";
 }
 
 function getBookingOptionText(course) {
+  if (isCourseClosed(course)) {
+    return "Temporarily closed";
+  }
+
   return getBookingType(course) === "call" ? "Call course" : "Online booking";
 }
 
@@ -2876,6 +2890,10 @@ function getRateStatusText(course) {
 }
 
 function getCourseNoteText(course, note) {
+  if (isCourseClosed(course)) {
+    return "Check the official course page for reopening updates.";
+  }
+
   const fallbackNote = getBookingType(course) === "call"
     ? "Call the course to confirm current availability and rates."
     : "Open the course's booking page to check current availability and pricing.";
