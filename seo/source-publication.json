@@ -258,5 +258,95 @@
     "decision": "publish",
     "expectedUrl": "https://blackdiamondgolfcourse.com/rates/",
     "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0036": {
+    "decision": "publish",
+    "expectedUrl": "https://golfwindmilllakes.com/rates/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0041": {
+    "decision": "publish",
+    "expectedUrl": "https://bouldercreekohio.com/rates-and-course-policy/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0121": {
+    "decision": "publish",
+    "expectedUrl": "https://www.plcc.info/rates/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0122": {
+    "decision": "publish",
+    "expectedUrl": "https://www.fairwaysattwinlakes.com/prices/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0123": {
+    "decision": "publish",
+    "expectedUrl": "https://raccoonhillgolfclub.com/rates/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0076": {
+    "decision": "publish",
+    "expectedUrl": "https://www.eaglesticks.com/tee-times/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0077": {
+    "decision": "publish",
+    "expectedUrl": "https://crystalspringsgc.com/rates/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0078": {
+    "decision": "publish",
+    "expectedUrl": "https://thevirtuesgolfclub.com/book-a-tee-time/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0081": {
+    "decision": "publish",
+    "expectedUrl": "https://www.vistagolfcourse.com/Golf-Course-Details/Rates/",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0098": {
+    "decision": "publish",
+    "expectedUrl": "https://sites.google.com/site/wildfiregolfclub/green-fees",
+    "reason": "Phase 3 local draft: reviewed official course source; preserve stored rates, review date and qualifications. Booking fallbacks remain fallbacks."
+  },
+  "td-0048": {
+    "decision": "publish",
+    "expectedUrl": "https://deerridgegc.com/rates",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0110": {
+    "decision": "publish",
+    "expectedUrl": "https://www.littleapplegolfcourse.com/",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0115": {
+    "decision": "publish",
+    "expectedUrl": "https://www.ashland-ohio.com/o/ashland/page/rates",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0116": {
+    "decision": "publish",
+    "expectedUrl": "https://www.ashlandgolfclubohio.com/golf-course/course-rates",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0118": {
+    "decision": "publish",
+    "expectedUrl": "https://fhgolfcourse.com/pricing/",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0124": {
+    "decision": "publish",
+    "expectedUrl": "https://twin-lakes-golf.com/rates/",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0047": {
+    "decision": "publish",
+    "expectedUrl": "https://pleasanthillgolfcourse.com/green-fees",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0117": {
+    "decision": "publish",
+    "expectedUrl": "https://www.oaktreeclub.com/",
+    "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
   }
 }

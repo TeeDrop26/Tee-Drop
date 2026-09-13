@@ -83,7 +83,7 @@
       "id": "td-0079",
       "state": "published",
       "modified": "2026-09-13",
-      "primaryHub": null,
+      "primaryHub": "zanesville-oh",
       "relatedHubs": []
     },
     {
@@ -197,6 +197,118 @@
       "modified": "2026-09-13",
       "primaryHub": "wooster-orrville-oh",
       "relatedHubs": []
+    },
+    {
+      "id": "td-0036",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "kent-ravenna-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0041",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "kent-ravenna-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0121",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "kent-ravenna-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0122",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "kent-ravenna-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0123",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "kent-ravenna-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0076",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "zanesville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0077",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "zanesville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0078",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "zanesville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0081",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "zanesville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0098",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "zanesville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0048",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "mansfield-ashland-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0110",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "mansfield-ashland-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0115",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "mansfield-ashland-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0116",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "mansfield-ashland-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0118",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "mansfield-ashland-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0124",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "mansfield-ashland-oh",
+      "relatedHubs": []
     }
   ],
   "areas": [
@@ -244,7 +356,8 @@
       "relatedHubs": [
         "canton-oh",
         "akron-oh",
-        "wooster-orrville-oh"
+        "wooster-orrville-oh",
+        "zanesville-oh"
       ]
     },
     {
@@ -359,7 +472,8 @@
         "new-philadelphia-oh",
         "canton-oh",
         "youngstown-oh",
-        "cleveland-west-oh"
+        "cleveland-west-oh",
+        "kent-ravenna-oh"
       ]
     },
     {
@@ -376,7 +490,8 @@
       },
       "introNote": "8 course listings, including temporarily closed Mill Creek. Towns are grouped separately below; this is a selection from Tee Drop’s directory, not every course in the valley.",
       "relatedHubs": [
-        "akron-oh"
+        "akron-oh",
+        "kent-ravenna-oh"
       ],
       "groups": [
         {
@@ -500,7 +615,155 @@
       ],
       "relatedHubs": [
         "canton-oh",
+        "new-philadelphia-oh",
+        "mansfield-ashland-oh"
+      ]
+    },
+    {
+      "slug": "kent-ravenna-oh",
+      "name": "Kent, Ravenna & Streetsboro",
+      "state": "published",
+      "modified": "2026-09-13",
+      "title": "Public Golf Courses near Kent, Ravenna & Streetsboro | Tee Drop",
+      "description": "Compare five golf courses around Kent, Ravenna and Streetsboro, plus a labelled Suffield option, with selected rates, booking restrictions and direct course links.",
+      "copy": {
+        "kicker": "Kent, Ravenna, Streetsboro & Suffield",
+        "title": "Kent, Ravenna & Streetsboro",
+        "intro": "Compare Windmill Lakes in Ravenna, Boulder Creek in Streetsboro and two Kent options with different nine- and eighteen-hole prices. Paradise Lake is grouped separately in Suffield to the south. For a wider search, explore Akron or Youngstown, or use the directory’s Cleveland area filter for eastern Cleveland options.",
+        "headingPrefix": "Golf Courses in"
+      },
+      "introNote": "5 selections from Tee Drop’s directory, not an exhaustive local list. Compare the round length, walking or riding terms and time bands before choosing.",
+      "relatedHubs": [
+        "akron-oh",
+        "youngstown-oh"
+      ],
+      "groups": [
+        {
+          "title": "Ravenna & Streetsboro",
+          "intro": "Windmill Lakes lists selected summer riding prices for nine and eighteen holes. Boulder Creek’s selected eighteen-hole riding rates use specific weekend time bands, including 12:10 PM and 2:10 PM starts.",
+          "courses": [
+            "td-0036",
+            "td-0041"
+          ]
+        },
+        {
+          "title": "Kent options",
+          "intro": "Fairways at Twin Lakes is a nine-hole course with eighteen-hole round pricing; weekend tee times before noon require at least two golfers. Raccoon Hill is an eighteen-hole option with separate walking and riding rates.",
+          "courses": [
+            "td-0122",
+            "td-0123"
+          ]
+        },
+        {
+          "title": "Southern option: Suffield",
+          "intro": "Paradise Lake is in Suffield, south of the Kent/Ravenna core. Its published price table has no effective year, so check the official booking choices or call for current rates.",
+          "courses": [
+            "td-0121"
+          ]
+        }
+      ],
+      "breadcrumbLabel": "Kent, Ravenna & Streetsboro Golf Courses"
+    },
+    {
+      "slug": "zanesville-oh",
+      "name": "Zanesville, Nashport & nearby golf",
+      "state": "published",
+      "modified": "2026-09-13",
+      "title": "Public Golf Courses near Zanesville & Nashport | Tee Drop",
+      "description": "Compare six golf listings in Zanesville, Nashport, Hopewell and New Concord with qualified rates, current booking links and clearly separated town groups.",
+      "copy": {
+        "kicker": "Zanesville, Nashport & nearby towns",
+        "title": "Zanesville, Nashport & nearby golf",
+        "intro": "Start with EagleSticks and Zanesville Jaycees in Zanesville, then compare The Virtues and Vista in Nashport. Crystal Springs in Hopewell and Wildfire in New Concord are separate alternatives outside the core grouping. Check each town and the applicable rate terms before making plans."
+      },
+      "introNote": "6 selections from Tee Drop’s directory, not every course in the region. Booking prices, undated schedules and separate cart charges are distinguished below.",
+      "relatedHubs": [
         "new-philadelphia-oh"
+      ],
+      "groups": [
+        {
+          "title": "Zanesville",
+          "intro": "EagleSticks uses current booking prices. Jaycees’ selected nine-hole price distinguishes card payment and leaves cart inclusion for confirmation.",
+          "courses": [
+            "td-0076",
+            "td-0079"
+          ]
+        },
+        {
+          "title": "Nashport",
+          "intro": "The Virtues uses current booking prices. Vista’s adult schedule is undated; its weekend afternoon adult price requires confirmation.",
+          "courses": [
+            "td-0078",
+            "td-0081"
+          ]
+        },
+        {
+          "title": "Hopewell alternative",
+          "intro": "Crystal Springs is in Hopewell, west of Zanesville. Compare its selected eighteen-hole walking and riding rates before opening the booking page.",
+          "courses": [
+            "td-0077"
+          ]
+        },
+        {
+          "title": "New Concord alternative",
+          "intro": "Wildfire is in New Concord, east of Zanesville. Green fees and cart charges are separate; confirm the cart charging unit and availability by phone.",
+          "courses": [
+            "td-0098"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mansfield-ashland-oh",
+      "name": "Mansfield, Ashland & Bellville",
+      "state": "published",
+      "modified": "2026-09-13",
+      "title": "Public Golf Courses around Mansfield, Ashland & Bellville | Tee Drop",
+      "description": "Compare eight regional golf listings in Mansfield, Ashland, Bellville and Perrysville, with qualified rates, short-course options and direct course links.",
+      "breadcrumbLabel": "Mansfield, Ashland & Bellville Golf Courses",
+      "copy": {
+        "kicker": "Mansfield, Ashland, Bellville & Perrysville",
+        "headingPrefix": "Golf Courses around",
+        "title": "Mansfield, Ashland & Bellville",
+        "intro": "Compare Mansfield options with a separate Ashland group, then consider Bellville and the Perrysville alternative. This combined regional guide brings together different towns, not courses all immediately beside Mansfield. Compare round lengths, walking and riding prices, and booking or call-ahead options before planning your trip."
+      },
+      "introNote": "8 selections from Tee Drop’s directory, not an exhaustive regional list. Town groups are separate destinations; check the location and journey before choosing a course.",
+      "relatedHubs": [
+        "wooster-orrville-oh"
+      ],
+      "groups": [
+        {
+          "title": "Mansfield options",
+          "intro": "Forest Hills lists adult walking and riding prices and allows drop-in play, while also offering online booking. Twin Lakes asks golfers to call for current pricing; Oak Tree uses its booking page.",
+          "courses": [
+            "td-0118",
+            "td-0124",
+            "td-0117"
+          ]
+        },
+        {
+          "title": "Ashland options",
+          "intro": "Ashland is a separate town from Mansfield. Compare Brookside’s selected nine- and eighteen-hole walking or riding prices with Ashland Golf Club’s current booking prices.",
+          "courses": [
+            "td-0115",
+            "td-0116"
+          ]
+        },
+        {
+          "title": "Bellville options",
+          "intro": "Deer Ridge and Little Apple are in Bellville, south of Mansfield. Deer Ridge’s fixed prices are not reproduced here; Little Apple is an executive-length option with date-specific booking prices.",
+          "courses": [
+            "td-0048",
+            "td-0110"
+          ]
+        },
+        {
+          "title": "Separate alternative: Perrysville",
+          "intro": "Pleasant Hill is the Perrysville par 3 listing, not the similarly named Chardon course. Perrysville is a separate destination outside the Mansfield/Ashland groups; call to confirm current prices and availability.",
+          "courses": [
+            "td-0047"
+          ]
+        }
       ]
     }
   ]
