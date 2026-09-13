@@ -1,0 +1,160 @@
+{
+  "contentModified": "2026-09-13",
+  "existingPages": [
+    {
+      "path": "/",
+      "lastmod": "2026-09-13"
+    },
+    {
+      "path": "/about.html",
+      "lastmod": "2026-08-10"
+    },
+    {
+      "path": "/indoor.html",
+      "lastmod": "2026-08-10"
+    }
+  ],
+  "pilots": [
+    "td-0002",
+    "td-0001",
+    "td-0021",
+    "td-0069",
+    "td-0099",
+    "td-0033",
+    "td-0046",
+    "td-0079"
+  ],
+  "areas": [
+    {
+      "slug": "new-philadelphia-oh",
+      "name": "New Philadelphia / Dover",
+      "title": "Public Golf Courses near New Philadelphia & Dover | Tee Drop",
+      "description": "Compare public golf around New Philadelphia and Dover, with course locations, qualified rates and direct booking or information links.",
+      "intro": "Plan a round around New Philadelphia and Dover. Compare Oak Shadows in New Philadelphia with courses in the surrounding Tuscarawas County towns, then check rates and availability directly with the course.",
+      "coverage": "This guide covers the combined New Philadelphia / Dover market. The towns below are separate locations, not all within either city. It includes six Tuscarawas County listings and Spring Valley in East Sparta as a nearby option to the north; it is not an exhaustive list of every course in the region.",
+      "groups": [
+        {
+          "title": "New Philadelphia",
+          "description": "Start with the directory’s New Philadelphia listing.",
+          "courses": [
+            "td-0002"
+          ]
+        },
+        {
+          "title": "Zoar and Bolivar",
+          "description": "Compare these options north of New Philadelphia and Dover.",
+          "courses": [
+            "td-0001",
+            "td-0003"
+          ]
+        },
+        {
+          "title": "Surrounding Tuscarawas County towns",
+          "description": "Look beyond the two cities to Midvale, Uhrichsville and Sugarcreek.",
+          "courses": [
+            "td-0007",
+            "td-0008",
+            "td-0009"
+          ]
+        },
+        {
+          "title": "Farther north: East Sparta",
+          "description": "Spring Valley is in East Sparta, outside the New Philadelphia / Dover core.",
+          "courses": [
+            "td-0021"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "canton-oh",
+      "name": "Canton area",
+      "title": "Public Golf Courses in Canton & Nearby Towns | Tee Drop",
+      "description": "Compare public golf in Canton and nearby Stark County towns. See course locations, posted-rate qualifications and direct booking or information links.",
+      "intro": "Compare Canton’s public golf options with nearby courses across the Stark County area. Use the town groups to narrow the trip, then compare the full rate notes before choosing a tee time.",
+      "coverage": "Canton listings are separated from North Canton, East Canton and other surrounding towns. This is a selection from Tee Drop’s existing directory, not a claim that every course is within Canton city limits.",
+      "groups": [
+        {
+          "title": "Canton",
+          "description": "Courses listed with a Canton location.",
+          "courses": [
+            "td-0030",
+            "td-0010"
+          ]
+        },
+        {
+          "title": "North Canton, Uniontown and Hartville",
+          "description": "Options across the northern part of the Canton area.",
+          "courses": [
+            "td-0013",
+            "td-0014",
+            "td-0016"
+          ]
+        },
+        {
+          "title": "East Canton, Paris and Alliance",
+          "description": "Compare courses east and northeast of Canton.",
+          "courses": [
+            "td-0022",
+            "td-0017",
+            "td-0031"
+          ]
+        },
+        {
+          "title": "Massillon, North Lawrence and Canal Fulton",
+          "description": "Options west and northwest of Canton.",
+          "courses": [
+            "td-0006",
+            "td-0024",
+            "td-0073"
+          ]
+        },
+        {
+          "title": "East Sparta",
+          "description": "Spring Valley is south of Canton, in East Sparta.",
+          "courses": [
+            "td-0021"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "akron-oh",
+      "name": "Akron area",
+      "title": "Public Golf Courses in Akron & Nearby Towns | Tee Drop",
+      "description": "Explore public golf in Akron, Green, Cuyahoga Falls, Stow and Mogadore, with qualified rate summaries and direct booking or information links.",
+      "intro": "Compare public golf around Akron, from courses carrying an Akron location to options in Green, Cuyahoga Falls, Stow and Mogadore. Walking and riding prices, weekday schedules and time restrictions differ, so read the course-specific rate notes.",
+      "coverage": "The Akron group follows the locations recorded in Tee Drop’s directory; an Akron mailing location does not establish municipal boundaries. Surrounding towns are named separately. This guide is not a complete inventory of all golf in Summit County.",
+      "groups": [
+        {
+          "title": "Akron locations",
+          "description": "These listings carry an Akron location in the directory.",
+          "courses": [
+            "td-0029",
+            "td-0028",
+            "td-0027",
+            "td-0015",
+            "td-0037"
+          ]
+        },
+        {
+          "title": "Green and Mogadore",
+          "description": "Options south and east of the Akron group.",
+          "courses": [
+            "td-0026",
+            "td-0035"
+          ]
+        },
+        {
+          "title": "Cuyahoga Falls and Stow",
+          "description": "Compare courses north of Akron.",
+          "courses": [
+            "td-0038",
+            "td-0039",
+            "td-0040"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -235,9 +235,9 @@ const courses = [
     rateInfo: {
       status: "booking",
       statusLabel: "See booking page",
-      summary: "Official site states lowest rates are online and phone/walk-up rates may be higher; check booking page for current pricing.",
+      summary: "Online tee times must be prepaid. Rates may differ from phone and walk-up reservations; check the official booking page for current pricing.",
       checked: "Aug 5, 2026",
-      sourceUrl: "https://www.golfraintree.com/tee-times-2/"
+      sourceUrl: "https://www.golfraintree.com/book-a-tee-time/"
     },
     teeTimes: []
   },

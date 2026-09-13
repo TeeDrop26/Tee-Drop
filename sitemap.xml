@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.playteedrop.com/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.playteedrop.com/about.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://www.playteedrop.com/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/about.html</loc><lastmod>2026-08-10</lastmod></url>
+  <url><loc>https://www.playteedrop.com/indoor.html</loc><lastmod>2026-08-10</lastmod></url>
+  <url><loc>https://www.playteedrop.com/golf-courses/new-philadelphia-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/golf-courses/canton-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/golf-courses/akron-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/oak-shadows-golf-club-new-philadelphia-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/zoar-village-golf-course-zoar-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/spring-valley-golf-course-east-sparta-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/mill-creek-golf-course-boardman-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/wick-recreation-area-par-3-youngstown-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/round-lake-golf-course-lakeville-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/sweetbriar-golf-club-avon-lake-oh/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://www.playteedrop.com/courses/zanesville-jaycees-public-golf-course-zanesville-oh/</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>
