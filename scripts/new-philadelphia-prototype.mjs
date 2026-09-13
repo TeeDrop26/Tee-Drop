@@ -1,4 +1,7 @@
 import assert from 'node:assert/strict';
+import { rateSourceAllowed } from './source-publication.mjs';
+import { checkpointOneViews } from './checkpoint-one-presentations.mjs';
+import { checkpointTwoViews } from './checkpoint-two-presentations.mjs';
 import { additionalAreaViews } from './area-rate-presentations.mjs';
 
 // Presentation-only prototype. No course/data/schema changes. The expected
@@ -6,6 +9,8 @@ import { additionalAreaViews } from './area-rate-presentations.mjs';
 // future data update: changed source text must receive a fresh content review.
 const views = {
   ...additionalAreaViews,
+  ...checkpointOneViews,
+  ...checkpointTwoViews,
   'td-0002': {
     expected: '2026 rates, April 1–October 1, including half cart: 18/9 holes Mon–Thu $44/$28; Friday $50/$32; weekends $60/$38, or $45/$30 after 2 PM.',
     caption: '2026 · April 1–October 1 · Half cart included',
@@ -29,7 +34,6 @@ const views = {
     qualification: 'Confirm weekend cart terms with the course.'
   },
   'td-0007': {
-    suppressRateSource: true,
     expected: 'Official site lists weekday 9 walk $10 / ride $15 and 18 walk $16 / ride $22; weekend/holiday categories are listed, but the same page still contains 2020 membership wording, so confirm current prices.',
     caption: 'Posted weekday rates · Confirm current prices',
     headers: ['Weekday', '18 holes', '9 holes'],
@@ -63,39 +67,18 @@ export function getReviewedRateView(course) {
   const view = views[course.id];
   assert(view, `Missing reviewed rate presentation: ${course.name}`);
   assert.equal(course.rateInfo.summary, view.expected, `${course.name}: review rate presentation after source change`);
+  if (view.status) assert.equal(course.rateInfo.status, view.status);
   if (view.expectedNote) assert.equal(course.firstAvailable?.note || course.bookingNote, view.expectedNote);
   return view;
 }
 
 export function renderAreaGuide(area, { get, esc, external, action, coursePath, isPilot, areaNav }) {
-  const groups = area.slug === 'new-philadelphia-oh' ? [
-    { title: 'New Philadelphia & Dover Area', ids: ['td-0002'] },
-    { title: 'Zoar & Bolivar', intro: 'Head north for a round at Zoar Village or Wilkshire.', ids: ['td-0001', 'td-0003'] },
-    { title: 'Worth the Short Drive', intro: 'More places to play in Midvale, Uhrichsville, Sugarcreek and East Sparta.', ids: ['td-0007', 'td-0008', 'td-0009', 'td-0021'] }
-  ] : area.groups.map((g, i) => ({
-    title: area.slug === 'akron-oh' && i === 0 ? 'Akron Area' : g.title.replace(/ and /g, ' & '),
-    intro: area.slug === 'akron-oh'
-      ? ['', 'More places to play in Green and Mogadore.', 'Head north for a round in Cuyahoga Falls or Stow.'][i]
-      : ['Start with these Canton options.', 'Find a round around North Canton, Uniontown or Hartville.', 'Explore courses east and northeast of Canton.', 'More options around Massillon, North Lawrence and Canal Fulton.', 'Head south to Spring Valley in East Sparta.'][i],
-    ids: g.courses
-  }));
-  const copy = {
-    'new-philadelphia-oh': {
-      kicker: 'Tuscarawas County & nearby', title: 'New Philadelphia & Dover',
-      intro: 'Looking for somewhere to play around New Philadelphia and Dover? Explore these public courses around Tuscarawas County, plus Spring Valley in nearby East Sparta. Compare posted rates and follow the course’s own link to book or get in touch.'
-    },
-    'canton-oh': {
-      kicker: 'Canton, Stark County & nearby', title: 'Canton',
-      intro: 'Looking for your next round around Canton? Compare public courses in Canton and nearby towns, from North Canton and Hartville to Massillon and East Sparta. Check posted prices, pick a course and follow its direct link to book or get in touch.'
-    },
-    'akron-oh': {
-      kicker: 'Akron, Summit County & nearby', title: 'Akron',
-      intro: 'Find somewhere to play around Akron, with more options in Green, Mogadore, Cuyahoga Falls and Stow. Compare walking and riding rates, check the time restrictions and head straight to the course’s booking or information page.'
-    }
-  }[area.slug];
+  const groups = area.groups.map(g => ({ title: g.title, intro: g.intro, ids: g.courses }));
+  const copy = area.copy;
+  assert(copy?.title && copy?.intro && copy?.kicker, 'Missing reviewed area copy');
   assert.deepEqual(groups.flatMap(g => g.ids), area.groups.flatMap(g => g.courses), 'Prototype must retain the same courses and ItemList order');
   function card(id) {
-    const c = get(id), v = views[id];
+    const c = get(id), v = getReviewedRateView(c);
     assert.equal(c.rateInfo.summary, v.expected, `${c.name}: review compact rate presentation after source change`);
     if (v.expectedNote) assert.equal(c.firstAvailable?.note || c.bookingNote, v.expectedNote, `${c.name}: review course notice`);
     const date = new Date(c.rateInfo.checked + ' 12:00:00 UTC');
@@ -105,12 +88,12 @@ export function renderAreaGuide(area, { get, esc, external, action, coursePath, 
       <header class="np-identity"><p class="course-meta">${esc(c.city)}</p><h3 id="name-${c.id}">${isPilot(c) ? `<a href="${coursePath(c)}">${esc(c.name)}</a>` : esc(c.name)}</h3></header>
       <div class="np-rate-content">${v.notice ? `<p class="np-notice">${esc(v.notice)}</p>` : ''}${table}${v.qualification ? `<p class="np-qualification">${esc(v.qualification)}</p>` : ''}${v.contact ? `<p class="np-contact">${esc(v.contact)}</p>` : ''}</div>
       <div class="np-actions">${action(c)}${isPilot(c) ? `<a class="seo-detail" href="${coursePath(c)}">Course Details<span class="visually-hidden">: ${esc(c.name)}</span></a>` : ''}</div>
-      <p class="np-review">Rates reviewed <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time>${v.suppressRateSource ? '' : `<span aria-hidden="true"> · </span>${external(c.rateInfo.sourceUrl, 'View rate source')}`}</p>
+      <p class="np-review">${c.rateInfo.status === 'closed' ? 'Status reviewed' : 'Rates reviewed'} <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time>${!rateSourceAllowed(c) ? '' : `<span aria-hidden="true"> · </span>${external(c.rateInfo.sourceUrl, c.rateInfo.status === 'closed' ? 'View closure updates' : 'View rate source')}`}</p>
     </article>`;
   }
   return `<div class="np-guide">
-    <section class="seo-hero"><p class="section-kicker">Tee Drop · ${esc(copy.kicker)}</p><h1>Golf Courses Near<br>${esc(copy.title)}</h1><p class="seo-lead">${esc(copy.intro)}</p></section>
-    <p class="np-intro-note">${groups.flatMap(g => g.ids).length} places to plan your next round. Check the rate notes below and confirm current pricing with the course.</p>
+    <section class="seo-hero"><p class="section-kicker">Tee Drop · ${esc(copy.kicker)}</p><h1>${esc(copy.headingPrefix || 'Golf Courses Near')}<br>${esc(copy.title)}</h1><p class="seo-lead">${esc(copy.intro)}</p></section>
+    <p class="np-intro-note">${esc(area.introNote || `${groups.flatMap(g => g.ids).length} places to plan your next round. Check the rate notes below and confirm current pricing with the course.`)}</p>
     ${groups.map((g, i) => `<section class="np-group" id="group-${i + 1}" aria-labelledby="heading-${i + 1}"><div class="np-group-heading"><h2 id="heading-${i + 1}">${esc(g.title)}</h2>${g.intro ? `<p>${esc(g.intro)}</p>` : ''}</div><div class="np-courses">${g.ids.map(card).join('\n')}</div></section>`).join('\n')}
     ${areaNav(area)}
   </div>`;

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { rateSourceAllowed } from './source-publication.mjs';
 import { getReviewedRateView } from './new-philadelphia-prototype.mjs';
 
 // Presentation-only additions for the remaining approved pilots. Source guards
@@ -37,7 +38,6 @@ const courseViews = {
 
 // Preserve the existing shell, hero layout, booking panel and metadata/JSON-LD.
 export function refineCourseDetail(course, body, { esc, external }) {
-  assert(['td-0002', 'td-0001', 'td-0021', ...Object.keys(courseViews)].includes(course.id));
   const view = courseViews[course.id] || getReviewedRateView(course);
   assert.equal(course.rateInfo.summary, view.expected, `${course.name}: review formatted rates after source change`);
   if (view.status) assert.equal(course.rateInfo.status, view.status);
@@ -54,7 +54,7 @@ export function refineCourseDetail(course, body, { esc, external }) {
       : `<p class="course-rate-qualification">${esc(view.message)}</p>`;
   const date = new Date(course.rateInfo.checked + ' 12:00:00 UTC');
   const dateText = course.rateInfo.checked.replace(/^Sep /, 'Sept. ').replace(/^Aug /, 'Aug. ');
-  const review = `<p class="seo-review">${closed ? 'Status reviewed' : 'Rates reviewed'} <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time> · ${external(course.rateInfo.sourceUrl, closed ? 'View closure updates' : 'View rate source')}</p>`;
+  const review = `<p class="seo-review">${closed ? 'Status reviewed' : 'Rates reviewed'} <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time>${rateSourceAllowed(course) ? ` · ${external(course.rateInfo.sourceUrl, closed ? 'View closure updates' : 'View rate source')}` : ''}</p>`;
   function replaceOnce(pattern, replacement) {
     const matches = body.match(new RegExp(pattern.source, 'g'));
     assert.equal(matches?.length, 1, `Course template insertion changed: ${pattern}`);
@@ -65,7 +65,7 @@ export function refineCourseDetail(course, body, { esc, external }) {
   replaceOnce(/Independent course information from Tee Drop/, esc(descriptor));
   replaceOnce(/<p class="seo-status[^"]*">[\s\S]*?<\/p>/,
     view.statusLabel ? `<p class="seo-status">${esc(view.statusLabel)}</p>` : '');
-  replaceOnce(/<p class="rate-info seo-full-rate">[\s\S]*?<\/p>/, table);
+  replaceOnce(/<p class="rate-info seo-full-rate">[\s\S]*?<\/p>/, (view.detailNotice ? `<div class="seo-notice"><h3>Current course layout</h3><p>${esc(view.detailNotice)}</p></div>` : '') + table);
   replaceOnce(/<p class="seo-review">[\s\S]*?<\/p>/, review);
   replaceOnce(/<section class="seo-facts seo-section">[\s\S]*?<\/section>/, '');
   replaceOnce(/Nearby Tee Drop courses/, 'More courses nearby');

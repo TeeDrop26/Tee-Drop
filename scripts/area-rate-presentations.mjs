@@ -211,7 +211,6 @@ export const additionalAreaViews = {
     "message": "Open to the public. Current rates aren’t published online; call 330-833-2668 before you go."
   },
   "td-0073": {
-    "suppressRateSource": true,
     "expected": "2026 peak-season posted: weekday 9 holes riding $26 and 18 holes riding $36; weekend before 1 PM 9 riding $30 and 18 riding $48; after 1 PM 9 riding $28 and 18 riding $42.",
     "caption": "2026 peak-season riding rates",
     "headers": [
@@ -463,7 +462,6 @@ export const additionalAreaViews = {
     "expectedNote": "Online booking requires sign-in. Call (330) 699-2209 for booking assistance."
   },
   "td-0035": {
-    "suppressRateSource": true,
     "expected": "No official current rate page was found. Call 330-628-5139 to confirm current pricing.",
     "caption": "Call for rates",
     "message": "Call 330-628-5139 for current pricing and tee times.",

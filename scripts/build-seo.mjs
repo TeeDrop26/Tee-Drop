@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { rateSourceAllowed } from './source-publication.mjs';
 import path from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
@@ -9,13 +11,28 @@ import { refineCourseDetail } from './course-detail-refinements.mjs';
 // Read the existing trusted data declaration at build time. Never execute the
 // browser application or maintain a second copy of prices and outbound URLs.
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+const normalize = text => text.replace(/\r\n/g, '\n');
+const read = file => normalize(fs.readFileSync(path.join(root, file), 'utf8'));
+const preview = process.argv.includes('--preview');
+
 const source = read('app.js').replace(/\r\n/g, '\n');
 const end = source.indexOf('\n];');
 assert(end > 0 && source.startsWith('const courses = ['), 'Course declaration changed; review extraction');
 const courses = JSON.parse(JSON.stringify(vm.runInNewContext(source.slice(0, end + 3) + '\ncourses;', {}, { timeout: 1000 })));
 const registry = JSON.parse(read('seo/course-registry.json'));
-const config = JSON.parse(read('seo/phase-one.json'));
+const manifest = JSON.parse(read('seo/pages.json'));
+const previewDirectory = manifest.previewDirectory || 'planning/checkpoint-1/site';
+assert(/^planning\/checkpoint-[a-z0-9-]+\/site$/.test(previewDirectory), 'Preview must remain inside the isolated planning directory');
+const outputRoot = preview ? path.join(root, previewDirectory) : root;
+const selected = page => page.state === 'published' || (preview && page.state === 'draft');
+for (const page of [...manifest.areas, ...manifest.courses]) {
+  assert(['published', 'draft'].includes(page.state), 'Invalid publication state');
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(page.modified), 'Page needs an editorial modification date');
+}
+const config = { existingPages: manifest.existingPages, areas: manifest.areas.filter(selected), pilots: manifest.courses.filter(selected).map(c => c.id) };
+const coursePages = new Map(manifest.courses.map(c => [c.id, c]));
+const areaBySlug = new Map(config.areas.map(a => [a.slug, a]));
+const modified = page => preview && page.previewModified ? page.previewModified : page.modified;
 const origin = 'https://www.playteedrop.com';
 const check = process.argv.includes('--check');
 assert.equal(courses.length, 124, 'Phase 1 must preserve all 124 records');
@@ -28,9 +45,15 @@ const byId = new Map(registry.map(r => {
   return [r.id, { ...matches[0], id: r.id, slug: r.slug }];
 }));
 assert.equal(new Set(registry.map(r => `${r.name}\0${r.city}`)).size, courses.length);
-assert.equal(config.pilots.length, 8);
-assert.equal(new Set(config.pilots).size, 8);
-assert.equal(config.areas.length, 3);
+assert.equal(new Set(manifest.courses.map(c => c.id)).size, manifest.courses.length, 'Duplicate configured course');
+assert.equal(new Set(manifest.areas.map(a => a.slug)).size, manifest.areas.length, 'Duplicate configured hub');
+assert.equal(new Set(config.pilots).size, config.pilots.length);
+for (const area of config.areas) {
+  assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(area.slug), 'Unsafe area slug');
+  const related = preview && area.previewRelatedHubs ? area.previewRelatedHubs : area.relatedHubs;
+  assert.equal(new Set(related).size, related.length);
+  related.forEach(slug => assert(areaBySlug.has(slug) && slug !== area.slug, 'Invalid related area: ' + slug));
+}
 const get = id => { assert(byId.has(id), `Unknown stable course ID: ${id}`); return byId.get(id); };
 config.pilots.forEach(get);
 for (const area of config.areas) {
@@ -102,7 +125,7 @@ function shell({ title, description, url, items, graph, body }) {
 `.replace(/[ \t]+$/gm, '');
 }
 function review(c) {
-  return `<p class="seo-review">Tee Drop rate review: ${dateLabel(c.rateInfo.checked)}. ${external(c.rateInfo.sourceUrl, 'Rate source')}</p>`;
+  return `<p class="seo-review">Tee Drop rate review: ${dateLabel(c.rateInfo.checked)}. ${rateSourceAllowed(c) ? external(c.rateInfo.sourceUrl, 'Rate source') : ''}</p>`;
 }
 function card(c) {
   return `<article class="seo-course-card" id="${c.id}">
@@ -114,15 +137,15 @@ function card(c) {
   </article>`;
 }
 function areaNav(current) {
-  return `<section class="seo-section" aria-labelledby="nearby-areas"><p class="section-kicker">Keep exploring</p><h2 id="nearby-areas">${current ? 'Explore another area' : 'Explore area guides'}</h2><div class="seo-area-links">${config.areas.filter(a => a !== current).map(a => `<a href="${areaPath(a)}">${esc(a.name)} <span aria-hidden="true">→</span></a>`).join('')}<a href="/#courseDirectory">All Ohio courses <span aria-hidden="true">→</span></a></div></section>`;
+  return `<section class="seo-section" aria-labelledby="nearby-areas"><p class="section-kicker">Keep exploring</p><h2 id="nearby-areas">${current ? 'Explore another area' : 'Explore area guides'}</h2><div class="seo-area-links">${(current ? (preview && current.previewRelatedHubs ? current.previewRelatedHubs : current.relatedHubs).map(slug => areaBySlug.get(slug)) : config.areas).map(a => `<a href="${areaPath(a)}">${esc(a.name)} <span aria-hidden="true">→</span></a>`).join('')}<a href="/#courseDirectory">All Ohio courses <span aria-hidden="true">→</span></a></div></section>`;
 }
 const outputs = new Map();
 for (const area of config.areas) {
   const url = areaPath(area);
   const ids = area.groups.flatMap(g => g.courses);
-  const items = [{ name: 'Home', path: '/' }, { name: area.name + ' golf courses', path: url }];
+  const items = [{ name: 'Home', path: '/' }, { name: area.breadcrumbLabel || area.name + ' golf courses', path: url }];
   const list = { '@type': 'ItemList', '@id': origin + url + '#courses', numberOfItems: ids.length, itemListOrder: 'https://schema.org/ItemListUnordered', itemListElement: ids.map((id, n) => { const c = get(id); return { '@type': 'ListItem', position: n + 1, name: c.name, url: origin + (isPilot(c) ? coursePath(c) : url + '#' + c.id) }; }) };
-  const graph = [{ '@type': 'CollectionPage', '@id': origin + url + '#webpage', url: origin + url, name: area.title, description: area.description, publisher, mainEntity: { '@id': list['@id'] }, dateModified: config.contentModified }, list];
+  const graph = [{ '@type': 'CollectionPage', '@id': origin + url + '#webpage', url: origin + url, name: area.title, description: area.description, publisher, mainEntity: { '@id': list['@id'] }, dateModified: modified(area) }, list];
   const body = renderAreaGuide(area, { get, esc, external, action, coursePath, isPilot, areaNav });
   outputs.set(url.slice(1) + 'index.html', shell({ title: area.title, description: area.description, url, items, graph, body }));
 }
@@ -133,16 +156,24 @@ function distance(a, b) {
 }
 for (const id of config.pilots) {
   const c = get(id), url = coursePath(c);
-  const parents = config.areas.filter(a => a.groups.some(g => g.courses.includes(id)));
-  // A course's existing region chooses between overlapping guides; never assign
-  // an unrelated parent merely because every page needs a breadcrumb.
-  const parent = parents.find(a => c.area === 'Canton / Stark County' && a.slug === 'canton-oh') || parents[0];
+  const pageConfig = coursePages.get(id);
+  const primarySlug = preview && pageConfig.previewPrimaryHub ? pageConfig.previewPrimaryHub : pageConfig.primaryHub;
+  const parentSlugs = [primarySlug, ...pageConfig.relatedHubs].filter(Boolean);
+  assert.equal(new Set(parentSlugs).size, parentSlugs.length, 'Duplicate course parent');
+  const orderedSlugs = pageConfig.hubLinkOrder || parentSlugs;
+  assert.deepEqual([...orderedSlugs].sort(), [...parentSlugs].sort(), 'Hub link order must match explicit parents');
+  const parents = orderedSlugs.map(slug => {
+    const area = areaBySlug.get(slug);
+    assert(area && area.groups.some(g => g.courses.includes(id)), id + ': parent must be a selected hub containing this course');
+    return area;
+  });
+  const parent = primarySlug ? areaBySlug.get(primarySlug) : null;
   const ending = closed(c) ? 'Closure Updates & Info' : c.bookingLabel ? 'Rates & Course Info' : 'Rates & Booking';
   const title = `${c.name} ${ending} | Tee Drop`;
   const description = closed(c) ? `${c.name} in ${c.city}: temporarily closed until further notice after July 5, 2026 storm damage. See Tee Drop’s record and official updates.` : `${c.name} in ${c.city}: Tee Drop’s rate notes, review date, important qualifications and ${c.bookingLabel ? 'course information link' : 'direct booking link'}.`;
   const items = [{ name: 'Home', path: '/' }, ...(parent ? [{ name: parent.name, path: areaPath(parent) }] : []), { name: c.name, path: url }];
   const courseEntity = { '@type': 'GolfCourse', '@id': origin + url + '#course', name: c.name, description: `${c.name} is listed in Tee Drop’s public-golf directory with a location of ${c.city}.${closed(c) ? ' Temporarily closed until further notice following July 5, 2026 storm damage.' : ''}` };
-  const graph = [{ '@type': 'WebPage', '@id': origin + url + '#webpage', url: origin + url, name: title, description, publisher, mainEntity: { '@id': courseEntity['@id'] }, dateModified: config.contentModified }, courseEntity];
+  const graph = [{ '@type': 'WebPage', '@id': origin + url + '#webpage', url: origin + url, name: title, description, publisher, mainEntity: { '@id': courseEntity['@id'] }, dateModified: modified(pageConfig) }, courseEntity];
   const nearby = [...byId.values()].filter(other => other.id !== id).map(other => ({ course: other, miles: distance(c, other) })).filter(n => n.miles <= 25).sort((a, b) => a.miles - b.miles || a.course.id.localeCompare(b.course.id)).slice(0, 3);
   const characteristics = [];
   if (c.courseType) characteristics.push(['Course type', ({ par3: 'Par 3', executive: 'Executive / short', regulation: 'Regulation' })[c.courseType]]);
@@ -150,7 +181,7 @@ for (const id of config.pilots) {
   // Notes remain prose: never mine them for structured addresses/phone/amenities.
   let body = `<section class="seo-hero"><p class="section-kicker">Ohio public golf · Course guide</p><h1>${esc(c.name)}</h1><p class="seo-lead">${esc(c.city)}</p><p class="seo-hero-meta">Independent course information from Tee Drop</p></section>
     <div class="seo-detail-layout"><section class="seo-rate-panel" aria-labelledby="rates-title"><p class="section-kicker">${closed(c) ? 'Course status' : 'Plan your round'}</p><h2 id="rates-title">${closed(c) ? 'Temporarily closed' : 'Rates & important details'}</h2><p class="seo-status${closed(c) ? ' seo-closed' : ''}">${esc(status(c))}${c.rateInfo.status === 'undated' ? ' · Undated source; confirm current pricing' : ''}</p><p class="rate-info seo-full-rate">${esc(summary(c))}</p>${review(c)}${note(c) ? `<div class="seo-notice"><h3>${closed(c) ? 'Reopening information' : 'Before you go'}</h3><p>${esc(note(c))}</p></div>` : ''}<p class="seo-small">${closed(c) ? 'This listing remains available for closure information. Check the official update before planning a visit.' : 'Rates are not live availability. Confirm current prices, cart terms and any restrictions directly with the course.'}</p></section>
-    <aside class="seo-action-panel" aria-labelledby="course-link-title"><p class="section-kicker">Direct course link</p><h2 id="course-link-title">${closed(c) ? 'Follow reopening updates' : c.bookingLabel ? 'Contact the course' : 'Check tee times'}</h2><p>${closed(c) ? 'The course is temporarily closed. Use its official information page for updates.' : c.bookingLabel ? 'Use the course’s information page to confirm availability and rates.' : c.name === 'Sweetbriar Golf Club' ? 'Choose from the course’s booking options on its official booking page.' : 'Availability and reservations are handled by the course or its booking provider.'}</p>${action(c)}<p class="seo-small">You’ll leave Tee Drop. Opens in a new tab.</p>${parents.length ? `<div class="seo-parent-links"><h3>Explore this area</h3>${parents.map(a => `<a href="${areaPath(a)}">${esc(a.name)} golf courses</a>`).join('')}</div>` : '<p><a href="/#courseDirectory">Back to all Ohio courses</a></p>'}</aside></div>
+    <aside class="seo-action-panel" aria-labelledby="course-link-title"><p class="section-kicker">Direct course link</p><h2 id="course-link-title">${closed(c) ? 'Follow reopening updates' : c.bookingLabel ? 'Contact the course' : 'Check tee times'}</h2><p>${closed(c) ? 'The course is temporarily closed. Use its official information page for updates.' : c.bookingLabel ? 'Use the course’s information page to confirm availability and rates.' : c.name === 'Sweetbriar Golf Club' ? 'Choose from the course’s booking options on its official booking page.' : 'Availability and reservations are handled by the course or its booking provider.'}</p>${action(c)}<p class="seo-small">You’ll leave Tee Drop. Opens in a new tab.</p>${parents.length ? `<div class="seo-parent-links"><h3>Explore this area</h3>${parents.map(a => `<a href="${areaPath(a)}">${esc(a.breadcrumbLabel || a.name + ' golf courses')}</a>`).join('')}</div>` : '<p><a href="/#courseDirectory">Back to all Ohio courses</a></p>'}</aside></div>
     <section class="seo-facts seo-section"><h2>About this listing</h2><p>${esc(courseEntity.description)} Tee Drop is an independent directory, not the course’s official website.</p>${characteristics.length ? `<dl>${characteristics.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : ''}</section>
     <section class="seo-section" aria-labelledby="nearby-courses"><p class="section-kicker">More places to look</p><h2 id="nearby-courses">Nearby Tee Drop courses</h2><p>Nearby suggestions use the directory’s recorded coordinates, not driving times. Check each course’s own information before making plans.</p><ul class="seo-nearby">${nearby.map(({ course: n }) => `<li><div><strong>${isPilot(n) ? `<a href="${coursePath(n)}">${esc(n.name)}</a>` : esc(n.name)}</strong><span>${esc(n.city)}${closed(n) ? ' · Temporarily closed' : ''}</span></div>${isPilot(n) ? `<a class="seo-detail" href="${coursePath(n)}">Course details<span class="visually-hidden">: ${esc(n.name)}</span></a>` : external(n.bookingUrl, button(n), 'seo-detail')}</li>`).join('')}</ul></section>`;
   body = refineCourseDetail(c, body, { esc, external });
@@ -162,7 +193,7 @@ const discovery = `<!-- SEO DISCOVERY START -->
       <div class="section-heading"><div><p class="section-kicker">Explore by place</p><h2 id="area-guides-title">Local golf guides</h2></div><p>Course locations, qualified rates and direct course links.</p></div>
       <div class="seo-area-links">${config.areas.map(a => `<a href="${areaPath(a)}">${esc(a.name)} <span aria-hidden="true">→</span></a>`).join('')}</div>
       <h3>Take a closer look at a course</h3>
-      <ul class="seo-pilot-links">${config.pilots.map(id => { const c = get(id); return `<li><a href="${coursePath(c)}">${esc(c.name)}</a><span>${esc(c.city)}${closed(c) ? ' · Temporarily closed' : ''}</span></li>`; }).join('')}</ul>
+      <ul class="seo-pilot-links">${manifest.homepageHighlights.map(id => { assert(config.pilots.includes(id)); const c = get(id); return `<li><a href="${coursePath(c)}">${esc(c.name)}</a><span>${esc(c.city)}${closed(c) ? ' · Temporarily closed' : ''}</span></li>`; }).join('')}</ul>
       <noscript><p>Search and filters need JavaScript. The guides above provide course information and direct links without it.</p></noscript>
     </section>
     <!-- SEO DISCOVERY END -->`;
@@ -172,17 +203,31 @@ else home = home.replace('    <button class="primary-action back-to-filters"', '
 if (!home.includes('href="seo.css')) home = home.replace('</head>', '  <link rel="stylesheet" href="seo.css?v=phase-one-20260912">\n</head>');
 assert(home.includes(discovery), 'Homepage insertion point missing');
 outputs.set('index.html', home);
-const pages = [...config.existingPages, ...config.areas.map(a => ({ path: areaPath(a), lastmod: config.contentModified })), ...config.pilots.map(id => ({ path: coursePath(get(id)), lastmod: config.contentModified }))];
-assert.equal(pages.length, 14);
+const pages = [...config.existingPages, ...config.areas.map(a => ({ path: areaPath(a), lastmod: modified(a) })), ...config.pilots.map(id => ({ path: coursePath(get(id)), lastmod: modified(coursePages.get(id)) }))];
+assert.equal(new Set(pages.map(p => p.path)).size, pages.length, 'Duplicate canonical URL');
+assert.equal(pages.length, config.existingPages.length + config.areas.length + config.pilots.length);
+if (preview) {
+  outputs.set('robots.txt', 'User-agent: *\nDisallow: /\n');
+  outputs.set('preview-manifest.json', JSON.stringify({ mode: 'local-review-only', publishedPaths: pages.filter(p => !manifest.areas.some(a => a.state === 'draft' && areaPath(a) === p.path) && !manifest.courses.some(c => c.state === 'draft' && coursePath(get(c.id)) === p.path)).map(p => p.path), draftPaths: [...manifest.areas.filter(a => a.state === 'draft').map(areaPath), ...manifest.courses.filter(c => c.state === 'draft').map(c => coursePath(get(c.id)))], sitemapPurpose: 'Local review only; root published sitemap unchanged' }, null, 2) + '\n');
+  for (const [file, html] of outputs) if (file.endsWith('.html')) outputs.set(file, html.replace('<head>', '<head>\n  <meta name="robots" content="noindex, nofollow">'));
+  if (!check) {
+    // Copy only tracked public assets: never planning files, Git metadata or scripts.
+    const files = execFileSync('git', ['-c', 'safe.directory=' + root, '-C', root, 'ls-files', '-z'], {encoding:'utf8'}).split('\0').filter(Boolean);
+    for (const file of files) if (/\.(?:html|css|js|svg|png|jpe?g|webp|ico|woff2?|xml|txt)$/i.test(file) && !/^(?:scripts|seo|planning|\.)\//.test(file) && !outputs.has(file)) {
+      fs.mkdirSync(path.dirname(path.join(outputRoot, file)), {recursive:true});
+      fs.copyFileSync(path.join(root,file), path.join(outputRoot,file));
+    }
+  }
+}
 outputs.set('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `  <url><loc>${origin}${p.path}</loc><lastmod>${p.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 let drift = false;
 for (const [file, content] of outputs) {
   if (check) {
-    if (!fs.existsSync(path.join(root, file)) || read(file) !== content) { console.error(`Stale generated file: ${file}`); drift = true; }
+    if (!fs.existsSync(path.join(outputRoot, file)) || normalize(fs.readFileSync(path.join(outputRoot, file), 'utf8')) !== content) { console.error(`Stale generated file: ${file}`); drift = true; }
   } else {
-    fs.mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
-    if (!fs.existsSync(path.join(root, file)) || read(file) !== content) fs.writeFileSync(path.join(root, file), content);
+    fs.mkdirSync(path.dirname(path.join(outputRoot, file)), { recursive: true });
+    if (!fs.existsSync(path.join(outputRoot, file)) || normalize(fs.readFileSync(path.join(outputRoot, file), 'utf8')) !== content) fs.writeFileSync(path.join(outputRoot, file), content);
   }
 }
 if (drift) process.exitCode = 1;
-else console.log(`${check ? 'Verified' : 'Generated'} 3 area pages, 8 course pages, homepage discovery and 14 sitemap entries.`);
+else console.log(`${check ? 'Verified' : 'Generated'} ${config.areas.length} area pages, ${config.pilots.length} course pages, homepage discovery and ${pages.length} ${preview ? 'preview' : 'published'} sitemap entries.`);

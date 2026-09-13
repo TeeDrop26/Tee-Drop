@@ -1,0 +1,507 @@
+{
+  "existingPages": [
+    {
+      "path": "/",
+      "lastmod": "2026-09-13"
+    },
+    {
+      "path": "/about.html",
+      "lastmod": "2026-08-10"
+    },
+    {
+      "path": "/indoor.html",
+      "lastmod": "2026-08-10"
+    }
+  ],
+  "homepageHighlights": [
+    "td-0002",
+    "td-0001",
+    "td-0021",
+    "td-0069",
+    "td-0099",
+    "td-0033",
+    "td-0046",
+    "td-0079"
+  ],
+  "courses": [
+    {
+      "id": "td-0002",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "new-philadelphia-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0001",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "new-philadelphia-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0021",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "canton-oh",
+      "relatedHubs": [
+        "new-philadelphia-oh"
+      ],
+      "hubLinkOrder": [
+        "new-philadelphia-oh",
+        "canton-oh"
+      ]
+    },
+    {
+      "id": "td-0069",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "youngstown-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0099",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "youngstown-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0033",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "wooster-orrville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0046",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "cleveland-west-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0079",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": null,
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0051",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "youngstown-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0070",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "youngstown-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0071",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "youngstown-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0050",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "youngstown-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0003",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "new-philadelphia-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0013",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "canton-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0028",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "akron-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0031",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "canton-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0054",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "cleveland-west-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0056",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "cleveland-west-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0057",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "cleveland-west-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0112",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "cleveland-west-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0019",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "wooster-orrville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0020",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "wooster-orrville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0032",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "wooster-orrville-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0113",
+      "state": "published",
+      "modified": "2026-09-13",
+      "primaryHub": "wooster-orrville-oh",
+      "relatedHubs": []
+    }
+  ],
+  "areas": [
+    {
+      "slug": "new-philadelphia-oh",
+      "name": "New Philadelphia / Dover",
+      "title": "Public Golf Courses near New Philadelphia & Dover | Tee Drop",
+      "description": "Compare public golf around New Philadelphia and Dover, with course locations, qualified rates and direct booking or information links.",
+      "intro": "Plan a round around New Philadelphia and Dover. Compare Oak Shadows in New Philadelphia with courses in the surrounding Tuscarawas County towns, then check rates and availability directly with the course.",
+      "coverage": "This guide covers the combined New Philadelphia / Dover market. The towns below are separate locations, not all within either city. It includes six Tuscarawas County listings and Spring Valley in East Sparta as a nearby option to the north; it is not an exhaustive list of every course in the region.",
+      "groups": [
+        {
+          "title": "New Philadelphia & Dover Area",
+          "intro": "",
+          "courses": [
+            "td-0002"
+          ]
+        },
+        {
+          "title": "Zoar & Bolivar",
+          "intro": "Head north for a round at Zoar Village or Wilkshire.",
+          "courses": [
+            "td-0001",
+            "td-0003"
+          ]
+        },
+        {
+          "title": "Worth the Short Drive",
+          "intro": "More places to play in Midvale, Uhrichsville, Sugarcreek and East Sparta.",
+          "courses": [
+            "td-0007",
+            "td-0008",
+            "td-0009",
+            "td-0021"
+          ]
+        }
+      ],
+      "copy": {
+        "kicker": "Tuscarawas County & nearby",
+        "title": "New Philadelphia & Dover",
+        "intro": "Looking for somewhere to play around New Philadelphia and Dover? Explore these public courses around Tuscarawas County, plus Spring Valley in nearby East Sparta. Compare posted rates and follow the course’s own link to book or get in touch."
+      },
+      "state": "published",
+      "modified": "2026-09-13",
+      "relatedHubs": [
+        "canton-oh",
+        "akron-oh",
+        "wooster-orrville-oh"
+      ]
+    },
+    {
+      "slug": "canton-oh",
+      "name": "Canton area",
+      "title": "Public Golf Courses in Canton & Nearby Towns | Tee Drop",
+      "description": "Compare public golf in Canton and nearby Stark County towns. See course locations, posted-rate qualifications and direct booking or information links.",
+      "intro": "Compare Canton’s public golf options with nearby courses across the Stark County area. Use the town groups to narrow the trip, then compare the full rate notes before choosing a tee time.",
+      "coverage": "Canton listings are separated from North Canton, East Canton and other surrounding towns. This is a selection from Tee Drop’s existing directory, not a claim that every course is within Canton city limits.",
+      "groups": [
+        {
+          "title": "Canton",
+          "intro": "Start with these Canton options.",
+          "courses": [
+            "td-0030",
+            "td-0010"
+          ]
+        },
+        {
+          "title": "North Canton, Uniontown & Hartville",
+          "intro": "Find a round around North Canton, Uniontown or Hartville.",
+          "courses": [
+            "td-0013",
+            "td-0014",
+            "td-0016"
+          ]
+        },
+        {
+          "title": "East Canton, Paris & Alliance",
+          "intro": "Explore courses east and northeast of Canton.",
+          "courses": [
+            "td-0022",
+            "td-0017",
+            "td-0031"
+          ]
+        },
+        {
+          "title": "Massillon, North Lawrence & Canal Fulton",
+          "intro": "More options around Massillon, North Lawrence and Canal Fulton.",
+          "courses": [
+            "td-0006",
+            "td-0024",
+            "td-0073"
+          ]
+        },
+        {
+          "title": "East Sparta",
+          "intro": "Head south to Spring Valley in East Sparta.",
+          "courses": [
+            "td-0021"
+          ]
+        }
+      ],
+      "copy": {
+        "kicker": "Canton, Stark County & nearby",
+        "title": "Canton",
+        "intro": "Looking for your next round around Canton? Compare public courses in Canton and nearby towns, from North Canton and Hartville to Massillon and East Sparta. Check posted prices, pick a course and follow its direct link to book or get in touch."
+      },
+      "state": "published",
+      "modified": "2026-09-13",
+      "relatedHubs": [
+        "new-philadelphia-oh",
+        "akron-oh",
+        "wooster-orrville-oh"
+      ]
+    },
+    {
+      "slug": "akron-oh",
+      "name": "Akron area",
+      "title": "Public Golf Courses in Akron & Nearby Towns | Tee Drop",
+      "description": "Explore public golf in Akron, Green, Cuyahoga Falls, Stow and Mogadore, with qualified rate summaries and direct booking or information links.",
+      "intro": "Compare public golf around Akron, from courses carrying an Akron location to options in Green, Cuyahoga Falls, Stow and Mogadore. Walking and riding prices, weekday schedules and time restrictions differ, so read the course-specific rate notes.",
+      "coverage": "The Akron group follows the locations recorded in Tee Drop’s directory; an Akron mailing location does not establish municipal boundaries. Surrounding towns are named separately. This guide is not a complete inventory of all golf in Summit County.",
+      "groups": [
+        {
+          "title": "Akron Area",
+          "intro": "",
+          "courses": [
+            "td-0029",
+            "td-0028",
+            "td-0027",
+            "td-0015",
+            "td-0037"
+          ]
+        },
+        {
+          "title": "Green & Mogadore",
+          "intro": "More places to play in Green and Mogadore.",
+          "courses": [
+            "td-0026",
+            "td-0035"
+          ]
+        },
+        {
+          "title": "Cuyahoga Falls & Stow",
+          "intro": "Head north for a round in Cuyahoga Falls or Stow.",
+          "courses": [
+            "td-0038",
+            "td-0039",
+            "td-0040"
+          ]
+        }
+      ],
+      "copy": {
+        "kicker": "Akron, Summit County & nearby",
+        "title": "Akron",
+        "intro": "Find somewhere to play around Akron, with more options in Green, Mogadore, Cuyahoga Falls and Stow. Compare walking and riding rates, check the time restrictions and head straight to the course’s booking or information page."
+      },
+      "state": "published",
+      "modified": "2026-09-13",
+      "relatedHubs": [
+        "new-philadelphia-oh",
+        "canton-oh",
+        "youngstown-oh",
+        "cleveland-west-oh"
+      ]
+    },
+    {
+      "slug": "youngstown-oh",
+      "name": "Youngstown & the Mahoning Valley",
+      "state": "published",
+      "modified": "2026-09-13",
+      "title": "Public Golf Courses near Youngstown & the Mahoning Valley | Tee Drop",
+      "description": "Compare eight Tee Drop listings around Youngstown, Boardman and the Mahoning Valley, with qualified rates, a Mill Creek closure notice and direct course links.",
+      "copy": {
+        "kicker": "Youngstown, Boardman & the Mahoning Valley",
+        "title": "Youngstown & the Mahoning Valley",
+        "intro": "Compare golf around Youngstown and Boardman with options in Poland, Lowellville, Columbiana, Salem and Lake Milton. Choose between nine-hole and eighteen-hole rate options, check cart terms and follow the course’s own link for availability. Mill Creek is listed for closure updates, not current play."
+      },
+      "introNote": "8 course listings, including temporarily closed Mill Creek. Towns are grouped separately below; this is a selection from Tee Drop’s directory, not every course in the valley.",
+      "relatedHubs": [
+        "akron-oh"
+      ],
+      "groups": [
+        {
+          "title": "Youngstown & Boardman",
+          "intro": "Compare Wick’s daytime par 3 fees and follow Mill Creek’s closure updates. Confirm Mill Creek has reopened before planning a round.",
+          "courses": [
+            "td-0099",
+            "td-0069"
+          ]
+        },
+        {
+          "title": "Poland & Lowellville",
+          "intro": "Compare Reserve Run’s eighteen-hole riding schedule with Knoll Run’s nine- and eighteen-hole green fees. Knoll Run’s cart fees are additional.",
+          "courses": [
+            "td-0051",
+            "td-0070"
+          ]
+        },
+        {
+          "title": "Columbiana & Salem",
+          "intro": "Firestone Farms and The Flying B offer different weekday and weekend options. Flying B’s published table is undated; confirm current pricing.",
+          "courses": [
+            "td-0071",
+            "td-0050"
+          ]
+        },
+        {
+          "title": "Lake Milton options",
+          "intro": "Check current booking prices at Lake Milton and Olde Dutch Mill. The Lake Milton rate page is labelled 2025, so no stale prices are reproduced here.",
+          "courses": [
+            "td-0072",
+            "td-0075"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cleveland-west-oh",
+      "name": "Cleveland West Side & Western Suburbs",
+      "title": "Public Golf Courses in Cleveland’s Western Suburbs | Tee Drop",
+      "description": "Compare public golf on Cleveland’s west side and in its western suburbs, including Metroparks fees, Meadowood’s temporary par 3 layout and direct course links.",
+      "state": "published",
+      "modified": "2026-09-13",
+      "copy": {
+        "title": "Cleveland's West Side & Western Suburbs",
+        "kicker": "Cleveland west side, Westlake & nearby",
+        "intro": "Compare Big Met’s eighteen-hole green fees with nine-hole options at Little Met and Mastick Woods. Look west to Meadowood’s temporary par 3 layout and Sweetbriar’s booking choices, then explore separately named towns farther southwest.",
+        "headingPrefix": "Golf Courses on"
+      },
+      "groups": [
+        {
+          "title": "West-side Metroparks courses",
+          "intro": "Big Met is listed in Fairview Park; Little Met and Mastick Woods carry Cleveland locations in the directory. Green fees and cart charges are shown separately.",
+          "courses": [
+            "td-0054",
+            "td-0056",
+            "td-0057"
+          ]
+        },
+        {
+          "title": "Westlake & Avon Lake",
+          "intro": "Confirm Meadowood’s temporary construction layout before visiting. Sweetbriar’s current prices are available through its booking choices.",
+          "courses": [
+            "td-0112",
+            "td-0046"
+          ]
+        },
+        {
+          "title": "Columbia Station, Grafton & LaGrange",
+          "intro": "These are separate towns farther southwest, not Cleveland city locations. Use current booking prices rather than assuming a fixed rate from an old schedule.",
+          "courses": [
+            "td-0063",
+            "td-0064",
+            "td-0045"
+          ]
+        }
+      ],
+      "relatedHubs": [
+        "akron-oh"
+      ],
+      "breadcrumbLabel": "Cleveland West Side & Western Suburbs Golf Courses"
+    },
+    {
+      "slug": "wooster-orrville-oh",
+      "name": "Wooster, Orrville & nearby golf",
+      "title": "Public Golf Courses near Wooster & Orrville | Tee Drop",
+      "description": "Compare public golf in Wooster and Orrville with separately labelled Doylestown, Lakeville and Millersburg options, qualified rates and direct course links.",
+      "state": "published",
+      "modified": "2026-09-13",
+      "copy": {
+        "title": "Wooster, Orrville & nearby golf",
+        "kicker": "Wooster, Orrville & nearby towns",
+        "intro": "Start with L.C. Boles in Wooster and The Pines or Riceland in Orrville. Compare walking, riding and cart-extra prices, then consider Doylestown, Lakeville and the farther-south Millersburg options. These towns are separate destinations, not a promise of short driving times."
+      },
+      "groups": [
+        {
+          "title": "Wooster & Orrville",
+          "intro": "L.C. Boles is a public nine-hole course with alternate tees for a second nine. Compare its adult green fees and separate per-person cart rental with the selected prices at The Pines and Riceland.",
+          "courses": [
+            "td-0113",
+            "td-0019",
+            "td-0032"
+          ]
+        },
+        {
+          "title": "Doylestown & Lakeville",
+          "intro": "Chippewa is in Doylestown, while Round Lake is in Lakeville. Check their different weekday/weekend schedules and source-date qualifications.",
+          "courses": [
+            "td-0020",
+            "td-0033"
+          ]
+        },
+        {
+          "title": "Farther south: Millersburg",
+          "intro": "Fire Ridge and Black Diamond are Millersburg options outside the Wooster/Orrville core. Check the trip and current prices before choosing one of these alternatives.",
+          "courses": [
+            "td-0018",
+            "td-0025"
+          ]
+        }
+      ],
+      "relatedHubs": [
+        "canton-oh",
+        "new-philadelphia-oh"
+      ]
+    }
+  ]
+}

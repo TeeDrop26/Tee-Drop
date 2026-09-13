@@ -1,0 +1,262 @@
+{
+  "td-0001": {
+    "decision": "publish",
+    "expectedUrl": "https://zoarvillagegolf.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0002": {
+    "decision": "publish",
+    "expectedUrl": "https://www.oakshadowsgolf.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0003": {
+    "decision": "publish",
+    "expectedUrl": "https://www.wilkshiregolf.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0006": {
+    "decision": "publish",
+    "expectedUrl": "https://www.thelegends.com/course/rates",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0007": {
+    "decision": "suppress",
+    "expectedUrl": "https://5watersgolf.com/info.html",
+    "reason": "Certificate warning: preserve suppression pending a secure verified rate source."
+  },
+  "td-0008": {
+    "decision": "publish",
+    "expectedUrl": "https://bigbendgolfcourse.com/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0009": {
+    "decision": "publish",
+    "expectedUrl": "https://blackgoldgolfclub.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0010": {
+    "decision": "publish",
+    "expectedUrl": "https://vip.teeitup.com/the-quarry/tee-times/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0013": {
+    "decision": "publish",
+    "expectedUrl": "https://ncarrowhead.com/golf/book-time/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0014": {
+    "decision": "publish",
+    "expectedUrl": "https://www.golfraintree.com/book-a-tee-time/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0015": {
+    "decision": "publish",
+    "expectedUrl": "https://www.firestone9.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0016": {
+    "decision": "publish",
+    "expectedUrl": "https://sablecreekgolf.com/rates-and-fees/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0017": {
+    "decision": "publish",
+    "expectedUrl": "https://pleasantviewgolfclub.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0021": {
+    "decision": "publish",
+    "expectedUrl": "https://www.svgcanton.com/golf-rates",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0022": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clearviewgolfclub.com/rates",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0024": {
+    "decision": "publish",
+    "expectedUrl": "https://elms.golf/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0026": {
+    "decision": "publish",
+    "expectedUrl": "https://www.mayfaircountryclub.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0027": {
+    "decision": "publish",
+    "expectedUrl": "https://www.chenowethgolf.com/about-us/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0028": {
+    "decision": "publish",
+    "expectedUrl": "https://www.mudrungolf.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0029": {
+    "decision": "publish",
+    "expectedUrl": "https://www.goodparkgolf.com/ates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0030": {
+    "decision": "publish",
+    "expectedUrl": "https://www.meadowlakeclub.com/greens-fees",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0031": {
+    "decision": "publish",
+    "expectedUrl": "https://tannenhaufgolf.net/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0033": {
+    "decision": "publish",
+    "expectedUrl": "https://www.roundlakegolfcourse.com/golfcourse",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0035": {
+    "decision": "suppress",
+    "expectedUrl": "https://www.golfdigest.com/courses/oh/mulligan-springs-golf-course-mulligan",
+    "reason": "Golf Digest is not an official rate source; preserve call-for-rates and existing contact action."
+  },
+  "td-0037": {
+    "decision": "publish",
+    "expectedUrl": "https://www.turkeyfootgolf.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0038": {
+    "decision": "publish",
+    "expectedUrl": "https://www.brookledgegc.com/tee-times/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0039": {
+    "decision": "publish",
+    "expectedUrl": "https://www.foxdengc.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0040": {
+    "decision": "publish",
+    "expectedUrl": "https://www.rosesrun.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0046": {
+    "decision": "publish",
+    "expectedUrl": "https://www.sweetbriargolfclub.com/book-a-tee-time/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0050": {
+    "decision": "publish",
+    "expectedUrl": "https://www.flyingbgolf.com/aboutus/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0051": {
+    "decision": "publish",
+    "expectedUrl": "https://www.reserverungolf.com/rates-booking/2025-rates",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0069": {
+    "decision": "publish",
+    "expectedUrl": "https://www.millcreekmetroparks.org/mill-creek-golf-course/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0070": {
+    "decision": "publish",
+    "expectedUrl": "https://www.knollrun.com/rates-booking",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0071": {
+    "decision": "publish",
+    "expectedUrl": "https://www.linksatfirestonefarms.com/golf-course/rates",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0072": {
+    "decision": "publish",
+    "expectedUrl": "https://www.lakemiltongolfclub.com/rates/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0073": {
+    "decision": "suppress",
+    "expectedUrl": "https://www.lyonsdengolf.com/id14.html",
+    "reason": "Certificate warning: preserve suppression pending a secure verified rate source."
+  },
+  "td-0075": {
+    "decision": "publish",
+    "expectedUrl": "https://b51e062b-8ea4-4ca1-aa13-c449a771989b.book.teeitup.com/",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0079": {
+    "decision": "publish",
+    "expectedUrl": "https://www.zanesvillejcgolfcourse.com/Rates.html",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0099": {
+    "decision": "publish",
+    "expectedUrl": "https://reservations.millcreekmetroparks.org/documents/2026/01/2026/1/2026_Mill_Creek_Golf___Recreation_Planner_-_web.pdf",
+    "reason": "Approved stored course/operator source; provider-hosted references retain existing qualifications."
+  },
+  "td-0054": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clevelandmetroparks.com/golf/pricing/green-fees",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0056": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clevelandmetroparks.com/golf/pricing/green-fees",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0057": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clevelandmetroparks.com/golf/pricing/green-fees",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0112": {
+    "decision": "publish",
+    "expectedUrl": "https://www.cityofwestlake.org/o/rcwl/page/meadowood-golf-course",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0063": {
+    "decision": "publish",
+    "expectedUrl": "https://themallardcreek.com/tee-times/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0064": {
+    "decision": "publish",
+    "expectedUrl": "https://golfpinebrook.com/course-rates/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0045": {
+    "decision": "publish",
+    "expectedUrl": "https://www.greyhawkgolf.com/daily-rates/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0113": {
+    "decision": "publish",
+    "expectedUrl": "https://inside.wooster.edu/golf/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0019": {
+    "decision": "publish",
+    "expectedUrl": "https://thepinesgolf.com/the-course/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0032": {
+    "decision": "publish",
+    "expectedUrl": "https://ricelandgolfcourse.com/rates/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0020": {
+    "decision": "publish",
+    "expectedUrl": "https://www.chippewagolfclub.com/golf/rates/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0018": {
+    "decision": "publish",
+    "expectedUrl": "https://www.fireridgegolfcourse.com/rates-and-specials",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  },
+  "td-0025": {
+    "decision": "publish",
+    "expectedUrl": "https://blackdiamondgolfcourse.com/rates/",
+    "reason": "Reviewed Checkpoint 2 stored official source. Preserve current/undated/stale/dynamic qualifications; publication of a source link does not assert a completed booking."
+  }
+}
