@@ -842,7 +842,7 @@ const courses = [
       statusLabel: "Rates listed",
       summary: "Peak greens fees: 18 holes $38 Monday-Thursday, $45 Friday, and $51 weekends; an 18-hole cart is $16 at Manakiki.",
       checked: "Aug 5, 2026",
-      sourceUrl: "https://cms.clevelandmetroparks.com/golf/pricing/green-fees"
+      sourceUrl: "https://www.clevelandmetroparks.com/golf/pricing/green-fees"
     },
     teeTimes: []
   },
@@ -1069,7 +1069,7 @@ const courses = [
       statusLabel: "Rates listed",
       summary: "2026 posted: Monday-Thursday 18 holes with cart $48 and 9 holes $32; Friday 18 holes $52 before noon and $42 after; weekend 18 holes $64 before 1 PM and $54 after.",
       checked: "Aug 5, 2026",
-      sourceUrl: "https://www.valleairegolf.com/rates/"
+      sourceUrl: "https://www.valleairegolf.co/course-rates/"
     },
     teeTimes: []
   },
@@ -1552,7 +1552,7 @@ const courses = [
       summary: "The course-owned website confirms public play and routes golfers to a course-specific GolfBack tee sheet; no separate current fixed-rate page was found.",
       publicSummary: "Current pricing is shown through the course's online booking page.",
       checked: "Aug 10, 2026",
-      sourceUrl: "https://www.raccoongolf.com/"
+      sourceUrl: "https://raccoonvalley.golf/"
     },
     teeTimes: []
   },

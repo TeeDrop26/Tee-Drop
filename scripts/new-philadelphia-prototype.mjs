@@ -1,3 +1,6 @@
+import { phaseFourFinalViews } from './phase-four-final-presentations.mjs';
+import { phaseFourCheckpointTwoViews } from './phase-four-checkpoint-two-presentations.mjs';
+import { phaseFourCheckpointOneViews } from './phase-four-checkpoint-one-presentations.mjs';
 import assert from 'node:assert/strict';
 import { phaseThreeCheckpointTwoViews } from './phase-three-checkpoint-two-presentations.mjs';
 import { phaseThreeCheckpointOneViews } from './phase-three-checkpoint-one-presentations.mjs';
@@ -10,6 +13,9 @@ import { additionalAreaViews } from './area-rate-presentations.mjs';
 // source text guards the hand-formatted tables against stale prices after a
 // future data update: changed source text must receive a fresh content review.
 const views = {
+  ...phaseFourFinalViews,
+  ...phaseFourCheckpointTwoViews,
+  ...phaseFourCheckpointOneViews,
   ...phaseThreeCheckpointTwoViews,
   ...phaseThreeCheckpointOneViews,
   ...additionalAreaViews,

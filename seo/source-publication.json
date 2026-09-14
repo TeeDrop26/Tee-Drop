@@ -348,5 +348,125 @@
     "decision": "publish",
     "expectedUrl": "https://www.oaktreeclub.com/",
     "reason": "Phase 3 Checkpoint 2: official course/city source reviewed; stored review date, fixed-rate scope and transparent fallback preserved."
+  },
+  "td-0042": {
+    "decision": "publish",
+    "expectedUrl": "https://www.golfpinehills.net/course-rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0043": {
+    "decision": "publish",
+    "expectedUrl": "https://bunker-hill-golf-course.book.teeitup.com/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0044": {
+    "decision": "publish",
+    "expectedUrl": "https://coppertopgolf.com/course-overview/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0055": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clevelandmetroparks.com/golf/pricing/green-fees",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0061": {
+    "decision": "publish",
+    "expectedUrl": "https://shalecreek.cps.golf/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0062": {
+    "decision": "publish",
+    "expectedUrl": "https://www.valleairegolf.co/course-rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0065": {
+    "decision": "publish",
+    "expectedUrl": "https://hinckley-hills-golf-course.book.teeitup.com/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0066": {
+    "decision": "publish",
+    "expectedUrl": "https://cossettcreek.com/book-a-tee-time/",
+    "reason": "Phase 4 owner-approved treatment: preserve booking fallback or selected rate scope, review date and qualifications; Valleaire source replacement approved September 14, 2026."
+  },
+  "td-0087": {
+    "decision": "publish",
+    "expectedUrl": "https://www.denisongolfclub.com/rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0088": {
+    "decision": "publish",
+    "expectedUrl": "https://www.mastodongolfclub.com/rates.html",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0089": {
+    "decision": "publish",
+    "expectedUrl": "https://raccoonvalley.golf/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0090": {
+    "decision": "publish",
+    "expectedUrl": "https://thelinksatechosprings.org/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0091": {
+    "decision": "publish",
+    "expectedUrl": "https://www.cumberlandtgc.com/rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0094": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clovervalleygolfclub.com/rates-and-policies/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0095": {
+    "decision": "publish",
+    "expectedUrl": "https://kyberrungolf.com/rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0092": {
+    "decision": "publish",
+    "expectedUrl": "https://www.irishhillsgolfclub.com/rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0114": {
+    "decision": "publish",
+    "expectedUrl": "https://www.applevalleygolfcourse.com/rates/fees",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0119": {
+    "decision": "publish",
+    "expectedUrl": "https://www.vernonviewgc.com/rates-and-passes/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0120": {
+    "decision": "publish",
+    "expectedUrl": "https://www.chapelhillgolfcourse.com/rates/",
+    "reason": "Phase 4 owner-approved treatment: preserve selected rate scope, fallbacks, review dates and payment/booking qualifications. Raccoon Valley direct HTTPS source approved; Chapel Hill retains /rates/ with the approved 2026 brochure as supporting evidence."
+  },
+  "td-0049": {
+    "decision": "publish",
+    "expectedUrl": "https://www.clevelandmetroparks.com/golf/pricing/green-fees",
+    "reason": "Owner-approved Phase 4 source and rate treatment. Preserve current-pricing fallbacks, selected scope and existing booking destination; Manakiki public source replacement approved."
+  },
+  "td-0053": {
+    "decision": "publish",
+    "expectedUrl": "https://stdenisgolfclub.com/rates/",
+    "reason": "Owner-approved Phase 4 source and rate treatment. Preserve current-pricing fallbacks, selected scope and existing booking destination; Manakiki public source replacement approved."
+  },
+  "td-0067": {
+    "decision": "publish",
+    "expectedUrl": "https://fowlersmillgc.com/",
+    "reason": "Owner-approved Phase 4 source and rate treatment. Preserve current-pricing fallbacks, selected scope and existing booking destination; Manakiki public source replacement approved."
+  },
+  "td-0068": {
+    "decision": "publish",
+    "expectedUrl": "https://www.painesvillecountryclub.com/rates/",
+    "reason": "Owner-approved Phase 4 source and rate treatment. Preserve current-pricing fallbacks, selected scope and existing booking destination; Manakiki public source replacement approved."
+  },
+  "td-0074": {
+    "decision": "publish",
+    "expectedUrl": "https://playphgc.com/rates/",
+    "reason": "Owner-approved Phase 4 source and rate treatment. Preserve current-pricing fallbacks, selected scope and existing booking destination; Manakiki public source replacement approved."
   }
 }

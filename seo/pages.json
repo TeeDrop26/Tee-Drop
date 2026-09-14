@@ -309,6 +309,174 @@
       "modified": "2026-09-13",
       "primaryHub": "mansfield-ashland-oh",
       "relatedHubs": []
+    },
+    {
+      "id": "td-0042",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0043",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0044",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0055",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0061",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0062",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0065",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0066",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "medina-hinckley-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0087",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0088",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0089",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0090",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0091",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0094",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0095",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "licking-county-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0092",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "mount-vernon-howard-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0114",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "mount-vernon-howard-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0119",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "mount-vernon-howard-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0120",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "mount-vernon-howard-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0049",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "cleveland-east-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0053",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "cleveland-east-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0067",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "cleveland-east-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0068",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "cleveland-east-oh",
+      "relatedHubs": []
+    },
+    {
+      "id": "td-0074",
+      "state": "published",
+      "modified": "2026-09-14",
+      "primaryHub": "cleveland-east-oh",
+      "relatedHubs": []
     }
   ],
   "areas": [
@@ -467,13 +635,14 @@
         "intro": "Find somewhere to play around Akron, with more options in Green, Mogadore, Cuyahoga Falls and Stow. Compare walking and riding rates, check the time restrictions and head straight to the course’s booking or information page."
       },
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-14",
       "relatedHubs": [
         "new-philadelphia-oh",
         "canton-oh",
         "youngstown-oh",
         "cleveland-west-oh",
-        "kent-ravenna-oh"
+        "kent-ravenna-oh",
+        "medina-hinckley-oh"
       ]
     },
     {
@@ -534,7 +703,7 @@
       "title": "Public Golf Courses in Cleveland’s Western Suburbs | Tee Drop",
       "description": "Compare public golf on Cleveland’s west side and in its western suburbs, including Metroparks fees, Meadowood’s temporary par 3 layout and direct course links.",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-14",
       "copy": {
         "title": "Cleveland's West Side & Western Suburbs",
         "kicker": "Cleveland west side, Westlake & nearby",
@@ -570,7 +739,9 @@
         }
       ],
       "relatedHubs": [
-        "akron-oh"
+        "akron-oh",
+        "medina-hinckley-oh",
+        "cleveland-east-oh"
       ],
       "breadcrumbLabel": "Cleveland West Side & Western Suburbs Golf Courses"
     },
@@ -623,7 +794,7 @@
       "slug": "kent-ravenna-oh",
       "name": "Kent, Ravenna & Streetsboro",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-14",
       "title": "Public Golf Courses near Kent, Ravenna & Streetsboro | Tee Drop",
       "description": "Compare five golf courses around Kent, Ravenna and Streetsboro, plus a labelled Suffield option, with selected rates, booking restrictions and direct course links.",
       "copy": {
@@ -635,7 +806,8 @@
       "introNote": "5 selections from Tee Drop’s directory, not an exhaustive local list. Compare the round length, walking or riding terms and time bands before choosing.",
       "relatedHubs": [
         "akron-oh",
-        "youngstown-oh"
+        "youngstown-oh",
+        "cleveland-east-oh"
       ],
       "groups": [
         {
@@ -668,7 +840,7 @@
       "slug": "zanesville-oh",
       "name": "Zanesville, Nashport & nearby golf",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-14",
       "title": "Public Golf Courses near Zanesville & Nashport | Tee Drop",
       "description": "Compare six golf listings in Zanesville, Nashport, Hopewell and New Concord with qualified rates, current booking links and clearly separated town groups.",
       "copy": {
@@ -678,7 +850,8 @@
       },
       "introNote": "6 selections from Tee Drop’s directory, not every course in the region. Booking prices, undated schedules and separate cart charges are distinguished below.",
       "relatedHubs": [
-        "new-philadelphia-oh"
+        "new-philadelphia-oh",
+        "licking-county-oh"
       ],
       "groups": [
         {
@@ -717,7 +890,7 @@
       "slug": "mansfield-ashland-oh",
       "name": "Mansfield, Ashland & Bellville",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-14",
       "title": "Public Golf Courses around Mansfield, Ashland & Bellville | Tee Drop",
       "description": "Compare eight regional golf listings in Mansfield, Ashland, Bellville and Perrysville, with qualified rates, short-course options and direct course links.",
       "breadcrumbLabel": "Mansfield, Ashland & Bellville Golf Courses",
@@ -729,7 +902,8 @@
       },
       "introNote": "8 selections from Tee Drop’s directory, not an exhaustive regional list. Town groups are separate destinations; check the location and journey before choosing a course.",
       "relatedHubs": [
-        "wooster-orrville-oh"
+        "wooster-orrville-oh",
+        "mount-vernon-howard-oh"
       ],
       "groups": [
         {
@@ -762,6 +936,202 @@
           "intro": "Pleasant Hill is the Perrysville par 3 listing, not the similarly named Chardon course. Perrysville is a separate destination outside the Mansfield/Ashland groups; call to confirm current prices and availability.",
           "courses": [
             "td-0047"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "medina-hinckley-oh",
+      "name": "Medina, Hinckley & Brunswick",
+      "state": "published",
+      "modified": "2026-09-14",
+      "title": "Golf Courses in Medina, Hinckley & Brunswick | Tee Drop",
+      "description": "Compare eight golf courses in Medina, Hinckley, Brunswick and Valley City, with selected rates, shared-cart qualifications and direct booking links.",
+      "breadcrumbLabel": "Medina, Hinckley & Brunswick Golf Courses",
+      "copy": {
+        "kicker": "Medina, Hinckley, Brunswick & Valley City",
+        "headingPrefix": "Golf Courses in",
+        "title": "Medina, Hinckley & Brunswick",
+        "intro": "Compare Bunker Hill and Shale Creek in Medina, then explore four Hinckley options: Pine Hills, Ironwood, Valleaire and Hinckley Hills. Cossett Creek is grouped in Brunswick and Coppertop separately in Valley City. Use the town groups to choose your location, then compare the selected prices and booking terms before planning a round."
+      },
+      "introNote": "8 selections from Tee Drop’s directory, not an exhaustive regional list. Towns are grouped separately; booking prices and selected fixed rates have different cart and availability qualifications.",
+      "relatedHubs": [
+        "cleveland-west-oh",
+        "akron-oh"
+      ],
+      "groups": [
+        {
+          "title": "Medina",
+          "intro": "Bunker Hill and Shale Creek use their booking pages for current prices. Choose a date and tee time rather than assuming a fixed daily rate.",
+          "courses": [
+            "td-0043",
+            "td-0061"
+          ]
+        },
+        {
+          "title": "Hinckley",
+          "intro": "Pine Hills and Hinckley Hills use booking prices. Compare Ironwood’s selected green fees and separate cart charge with Valleaire’s selected shared-cart prices.",
+          "courses": [
+            "td-0042",
+            "td-0055",
+            "td-0062",
+            "td-0065"
+          ]
+        },
+        {
+          "title": "Brunswick",
+          "intro": "Cossett Creek’s dynamic prices apply to online bookings. Review its cart qualification and evening-league availability guidance before planning a round.",
+          "courses": [
+            "td-0066"
+          ]
+        },
+        {
+          "title": "Separate town: Valley City",
+          "intro": "Coppertop is the Valley City option. Its occasional deal prices are conditional, so check the price for your selected tee time.",
+          "courses": [
+            "td-0044"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "licking-county-oh",
+      "name": "Licking County",
+      "state": "published",
+      "modified": "2026-09-14",
+      "title": "Golf Courses in Licking County | Tee Drop",
+      "description": "Compare golf in Granville, Heath, Johnstown and Pataskala, with selected rates, booking-price fallbacks and payment qualifications.",
+      "breadcrumbLabel": "Licking County Golf Courses",
+      "copy": {
+        "kicker": "Granville, Heath, Johnstown & Pataskala",
+        "headingPrefix": "Golf Courses in",
+        "title": "Licking County: Granville, Heath, Johnstown & Pataskala",
+        "intro": "Explore seven selections across Licking County, grouped by town: Denison and Raccoon Valley in Granville, Mastodon in Heath, Echo Springs, Clover Valley and Kyber Run in Johnstown, and Cumberland Trail in Pataskala. Compare each location separately, then review the selected rates or booking prices for your planned round."
+      },
+      "introNote": "7 selections from Tee Drop’s directory, not an exhaustive county list. This regional guide groups distinct towns; prices and booking terms vary by course.",
+      "relatedHubs": [
+        "zanesville-oh",
+        "mount-vernon-howard-oh"
+      ],
+      "groups": [
+        {
+          "title": "Granville",
+          "intro": "Denison uses dynamic tee-time pricing. Raccoon Valley also directs golfers to its booking page for current prices.",
+          "courses": [
+            "td-0087",
+            "td-0089"
+          ]
+        },
+        {
+          "title": "Heath",
+          "intro": "Mastodon’s selected regular non-member rates distinguish weekdays from weekends and holidays. Confirm the price for your visit.",
+          "courses": [
+            "td-0088"
+          ]
+        },
+        {
+          "title": "Johnstown",
+          "intro": "Echo Springs and Clover Valley use booking prices; Kyber Run provides rate and booking pages. Review Clover Valley’s online reservation, cart and tax terms before booking.",
+          "courses": [
+            "td-0090",
+            "td-0094",
+            "td-0095"
+          ]
+        },
+        {
+          "title": "Pataskala",
+          "intro": "Cumberland Trail’s selected in-season ranges vary by tee time and include a cart. The course does not accept cash payments.",
+          "courses": [
+            "td-0091"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mount-vernon-howard-oh",
+      "name": "Mount Vernon & Howard",
+      "state": "published",
+      "modified": "2026-09-14",
+      "title": "Golf Courses in Mount Vernon & Howard | Tee Drop",
+      "description": "Compare Irish Hills, Vernon View and Chapel Hill in Mount Vernon with Apple Valley in Howard, with qualified selected rates and booking links.",
+      "breadcrumbLabel": "Mount Vernon & Howard Golf Courses",
+      "copy": {
+        "kicker": "Mount Vernon & Howard",
+        "headingPrefix": "Golf Courses in",
+        "title": "Mount Vernon & Howard",
+        "intro": "Compare Irish Hills, Vernon View and Chapel Hill in Mount Vernon, then consider Apple Valley separately in Howard. The town groups keep the locations distinct while bringing their selected prices, payment qualifications and booking links into one regional guide."
+      },
+      "introNote": "4 selections from Tee Drop’s directory, not an exhaustive regional list. Howard is a separate location; use the individual course details to plan your visit.",
+      "relatedHubs": [
+        "mansfield-ashland-oh",
+        "licking-county-oh"
+      ],
+      "groups": [
+        {
+          "title": "Mount Vernon",
+          "intro": "Irish Hills’ published schedule is undated and distinguishes 18-hole cash prices. Vernon View lists 2026 adult rates, while Chapel Hill’s selection covers only adult 18-hole summer prices.",
+          "courses": [
+            "td-0092",
+            "td-0119",
+            "td-0120"
+          ]
+        },
+        {
+          "title": "Separate location: Howard",
+          "intro": "Apple Valley is the Howard option. Its selected adult 18-hole prices include taxes, with carts required Friday–Sunday before 1 PM.",
+          "courses": [
+            "td-0114"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cleveland-east-oh",
+      "name": "Cleveland East",
+      "state": "published",
+      "modified": "2026-09-14",
+      "title": "Golf Courses East of Cleveland | Tee Drop",
+      "description": "Compare golf in Willoughby Hills, Chesterland, Chardon and Painesville, with selected qualified rates, current-pricing fallbacks and direct booking links.",
+      "breadcrumbLabel": "Cleveland East Golf Courses",
+      "copy": {
+        "kicker": "Willoughby Hills, Chesterland, Chardon & Painesville",
+        "headingPrefix": "Golf Courses",
+        "title": "East of Cleveland: Willoughby Hills, Chardon & Painesville",
+        "intro": "Explore five selections east of Cleveland, grouped by their distinct towns: Manakiki in Willoughby Hills, Fowler’s Mill in Chesterland, St. Denis and Pleasant Hill in Chardon, and Painesville Country Club in Painesville. Compare each location separately, then check the selected prices and booking options for your round."
+      },
+      "introNote": "5 selections from Tee Drop’s directory, not an exhaustive regional list. These are separate communities east of Cleveland, not five courses in Cleveland city.",
+      "relatedHubs": [
+        "cleveland-west-oh",
+        "kent-ravenna-oh"
+      ],
+      "groups": [
+        {
+          "title": "Willoughby Hills",
+          "intro": "Manakiki’s selected peak green fees and cart charge are shown separately. Its Willoughby Hills course identity is retained.",
+          "courses": [
+            "td-0049"
+          ]
+        },
+        {
+          "title": "Chesterland",
+          "intro": "Fowler’s Mill uses its booking page for current tee-time prices. Check availability for your chosen visit.",
+          "courses": [
+            "td-0067"
+          ]
+        },
+        {
+          "title": "Chardon",
+          "intro": "St. Denis uses a current-pricing fallback. Pleasant Hill’s selected prices are undated; this is the Chardon course, distinct from Pleasant Hill in Perrysville.",
+          "courses": [
+            "td-0053",
+            "td-0074"
+          ]
+        },
+        {
+          "title": "Painesville",
+          "intro": "Painesville Country Club’s published schedule is labeled 2025. Use its booking page or contact the course for current prices.",
+          "courses": [
+            "td-0068"
           ]
         }
       ]
