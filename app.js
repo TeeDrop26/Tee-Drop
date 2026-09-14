@@ -2263,6 +2263,16 @@ const FEATURED_COURSE_ROTATION = [
 const SEPTEMBER_COURSE_OF_MONTH = "Spring Valley Golf Course";
 // Optional, course-specific approved photography. Unmapped courses keep the text card.
 const FEATURED_COURSE_IMAGES = {
+  "Edgewater Golf Course": {
+    courseIdentifier: "Edgewater Golf Course",
+    filename: "assets/edgewater-course-of-week.webp",
+    alt: "Aerial view of Edgewater Golf Course in Minerva, Ohio",
+    cropPosition: "50% 50%",
+    source: "https://cloud-1de12d.becdn.net/media/original/4e0afb31fd7e87982d722207f0257ff2/487779204-9536656786357361-2454072730400124526-n.jpg",
+    approved: true,
+    permissionNotes: "Bobby approved the photo, crop, local hosting and publication on September 14, 2026, after being informed that rights-holder reuse permission is unconfirmed. No separate rights-holder license is recorded.",
+    creditNotes: "Photo identified as Edgewater Golf Course on its official Minerva website: https://www.edgewatergolfcourse.com/about-us. Photographer and any required attribution are unconfirmed."
+  },
   "Chippewa Golf Club": {
     courseIdentifier: "Chippewa Golf Club",
     filename: "assets/chippewa-course-of-week.webp",
