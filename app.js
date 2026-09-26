@@ -2263,6 +2263,16 @@ const FEATURED_COURSE_ROTATION = [
 const SEPTEMBER_COURSE_OF_MONTH = "Spring Valley Golf Course";
 // Optional, course-specific approved photography. Unmapped courses keep the text card.
 const FEATURED_COURSE_IMAGES = {
+  "Chenoweth Golf Course": {
+    courseIdentifier: "Chenoweth Golf Course",
+    filename: "assets/chenoweth-course-of-week.webp",
+    alt: "Green, red flag and pond at Chenoweth Golf Course in Akron, Ohio",
+    cropPosition: "50% 50%",
+    source: "https://www.chenowethgolf.com/wp-content/uploads/sites/7909/2020/05/home_slider_4.jpg",
+    approved: true,
+    permissionNotes: "Bobby approved the photo, crop, local hosting and publication on September 26, 2026, after being informed that rights-holder reuse permission is unconfirmed. No separate rights-holder license is recorded.",
+    creditNotes: "Photo sourced from Chenoweth Golf Course's official Akron website: https://www.chenowethgolf.com/. Photographer and any required attribution are unconfirmed."
+  },
   "Edgewater Golf Course": {
     courseIdentifier: "Edgewater Golf Course",
     filename: "assets/edgewater-course-of-week.webp",
