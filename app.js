@@ -2515,6 +2515,11 @@ function renderCourseOfMonth() {
 }
 
 function renderFeaturedCourse() {
+  // The seasonal section stays in an inert template during the offseason.
+  if (!featuredCourse) {
+    return;
+  }
+
   const course = courses.find((item) => item.name === getFeaturedCourseName()) || courses[0];
   const buttonText = getCourseButtonText(course);
   const mappedImage = FEATURED_COURSE_IMAGES[course.name];
