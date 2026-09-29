@@ -2,7 +2,7 @@
   "existingPages": [
     {
       "path": "/",
-      "lastmod": "2026-09-13"
+      "lastmod": "2026-09-29"
     },
     {
       "path": "/about.html",
@@ -34,7 +34,7 @@
     {
       "id": "td-0001",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "primaryHub": "new-philadelphia-oh",
       "relatedHubs": []
     },
@@ -54,9 +54,10 @@
     {
       "id": "td-0069",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "primaryHub": "youngstown-oh",
-      "relatedHubs": []
+      "relatedHubs": [],
+      "description": "Mill Creek Golf Course in Boardman: closure status, the September 15 North Course reopening target, and official updates. Confirm before travelling."
     },
     {
       "id": "td-0099",
@@ -166,16 +167,23 @@
     {
       "id": "td-0112",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "primaryHub": "cleveland-west-oh",
-      "relatedHubs": []
+      "relatedHubs": [],
+      "title": "Meadowood Golf Course, Westlake: Rates & Layout | Tee Drop",
+      "description": "Meadowood Golf Course in Westlake: temporary par 3 layouts, posted rates and construction notes. Confirm the current layout with the city before visiting."
     },
     {
       "id": "td-0019",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "primaryHub": "wooster-orrville-oh",
-      "relatedHubs": []
+      "relatedHubs": [],
+      "title": "The Pines Golf Club, Orrville: Rates & Booking | Tee Drop",
+      "description": "Selected rates for The Pines Golf Club in Orrville, Ohio, with cart and senior-rate qualifications and a direct link to check tee times.",
+      "parentLinkLabels": {
+        "wooster-orrville-oh": "Golf courses near Wooster & Orrville"
+      }
     },
     {
       "id": "td-0020",
@@ -306,9 +314,11 @@
     {
       "id": "td-0124",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "primaryHub": "mansfield-ashland-oh",
-      "relatedHubs": []
+      "relatedHubs": [],
+      "title": "Twin Lakes Golf Club, Mansfield: Course Info | Tee Drop",
+      "description": "Twin Lakes Golf Club in Mansfield, Ohio. Find contact details and call for current rates and availability. This is not The Fairways at Twin Lakes in Kent."
     },
     {
       "id": "td-0042",
@@ -484,7 +494,7 @@
       "slug": "new-philadelphia-oh",
       "name": "New Philadelphia / Dover",
       "title": "Public Golf Courses near New Philadelphia & Dover | Tee Drop",
-      "description": "Compare public golf around New Philadelphia and Dover, with course locations, qualified rates and direct booking or information links.",
+      "description": "Compare seven public golf courses near New Philadelphia and Dover, including Oak Shadows, Zoar and Wilkshire. See rate notes and direct course links.",
       "intro": "Plan a round around New Philadelphia and Dover. Compare Oak Shadows in New Philadelphia with courses in the surrounding Tuscarawas County towns, then check rates and availability directly with the course.",
       "coverage": "This guide covers the combined New Philadelphia / Dover market. The towns below are separate locations, not all within either city. It includes six Tuscarawas County listings and Spring Valley in East Sparta as a nearby option to the north; it is not an exhaustive list of every course in the region.",
       "groups": [
@@ -520,7 +530,7 @@
         "intro": "Looking for somewhere to play around New Philadelphia and Dover? Explore these public courses around Tuscarawas County, plus Spring Valley in nearby East Sparta. Compare posted rates and follow the course’s own link to book or get in touch."
       },
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "relatedHubs": [
         "canton-oh",
         "akron-oh",
@@ -649,7 +659,7 @@
       "slug": "youngstown-oh",
       "name": "Youngstown & the Mahoning Valley",
       "state": "published",
-      "modified": "2026-09-13",
+      "modified": "2026-09-29",
       "title": "Public Golf Courses near Youngstown & the Mahoning Valley | Tee Drop",
       "description": "Compare eight Tee Drop listings around Youngstown, Boardman and the Mahoning Valley, with qualified rates, a Mill Creek closure notice and direct course links.",
       "copy": {
@@ -700,10 +710,10 @@
     {
       "slug": "cleveland-west-oh",
       "name": "Cleveland West Side & Western Suburbs",
-      "title": "Public Golf Courses in Cleveland’s Western Suburbs | Tee Drop",
+      "title": "Public Golf Courses on Cleveland’s West Side | Tee Drop",
       "description": "Compare public golf on Cleveland’s west side and in its western suburbs, including Metroparks fees, Meadowood’s temporary par 3 layout and direct course links.",
       "state": "published",
-      "modified": "2026-09-14",
+      "modified": "2026-09-29",
       "copy": {
         "title": "Cleveland's West Side & Western Suburbs",
         "kicker": "Cleveland west side, Westlake & nearby",

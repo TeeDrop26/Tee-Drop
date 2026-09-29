@@ -72,5 +72,12 @@ export function refineCourseDetail(course, body, { esc, external }) {
   replaceOnce(/Nearby suggestions use the directory’s recorded coordinates, not driving times\. Check each course’s own information before making plans\./,
     oak ? 'More public courses around New Philadelphia and Tuscarawas County.' : zoar ? 'More public courses around Zoar and the surrounding towns.'
       : `More public courses around ${esc(course.city.replace(/, OH$/, ''))} and the surrounding towns.`);
+  if (course.id === 'td-0069') {
+    replaceOnce(/<h2 id="rates-title">Temporarily closed<\/h2>/, '<h2 id="rates-title">Is Mill Creek Golf Course open?</h2>');
+    replaceOnce(/<p class="rate-info">[\s\S]*?<\/p>/, table + `<p>On September 15, 2026, Mill Creek MetroParks published an update saying it hoped to reopen the North Course and West Golf Drive by mid-October. This was a target, not a confirmed reopening date. Check the official update before travelling; South Course reopening was not confirmed in that update.</p><p>${external('https://www.millcreekmetroparks.org/mill-creek-golf-course-could-reopen-by-mid-october/', 'September 15 reopening update')}</p>`);
+  }
+  if (course.id === 'td-0124') {
+    replaceOnce(/<p class="course-rate-qualification">[\s\S]*?<\/p>/, table + '<p><a href="/courses/the-fairways-at-twin-lakes-kent-oh/">Looking for The Fairways at Twin Lakes in Kent?</a></p>');
+  }
   return body;
 }

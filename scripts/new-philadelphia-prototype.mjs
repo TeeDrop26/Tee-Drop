@@ -33,8 +33,8 @@ const views = {
     headers: ['When', '18 holes', '9 holes'],
     rows: [['Mon–Thu', '$44–48', '$30'], ['Friday before noon', '$53–56', '—'], ['Friday after noon', '$44–47', '$30'], ['Weekend / holiday before noon', '$65–70', '—'], ['Weekend / holiday noon–2 PM', '$57–60', '—'], ['Weekend / holiday after 2 PM', '$50–55', '$32–35*']],
     qualification: '*9-hole rate is listed for weekends after 2 PM; confirm holidays. — No rate listed for that time.',
-    notice: 'Aeration: closed September 14–16, 2026. Reopens September 17.',
-    expectedNote: "Closed September 14–16, 2026 for aeration; reopens September 17. Open Zoar's booking page to check availability."
+    notice: 'September 2026 aeration: the posted closure was September 14–16, with a planned September 17 reopening. Confirm current availability with Zoar.',
+    expectedNote: "September 2026 aeration: the posted closure was September 14–16, with a planned September 17 reopening. Confirm current availability with Zoar."
   },
   'td-0003': {
     expected: '2026 posted: weekday 18 w/cart $45, 9 w/cart $30; weekend/holiday 18 $65; after 2 PM 18 $55; weekend 9 $40 PM only.',
@@ -96,7 +96,7 @@ export function renderAreaGuide(area, { get, esc, external, action, coursePath, 
     const table = v.rows ? `<table class="np-rates"><caption>${esc(v.caption)}</caption><thead><tr>${v.headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${v.rows.map(row => `<tr><th scope="row">${esc(row[0])}</th>${row.slice(1).map(cell => `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : `<h4>${esc(v.caption)}</h4><p class="np-message">${esc(v.message)}</p>`;
     return `<article class="np-card" id="${c.id}" aria-labelledby="name-${c.id}">
       <header class="np-identity"><p class="course-meta">${esc(c.city)}</p><h3 id="name-${c.id}">${isPilot(c) ? `<a href="${coursePath(c)}">${esc(c.name)}</a>` : esc(c.name)}</h3></header>
-      <div class="np-rate-content">${v.notice ? `<p class="np-notice">${esc(v.notice)}</p>` : ''}${table}${v.qualification ? `<p class="np-qualification">${esc(v.qualification)}</p>` : ''}${v.contact ? `<p class="np-contact">${esc(v.contact)}</p>` : ''}</div>
+      <div class="np-rate-content">${v.notice ? `<p class="np-notice">${esc(v.notice)}</p>` : ''}${table}${area.slug === 'youngstown-oh' && id === 'td-0069' ? '<p class="np-notice">A September 15 update targets mid-October for the North Course; reopening is not confirmed.</p>' : ''}${v.qualification ? `<p class="np-qualification">${esc(v.qualification)}</p>` : ''}${v.contact ? `<p class="np-contact">${esc(v.contact)}</p>` : ''}</div>
       <div class="np-actions">${action(c)}${isPilot(c) ? `<a class="seo-detail" href="${coursePath(c)}">Course Details<span class="visually-hidden">: ${esc(c.name)}</span></a>` : ''}</div>
       <p class="np-review">${c.rateInfo.status === 'closed' ? 'Status reviewed' : 'Rates reviewed'} <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time>${!rateSourceAllowed(c) ? '' : `<span aria-hidden="true"> · </span>${external(c.rateInfo.sourceUrl, c.rateInfo.status === 'closed' ? 'View closure updates' : 'View rate source')}`}</p>
     </article>`;

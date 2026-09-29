@@ -17,7 +17,7 @@ const courses = [
       time: "Open link",
       players: 4,
       price: null,
-      note: "Closed September 14–16, 2026 for aeration; reopens September 17. Open Zoar's booking page to check availability."
+      note: "September 2026 aeration: the posted closure was September 14–16, with a planned September 17 reopening. Confirm current availability with Zoar."
     },
     teeTimes: []
   },
