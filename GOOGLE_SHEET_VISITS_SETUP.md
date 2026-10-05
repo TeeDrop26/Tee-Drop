@@ -1,5 +1,7 @@
 # Tee Drop Visit Tracking
 
+> Historical tracking reference. This review branch migrates the frontend to Tracking V2; see [tracking/README.md](tracking/README.md). The legacy schemas below remain supported for cached clients but are not emitted by the new frontend. Tracking V2 is not deployed or enabled yet.
+
 The existing Tee Drop Apps Script web app records activity in separate Google Sheet tabs. Keep its existing `/exec` deployment URL and do not change the existing course-click or indoor-facility-click column order.
 
 ## Production Tabs

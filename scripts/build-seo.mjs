@@ -1,3 +1,4 @@
+import { trackingScripts, trackingOutputs } from './tracking-metadata.mjs';
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { rateSourceAllowed } from './source-publication.mjs';
@@ -77,8 +78,8 @@ const dateLabel = checked => {
   assert(!Number.isNaN(date.valueOf()), `Invalid review date: ${checked}`);
   return `<time datetime="${date.toISOString().slice(0, 10)}">${esc(checked)}</time>`;
 };
-const external = (url, text, css = '') => `<a${css ? ` class="${css}"` : ''} href="${href(url)}" target="_blank" rel="noopener noreferrer">${esc(text)}<span class="visually-hidden"> (opens in a new tab)</span></a>`;
-const action = c => external(c.bookingUrl, button(c), 'book-link seo-outbound');
+const external = (url, text, css = '', tracking = {}) => `<a${tracking.courseId ? ` data-tracking-course="${esc(tracking.courseId)}" data-tracking-action="${esc(tracking.actionType)}"` : ''}${css ? ` class="${css}"` : ''} href="${href(url)}" target="_blank" rel="noopener noreferrer">${esc(text)}<span class="visually-hidden"> (opens in a new tab)</span></a>`;
+const action = c => external(c.bookingUrl, button(c), 'book-link seo-outbound', { courseId: c.id, actionType: closed(c) ? 'course_updates' : c.bookingLabel ? 'course_info' : 'booking' });
 const publisher = { '@type': 'Organization', '@id': origin + '/#organization', name: 'Tee Drop', url: origin + '/' };
 function breadcrumb(items) {
   return { '@type': 'BreadcrumbList', itemListElement: items.map((i, n) => ({ '@type': 'ListItem', position: n + 1, name: i.name, item: origin + i.path })) };
@@ -120,12 +121,13 @@ function shell({ title, description, url, items, graph, body }) {
     <main id="main-content" tabindex="-1">${body}</main>
     <footer class="site-footer"><div class="footer-brand"><img src="/brand-assets/tee-drop-logo-system/tee-drop-horizontal.svg" alt="Tee Drop"><p>An independent Ohio public-golf directory. Tee Drop is not the course owner or booking provider.</p></div><div class="footer-links"><a href="/">Explore the full directory</a><a href="/about.html">About Tee Drop</a><p>Rates and availability can change. Confirm details with the course before making plans. Outbound links open in a new tab.</p></div></footer>
   </div>
+${trackingScripts}
 </body>
 </html>
 `.replace(/[ \t]+$/gm, '');
 }
 function review(c) {
-  return `<p class="seo-review">Tee Drop rate review: ${dateLabel(c.rateInfo.checked)}. ${rateSourceAllowed(c) ? external(c.rateInfo.sourceUrl, 'Rate source') : ''}</p>`;
+  return `<p class="seo-review">Tee Drop rate review: ${dateLabel(c.rateInfo.checked)}. ${rateSourceAllowed(c) ? external(c.rateInfo.sourceUrl, 'Rate source', '', { courseId: c.id, actionType: closed(c) ? 'course_updates' : 'rate_source' }) : ''}</p>`;
 }
 function card(c) {
   return `<article class="seo-course-card" id="${c.id}">
@@ -183,7 +185,7 @@ for (const id of config.pilots) {
     <div class="seo-detail-layout"><section class="seo-rate-panel" aria-labelledby="rates-title"><p class="section-kicker">${closed(c) ? 'Course status' : 'Plan your round'}</p><h2 id="rates-title">${closed(c) ? 'Temporarily closed' : 'Rates & important details'}</h2><p class="seo-status${closed(c) ? ' seo-closed' : ''}">${esc(status(c))}${c.rateInfo.status === 'undated' ? ' · Undated source; confirm current pricing' : ''}</p><p class="rate-info seo-full-rate">${esc(summary(c))}</p>${review(c)}${note(c) ? `<div class="seo-notice"><h3>${closed(c) ? 'Reopening information' : 'Before you go'}</h3><p>${esc(note(c))}</p></div>` : ''}<p class="seo-small">${closed(c) ? 'This listing remains available for closure information. Check the official update before planning a visit.' : 'Rates are not live availability. Confirm current prices, cart terms and any restrictions directly with the course.'}</p></section>
     <aside class="seo-action-panel" aria-labelledby="course-link-title"><p class="section-kicker">Direct course link</p><h2 id="course-link-title">${closed(c) ? 'Follow reopening updates' : c.bookingLabel ? 'Contact the course' : 'Check tee times'}</h2><p>${closed(c) ? 'The course is temporarily closed. Use its official information page for updates.' : c.bookingLabel ? 'Use the course’s information page to confirm availability and rates.' : c.name === 'Sweetbriar Golf Club' ? 'Choose from the course’s booking options on its official booking page.' : 'Availability and reservations are handled by the course or its booking provider.'}</p>${action(c)}<p class="seo-small">You’ll leave Tee Drop. Opens in a new tab.</p>${parents.length ? `<div class="seo-parent-links"><h3>Explore this area</h3>${parents.map(a => `<a href="${areaPath(a)}">${esc(pageConfig.parentLinkLabels?.[a.slug] || a.breadcrumbLabel || a.name + ' golf courses')}</a>`).join('')}</div>` : '<p><a href="/#courseDirectory">Back to all Ohio courses</a></p>'}</aside></div>
     <section class="seo-facts seo-section"><h2>About this listing</h2><p>${esc(courseEntity.description)} Tee Drop is an independent directory, not the course’s official website.</p>${characteristics.length ? `<dl>${characteristics.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : ''}</section>
-    <section class="seo-section" aria-labelledby="nearby-courses"><p class="section-kicker">More places to look</p><h2 id="nearby-courses">Nearby Tee Drop courses</h2><p>Nearby suggestions use the directory’s recorded coordinates, not driving times. Check each course’s own information before making plans.</p><ul class="seo-nearby">${nearby.map(({ course: n }) => `<li><div><strong>${isPilot(n) ? `<a href="${coursePath(n)}">${esc(n.name)}</a>` : esc(n.name)}</strong><span>${esc(n.city)}${closed(n) ? ' · Temporarily closed' : ''}</span></div>${isPilot(n) ? `<a class="seo-detail" href="${coursePath(n)}">Course details<span class="visually-hidden">: ${esc(n.name)}</span></a>` : external(n.bookingUrl, button(n), 'seo-detail')}</li>`).join('')}</ul></section>`;
+    <section class="seo-section" aria-labelledby="nearby-courses"><p class="section-kicker">More places to look</p><h2 id="nearby-courses">Nearby Tee Drop courses</h2><p>Nearby suggestions use the directory’s recorded coordinates, not driving times. Check each course’s own information before making plans.</p><ul class="seo-nearby">${nearby.map(({ course: n }) => `<li><div><strong>${isPilot(n) ? `<a href="${coursePath(n)}">${esc(n.name)}</a>` : esc(n.name)}</strong><span>${esc(n.city)}${closed(n) ? ' · Temporarily closed' : ''}</span></div>${isPilot(n) ? `<a class="seo-detail" href="${coursePath(n)}">Course details<span class="visually-hidden">: ${esc(n.name)}</span></a>` : external(n.bookingUrl, button(n), 'seo-detail', { courseId: n.id, actionType: closed(n) ? 'course_updates' : n.bookingLabel ? 'course_info' : 'booking' })}</li>`).join('')}</ul></section>`;
   body = refineCourseDetail(c, body, { esc, external });
   outputs.set(url.slice(1) + 'index.html', shell({ title, description, url, items, graph, body }));
 }
@@ -207,6 +209,7 @@ const pages = [...config.existingPages, ...config.areas.map(a => ({ path: areaPa
 assert.equal(new Set(pages.map(p => p.path)).size, pages.length, 'Duplicate canonical URL');
 assert.equal(pages.length, config.existingPages.length + config.areas.length + config.pilots.length);
 if (preview) {
+  for (const file of ['tracking.js', 'tracking-config.js']) outputs.set(file, read(file));
   outputs.set('robots.txt', 'User-agent: *\nDisallow: /\n');
   outputs.set('preview-manifest.json', JSON.stringify({ mode: 'local-review-only', publishedPaths: pages.filter(p => !manifest.areas.some(a => a.state === 'draft' && areaPath(a) === p.path) && !manifest.courses.some(c => c.state === 'draft' && coursePath(get(c.id)) === p.path)).map(p => p.path), draftPaths: [...manifest.areas.filter(a => a.state === 'draft').map(areaPath), ...manifest.courses.filter(c => c.state === 'draft').map(c => coursePath(get(c.id)))], sitemapPurpose: 'Local review only; root published sitemap unchanged' }, null, 2) + '\n');
   for (const [file, html] of outputs) if (file.endsWith('.html')) outputs.set(file, html.replace('<head>', '<head>\n  <meta name="robots" content="noindex, nofollow">'));
@@ -220,6 +223,10 @@ if (preview) {
   }
 }
 outputs.set('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p => `  <url><loc>${origin}${p.path}</loc><lastmod>${p.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+const indoorSource = read('indoor.js');
+const facilities = JSON.parse(JSON.stringify(vm.runInNewContext(indoorSource.slice(0, indoorSource.indexOf('\n];') + 3) + ';indoorFacilities', {}, { timeout: 1000 })));
+assert.equal(new Set(facilities.map(f => f.id)).size, facilities.length, 'Indoor IDs must be permanent and unique');
+for (const [file, content] of trackingOutputs({ registry, facilities, courses, areas: config.areas, coursePages: manifest.courses.filter(selected), outputs })) outputs.set(file, content);
 let drift = false;
 for (const [file, content] of outputs) {
   if (check) {

@@ -1,5 +1,6 @@
 const indoorFacilities = [
   {
+    id: "indoor-0001",
     name: "Beers and Birdies",
     city: "New Philadelphia, OH",
     area: "Tuscarawas County",
@@ -22,6 +23,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0002",
     name: "Willie's Custom Golf Center",
     city: "Strasburg, OH",
     area: "Tuscarawas County",
@@ -45,6 +47,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0003",
     name: "Under Par Indoor Golf",
     city: "Sugarcreek, OH",
     area: "Tuscarawas County",
@@ -62,6 +65,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0004",
     name: "Golf Garage Minerva",
     city: "Minerva, OH",
     area: "Canton / Stark County",
@@ -84,6 +88,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0005",
     name: "Mishler Birdie Barn",
     city: "Millersburg, OH",
     area: "Wayne / Holmes County",
@@ -101,6 +106,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0006",
     name: "X-Golf North Canton",
     city: "Canton, OH",
     area: "Canton / Stark County",
@@ -124,6 +130,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0007",
     name: "Tee It Up Canton",
     city: "North Canton, OH",
     area: "Canton / Stark County",
@@ -147,6 +154,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0008",
     name: "The Back Nine Golf - North Canton",
     city: "Canton, OH",
     area: "Canton / Stark County",
@@ -169,6 +177,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0009",
     name: "The Back Nine Golf - Wooster",
     city: "Wooster, OH",
     area: "Wayne / Holmes County",
@@ -191,6 +200,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0010",
     name: "Ohio Golf Club",
     city: "Akron, OH",
     area: "Akron / Summit County",
@@ -213,6 +223,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0011",
     name: "Tee Time Anytime",
     city: "Akron, OH",
     area: "Akron / Summit County",
@@ -235,6 +246,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0012",
     name: "X-Golf Fairlawn",
     city: "Akron, OH",
     area: "Akron / Summit County",
@@ -258,6 +270,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0013",
     name: "The Corner Club",
     city: "Akron / Bath, OH",
     area: "Akron / Summit County",
@@ -283,6 +296,7 @@ const indoorFacilities = [
     }
   },
   {
+    id: "indoor-0014",
     name: "1899 Indoor Golf",
     city: "Twinsburg, OH",
     area: "Akron / Summit County",
@@ -306,11 +320,6 @@ const indoorFacilities = [
   }
 ];
 
-const INDOOR_TRACKING_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBXBZrOxn6hbDb-GWPV7oORMCG4sb1VTYGKLEpRmezpPYmuL0vmwdPKwvl-qpOsgYtgg/exec";
-const INDOOR_SESSION_ID_KEY = "teeDropIndoorSessionId";
-const INDOOR_VISIT_STORAGE_KEY = "teeDropIndoorVisits";
-const INDOOR_VISIT_RECORDED_PREFIX = "teeDropIndoorVisitRecorded:";
-
 let indoorUserLocation = null;
 
 const indoorSearch = document.querySelector("#indoorSearch");
@@ -328,12 +337,12 @@ indoorSearch.addEventListener("input", renderIndoorFacilities);
 indoorBookingFilter.addEventListener("change", renderIndoorFacilities);
 indoorFeatureFilters.forEach((filter) => filter.addEventListener("change", renderIndoorFacilities));
 indoorLocationButton.addEventListener("click", getIndoorUserLocation);
-document.addEventListener("click", handleIndoorLinkClick);
+
 
 indoorStats.textContent = `${indoorFacilities.length} indoor golf locations \u00b7 Book direct`;
 indoorCurrentYear.textContent = new Date().getFullYear();
 renderIndoorFacilities();
-trackIndoorPageView();
+
 
 function renderIndoorFacilities() {
   indoorFacilityList.textContent = "";
@@ -409,9 +418,9 @@ function renderIndoorFacilities() {
     bookingLink.href = facility.bookingUrl;
     bookingLink.textContent = facility.bookingLabel === "online" ? "View Booking" : "Call / Info";
     bookingLink.setAttribute("aria-label", `${bookingLink.textContent} for ${facility.name}`);
-    bookingLink.dataset.facilityName = facility.name;
-    bookingLink.dataset.facilityCity = facility.city;
-    bookingLink.dataset.bookingType = facility.bookingLabel;
+    bookingLink.dataset.trackingFacility = facility.id;
+    bookingLink.dataset.trackingAction = facility.bookingLabel === "online" ? "booking" : "course_info";
+    bookingLink.dataset.trackingPlacement = "indoor_list";
 
     indoorFacilityList.append(card);
   });
@@ -471,137 +480,6 @@ function getIndoorBookingNote(facility) {
   }
 
   return "Contact the facility to confirm current availability, pricing, and booking details.";
-}
-
-function handleIndoorLinkClick(event) {
-  if (!(event.target instanceof Element)) {
-    return;
-  }
-
-  const link = event.target.closest(".indoor-book-link[data-facility-name]");
-
-  if (!link) {
-    return;
-  }
-
-  trackIndoorClick({
-    facility: link.dataset.facilityName,
-    city: link.dataset.facilityCity,
-    bookingType: link.dataset.bookingType,
-    bookingUrl: link.href
-  });
-}
-
-function trackIndoorClick(click) {
-  const record = {
-    eventType: "indoor_click",
-    facility: click.facility,
-    city: click.city,
-    source: "indoor golf",
-    trafficSource: getIndoorTrafficSource(),
-    bookingType: click.bookingType,
-    bookingUrl: click.bookingUrl,
-    page: location.href,
-    createdAt: new Date().toISOString()
-  };
-
-  if (isIndoorLocalPreview() || !INDOOR_TRACKING_ENDPOINT) {
-    saveLocalIndoorClick(record);
-    return;
-  }
-
-  fetch(INDOOR_TRACKING_ENDPOINT, {
-    method: "POST",
-    body: JSON.stringify(record),
-    mode: "no-cors",
-    keepalive: true
-  }).catch(() => {});
-}
-
-function trackIndoorPageView() {
-  const trafficSource = getIndoorTrafficSource();
-  const visitKey = `${INDOOR_VISIT_RECORDED_PREFIX}${trafficSource}`;
-
-  if (sessionStorage.getItem(visitKey)) {
-    return;
-  }
-
-  const record = {
-    eventType: "indoor_page_view",
-    trafficSource,
-    page: location.pathname,
-    referrer: getIndoorReferrer(),
-    sessionId: getIndoorSessionId(),
-    createdAt: new Date().toISOString()
-  };
-
-  sessionStorage.setItem(visitKey, "true");
-
-  if (isIndoorLocalPreview() || !INDOOR_TRACKING_ENDPOINT) {
-    saveLocalIndoorVisit(record);
-    return;
-  }
-
-  fetch(INDOOR_TRACKING_ENDPOINT, {
-    method: "POST",
-    body: JSON.stringify(record),
-    mode: "no-cors",
-    keepalive: true
-  }).catch(() => {});
-}
-
-function getIndoorTrafficSource() {
-  const source = new URLSearchParams(location.search).get("source");
-
-  if (!source) {
-    return "direct";
-  }
-
-  return source.trim().toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 60) || "direct";
-}
-
-function getIndoorReferrer() {
-  if (!document.referrer) {
-    return "";
-  }
-
-  try {
-    const referrer = new URL(document.referrer);
-    return `${referrer.origin}${referrer.pathname}`;
-  } catch {
-    return "";
-  }
-}
-
-function getIndoorSessionId() {
-  const existingSessionId = sessionStorage.getItem(INDOOR_SESSION_ID_KEY);
-
-  if (existingSessionId) {
-    return existingSessionId;
-  }
-
-  const sessionId = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
-    ? crypto.randomUUID()
-    : `indoor-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-
-  sessionStorage.setItem(INDOOR_SESSION_ID_KEY, sessionId);
-  return sessionId;
-}
-
-function isIndoorLocalPreview() {
-  return location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
-}
-
-function saveLocalIndoorClick(record) {
-  const clicks = JSON.parse(localStorage.getItem("teeDropIndoorClicks") || "[]");
-  clicks.push(record);
-  localStorage.setItem("teeDropIndoorClicks", JSON.stringify(clicks));
-}
-
-function saveLocalIndoorVisit(record) {
-  const visits = JSON.parse(localStorage.getItem(INDOOR_VISIT_STORAGE_KEY) || "[]");
-  visits.push(record);
-  localStorage.setItem(INDOOR_VISIT_STORAGE_KEY, JSON.stringify(visits));
 }
 
 function calculateIndoorDistance(lat1, lon1, lat2, lon2) {

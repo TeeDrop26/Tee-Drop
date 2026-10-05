@@ -54,42 +54,9 @@ August 10, 2026. Do not advance dates on a no-op rebuild. For future significant
 guide content updates, explicitly update the editorial date; use per-page dates
 when updates no longer apply across the full pilot set.
 
-## Tracking decision awaiting review
+## Tracking V2 review build
 
-As of September 13, all three area guides and all eight course-detail pages load
-only JSON-LD scripts, which do not execute tracking. They record no page-view
-events, including direct/search arrivals, reloads, or navigation between guides.
-Their primary View Booking, Call / Info and Updates / Info actions, rate-source
-links, and external nearby-course actions produce no click events. Internal course
-details, area links, breadcrumbs, header/footer links and directory links are also
-untracked. Homepage discovery links do not record navigation clicks either.
-
-Returning to the homepage can trigger its existing outdoor_page_view, subject to
-its session/traffic-source deduplication. Visiting Indoor can trigger its existing
-indoor tracking. Neither reconstructs the preceding guide visit or click. Provider
-booking completions are not measured by this repository. This describes Tee Drop's
-checked-in tracking only, not any independent hosting logs or provider analytics.
-
-The existing homepage handler requires .book-link[data-course-name] and attaches
-course name, city, source and booking type. Static anchors have no such tracking
-attributes or handler; nearby and rate-source links also use other CSS classes.
-Do not load app.js on guides: its initialization expects homepage DOM elements.
-
-A separately approved implementation would need a small shared tracking module
-that works without the homepage DOM, included by the static shell, plus explicit
-page identity and event attributes on the intended anchors. Define guide page-view
-events and deduplication, stable course IDs/slugs, area identity, source page,
-traffic attribution, and action type. Proposed booking source values are
-course detail page and area page; distinguish nearby placement, information and
-closure actions from bookings. Rate-source and internal-navigation events need
-separate definitions. Review the existing Apps Script receiver, sheet columns and
-reports to ensure they accept and classify these events; update them if needed.
-Preserve existing homepage/Indoor contracts, preview guards, and safe navigation,
-then verify one intended event per action without duplicate counting. Booking
-completion attribution would additionally require provider support.
-
-No tracking implementation or behavior change is included. This remains a separate
-approval decision; this release retains the documented measurement gap.
+This branch includes shared page-view, exploration, and outbound tracking across generated pages. Production sending is disabled pending release review. See [the tracking contract and release notes](../tracking/README.md). Generated page and action metadata is built by scripts/build-seo.mjs; do not manually wire individual generated pages. Historical tracking definitions remain separate.
 
 ## Remaining discovery work
 

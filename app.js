@@ -2221,11 +2221,6 @@ const courses = [
   }
 ];
 
-const TRACKING_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBXBZrOxn6hbDb-GWPV7oORMCG4sb1VTYGKLEpRmezpPYmuL0vmwdPKwvl-qpOsgYtgg/exec";
-const TRACKING_FORM_ENDPOINT = "https://formspree.io/f/mpqbbkpr";
-const OUTDOOR_SESSION_ID_KEY = "teeDropOutdoorSessionId";
-const OUTDOOR_VISIT_STORAGE_KEY = "teeDropOutdoorVisits";
-const OUTDOOR_VISIT_RECORDED_PREFIX = "teeDropOutdoorVisitRecorded:";
 const FEATURED_ROTATION_START_DATE = "2026-06-01";
 const FEATURED_BEFORE_ROTATION = "Wilkshire Golf Course";
 const FEATURED_COURSE_ROTATION = [
@@ -2334,14 +2329,14 @@ courseSearch.addEventListener("input", resetCourseLimitAndRender);
 showMoreButton.addEventListener("click", showMoreCourses);
 backToFiltersButton.addEventListener("click", scrollToCourseFilters);
 window.addEventListener("scroll", updateBackToFiltersButton, { passive: true });
-document.addEventListener("click", handleCourseLinkClick);
+
 
 updateHomepageStats();
 updateFooterYear();
 renderTeeTimes();
 renderCourseOfMonth();
 renderFeaturedCourse();
-trackOutdoorPageView();
+
 
 function getUserLocation() {
   if (!navigator.geolocation) {
@@ -2567,117 +2562,11 @@ function renderFeaturedCourse() {
 }
 
 function addTrackingData(link, course, source) {
-  link.dataset.courseName = course.name;
-  link.dataset.courseCity = course.city;
-  link.dataset.courseSource = source;
-  link.dataset.bookingType = getBookingType(course);
-}
-
-function handleCourseLinkClick(event) {
-  if (!(event.target instanceof Element)) {
-    return;
-  }
-
-  const link = event.target.closest(".book-link[data-course-name]");
-
-  if (!link) {
-    return;
-  }
-
-  trackCourseClick({
-    course: link.dataset.courseName,
-    city: link.dataset.courseCity,
-    source: link.dataset.courseSource,
-    bookingType: link.dataset.bookingType,
-    url: link.href
-  });
-}
-
-function trackCourseClick(click) {
-  const createdAt = new Date();
-  const clickedAtEastern = formatEasternDateTime(createdAt);
-  const clickRecord = {
-    eventType: "course_click",
-    course: click.course,
-    city: click.city,
-    source: click.source,
-    trafficSource: getTrafficSource(),
-    bookingType: click.bookingType,
-    bookingUrl: click.url,
-    message: `Course click: ${click.course} from ${click.source} at ${clickedAtEastern} Eastern`,
-    page: location.href,
-    timeEastern: clickedAtEastern,
-    clickedAtEastern,
-    createdAt: createdAt.toISOString()
-  };
-
-  if (isLocalPreview() || (!TRACKING_SHEET_ENDPOINT && !TRACKING_FORM_ENDPOINT)) {
-    saveLocalCourseClick(clickRecord);
-    return;
-  }
-
-  if (TRACKING_SHEET_ENDPOINT) {
-    sendSheetClick(clickRecord);
-    return;
-  }
-
-  sendFormspreeClick(clickRecord, click.course);
-}
-
-function trackOutdoorPageView() {
-  const trafficSource = getTrafficSource();
-  const visitKey = `${OUTDOOR_VISIT_RECORDED_PREFIX}${trafficSource}`;
-
-  if (sessionStorage.getItem(visitKey)) {
-    return;
-  }
-
-  const record = {
-    eventType: "outdoor_page_view",
-    trafficSource,
-    page: location.pathname,
-    referrer: getOutdoorReferrer(),
-    sessionId: getOutdoorSessionId(),
-    createdAt: new Date().toISOString()
-  };
-
-  sessionStorage.setItem(visitKey, "true");
-
-  if (isLocalPreview() || !TRACKING_SHEET_ENDPOINT) {
-    saveLocalOutdoorVisit(record);
-    return;
-  }
-
-  fetch(TRACKING_SHEET_ENDPOINT, {
-    method: "POST",
-    body: JSON.stringify(record),
-    mode: "no-cors",
-    keepalive: true
-  }).catch(() => {});
-}
-
-function sendSheetClick(clickRecord) {
-  fetch(TRACKING_SHEET_ENDPOINT, {
-    method: "POST",
-    body: JSON.stringify(clickRecord),
-    mode: "no-cors",
-    keepalive: true
-  }).catch(() => {});
-}
-
-function sendFormspreeClick(clickRecord, courseName) {
-  fetch(TRACKING_FORM_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      ...clickRecord,
-      _subject: `Tee Drop course click: ${courseName}`
-    }),
-    keepalive: true
-  }).catch(() => {});
+  const id = window.TEE_DROP_TRACKING_METADATA?.courseKeys[course.name + "\n" + course.city];
+  if (!id) return;
+  link.dataset.trackingCourse = id;
+  link.dataset.trackingAction = isCourseClosed(course) ? "course_updates" : course.bookingLabel ? "course_info" : "booking";
+  link.dataset.trackingPlacement = ({ "course list": "course_list", "course of the month": "course_of_month", "course of the week": "course_of_week" })[source];
 }
 
 function matchesSearch(course, searchTerm) {
@@ -2762,21 +2651,6 @@ function getFeaturedCourseName(date = new Date()) {
   return FEATURED_COURSE_ROTATION[weekIndex];
 }
 
-function formatEasternDateTime(date) {
-  if (typeof Intl === "undefined" || !Intl.DateTimeFormat) {
-    return formatLocalDateTime(date);
-  }
-
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/New_York",
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-    hour12: true
-  }).format(date);
-}
 
 function formatLocalDateTime(date) {
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -2807,62 +2681,6 @@ function getDaysBetweenDates(startDateString, endDateString) {
 function getDateValue(dateString) {
   const [year, month, day] = dateString.split("-").map(Number);
   return Date.UTC(year, month - 1, day);
-}
-
-function isLocalPreview() {
-  return location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
-}
-
-function getTrafficSource() {
-  const source = new URLSearchParams(location.search).get("source");
-
-  if (!source) {
-    return "direct";
-  }
-
-  return source.trim().toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 60) || "direct";
-}
-
-function getOutdoorReferrer() {
-  if (!document.referrer) {
-    return "";
-  }
-
-  try {
-    const referrer = new URL(document.referrer);
-    return `${referrer.origin}${referrer.pathname}`;
-  } catch {
-    return "";
-  }
-}
-
-function getOutdoorSessionId() {
-  const existingSessionId = sessionStorage.getItem(OUTDOOR_SESSION_ID_KEY);
-
-  if (existingSessionId) {
-    return existingSessionId;
-  }
-
-  const sessionId = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
-    ? crypto.randomUUID()
-    : `outdoor-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-
-  sessionStorage.setItem(OUTDOOR_SESSION_ID_KEY, sessionId);
-  return sessionId;
-}
-
-function saveLocalCourseClick(click) {
-  const clicks = JSON.parse(localStorage.getItem("teeDropCourseClicks") || "[]");
-
-  clicks.push(click);
-  localStorage.setItem("teeDropCourseClicks", JSON.stringify(clicks));
-}
-
-function saveLocalOutdoorVisit(record) {
-  const visits = JSON.parse(localStorage.getItem(OUTDOOR_VISIT_STORAGE_KEY) || "[]");
-
-  visits.push(record);
-  localStorage.setItem(OUTDOOR_VISIT_STORAGE_KEY, JSON.stringify(visits));
 }
 
 function getBookingType(course) {

@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { receiver } from './tracking-fixtures.mjs';
+const events=await (await fetch('http://127.0.0.1:4177/__review/events')).json();
+const r=receiver();for(const e of events)assert.equal(r.post(e).ok,true);
+const main=events.filter(e=>e.sessionId===events[0].sessionId);
+assert.equal(main.filter(e=>e.eventType==='page_view').length,5);
+assert.equal(main.filter(e=>e.eventType==='outbound_click').length,4);
+assert(main.some(e=>e.pageType==='area'&&e.eventType==='navigation_click'&&e.targetCourseId==='td-0001'));
+assert(main.some(e=>e.pageType==='indoor'&&e.actionType==='course_info'&&e.targetFacilityId==='indoor-0002'));
+assert(!JSON.stringify(events).includes('Willie'));
+const report={eventCount:events.length,pageViews:5,outboundClicks:4,oneSession:new Set(main.map(e=>e.sessionId)).size===1,events};
+fs.writeFileSync(new URL('../tracking/lab/browser-journey.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({...report,events:undefined}));

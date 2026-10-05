@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { rateSourceAllowed } from './source-publication.mjs';
 import { getReviewedRateView } from './new-philadelphia-prototype.mjs';
@@ -15,7 +16,7 @@ const manifest = JSON.parse(read('seo/pages.json'));
 const previewDirectory = manifest.previewDirectory || 'planning/checkpoint-1/site';
 const get = id => { const r = registry.find(r => r.id === id); return {...courses.find(c => c.name === r.name && c.city === r.city), id}; };
 test('selected published output and both build modes are reproducible', () => {
-  for (const args of [[], ['--preview']]) execFileSync(process.execPath, [new URL('scripts/build-seo.mjs',root).pathname.replace(/^\/(\w:)/,'$1'), ...args, '--check']);
+  for (const args of [[], ['--preview']]) execFileSync(process.execPath, [fileURLToPath(new URL('scripts/build-seo.mjs',root)), ...args, '--check']);
   const published = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]);
   const preview = [...read(previewDirectory+'/sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]);
   assert.equal(published.length, manifest.existingPages.length + manifest.courses.filter(c=>c.state==='published').length + manifest.areas.filter(a=>a.state==='published').length); assert.equal(preview.length, manifest.existingPages.length + manifest.courses.length + manifest.areas.length);
@@ -51,6 +52,6 @@ test('preview date and explicit hub relationships match the rendered output', ()
     if(parent)assert.equal(crumbs[1].item,`https://www.playteedrop.com/golf-courses/${parent}/`);
     else assert.equal(crumbs.length,2);
     assert(html.includes('name="robots" content="noindex, nofollow"'));
-    assert(!/<script(?! type="application\/ld\+json")/.test(html));
+    assert.equal((html.match(/src="\/tracking.js"/g)||[]).length, 1);
   }
 });

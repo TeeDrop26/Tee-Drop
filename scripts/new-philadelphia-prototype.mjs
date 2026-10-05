@@ -98,7 +98,7 @@ export function renderAreaGuide(area, { get, esc, external, action, coursePath, 
       <header class="np-identity"><p class="course-meta">${esc(c.city)}</p><h3 id="name-${c.id}">${isPilot(c) ? `<a href="${coursePath(c)}">${esc(c.name)}</a>` : esc(c.name)}</h3></header>
       <div class="np-rate-content">${v.notice ? `<p class="np-notice">${esc(v.notice)}</p>` : ''}${table}${area.slug === 'youngstown-oh' && id === 'td-0069' ? '<p class="np-notice">A September 15 update targets mid-October for the North Course; reopening is not confirmed.</p>' : ''}${v.qualification ? `<p class="np-qualification">${esc(v.qualification)}</p>` : ''}${v.contact ? `<p class="np-contact">${esc(v.contact)}</p>` : ''}</div>
       <div class="np-actions">${action(c)}${isPilot(c) ? `<a class="seo-detail" href="${coursePath(c)}">Course Details<span class="visually-hidden">: ${esc(c.name)}</span></a>` : ''}</div>
-      <p class="np-review">${c.rateInfo.status === 'closed' ? 'Status reviewed' : 'Rates reviewed'} <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time>${!rateSourceAllowed(c) ? '' : `<span aria-hidden="true"> · </span>${external(c.rateInfo.sourceUrl, c.rateInfo.status === 'closed' ? 'View closure updates' : 'View rate source')}`}</p>
+      <p class="np-review">${c.rateInfo.status === 'closed' ? 'Status reviewed' : 'Rates reviewed'} <time datetime="${date.toISOString().slice(0, 10)}">${esc(dateText)}</time>${!rateSourceAllowed(c) ? '' : `<span aria-hidden="true"> · </span>${external(c.rateInfo.sourceUrl, c.rateInfo.status === 'closed' ? 'View closure updates' : 'View rate source', '', { courseId: c.id, actionType: c.rateInfo.status === 'closed' ? 'course_updates' : 'rate_source' })}`}</p>
     </article>`;
   }
   return `<div class="np-guide">
