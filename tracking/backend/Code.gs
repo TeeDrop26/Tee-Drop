@@ -2,7 +2,7 @@
 const EVENT_COLUMNS = ['receivedAt', 'schemaVersion', 'eventType', 'eventId', 'sessionId', 'pageViewId', 'eventSequence', 'page', 'pageType', 'pageCourseId', 'entryPage', 'entrySource', 'entryMedium', 'campaign', 'previousPage', 'targetPage', 'targetCourseId', 'targetFacilityId', 'actionType', 'placement'];
 const ACTIONS = ['booking', 'course_info', 'rate_source', 'course_updates', 'phone', 'email'];
 const PLACEMENTS = ['content', 'header', 'footer', 'breadcrumb', 'nearby', 'course_list', 'course_of_week', 'course_of_month', 'indoor_list'];
-const APPROVED_CAMPAIGNS = {}; // Must match tracking-config.js when labels are approved.
+const APPROVED_CAMPAIGNS = { 'ohio-flyer': { source: 'flyer', medium: 'print' } }; // Must match tracking-config.js.
 const PRODUCTION_WORKBOOK_ID = '10pd71gIeCzvcB0lLKz5rqaWN-2vKJJbxJvez5Qm-L6k';
 const SYNTHETIC_WORKBOOK_ID = '1jLx34074y7NcqKThbLzhjY1QS6Jbu1dFPma_5oZpJ1s';
 const LEGACY_COLUMNS = {

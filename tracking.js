@@ -26,7 +26,7 @@
   const write = value => { memory = value; try { sessionStorage.setItem(key, JSON.stringify(value)); } catch {} };
   function attribution() {
     const params = new URLSearchParams(location.search);
-    for (const label of [params.get("source"), params.get("utm_campaign")]) {
+    for (const label of [params.get("source"), params.get("utm_campaign"), params.get("campaign")]) {
       if (label && Object.hasOwn(config.campaigns || {}, label)) {
         const campaign = config.campaigns[label];
         return { entrySource: campaign.source, entryMedium: campaign.medium, campaign: label };
